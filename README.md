@@ -1,6 +1,6 @@
-# example-datasets - Example datasets to run with RiboViz.
+# Example datasets to run with RiboViz.
 
-This repository is for the configuration files and genome/annotation files needed to run the [riboviz](https://github.com/riboviz/riboviz) ribosome profiling pipeline on specific datasets. It aims to:
+This **example-datasets** repository is for the configuration files and genome/annotation files needed to run the [riboviz](https://github.com/riboviz/riboviz) ribosome profiling pipeline on specific datasets. It aims to:
 
 * provide specific example datasets for new users to try or to adapt
 * share up-to-date tested example datasets between the riboviz development team
@@ -15,12 +15,14 @@ The main riboviz repository contains documentation of how to run riboviz in gene
 
 
 <a name="starthere"/>
+
 # Start here - DRAFT
 
 _This section will contain suggestions of example datasets to start with._
 
 
 <a name="contentsstructure"/>
+
 # Contents and structure of example-datasets
 
 ## What belongs in example-datasets
@@ -95,7 +97,10 @@ Artificial datasets that don't come from a complete real genome.
 
 
 <a name="howtosubmit"/>
+
 # How to submit an example dataset
+
+We welcome community contributions!
 
 We request that example datasets are submitted when they have been tested thoroughly, i.e. riboviz runs on the example dataset on relevant .fastq-format data. Please submit by forking the repository, and putting in a pull request for that contains only:
 
