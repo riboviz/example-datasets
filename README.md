@@ -56,11 +56,11 @@ animals (humans, mice, flies, worms, etc.)
 
 ### archaea
 
-Not populated until we become aware of a published archaeal ribosome profiling dataset
+archaea (Sulfolobus, Thermococcus, etc.)
 
 ### bacteria
 
-eubacteria
+eubacteria (E.coli, B. subtilis, etc)
 
 ### fungi 
 
@@ -79,8 +79,7 @@ Please file a github issue to suggest a change.
 
 ### simulated
 
-artificial datasets that don't come from a complete real genome
-
+Artificial datasets that don't come from a complete real genome.
 
 # Submitting an example dataset - DRAFT
 

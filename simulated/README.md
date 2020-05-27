@@ -8,5 +8,6 @@ These might be used to test features of the pipeline.
 
 ## Structure
 
-Since simulated datasets are not arranged by kingdom and genus, we need to suggest how to organise this. 
-Please choose an informative sensible name, or file an issue with a general suggestion.
+Since simulated datasets are not arranged by kingdom and genus, we cannot organise them phylogenetically
+
+Please organise directories `author/datasetinfo`, i.e. by author and then some brief information on the dataset(s), for example `sanchez/stalling_simulation_10genes`.
