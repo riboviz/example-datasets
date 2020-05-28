@@ -141,7 +141,20 @@ We are currently (May 2020) reviewing the format of this in issue [#riboviz166](
 
 ## annotation files
 
-Annotation files (.fasta files of transcript/extended-ORF sequences, .gff files that describe the CDS/ORF position within the fasta file), should ideally be checked with [check_fasta_gff.py](https://github.com/riboviz/riboviz/blob/master/riboviz/check_fasta_gff.py), which currently checks if start and stop codons are as expected. You can submit files with non-ATG start codons or in-frame stops if you have good reason to do so, `check_fasta_gff.py` is a diagnostic not a prescription. 
+Annotation files (.fasta files of transcript/extended-ORF sequences, .gff files that describe the CDS/ORF position within the fasta file), should ideally be checked with [check_fasta_gff.py](https://github.com/riboviz/riboviz/blob/master/riboviz/tools/check_fasta_gff.py), which currently checks if start and stop codons are as expected. This can be run as follows:
+
+```console
+$ python -m riboviz.tools.check_fasta_gff -f FASTA -g GFF
+```
+
+For example,
+
+```console
+$ python -m riboviz.tools.check_fasta_gff -f data/yeast_CDS_w_250utrs.fa \
+    -g data/yeast_CDS_w_250utrs.gff3 
+```
+
+You can submit files with non-ATG start codons or in-frame stops if you have good reason to do so, `check_fasta_gff.py` is a diagnostic not a prescription. 
 
 We are currently working on improving specification and testing for annotation files, see [#riboviz174](https://github.com/riboviz/riboviz/issues/74).
 
