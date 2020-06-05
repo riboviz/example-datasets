@@ -1,0 +1,62 @@
+provenance:
+  authors:
+  - author: Gloria A Brar
+    email: ...
+  - author: Moran Yassour
+    email: ...
+  - author: Nir Friedman
+    email: ...
+  - author: Aviv Regev
+    email: ...
+  - author: Nicholas T Ingolia
+    email: ingolia@ciwemb.edu
+  - author: Jonathan S Weissman
+    email: weissman@cmp.ucsf.edu
+  website:
+  date run: 2020-04-28
+  riboviz-version: 2.0.beta | COMMIT 0ecd69ec0786eaeee78c4ce0999f4a181c775044
+  reference: High-resolution View of the Yeast Meiotic Program Revealed by Ribosome Profiling, Brar et al. 2012
+  DOI: https://doi.org/10.1126/science.1215110
+  notes: >
+    Analysis of S. cerevisiae meotic RPF dataset by Ania Kurowska for undergraduate honours project
+
+adapters: AAAAAAAAAAAAAAAAAAAA # Illumina sequencing adapter(s) to remove
+aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
+asite_disp_length_file: B-Sc_2012/input/yeast_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
+buffer: 250 # Length of flanking region around the CDS
+build_indices: true # Build indices for aligner? if TRUE, remake indices from fasta files
+cmd_file: run_riboviz_B-Sc_2012.sh # Bash commands file
+codon_positions_file: data/yeast_codon_pos_i200.RData # Codon positions in each gene
+count_reads: true # Scan input, temporary and output files and produce counts of reads in each FASTQ, SAM, and BAM file processed?
+count_threshold: 64 # Remove genes with a read count below this threshold, when generating statistics and figures
+dataset: B-Sc_2012 # Dataset name
+dir_in: B-Sc_2012/input # Input directory
+dir_index: B-Sc_2012/index # Built indices directory
+dir_logs: B-Sc_2012/logs # Log files directory
+dir_out: B-Sc_2012/output # Output directory
+dir_tmp: B-Sc_2012/tmp # Intermediate files directory
+do_pos_sp_nt_freq: true # Calculate position-specific nucleotide frequency?
+features_file: data/yeast_features.tsv # Features to correlate with ORFs
+fq_files: # fastq files to be processed, relative to dir_in
+  VEG_1: SRR387871_GSM843747_footprints_for_exponential_vegetative_cells_of_the_strain_14201_used_for_the_ndt80_release_timecourse_Saccharomyces_cerevisiae_RNA-Seq.fastq.gz
+  VEG_2: SRR387872_GSM843748_footprints_for_exponential_vegetative_cells_of_the_strain_gb15_used_for_the_traditional_timecourse_Saccharomyces_cerevisiae_RNA-Seq.fastq.gz
+  ANAPH_1: SRR387890_GSM843766_footprints_for_the_7_timepoint_of_the_ndt80_release_timecourse_Saccharomyces_cerevisiae_RNA-Seq.fastq.gz
+  ANAPH_2: SRR387891_GSM843767_footprints_for_the_8_timepoint_of_the_ndt80_release_timecourse_Saccharomyces_cerevisiae_RNA-Seq.fastq.gz
+  SPORE_1: SRR387898_GSM843774_footprints_for_the_15_timepoint_of_the_ndt80_release_timecourse_Saccharomyces_cerevisiae_RNA-Seq.fastq.gz
+  SPORE_2: SRR387899_GSM843775_footprints_for_the_18_timepoint_of_the_ndt80_release_timecourse_Saccharomyces_cerevisiae_RNA-Seq.fastq.gz
+is_riboviz_gff: true # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
+is_test_run: false # Is this a test run
+make_bedgraph: true # Output bedgraph files, as TSV, in addition to h5?
+max_read_length: 50 # Maximum read length in H5 output
+min_read_length: 10 # Minimum read length in H5 output
+num_processes: 8 # Number of processes to parallelize over
+orf_fasta_file: B-Sc_2012/input/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.fa # ORF file to align to
+orf_gff_file: B-Sc_2012/input/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3 # GFF2/GFF3 file for ORFs
+orf_index_prefix: yeast_CDS_w_250 # ORF index file prefix, relative to dir_index
+primary_id: Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
+rpf: true # Is the dataset an RPF or mRNA dataset?
+rrna_fasta_file: B-Sc_2012/input/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa # rRNA file to avoid aligning to
+rrna_index_prefix: yeast_rRNA # rRNA index file prefix, relative to dir_index
+secondary_id: null # Secondary gene IDs to access the data (COX1, EFB1, etc.)
+stop_in_cds: false # Are stop codons part of the CDS annotations in GFF?
+t_rna_file: data/yeast_tRNAs.tsv # tRNA estimates
