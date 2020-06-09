@@ -1,0 +1,17 @@
+Transcript sequences:
+
+data/yeast_CDS_w_250utrs.fa
+
+Coding sequence locations:
+
+data/yeast_CDS_w_250utrs.gff3
+
+These files hold S288c annotations and ORF sequences.
+
+These files were created as follows:
+
+The file genome release R64-2-1 (file name S288C_reference_genome_R64-2-1_20150113.tgz; https://downloads.yeastgenome.org/sequence/S288C_reference/genome_releases/S288C_reference_genome_R64-2-1_20150113.tgz) was downloaded from the Saccharomyces Genome Database (https://www.yeastgenome.org/).
+
+The files saccharomyces_cerevisiae_R64-2-1_20150113.gff and S288C_reference_sequence_R64-2-1_20150113.fsa were extracted from the .tgz file.
+
+The sequence and annotation files for the whole approximate Saccharomyces cerevisiae transcriptome were prepared using script_for_transcript_annotation.Rmd (https://github.com/riboviz/riboviz/blob/master/rmarkdown/script_for_transcript_annotation.Rmd).
