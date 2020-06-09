@@ -38,12 +38,12 @@ dir_tmp: B-Sc_2012/tmp # Intermediate files directory
 do_pos_sp_nt_freq: true # Calculate position-specific nucleotide frequency?
 features_file: data/yeast_features.tsv # Features to correlate with ORFs
 fq_files: # fastq files to be processed, relative to dir_in
-  VEG_1: SRR387871_GSM843747_footprints_for_exponential_vegetative_cells_of_the_strain_14201_used_for_the_ndt80_release_timecourse_Saccharomyces_cerevisiae_RNA-Seq.fastq.gz
-  VEG_2: SRR387872_GSM843748_footprints_for_exponential_vegetative_cells_of_the_strain_gb15_used_for_the_traditional_timecourse_Saccharomyces_cerevisiae_RNA-Seq.fastq.gz
-  ANAPH_1: SRR387890_GSM843766_footprints_for_the_7_timepoint_of_the_ndt80_release_timecourse_Saccharomyces_cerevisiae_RNA-Seq.fastq.gz
-  ANAPH_2: SRR387891_GSM843767_footprints_for_the_8_timepoint_of_the_ndt80_release_timecourse_Saccharomyces_cerevisiae_RNA-Seq.fastq.gz
-  SPORE_1: SRR387898_GSM843774_footprints_for_the_15_timepoint_of_the_ndt80_release_timecourse_Saccharomyces_cerevisiae_RNA-Seq.fastq.gz
-  SPORE_2: SRR387899_GSM843775_footprints_for_the_18_timepoint_of_the_ndt80_release_timecourse_Saccharomyces_cerevisiae_RNA-Seq.fastq.gz
+  VEG_1: SRR387871.fastq.gz
+  VEG_2: SRR387872.fastq.gz
+  ANAPH_1: SRR387890.fastq.gz
+  ANAPH_2: SRR387891.fastq.gz
+  SPORE_1: SRR387898.fastq.gz
+  SPORE_2: SRR387899.fastq.gz
 is_riboviz_gff: true # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
 is_test_run: false # Is this a test run
 make_bedgraph: true # Output bedgraph files, as TSV, in addition to h5?
