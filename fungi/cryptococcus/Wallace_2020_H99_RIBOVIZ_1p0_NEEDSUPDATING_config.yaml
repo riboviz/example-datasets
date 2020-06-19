@@ -1,0 +1,37 @@
+# RiboViz/scripts/prepRiboviz.sh /Wallace_2020_H99/RiboViz_H99_config.yaml > /Wallace_2020_H99/logfile_RiboViz_H99.txt
+dir_in: /fastq_files # input directory
+dir_out: Wallace_2020_H99/out # output directory
+dir_tmp: Wallace_2020_H99/tmp # tmp directory for intermediate files
+rRNA_fasta: contaminants/cneoformans_H99/H99_rrna.fasta # rRNA file to avoid aligning to
+orf_fasta: annotation/H99_10p_up12dwn9_CDS_with_120bputrs.fa # orf file to align to
+orf_gff_file: annotation/H99_10p_up12dwn9_CDS_120bpL_120bpR.gff3 # GFF2/GFF3 file for ORFs
+aligner: hisat2 # short read aligner to use. Currently only hisat2 works
+build_indices: TRUE # if TRUE, build indices for aligner
+make_bedgraph: TRUE # output bedgraph.gzs of data, in addition to h5?
+dir_index: Wallace_2020_H99/index # directory to put built indices in
+rRNA_index: Wallace_2020_H99/index/H99_rRNA # rRNA index file
+orf_index: Wallace_2020_H99/index/H99_CDS_with_120bputrs # ORF index file
+fq_files: # fastq files to be processed
+  # H99r1: PN3_index4_NoIndex_L002_R1_001.fastq.gz # names of original files before GEO upload, included here as comments
+  H99r1: SRR9336389.fastq.gz
+  # HdGWO1: PN4_index7_NoIndex_L003_R1_001.fastq.gz
+  HdGWO1: SRR9336391.fastq.gz
+  # H99r2: PN8_index6_GCCAAT_L006_R1_001.fastq.gz
+  H99r2: SRR9336393.fastq.gz
+  # HdAGO1: PN9_index7_CAGATC_L007_R1_001.fastq.gz
+  HdAGO1: SRR9336395.fastq.gz
+  ## SIYIN: please double-check all these SRR numbers refer to the correct samples.
+adapters: CTGTAGGCACC # Illumina sequencing adapter(s) to remove
+nprocesses: 16 # number of processes to parallelize over
+MinReadLen: 10 # Minimum read length in H5 output
+MaxReadLen: 50 # Maximum read length in H5 output
+Buffer: 120 # Default length of flanking region around the CDS
+PrimaryID: Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
+SecondID: NULL # Secondary gene IDs to access the data (COX1, EFB1, etc.)
+dataset: H99 # Name of the dataset
+StopInCDS: TRUE # Are stop codons part of the CDS annotations in GFF?
+isTestRun: FALSE # Is this a test run
+rpf: TRUE # Is the dataset an RPF or mRNA dataset?
+ribovizGFF: TRUE # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
+features_file: NULL
+do_pos_sp_nt_freq: FALSE

@@ -1,0 +1,32 @@
+# python -m riboviz.tools.prep_riboviz --dry-run rscripts/ /homes/ewallac2/RibosomeProfiling_Madhani/RiboViz_JEC21_fullraw_June2019/RiboViz_JEC21_config.yaml
+dir_in: /homes/ewallac2/RibosomeProfiling_Madhani/fastq_files # input directory
+dir_out: /homes/ewallac2/RibosomeProfiling_Madhani/RiboViz_JEC21_fullraw_June2019/out_Sep2019 # output directory
+dir_tmp: /homes/ewallac2/RibosomeProfiling_Madhani/RiboViz_JEC21_fullraw_June2019/tmp # tmp directory for intermediate files
+dir_logs: /homes/ewallac2/RibosomeProfiling_Madhani/RiboViz_JEC21_fullraw_June2019/logs_Sep2019
+cmd_file: /homes/ewallac2/RibosomeProfiling_Madhani/RiboViz_JEC21_fullraw_June2019/run_riboviz_JEC21_Sep2019.sh # File to log bash commands
+rRNA_fasta: /homes/ewallac2/RiboVizIndices/cneoformans_H99/JEC21_rrna.fasta # rRNA file to avoid aligning to
+orf_fasta: /homes/ewallac2/RiboVizIndices/Cd_JEC21_longestmRNA_120UTRs/JEC21_10p_up12dwn9_CDS_with_120bputrs.fa # orf file to align to
+orf_gff_file: /homes/ewallac2/RiboVizIndices/Cd_JEC21_longestmRNA_120UTRs/JEC21_10p_up12dwn9_CDS_120bpL_120bpR.gff3 # GFF2/GFF3 file for ORFs
+aligner: hisat2 # short read aligner to use. Currently only hisat2 works
+build_indices: FALSE # if TRUE, build indices for aligner
+make_bedgraph: TRUE # output bedgraph.gzs of data, in addition to h5?
+dir_index: /homes/ewallac2/RibosomeProfiling_Madhani/RiboViz_JEC21_OLDCnGff_Oct2018/index # directory to put built indices in
+rRNA_index: /homes/ewallac2/RibosomeProfiling_Madhani/RiboViz_JEC21_OLDCnGff_Oct2018/index/JEC21_rRNA # rRNA index file
+orf_index: /homes/ewallac2/RibosomeProfiling_Madhani/RiboViz_JEC21_OLDCnGff_Oct2018/index/JEC21_CDS_with_120bputrs # ORF index file
+fq_files: # fastq files to be processed
+  JEC21: JSL02_index15_NoIndex_L002_R1_001.fastq.gz # do not use "_" in dataset name
+  JdAGO1: JSL03_index18_GTCCGC_L003_R1_001.fastq.gz
+adapters: CTGTAGGCACC # Illumina sequencing adapter(s) to remove
+nprocesses: 16 # number of processes to parallelize over
+MinReadLen: 10 # Minimum read length in H5 output
+MaxReadLen: 50 # Maximum read length in H5 output
+Buffer: 30 # Default length of flanking region around the CDS
+PrimaryID: Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
+SecondID: NULL # Secondary gene IDs to access the data (COX1, EFB1, etc.)
+dataset: JEC21 # Name of the dataset
+StopInCDS: TRUE # Are stop codons part of the CDS annotations in GFF?
+isTestRun: FALSE # Is this a test run
+rpf: TRUE # Is the dataset an RPF or mRNA dataset?
+ribovizGFF: TRUE # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
+features_file: NULL
+do_pos_sp_nt_freq: FALSE
