@@ -1,24 +1,17 @@
 provenance:
   authors:
-  - author: Gloria A Brar
+  - author: Felicity Anderson
+    email: Felicity.Anderson@ed.ac.uk
+  - author: Ania Kurowska
     email: ...
-  - author: Moran Yassour
-    email: ...
-  - author: Nir Friedman
-    email: ...
-  - author: Aviv Regev
-    email: ...
-  - author: Nicholas T Ingolia
-    email: ingolia@ciwemb.edu
-  - author: Jonathan S Weissman
-    email: weissman@cmp.ucsf.edu
   website:
   date run: 2020-04-28
   riboviz-version: 2.0.beta | COMMIT 0ecd69ec0786eaeee78c4ce0999f4a181c775044
+  GEO: GSE34082
   reference: High-resolution View of the Yeast Meiotic Program Revealed by Ribosome Profiling, Brar et al. 2012
   DOI: https://doi.org/10.1126/science.1215110
   notes: >
-    Analysis of S. cerevisiae meotic RPF dataset by Ania Kurowska for undergraduate honours project
+    Analysis of subset S. cerevisiae meotic RPF dataset by Ania Kurowska for undergraduate honours project.
 
 adapters: AAAAAAAAAAAAAAAAAAAA # Illumina sequencing adapter(s) to remove
 aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
