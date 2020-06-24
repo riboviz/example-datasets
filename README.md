@@ -55,10 +55,18 @@ The repository is organised roughly phylogenetically into subfolders, and then e
 
 We have organised the repository into top-level folders with kingdoms, and then within that organised by genus (e.g. `/fungi/neurospora`, `/animalia/homo`). Kingdom and genus names are *all lower case* to avoid confusion with weblinks. When we set up the repository, this seemed to provide a useful compromise providing human readability and easy navigability.
 
-For example, for re-analysis of the yeast meiosis dataset from Brar 2012: are in `fungi/saccharomyces`:
+### An example of an example dataset from brewer's yeast
 
-* `fungi/saccharomyces/Brar_2012_Meiosis_allRPF_transcriptome_config.yaml`
-* `fungi/saccharomyces/annotation` for the gff and fasta files (needs elaboration)
+For example, for re-analysis of the yeast meiosis dataset from Brar 2012, aligning to  an approximate dataset with CDS flanked by 250nt UTRs at both ends, are in `fungi/saccharomyces`:
+
+* `fungi/saccharomyces/Brar_2012_Meiosis_RPF_6-samples_CDS_w_250utrs_config.yaml`
+* `fungi/saccharomyces/annotation` for the annotation gff and fasta files: 
+  - `Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.fa` - fasta file of approximate transcripts
+  - `Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3` - gff file of locations of ORFs on those transcripts
+  - `Saccharomyces_cerevisiae_yeast_CDS_w_250utrs_annotation_provenance.txt` - describes the provenance of these (where those files came from)
+* `fungi/saccharomyces/contaminants` for the contaminants fasta files:
+  - `Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa`
+  - `Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1-fasta_provenance.txt` - describes the provenance of the fasta file
 
 ## Top-level directories are kingdoms, with an artificial one for simulated data
 
@@ -119,11 +127,11 @@ The `config.yaml` file should contain **all** parameters needed to run riboviz. 
 
 If your example dataset runs riboviz on published data in archives such as GEO/SRA/ENA, please ensure that config.yaml fastq filenames correspond to the accession numbers of the relevant SRA/ENA files.
 
-Please begin the `config.yaml` with a `provenance` entry providing metadata on the riboviz run, the authors, the data source, and the version of riboviz that ran on the dataset, for example:
+Please begin the `config.yaml` with a `provenance` entry providing metadata on the riboviz run, the authors of the file, the version of riboviz that ran on the dataset, and the data source including publication reference and DOI, for example:
 
 ```
 provenance:
-  authors:
+  authors: # people who put together this config.yaml file
   - author: John Smith III
     email: John.Smith.III@ed.ac.uk
   - author: ...
@@ -131,6 +139,7 @@ provenance:
   website: https://www.ed.ac.uk/some-bio-project
   date: 2020-04-01
   riboviz-version: TAG | COMMIT
+  GEO: GSExxxxxxx # gene expression omnibus references for dataset, if relevant
   reference: Genome-Wide Analysis in Vivo of Translation with Nucleotide Resolution Using Ribosome Profiling, Ingolia et al 2009
   DOI: 10.1126/science.1168978
   notes: >
@@ -141,7 +150,8 @@ We are currently (May 2020) reviewing the format of this in issue [#riboviz166](
 
 ## annotation files
 
-Annotation files (.fasta files of transcript/extended-ORF sequences, .gff files that describe the CDS/ORF position within the fasta file), should ideally be checked with [check_fasta_gff.py](https://github.com/riboviz/riboviz/blob/master/riboviz/tools/check_fasta_gff.py), which currently checks if start and stop codons are as expected. This can be run as follows:
+Annotation files (.fasta files of transcript/extended-ORF sequences, .gff files that describe the CDS/ORF position within the fasta file), should be placed within
+They should ideally be checked with [check_fasta_gff.py](https://github.com/riboviz/riboviz/blob/master/riboviz/tools/check_fasta_gff.py), which currently checks if start and stop codons are as expected. This can be run as follows:
 
 ```console
 $ python -m riboviz.tools.check_fasta_gff -f FASTA -g GFF
@@ -161,6 +171,13 @@ We are currently working on improving specification and testing for annotation f
 ## contaminant files 
 
 This is a .fasta-format file of everything that you want ignored in the downstream riboviz analysis. It will generally encompass ribosomal rRNA from your species of interest, perhaps also transfer RNA and other abundant non-coding RNA sequences.
+
+## provenance files
+
+These are .txt format files that describe provenance or metadata covering where the annotation and contaminants come from. Ideally they should include data on repositories, genome releases, references, etc.
+These are in separate files, because .fasta files do not generally accept comments in the header.
+
+For an example, see: `fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs_annotation_provenance.txt`
 
 ## pull request
 
