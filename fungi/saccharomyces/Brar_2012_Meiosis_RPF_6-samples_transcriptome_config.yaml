@@ -1,17 +1,9 @@
 provenance:
   authors:
-  - author: Gloria A Brar
+  - author: Ania Kurowska
     email: ...
-  - author: Moran Yassour
-    email: ...
-  - author: Nir Friedman
-    email: ...
-  - author: Aviv Regev
-    email: ...
-  - author: Nicholas T Ingolia
-    email: ingolia@ciwemb.edu
-  - author: Jonathan S Weissman
-    email: weissman@cmp.ucsf.edu
+  - author: Felicity Anderson
+    email: Felicity.Anderson@ed.ac.uk
   website:
   date run: 2020-04-28
   riboviz-version: 2.0.beta | COMMIT 0ecd69ec0786eaeee78c4ce0999f4a181c775044
