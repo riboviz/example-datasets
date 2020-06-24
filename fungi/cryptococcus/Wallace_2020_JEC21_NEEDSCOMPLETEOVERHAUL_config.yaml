@@ -6,7 +6,7 @@ provenance:
     email: siyinxue@gmail.com
 website:
   date run: 2020-06-21
-  riboviz-version: 2.0.beta | COMMIT 
+  riboviz-version: 2.0.beta | COMMIT 0ecd69ec0786eaeee78c4ce0999f4a181c775044
   GEO: GSE133125
   reference: Quantitative global studies reveal differential translational control by start codon context across the fungal kingdom, Wallace et al. 2012
   DOI: https://doi.org/10.1093/nar/gkaa060
