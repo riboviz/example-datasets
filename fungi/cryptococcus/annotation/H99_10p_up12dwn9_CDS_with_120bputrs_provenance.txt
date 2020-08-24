@@ -1,0 +1,21 @@
+Transcript sequences:
+
+example-datasets/fungi/cryptococcus/annotation/H99_10p_up12dwn9_CDS_with_120bputrs.fa
+
+Coding sequence locations:
+
+example-datasets/fungi/cryptococcus/annotation/H99_10p_up12dwn9_CDS_120bpL_120bpR.gff3
+
+These files hold annotations and ORF sequences.
+
+These files were created as follows:
+
+* [ ]
+
+* [ ]
+
+The sequence and annotation files for the whole approximate Cryptococcus neoformans transcriptome were prepared using: [ ]   
+
+These annotation files were run with H99_rrna.fasta contaminants file.
+
+These were run through Riboviz [2.0] tagged master branch, commit: [ ] 
