@@ -10,7 +10,7 @@ website:
   GEO: GSE133125
   reference: Quantitative global studies reveal differential translational control by start codon context across the fungal kingdom, Wallace et al. 2012
   DOI: https://doi.org/10.1093/nar/gkaa060
-  notes: >
+  notes: > Need to create folder called Wallace_2020/input to place the .fastq files in, while output and other folders will be created in Wallace_2020/ by the riboviz workflow.
 
 adapters: CTGTAGGCACC # Illumina sequencing adapter(s) to remove
 aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
@@ -36,12 +36,12 @@ make_bedgraph: TRUE # Output bedgraph files, as TSV, in addition to h5?
 max_read_length: 50 # Maximum read length in H5 output
 min_read_length: 10 # Minimum read length in H5 output
 num_processes: 8 # Number of processes to parallelize over
-orf_fasta_file: Wallace_2020_H99/annotation/H99_10p_up12dwn9_CDS_with_120bputrs.fa # ORF file to align to
-orf_gff_file: Wallace_2020_H99/annotation/H99_10p_up12dwn9_CDS_120bpL_120bpR.gff3 # GFF2/GFF3 file for ORFs
+orf_fasta_file: example-datasets/fungi/cryptococcus/annotation/H99_10p_up12dwn9_CDS_with_120bputrs.fa # ORF file to align to
+orf_gff_file: example-datasets/fungi/cryptococcus/annotation/H99_10p_up12dwn9_CDS_120bpL_120bpR.gff3 # GFF2/GFF3 file for ORFs
 orf_index_prefix: H99_CDS_with_120bputrs # ORF index file prefix, relative to dir_index
 primary_id: Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
 rpf: TRUE # Is the dataset an RPF or mRNA dataset?
-rrna_fasta_file: Wallace_2020_H99/contaminants/H99_rrna.fasta # rRNA file to avoid aligning to
+rrna_fasta_file: example-datasets/fungi/cryptococcus/contaminants/H99_rrna.fasta # rRNA file to avoid aligning to
 rrna_index_prefix: H99_rRNA # rRNA index file prefix, relative to dir_index
 secondary_id: NULL # Secondary gene IDs to access the data (COX1, EFB1, etc.)
 stop_in_cds: TRUE # Are stop codons part of the CDS annotations in GFF?
