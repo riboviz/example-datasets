@@ -10,7 +10,7 @@ website:
   GEO: GSE133125
   reference: Quantitative global studies reveal differential translational control by start codon context across the fungal kingdom, Wallace et al. 2012
   DOI: https://doi.org/10.1093/nar/gkaa060
-  notes: >
+  notes: > Need to create folder Wallace_2020_JEC21/input to place .fastq files into and riboviz will create other folders within Wallace_2020_JEC21/ to hold outputs.
 
 adapters: CTGTAGGCACC # Illumina sequencing adapter(s) to remove
 aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
