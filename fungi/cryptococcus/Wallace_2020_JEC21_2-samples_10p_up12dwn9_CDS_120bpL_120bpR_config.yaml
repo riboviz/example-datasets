@@ -34,12 +34,12 @@ make_bedgraph: TRUE # Output bedgraph files, as TSV, in addition to h5?
 max_read_length: 50 # Maximum read length in H5 output
 min_read_length: 10 # Minimum read length in H5 output
 num_processes: 8 # Number of processes to parallelize over
-orf_fasta_file: Wallace_2020_JEC21/annotation/JEC21_10p_up12dwn9_CDS_with_120bputrs.fa # ORF file to align to
-orf_gff_file: Wallace_2020_JEC21/annotation/JEC21_10p_up12dwn9_CDS_120bpL_120bpR.gff3 # GFF2/GFF3 file for ORFs
+orf_fasta_file: example-datasets/fungi/cryptococcus/annotation/JEC21_10p_up12dwn9_CDS_with_120bputrs.fa # ORF file to align to
+orf_gff_file: example-datasets/fungi/cryptococcus/annotation/JEC21_10p_up12dwn9_CDS_120bpL_120bpR.gff3 # GFF2/GFF3 file for ORFs
 orf_index_prefix: JEC21_CDS_with_120bputrs # ORF index file prefix, relative to dir_index
 primary_id: Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
 rpf: TRUE # Is the dataset an RPF or mRNA dataset?
-rrna_fasta_file: Wallace_2020_JEC21/contaminants/JEC21_rrna.fasta # rRNA file to avoid aligning to
+rrna_fasta_file: example-datasets/fungi/cryptococcus/contaminants/JEC21_rrna.fasta # rRNA file to avoid aligning to
 rrna_index_prefix: JEC21_rRNA # rRNA index file prefix, relative to dir_index
 secondary_id: NULL # Secondary gene IDs to access the data (COX1, EFB1, etc.)
 stop_in_cds: TRUE # Are stop codons part of the CDS annotations in GFF?
