@@ -1,0 +1,22 @@
+Transcript sequences:
+
+example-datasets/fungi/cryptococcus/annotation/JEC21_10p_up12dwn9_CDS_with_120bpu$
+
+Coding sequence locations:
+
+example-datasets/fungi/cryptococcus/annotation/JEC21_10p_up12dwn9_CDS_120bpL_120b$
+
+These files hold annotations and ORF sequences.
+
+These files were created as follows:
+
+* [ ]
+
+* [ ]
+
+
+The sequence and annotation files for the whole approximate Cryptococcus neoformans transcriptome were prepared using: [ ]   
+
+These annotation files were run with JEC21_rrna.fasta contaminants file.
+
+These were run through Riboviz [2.0] tagged master branch, commit: [ ] 
