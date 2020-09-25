@@ -1,5 +1,5 @@
 provenance:
-  authors:
+  yaml authors:
   - author: Felicity Anderson
     email: Felicity.Anderson@ed.ac.uk
   website:
@@ -36,24 +36,22 @@ fq_files: # fastq files to be processed, relative to dir_in
   WT_42_2: SRR9052043.fastq.gz  # GSM3765216: WT_42°C_Rep2
   IDR-mut_30_1: SRR9052044.fastq.gz  # GSM3765217: IDRm_30°C_Rep1
   IDR-mut_30_2: SRR9052045.fastq.gz  # GSM3765218: IDRm_30°C_Rep2
-  IDR-mut_40_1:  .fastq.gz  # 
-  IDR-mut_40_2:  .fastq.gz  # 
-  IDR-mut_42_1:  .fastq.gz  # 
-  IDR-mut_42_2:  .fastq.gz  # 
-
-
+  IDR-mut_40_1: SRR9052046.fastq.gz  # GSM3765219: IDRm_40°C_Rep1
+  IDR-mut_40_2: SRR9052047.fastq.gz  # GSM3765220: IDRm_40°C_Rep2
+  IDR-mut_42_1: SRR9052048.fastq.gz  # GSM3765221: IDRm_42°C_Rep1
+  IDR-mut_42_2: SRR9052049.fastq.gz  # GSM3765222: IDRm_42°C_Rep2
 is_riboviz_gff: true # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
 is_test_run: false # Is this a test run
 make_bedgraph: true # Output bedgraph files, as TSV, in addition to h5?
 max_read_length: 50 # Maximum read length in H5 output
 min_read_length: 10 # Minimum read length in H5 output
 num_processes: 8 # Number of processes to parallelize over
-orf_fasta_file: riboviz/example-datasets/tree/master/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.fa # ORF file to align to
-orf_gff_file: riboviz/example-datasets/tree/master/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3 # GFF2/GFF3 file for ORFs
+orf_fasta_file: ../../riboviz/example-datasets/tree/master/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.fa # ORF file to align to
+orf_gff_file: ../../riboviz/example-datasets/tree/master/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3 # GFF2/GFF3 file for ORFs
 orf_index_prefix: yeast_CDS_w_250 # ORF index file prefix, relative to dir_index
 primary_id: Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
 rpf: true # Is the dataset an RPF or mRNA dataset?
-rrna_fasta_file: $HOME/riboviz/example-datasets/tree/master/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa # rRNA file to avoid aligning to
+rrna_fasta_file: ../../riboviz/example-datasets/tree/master/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa # rRNA file to avoid aligning to
 rrna_index_prefix: yeast_rRNA # rRNA index file prefix, relative to dir_index
 secondary_id: null # Secondary gene IDs to access the data (COX1, EFB1, etc.)
 stop_in_cds: false # Are stop codons part of the CDS annotations in GFF?
