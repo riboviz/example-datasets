@@ -30,16 +30,16 @@ features_file: data/yeast_features.tsv # Features to correlate with ORFs
 fq_files: # fastq files to be processed, relative to dir_in
   WT_30_1: SRR9052038.fastq.gz  # GSM3765211: WT_30°C_Rep1
   WT_30_2: SRR9052039.fastq.gz  # GSM3765212: WT_30°C_Rep2
-  WT_40_1: SRR9052040.fastq.gz  # GSM3765213: WT_40°C_Rep1
-  WT_40_2: SRR9052041.fastq.gz  # GSM3765214: WT_40°C_Rep2
-  WT_42_1: SRR9052042.fastq.gz  # GSM3765215: WT_42°C_Rep1
-  WT_42_2: SRR9052043.fastq.gz  # GSM3765216: WT_42°C_Rep2
-  IDR-mut_30_1: SRR9052044.fastq.gz  # GSM3765217: IDRm_30°C_Rep1
-  IDR-mut_30_2: SRR9052045.fastq.gz  # GSM3765218: IDRm_30°C_Rep2
-  IDR-mut_40_1: SRR9052046.fastq.gz  # GSM3765219: IDRm_40°C_Rep1
-  IDR-mut_40_2: SRR9052047.fastq.gz  # GSM3765220: IDRm_40°C_Rep2
-  IDR-mut_42_1: SRR9052048.fastq.gz  # GSM3765221: IDRm_42°C_Rep1
-  IDR-mut_42_2: SRR9052049.fastq.gz  # GSM3765222: IDRm_42°C_Rep2
+ # WT_40_1: SRR9052040.fastq.gz  # GSM3765213: WT_40°C_Rep1
+ # WT_40_2: SRR9052041.fastq.gz  # GSM3765214: WT_40°C_Rep2
+ # WT_42_1: SRR9052042.fastq.gz  # GSM3765215: WT_42°C_Rep1
+ # WT_42_2: SRR9052043.fastq.gz  # GSM3765216: WT_42°C_Rep2
+ # IDR-mut_30_1: SRR9052044.fastq.gz  # GSM3765217: IDRm_30°C_Rep1
+ # IDR-mut_30_2: SRR9052045.fastq.gz  # GSM3765218: IDRm_30°C_Rep2
+ # IDR-mut_40_1: SRR9052046.fastq.gz  # GSM3765219: IDRm_40°C_Rep1
+ # IDR-mut_40_2: SRR9052047.fastq.gz  # GSM3765220: IDRm_40°C_Rep2
+ # IDR-mut_42_1: SRR9052048.fastq.gz  # GSM3765221: IDRm_42°C_Rep1
+ # IDR-mut_42_2: SRR9052049.fastq.gz  # GSM3765222: IDRm_42°C_Rep2
 is_riboviz_gff: true # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
 is_test_run: false # Is this a test run
 make_bedgraph: true # Output bedgraph files, as TSV, in addition to h5?
