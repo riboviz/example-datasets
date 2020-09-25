@@ -1,0 +1,60 @@
+provenance:
+  authors:
+  - author: Felicity Anderson
+    email: Felicity.Anderson@ed.ac.uk
+  website:
+  date run: 2020-09-??
+  riboviz-version: 2.0 | COMMIT ???
+  GEO: GSE131176
+  reference: Condensation of Ded1p Promotes a Translational Switch from Housekeeping to Stress Protein Production
+  DOI: https://doi.org/10.1016/j.cell.2020.04.009
+  notes: presumes running from $HOME/riboviz/riboviz 
+
+adapters: ATCGTAGATCGGAAGAGCACACGTCTGAA # Illumina sequencing adapter(s) to remove
+aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
+asite_disp_length_file: data/yeast_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
+buffer: 250 # Length of flanking region around the CDS
+build_indices: true # Build indices for aligner? if TRUE, remake indices from fasta files
+cmd_file: run_riboviz_I-Sc_2020.sh # Bash commands file
+codon_positions_file: data/yeast_codon_pos_i200.RData # Codon positions in each gene
+count_reads: true # Scan input, temporary and output files and produce counts of reads in each FASTQ, SAM, and BAM file processed?
+count_threshold: 64 # Remove genes with a read count below this threshold, when generating statistics and figures
+dataset: I-Sc_2020 # Dataset name
+dir_in: I-Sc_2020/input # Input directory
+dir_index: I-Sc_2020/index # Built indices directory
+dir_logs: I-Sc_2020/logs # Log files directory
+dir_out: I-Sc_2020/output # Output directory
+dir_tmp: I-Sc_2020/tmp # Intermediate files directory
+do_pos_sp_nt_freq: true # Calculate position-specific nucleotide frequency?
+features_file: data/yeast_features.tsv # Features to correlate with ORFs
+fq_files: # fastq files to be processed, relative to dir_in
+  WT_30_1: SRR9052038.fastq.gz  # GSM3765211: WT_30°C_Rep1
+  WT_30_2: SRR9052039.fastq.gz  # GSM3765212: WT_30°C_Rep2
+  WT_40_1: SRR9052040.fastq.gz  # GSM3765213: WT_40°C_Rep1
+  WT_40_2: SRR9052041.fastq.gz  # GSM3765214: WT_40°C_Rep2
+  WT_42_1: SRR9052042.fastq.gz  # GSM3765215: WT_42°C_Rep1
+  WT_42_2: SRR9052043.fastq.gz  # GSM3765216: WT_42°C_Rep2
+  IDR-mut_30_1: SRR9052044.fastq.gz  # GSM3765217: IDRm_30°C_Rep1
+  IDR-mut_30_2: SRR9052045.fastq.gz  # GSM3765218: IDRm_30°C_Rep2
+  IDR-mut_40_1:  .fastq.gz  # 
+  IDR-mut_40_2:  .fastq.gz  # 
+  IDR-mut_42_1:  .fastq.gz  # 
+  IDR-mut_42_2:  .fastq.gz  # 
+
+
+is_riboviz_gff: true # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
+is_test_run: false # Is this a test run
+make_bedgraph: true # Output bedgraph files, as TSV, in addition to h5?
+max_read_length: 50 # Maximum read length in H5 output
+min_read_length: 10 # Minimum read length in H5 output
+num_processes: 8 # Number of processes to parallelize over
+orf_fasta_file: riboviz/example-datasets/tree/master/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.fa # ORF file to align to
+orf_gff_file: riboviz/example-datasets/tree/master/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3 # GFF2/GFF3 file for ORFs
+orf_index_prefix: yeast_CDS_w_250 # ORF index file prefix, relative to dir_index
+primary_id: Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
+rpf: true # Is the dataset an RPF or mRNA dataset?
+rrna_fasta_file: $HOME/riboviz/example-datasets/tree/master/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa # rRNA file to avoid aligning to
+rrna_index_prefix: yeast_rRNA # rRNA index file prefix, relative to dir_index
+secondary_id: null # Secondary gene IDs to access the data (COX1, EFB1, etc.)
+stop_in_cds: false # Are stop codons part of the CDS annotations in GFF?
+t_rna_file: data/yeast_tRNAs.tsv # tRNA estimates
