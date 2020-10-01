@@ -1,0 +1,9 @@
+This file was created as follows: 
+The Drosophila melanogaster 'D_mel_rRNA.fasta' file for rRNA was downloaded from Ribogalaxy Data Library
+ Original Filename: D_mel_rRNA.fasta
+ Downloaded from: https://ribogalaxy.ucc.ie/library_common/download_dataset_from_folder?library_id=03501d7626bd192f&cntrller=library&use_panels=False&id=52e496b945151ee8
+ File Information: https://ribogalaxy.ucc.ie/library_common/ldda_info?library_id=03501d7626bd192f&show_deleted=False&cntrller=library&folder_id=03501d7626bd192f&use_panels=False&id=52e496b945151ee8
+
+The file was then moved to this folder and renamed.
+ Current Filename: Drosophila_melanogaster_fly_rRNA.fasta
+ 
