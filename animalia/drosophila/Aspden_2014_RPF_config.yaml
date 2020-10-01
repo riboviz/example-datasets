@@ -1,0 +1,14 @@
+provenance:
+  yaml authors:
+  - author: Felicity Anderson
+    email: Felicity.Anderson@ed.ac.uk
+  - author: 
+    email: 
+  website:
+  date run: 2020-??-??
+  riboviz-version: 2.0 | COMMIT 0f4e932d8c7de032d66f68048989b182730e7d49
+  GEO: GSE60384
+  reference: Extensive translation of small Open Reading Frames revealed by Poly-Ribo-Seq, by Aspden et al. 2014
+  DOI: https://doi.org/10.7554/eLife.03528
+  notes:  
+
