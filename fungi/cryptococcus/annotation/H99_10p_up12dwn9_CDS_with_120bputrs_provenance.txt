@@ -2,20 +2,21 @@ Transcript sequences:
 
 example-datasets/fungi/cryptococcus/annotation/H99_10p_up12dwn9_CDS_with_120bputrs.fa
 
-Coding sequence locations:
+Coding sequence annotations within transcripts:
 
 example-datasets/fungi/cryptococcus/annotation/H99_10p_up12dwn9_CDS_120bpL_120bpR.gff3
 
 These files hold annotations and ORF sequences.
 
-These files were created as follows:
+These files hold annotations and ORF sequences.
 
-* [ ]
+These files were created by Corinne Maufrais, Institut Pasteur, to reflect updated Cryptococcus neoformans (strain H99) gene annotations reported in the paper:
 
-* [ ]
+> Quantitative global studies reveal differential translational control by start codon context across the fungal kingdom.
+> Wallace, Edward; Maufrais, Corinne ; Sales-Lee, Jade; Tuck, Laura; de Oliveira, Luciana; Feuerbach, Frank; Moyrand, Frédérique; Natarajan, Prashanthi; Madhani, Hiten; Janbon, Guilhem. Nucleic Acids Research, 2020
+> [doi:10.1093/nar/gkaa060](http://dx.doi.org/10.1093/nar/gkaa060)
 
-The sequence and annotation files for the whole approximate Cryptococcus neoformans transcriptome were prepared using: [ ]   
-
-These annotation files were run with H99_rrna.fasta contaminants file.
-
-These were run through Riboviz [2.0] tagged master branch, commit: [ ] 
+They can be found in the supplementary online material at
+[ewallace/CryptoTranscriptome2018/](https://github.com/ewallace/CryptoTranscriptome2018/), or with a permanent record at zenodo:
+[doi: 10.5281/zenodo.3627875](https://doi.org/10.5281/zenodo.3627875)
+   
