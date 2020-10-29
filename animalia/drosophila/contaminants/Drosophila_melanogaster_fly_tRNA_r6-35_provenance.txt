@@ -1,6 +1,0 @@
-This file was created as follows: 
-The Drosophila melanogaster genome release 'dmel_r6.35' file for tRNA was downloaded from Flybase.net
- Original Filename:dmel-all-tRNA-r6.35.fasta.gz
- Downloaded from: ftp://ftp.flybase.net/releases/FB2020_04/dmel_r6.35/fasta/dmel-all-tRNA-r6.35.fasta.gz
-The file was then unzipped and the fasta file added to this folder and renamed.
- Current Filename: Drosophila_melanogaster_fly_tRNA_r6-35.fasta
