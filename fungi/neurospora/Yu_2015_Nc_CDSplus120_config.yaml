@@ -2,7 +2,7 @@ adapters: AGATCGGAAGAGCACACGTCT
 aligner: hisat2
 asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
 buffer: 120
-build_indices: false
+build_indices: true
 cmd_file: run_riboviz_Yu_2015_Nc.sh
 codon_positions_file: null
 count_reads: true
