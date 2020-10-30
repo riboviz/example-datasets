@@ -1,14 +1,12 @@
-Transcript sequences:
+Cryptococcus neoformans strain H99
+
+Approximate transcript sequences, spliced CDS with 120bps on both ends:
 
 example-datasets/fungi/cryptococcus/annotation/H99_10p_up12dwn9_CDS_with_120bputrs.fa
 
-Coding sequence annotations within transcripts:
+Coding sequence annotations within approximate transcripts:
 
 example-datasets/fungi/cryptococcus/annotation/H99_10p_up12dwn9_CDS_120bpL_120bpR.gff3
-
-These files hold annotations and ORF sequences.
-
-These files hold annotations and ORF sequences.
 
 These files were created by Corinne Maufrais, Institut Pasteur, to reflect updated Cryptococcus neoformans (strain H99) gene annotations reported in the paper:
 
