@@ -1,3 +1,15 @@
+provenance:
+  yaml authors:
+  - author: Edward W. J. Wallace
+    email: edward.wallace@ed.ac.uk
+website:
+  date run: 2020-11-06
+  riboviz-version: 2.0 | COMMIT d8215697a5fca37df51fd2b71af51e211ac213d2
+  GEO: GSM1825740
+  reference: Codon Usage Influences the Local Rate of Translation Elongation to Regulate Co-translational Protein Folding., Yu et al. 2015
+  DOI: https://doi.org/10.1016/j.molcel.2015.07.018
+  notes: Presumes example-datasets folder structure is held within $HOME/riboviz and will need to create folder called Yu_2015_Nc/input to place the .fastq files in, while output and other folders will be created in Yu_2015_Nc/ by the riboviz workflow.
+
 adapters: AGATCGGAAGAGCACACGTCT
 aligner: hisat2
 asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
@@ -29,7 +41,7 @@ make_bedgraph: true
 max_read_length: 50
 min_read_length: 10
 multiplex_fq_files: null
-num_processes: 8
+num_processes: 2
 orf_fasta_file: ../../riboviz/example-datasets/fungi/neurospora/annotation/NC12_CDS_with_120bputrs.fa
 orf_gff_file:  ../../riboviz/example-datasets/fungi/neurospora/annotation/NC12_CDS_120bpL_120bpR.gff3
 orf_index_prefix: NC12_CDS_with_120bputrs
