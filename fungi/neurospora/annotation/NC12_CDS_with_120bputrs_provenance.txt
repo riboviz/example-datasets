@@ -1,0 +1,17 @@
+Neurospora crassa strain NC12
+
+Transcript sequences:
+
+example-datasets/fungi/neurospora/annotation/NC12_CDS_with_120bputrs.fa
+
+Coding sequence annotations within transcripts:
+
+example-datasets/fungi/neurospora/annotation/NC12_CDS_120bpL_120bpR.gff3
+
+These files were created by Corinne Maufrais, Institut Pasteur, in 2018, to include 120bps of genomic sequence both sides of the CDS.
+Beware UTR introns - these are probably not correctly annotated or spliced out.
+CDS and genomic data from strain NC12 were downloaded from Ensembl fungi, http://fungi.ensembl.org/Neurospora_crassa/Info/Index
+
+The genome sequence of the filamentous fungus Neurospora crassa.
+Galagan JE, Calvo SE, Borkovich KA, Selker EU, Read ND, Jaffe D, FitzHugh W, Ma LJ, Smirnov S, Purcell S et al. 2003. Nature. 422:859-868.
+   

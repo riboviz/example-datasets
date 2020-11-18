@@ -1,0 +1,18 @@
+Approximate transcript sequences, spliced CDS with 120bps on both ends:
+
+example-datasets/fungi/cryptococcus/annotation/JEC21_10p_up12dwn9_CDS_with_120bputrs.fa
+
+Coding sequence annotations within approximate transcripts:
+
+example-datasets/fungi/cryptococcus/annotation/JEC21_10p_up12dwn9_CDS_120bpL_120bpR.gff3
+
+These files were created by Corinne Maufrais, Institut Pasteur, to reflect updated Cryptococcus deneoformans (strain JEC21) gene annotations reported in the paper:
+
+> Quantitative global studies reveal differential translational control by start codon context across the fungal kingdom.
+> Wallace, Edward; Maufrais, Corinne ; Sales-Lee, Jade; Tuck, Laura; de Oliveira, Luciana; Feuerbach, Frank; Moyrand, Frédérique; Natarajan, Prashanthi; Madhani, Hiten; Janbon, Guilhem. Nucleic Acids Research, 2020
+> [doi:10.1093/nar/gkaa060](http://dx.doi.org/10.1093/nar/gkaa060)
+
+They can be found in the supplementary online material at
+[ewallace/CryptoTranscriptome2018/](https://github.com/ewallace/CryptoTranscriptome2018/), or with a permanent record at zenodo:
+[doi: 10.5281/zenodo.3627875](https://doi.org/10.5281/zenodo.3627875)
+   
