@@ -33,7 +33,8 @@ do_pos_sp_nt_freq: FALSE # Calculate position-specific nucleotide frequency?
 extract_umis: FALSE # Extract UMIs if TRUE
 features_file: NULL # Features to correlate with ORFs
 fq_files: # fastq files to be processed
-  SmlPolysmFtpt: SRR1548656.fastq.gz  # GSM1477470: small polysome footprint
+ subsampledSmlPolysmFtpt: SRR1548656_100k_reads_subsampled.fastq 
+ #SmlPolysmFtpt: SRR1548656.fastq.gz  # GSM1477470: small polysome footprint
 group_umis: FALSE # Summarise UMI groups before and after deduplication, if TRUE
 is_riboviz_gff: TRUE # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
 is_test_run: FALSE # Is this a test run
