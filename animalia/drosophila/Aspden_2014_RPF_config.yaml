@@ -12,7 +12,7 @@ provenance:
   DOI: https://doi.org/10.7554/eLife.03528
   notes:  
 
-adapters: #########  # Illumina sequencing adapter(s) to remove
+adapters: CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC # Illumina sequencing adapter(s) to remove
 aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
 asite_disp_length_file: NULL # Table of fixed A-site positions by read length
 buffer: ####### 120 # Length of flanking region around the CDS
@@ -33,7 +33,8 @@ do_pos_sp_nt_freq: FALSE # Calculate position-specific nucleotide frequency?
 extract_umis: FALSE # Extract UMIs if TRUE
 features_file: NULL # Features to correlate with ORFs
 fq_files: # fastq files to be processed
-  SmlPolysmFtpt: SRR1548656.fastq.gz  # GSM1477470: small polysome footprint
+ subsampledSmlPolysmFtpt: SRR1548656_100k_reads_subsampled.fastq 
+ #SmlPolysmFtpt: SRR1548656.fastq.gz  # GSM1477470: small polysome footprint
 group_umis: FALSE # Summarise UMI groups before and after deduplication, if TRUE
 is_riboviz_gff: TRUE # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
 is_test_run: FALSE # Is this a test run
@@ -42,12 +43,12 @@ max_read_length: 50 # Maximum read length in H5 output
 min_read_length: 10 # Minimum read length in H5 output
 multiplex_fq_files: NULL # Multiplexed fastq files to be processed, relative to dir_in
 num_processes: 16 # Number of processes to parallelize over
-orf_fasta_file: ######## ../../riboviz/example-datasets/animalia/drosophila/annotation/ ########  # ORF file to align to
-orf_gff_file: ######## ../../riboviz/example-datasets/animalia/drosophila/annotation ########  # GFF2/GFF3 file for ORFs
+orf_fasta_file: ../../riboviz/example-datasets/animalia/drosophila/annotation/dmel-all-CDS-r6.35.fasta # ORF file to align to
+orf_gff_file: ../../riboviz/example-datasets/animalia/drosophila/annotation/dmel-all-r6.35.gff # GFF2/GFF3 file for ORFs
 orf_index_prefix: ##########   # ORF index file prefix, relative to dir_index
 primary_id: Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
 rpf: TRUE # Is the dataset an RPF or mRNA dataset?
-rrna_fasta_file: ../../riboviz/example-datasets/animalia/drosophila/contaminants/Drosophila_melanogaster_fly_tRNA_r6-35.fasta # rRNA file to avoid aligning to
+rrna_fasta_file: ../../riboviz/example-datasets/animalia/drosophila/contaminants/Drosophila_melanogaster_fly_rRNA_tRNA.fasta # rRNA file to avoid aligning to
 rrna_index_prefix: A-Dm_2014_rRNA # rRNA index file prefix, relative to dir_index
 sample_sheet: NULL # Sample sheet, TSV file with, at least, SampleID and TagRead (barcode) columns
 secondary_id: NULL # Secondary gene IDs to access the data (COX1, EFB1, etc.)
