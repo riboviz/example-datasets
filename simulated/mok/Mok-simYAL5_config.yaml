@@ -4,7 +4,7 @@ provenance:
     email: Edward.Wallace@ed.ac.uk
   website:
   date run: 2021-01-12
-  riboviz-version: 2.0 
+  riboviz-version: 2.0 | 8e61429
   GEO: null
   reference: simRiboSeq, https://github.com/amandamok/simRiboSeq/, Amanda Mok 2021, commit 48c9e2d
   DOI: null
