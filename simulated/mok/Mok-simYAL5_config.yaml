@@ -1,0 +1,54 @@
+provenance:
+  yaml authors:
+  - author: Edward Wallace
+    email: Edward.Wallace@ed.ac.uk
+  website:
+  date run: 2021-01-12
+  riboviz-version: 2.0 | 8e61429
+  GEO: null
+  reference: simRiboSeq, https://github.com/amandamok/simRiboSeq/, Amanda Mok 2021, commit 48c9e2d
+  DOI: null
+  notes:  Simulated data from Amanda Mok, January 2021
+
+adapters: CTGTAGGCACCATCAAT # Illumina sequencing adapter(s) to remove
+aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
+asite_disp_length_file: data/yeast_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
+buffer: 250 # Length of flanking region around the CDS
+build_indices: true # Build indices for aligner? if TRUE, remake indices from fasta files
+cmd_file: run_riboviz_Mok-simYAL5 # Bash commands file
+codon_positions_file: data/yeast_codon_pos_i200.RData # Codon positions in each gene
+count_reads: true # Scan input, temporary and output files and produce counts of reads in each FASTQ, SAM, and BAM file processed?
+count_threshold: 64 # Remove genes with a read count below this threshold, when generating statistics and figures
+dataset: Mok-simYAL5 # Dataset name
+dedup_stats: FALSE # Output UMI deduplication statistics?
+dedup_umis: FALSE # Extract UMIs and deduplicate reads if TRUE
+dir_in: Mok-simYAL5/input # Input directory
+dir_index: Mok-simYAL5/index # Built indices directory
+dir_logs: Mok-simYAL5/logs # Log files directory
+dir_out: Mok-simYAL5/output # Output directory
+dir_tmp: Mok-simYAL5/tmp # Intermediate files directory
+do_pos_sp_nt_freq: true # Calculate position-specific nucleotide frequency?
+extract_umis: FALSE # Extract UMIs if TRUE
+features_file: null # Features to correlate with ORFs
+fq_files: # fastq files to be processed, relative to dir_in
+  A: simRiboviz.fq.gz
+group_umis: FALSE # Summarise UMI groups before and after deduplication, if TRUE
+is_riboviz_gff: true # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
+is_test_run: false # Is this a test run
+make_bedgraph: true # Output bedgraph files, as TSV, in addition to h5?
+max_read_length: 50 # Maximum read length in H5 output
+min_read_length: 10 # Minimum read length in H5 output
+multiplex_fq_files: null # Multiplexed fastq files to be processed, relative to dir_in
+num_processes: 1 # Number of processes to parallelize over
+orf_fasta_file: ../../riboviz/example-datasets/simulated/mok/annotation/Scer_YAL_5genes_w_250utrs.fa # ORF file to align to
+orf_gff_file: ../../riboviz/example-datasets/simulated/mok/annotation/Scer_YAL_5genes_w_250utrs.gff3 # GFF2/GFF3 file for ORFs
+orf_index_prefix: Scer_YAL_5genes # ORF index file prefix, relative to dir_index
+primary_id: Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
+rpf: true # Is the dataset an RPF or mRNA dataset?
+rrna_fasta_file: ../../riboviz/example-datasets/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa # rRNA file to avoid aligning to
+rrna_index_prefix: yeast_rRNA # rRNA index file prefix, relative to dir_index
+sample_sheet: null # Sample sheet, TSV file with, at least, SampleID and TagRead (barcode) columns
+secondary_id: null # Secondary gene IDs to access the data (COX1, EFB1, etc.)
+stop_in_cds: false # Are stop codons part of the CDS annotations in GFF?
+t_rna_file: data/yeast_tRNAs.tsv # tRNA estimates
+umi_regexp: null # UMI-tools-compliant regular expression to extract UMIs
