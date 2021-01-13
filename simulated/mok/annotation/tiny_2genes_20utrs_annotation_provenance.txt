@@ -1,0 +1,17 @@
+# `tiny_2genes_20utrs_annotation_provenance.txt`
+
+Transcript sequences:
+
+`tiny_2genes_20utrs.fa`
+
+Coding sequence locations:
+
+`tiny_2genes_20utrs.gff3`
+
+These annotations were created by hand by Edward Wallace on 13/01/2021.
+
+There are two genes:
+* MAT, translates to `MAT`
+* MIKE, translates to `MIKE`
+
+The goal is to have a tiny transcriptome that can be used to simulate data for unit tests of riboviz functions, where the small size (few genes, short length) makes it easier to see if they are behaving correctly.
