@@ -1,0 +1,9 @@
+##gff-version 3
+##ewallace - Edward.Wallace@ed.ac.uk
+##date 2021-01-13
+MAT	ewallace	UTR5	1	20	.	+	.	Name=MAT_UTR5
+MAT	ewallace	CDS	21	32	.	+	.	Name=MAT_CDS
+MAT	ewallace	UTR3	33	52	.	+	.	Name=MAT_UTR3
+MIKE	ewallace	UTR5	1	20	.	+	.	Name=MIKE_UTR5
+MIKE	ewallace	CDS	21	35	.	+	.	Name=MIKE_CDS
+MIKE	ewallace	UTR3	36	55	.	+	.	Name=MIKE_UTR3
