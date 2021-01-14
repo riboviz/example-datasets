@@ -7,7 +7,7 @@ provenance:
   - author: Sophie Winterbourne
     email: ...
   website:
-  date run: 2021-01-12
+  date run: 2021-01-14
   riboviz-version: 2.0 | COMMIT e9bdce6764f6fa3f8b2d3e5c6f2eff9216083ca9
   GEO: GSE75897
   reference: Improved ribosome-footprint and mRNA measurements provide insights into dynamics and regulation of yeast translation, Weinberg et al. 2016
@@ -23,19 +23,19 @@ cmd_file: run_riboviz_W-Sc_2016.sh # Bash commands file
 codon_positions_file: data/yeast_codon_pos_i200.RData # Codon positions in each gene
 count_reads: true # Scan input, temporary and output files and produce counts of reads in each FASTQ, SAM, and BAM file processed?
 count_threshold: 64 # Remove genes with a read count below this threshold, when generating statistics and figures
-dataset: W-Sc_2016 # Dataset name
+dataset: W_Sc_2016 # Dataset name
 dedup_stats: TRUE # Output UMI deduplication statistics?
 dedup_umis: TRUE # Extract UMIs and deduplicate reads if TRUE
-dir_in: W-Sc_2016/input # Input directory
-dir_index: W-Sc_2016/index # Built indices directory
-dir_logs: W-Sc_2016/logs # Log files directory
-dir_out: W-Sc_2016/output # Output directory
-dir_tmp: W-Sc_2016/tmp # Intermediate files directory
+dir_in: W_Sc_2016/input # Input directory
+dir_index: W_Sc_2016/index # Built indices directory
+dir_logs: W_Sc_2016/logs # Log files directory
+dir_out: W_Sc_2016/output # Output directory
+dir_tmp: W_Sc_2016/tmp # Intermediate files directory
 do_pos_sp_nt_freq: true # Calculate position-specific nucleotide frequency?
 extract_umis: TRUE # Extract UMIs if TRUE
 features_file: data/yeast_features.tsv # Features to correlate with ORFs
 fq_files: # fastq files to be processed, relative to dir_in
-  Cerevisiae_RPF: SRR1049521.fastq.qz
+  Cerevisiae_RPF: SRR1049521.fastq.gz
 group_umis: TRUE # Summarise UMI groups before and after deduplication, if TRUE
 is_riboviz_gff: true # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
 is_test_run: false # Is this a test run
