@@ -3,12 +3,12 @@ provenance:
   - author: Edward Wallace
     email: Edward.Wallace@ed.ac.uk
   website:
-  date run: 2021-01-13
-  riboviz-version: 2.0 | 8e61429
+  date run: 2021-01-15
+  riboviz-version: 2.0 | fad6141
   GEO: null
   reference: simRiboSeq, https://github.com/amandamok/simRiboSeq/, Amanda Mok 2021, commit 8367709
   DOI: null
-  notes:  Simulated data from Amanda Mok, January 2021
+  notes:  Tiny simulated data from Amanda Mok, January 2021
 
 adapters: CTGTAGGCACCATCAAT # Illumina sequencing adapter(s) to remove
 aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
