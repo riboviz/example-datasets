@@ -37,8 +37,8 @@ max_read_length: 50 # Maximum read length in H5 output
 min_read_length: 10 # Minimum read length in H5 output
 multiplex_fq_files: null # Multiplexed fastq files to be processed, relative to dir_in
 num_processes: 1 # Number of processes to parallelize over
-orf_fasta_file: ../../riboviz/example-datasets/bacteria/ecoli/annotations/ecoli_K12_CDS_w_25utrs.fa # ORF file to align to
-orf_gff_file: ../../riboviz/example-datasets/bacteria/ecoli/annotations/ecoli_K12_CDS_w_25utrs.gff3 # GFF2/GFF3 file for ORFs
+orf_fasta_file: ../../riboviz/example-datasets/bacteria/ecoli/annotation/ecoli_K12_CDS_w_25utrs.fa # ORF file to align to
+orf_gff_file: ../../riboviz/example-datasets/bacteria/ecoli/annotation/ecoli_K12_CDS_w_25utrs.gff3 # GFF2/GFF3 file for ORFs
 orf_index_prefix: ecoli_25_ # ORF index file prefix, relative to dir_index
 primary_id: Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
 rpf: TRUE # Is the dataset an RPF or mRNA dataset?
@@ -46,5 +46,5 @@ rrna_fasta_file: ../../riboviz/example-datasets/bacteria/ecoli/contaminants/ecol
 rrna_index_prefix: rRNA # rRNA index file prefix, relative to dir_index
 sample_sheet: null # Sample sheet, TSV file with, at least, SampleID and TagRead (barcode) columns
 secondary_id: NULL # Secondary gene IDs to access the data (COX1, EFB1, etc.)
-stop_in_cds: FALSE # Are stop codons part of the CDS annotations in GFF?
+stop_in_cds: FALSE # Are stop codons part of the CDS annotation in GFF?
 umi_regexp: null # UMI-tools-compliant regular expression to extract UMIs
