@@ -1,0 +1,53 @@
+provenance:
+  yaml authors:
+  - author: Alexander Cope
+    email: alexander.cope@rutgers.edu
+  website:
+  date run: 2020-09-30
+  riboviz-version: 2.0 | COMMIT 346ee0f2e72e557b521d2f2b0b49d9af37904352
+  GEO: GSE89011
+  reference: Nat1 promotes translation of specific proteins that induce differentiation of mouse embryonic stem cells, Sugiyama et al. 2017
+  DOI: https://doi.org/10.1073/pnas.1617234114
+  notes: CDS uses major isoform for each gene based on the Appris database. File paths assume you are currently in the riboviz directory.
+
+
+adapters: AGATCGGAAGAGCACACGTCT # Illumina sequencing adapter(s) to remove
+aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
+buffer: 25
+asite_disp_length_file: data/yeast_standard_asite_disp_length.txt # Table of fixed A-site positions by read length. Eukaryote, use same as yeast
+build_indices: TRUE # Build indices for aligner? if TRUE, remake indices from fasta files
+cmd_file: mouse_riboviz_vignette.sh # Bash commands file
+count_reads: TRUE # Scan input, temporary and output files and produce counts of reads in each FASTQ, SAM, and BAM file processed?
+count_threshold: 64 # Remove genes with a read count below this threshold, when generating statistics and figures
+dataset: vignette # Dataset name
+dedup_stats: FALSE # Output UMI deduplication statistics?
+dedup_umis: FALSE # Extract UMIs and deduplicate reads if TRUE
+dir_index: Mouse_Sugiyama_etal_2017/index # Built indices directory
+dir_in: Mouse_Sugiyama_etal_2017/input # Input directory
+dir_logs: Mouse_Sugiyama_etal_2017/logs # Log files directory
+dir_out: Mouse_Sugiyama_etal_2017/output # Output directory
+dir_tmp: Mouse_Sugiyama_etal_2017/tmp # Intermediate files directory
+do_pos_sp_nt_freq: TRUE # Calculate position-specific nucleotide frequency?
+extract_umis: FALSE # Extract UMIs if TRUE
+group_umis: FALSE # Summarise UMI groups before and after deduplication, if TRUE
+is_riboviz_gff: TRUE # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
+is_test_run: FALSE # Is this a test run
+make_bedgraph: TRUE # Output bedgraph files, as TSV, in addition to h5?
+max_read_length: 50 # Maximum read length in H5 output
+min_read_length: 10 # Minimum read length in H5 output
+fq_files:
+  WT_RPF_1: SRR4436398.fastq.gz
+  WT_RPF_2: SRR4436400.fastq.gz
+  NAT1_plus_minus_A7_1: SRR4436402.fastq.gz
+num_processes: 12 # Number of processes to parallelize over
+orf_fasta_file: ../example-datasets/animalia/mouse/annotations/mouse_appris_cdna.fa # ORF file to align to
+orf_gff_file: ../example-datasets/animalia/mouse/annotations/mouse_appris_cdna.gff3 # GFF2/GFF3 file for ORFs
+orf_index_prefix: mouse_CDS # ORF index file prefix, relative to dir_index
+primary_id: Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
+rpf: TRUE # Is the dataset an RPF or mRNA dataset?
+rrna_fasta_file: ../example-datasets/animalia/mouse/contaminants/mouse_rrna.fa # rRNA file to avoid aligning to
+rrna_index_prefix: mouse_rRNA # rRNA index file prefix, relative to dir_index
+sample_sheet: null # Sample sheet, TSV file with, at least, SampleID and TagRead (barcode) columns
+secondary_id: NULL # Secondary gene IDs to access the data (COX1, EFB1, etc.)
+stop_in_cds: FALSE # Are stop codons part of the CDS annotations in GFF?
+umi_regexp: null # UMI-tools-compliant regular expression to extract UMIs
