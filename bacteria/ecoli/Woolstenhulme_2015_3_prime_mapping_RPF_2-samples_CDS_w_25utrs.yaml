@@ -5,6 +5,9 @@ provenance:
 website:
   date run: 2020-10-27
   riboviz-version: 2.0.beta | COMMIT ffb53643ccfdf78aa64a1627d2dd8a9c092df632
+  GEO: GSE64488
+  reference: High Precision Analysis of Translational Pausing by Ribosome Profiling in Bacteria Lacking EFP, Woolstenhulme et. al. 2015
+  DOI: 10.1016/j.celrep.2015.03.014
   notes: RiboSeq for E. coli K12 MG1655 strain. Successfully run using Python pipeline. Assign A-site using 3'-end mapping strategy.
 
 adapters: CTGTAGGCACCATCAAT # Illumina sequencing adapter(s) to remove
@@ -28,7 +31,7 @@ extract_umis: FALSE # Extract UMIs if TRUE
 fq_files: # fastq files to be processed, relative to dir_in
   MOPS1: SRR1734430.sra.fastq.gz
   MOPS2: SRR1734431.sra.fastq.gz
-num_processes: 16
+num_processes: 16 # Number of processes to parallelize over
 group_umis: FALSE # Summarise UMI groups before and after deduplication, if TRUE
 is_riboviz_gff: TRUE # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
 is_test_run: FALSE # Is this a test run
@@ -36,7 +39,6 @@ make_bedgraph: TRUE # Output bedgraph files, as TSV, in addition to h5?
 max_read_length: 50 # Maximum read length in H5 output
 min_read_length: 10 # Minimum read length in H5 output
 multiplex_fq_files: null # Multiplexed fastq files to be processed, relative to dir_in
-num_processes: 1 # Number of processes to parallelize over
 orf_fasta_file: ../../riboviz/example-datasets/bacteria/ecoli/annotation/ecoli_K12_CDS_w_25utrs.fa # ORF file to align to
 orf_gff_file: ../../riboviz/example-datasets/bacteria/ecoli/annotation/ecoli_K12_CDS_w_25utrs.gff3 # GFF2/GFF3 file for ORFs
 orf_index_prefix: ecoli_25_ # ORF index file prefix, relative to dir_index
