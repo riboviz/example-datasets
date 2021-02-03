@@ -12,7 +12,7 @@ website:
 
 adapters: AGATCGGAAGAGCACACGTCTGAA
 aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
-asite_disp_length_file: /data/ecoli_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
+asite_disp_length_file: data/ecoli_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
 buffer: 25 # Length of flanking region around the CDS
 build_indices: TRUE # Build indices for aligner? if TRUE, remake indices from fasta files
 cmd_file: run_riboviz_F-Ec.sh # Bash commands file
