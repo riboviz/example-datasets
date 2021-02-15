@@ -17,3 +17,8 @@ Cryptococcus neoformans and Cryptococcus deneoformans
 Neurospora crassa
 
 # saccharomyces
+
+
+# schizosaccharomyces 
+
+Schizosaccharomyces pombe 
