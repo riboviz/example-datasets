@@ -6,7 +6,7 @@ website:
   date run: 2020-10-13
   riboviz-version: 2.0.beta | COMMIT 03a4f13b2d833b8650ebf33bdce81fe2639eb9cf
   notes: >
-    Data is currently unpublished (Favate et. al. 2020). RiboSeq for E. coli strains from LTEE experiments. Successfully run using Python and Nextflow pipelines. Map A-site using 3'-end mapping strategy.
+    Data is available under the GEO ascension GSE164308 and in the preprint at https://doi.org/10.1101/2021.01.12.426406. RiboSeq for E. coli strains from LTEE experiments. Successfully run using Python and Nextflow pipelines. Map A-site using 3'-end mapping strategy.
 
 adapters: AGATCGGAAGAGCACACGTCTGAA
 aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
