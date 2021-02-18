@@ -11,3 +11,10 @@ These might be used to test features of the pipeline.
 Since simulated datasets are not arranged by kingdom and genus, we cannot organise them phylogenetically
 
 Please organise directories `author/datasetinfo`, i.e. by author and then some brief information on the dataset(s), for example `sanchez/stalling_simulation_10genes`.
+
+## mok
+
+Simulated data from Amanda Mok, U.C. Berkeley, @amandamok.
+
+* Mok-simYAL5_config.yaml
+* Mok-tinysim_config.yaml
