@@ -1,0 +1,16 @@
+# `Scer_YAL_5genes_w_250utrs_annotation_provenance.txt`
+
+Transcript sequences:
+
+`Scer_YAL_5genes_w_250utrs.fa`
+
+Coding sequence locations:
+
+`Scer_YAL_5genes_w_250utrs.gff3`
+
+These annotations were created by selecting data from 5 genes (YAL003W, YAL005C, YAL012W, YAL035W, YAL038W), from files in the folder `fungi/saccharomyces/annotation/`
+* `Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.fa`
+* `Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3`
+
+ 
+Provenenance of those files is described in `Saccharomyces_cerevisiae_yeast_CDS_w_250utrs_annotation_provenance.txt`

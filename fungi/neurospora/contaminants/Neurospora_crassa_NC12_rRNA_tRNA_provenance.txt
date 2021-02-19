@@ -1,0 +1,6 @@
+This file was created by Edward Wallace in 2018, ribosomal RNA and tRNA transcripts selected from the genome assembly and annotation of Neurospora crassa strain NC12.
+
+The data were downloaded from Ensembl fungi, http://fungi.ensembl.org/Neurospora_crassa/Info/Index
+
+The genome sequence of the filamentous fungus Neurospora crassa.
+Galagan JE, Calvo SE, Borkovich KA, Selker EU, Read ND, Jaffe D, FitzHugh W, Ma LJ, Smirnov S, Purcell S et al. 2003. Nature. 422:859-868.

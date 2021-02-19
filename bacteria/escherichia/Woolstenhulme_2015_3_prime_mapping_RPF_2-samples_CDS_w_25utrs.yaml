@@ -1,0 +1,50 @@
+provenance:
+  authors:
+  - author: Alexander Cope
+    email: alexander.cope@rutgers.edu
+website:
+  date run: 2020-10-27
+  riboviz-version: 2.0.beta | COMMIT ffb53643ccfdf78aa64a1627d2dd8a9c092df632
+  notes: RiboSeq for E. coli K12 MG1655 strain. Successfully run using Python pipeline. Assign A-site using 3'-end mapping strategy.
+
+adapters: CTGTAGGCACCATCAAT # Illumina sequencing adapter(s) to remove
+aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
+asite_disp_length_file: /data/Escherichia_coli_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
+buffer: 25 # Length of flanking region around the CDS
+build_indices: TRUE # Build indices for aligner? if TRUE, remake indices from fasta files
+cmd_file: woolstenhulme_mops_riboviz_vignette.sh # Bash commands file
+count_reads: TRUE # Scan input, temporary and output files and produce counts of reads in each FASTQ, SAM, and BAM file processed?
+count_threshold: 64 # Remove genes with a read count below this threshold, when generating statistics and figures
+dedup_stats: FALSE # Output UMI deduplication statistics?
+dedup_umis: FALSE # Extract UMIs and deduplicate reads if TRUE
+dataset: W-Ec_2015 # Dataset name
+dir_index: W-Ec_2015/index # Built indices directory
+dir_in: W-Ec_2015/input # Input directory
+dir_logs: W-Ec_2015/logs # Log files directory
+dir_out: W-Ec_2015/output # Output directory
+dir_tmp: W-Ec_2015/tmp # Intermediate files directory
+do_pos_sp_nt_freq: TRUE # Calculate position-specific nucleotide frequency?
+extract_umis: FALSE # Extract UMIs if TRUE
+fq_files: # fastq files to be processed, relative to dir_in
+  MOPS1: SRR1734430.sra.fastq.gz
+  MOPS2: SRR1734431.sra.fastq.gz
+num_processes: 16
+group_umis: FALSE # Summarise UMI groups before and after deduplication, if TRUE
+is_riboviz_gff: TRUE # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
+is_test_run: FALSE # Is this a test run
+make_bedgraph: TRUE # Output bedgraph files, as TSV, in addition to h5?
+max_read_length: 50 # Maximum read length in H5 output
+min_read_length: 10 # Minimum read length in H5 output
+multiplex_fq_files: null # Multiplexed fastq files to be processed, relative to dir_in
+num_processes: 1 # Number of processes to parallelize over
+orf_fasta_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_K12_CDS_w_25utrs.fa # ORF file to align to
+orf_gff_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_K12_CDS_w_25utrs.gff3 # GFF2/GFF3 file for ORFs
+orf_index_prefix: ecoli_25_ # ORF index file prefix, relative to dir_index
+primary_id: Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
+rpf: TRUE # Is the dataset an RPF or mRNA dataset?
+rrna_fasta_file: ../../riboviz/example-datasets/bacteria/escherichia/contaminants/Escherichia_coli_rrna_trna.fa # rRNA file to avoid aligning to
+rrna_index_prefix: rRNA # rRNA index file prefix, relative to dir_index
+sample_sheet: null # Sample sheet, TSV file with, at least, SampleID and TagRead (barcode) columns
+secondary_id: NULL # Secondary gene IDs to access the data (COX1, EFB1, etc.)
+stop_in_cds: FALSE # Are stop codons part of the CDS annotations in GFF?
+umi_regexp: null # UMI-tools-compliant regular expression to extract UMIs

@@ -1,0 +1,8 @@
+This file was created by Edward Wallace in 2018, ribosomal RNA transcripts selected from the genome assembly and annotation of Cryptococcus deneoformans strain JEC21.
+The genome of Cryptococcus deneoformans JEC21 (serotype D) was sequenced by TIGR. The data (genome assembly and gene predictions) were obtained from GenBank (record PRJNA10698).
+
+Citation:
+
+Loftus BJ, Fung E, Roncaglia P, Rowley D, Amedeo P, Bruno D, Vamathevan J, Miranda M, Anderson IJ, Fraser JA, Allen JE, Bosdet IE, Brent MR, Chiu R, Doering TL, Donlin MJ, D'Souza CA, Fox DS, Grinberg V, Fu J, Fukushima M, Haas BJ, Huang JC, Janbon G, Jones SJ, Koo HL, Krzywinski MI, Kwon-Chung JK, Lengeler KB, Maiti R, Marra MA, Marra RE, Mathewson CA, Mitchell TG, Pertea M, Riggs FR, Salzberg SL, Schein JE, Shvartsbeyn A, Shin H, Shumway M, Specht CA, Suh BB, Tenney A, Utterback TR, Wickes BL, Wortman JR, Wye NH, Kronstad JW, Lodge JK, Heitman J, Davis RW, Fraser CM, Hyman RW
+The genome of the basidiomycetous yeast and human pathogen Cryptococcus neoformans.
+Science. 2005 Feb 25;307(5713):1321-4. doi: 10.1126/science.1103773
