@@ -42,13 +42,13 @@ max_read_length: 50
 min_read_length: 10
 multiplex_fq_files: null
 num_processes: 8
-orf_fasta_file: annotation/Candida_albicans_CDS_with_120utrs.fa
-orf_gff_file: annotation/Candida_albicans_CDS_with_120utrs.gff3
+orf_fasta_file: ../../riboviz/example-datasets/fungi/candida/annotation/Candida_albicans_CDS_with_120utrs.fa
+orf_gff_file: ../../riboviz/example-datasets/fungi/candida/annotation/Candida_albicans_CDS_with_120utrs.gff3
 orf_index_prefix: CAlbi_CDS_with_120utrs
 primary_id: Name
 publish_index_tmp: false
 rpf: true
-rrna_fasta_file: contaminants/Candida_albicans_rRNA_tRNA.fa
+rrna_fasta_file: ../../riboviz/example-datasets/fungi/candida/contaminants/Candida_albicans_rRNA_tRNA.fa
 rrna_index_prefix: Calbicans_rRNA_tRNA
 sample_sheet: null
 secondary_id: null
