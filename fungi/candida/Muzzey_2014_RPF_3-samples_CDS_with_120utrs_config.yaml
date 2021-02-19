@@ -1,4 +1,3 @@
-
 provenance:
   authors:
   - author: Felicity Anderson
@@ -11,40 +10,49 @@ provenance:
   DOI: https://doi.org/10.1101/gr.166322.113
   notes: Candida albicans RPF dataset (2 bio reps, one with 2 technical reps)
 
-adapters: CTGTAGGCACCATCAAT # Illumina sequencing adapter(s) to remove
-aligner: hisat2 # short read aligner to use. Currently only hisat2 works
-asite_disp_length_file: NULL # Table of fixed A-site positions by read length
-buffer: 120 # Length of flanking region around the CDS
-build_indices: TRUE # build indices for aligner? if TRUE, remake indices from fasta files
-cmd_file: run_riboviz_M-Ca_2014.sh # File to log bash commands
-codon_positions_file: NULL  # Codon positions in each gene
-count_reads: TRUE # Scan input, temporary and output files and produce counts of reads in each FASTQ, SAM, and BAM file processed?
-count_threshold: 64 # Remove genes with a read count below this threshold, when generating statistics and figures
-dataset: M-Ca_2014 # Name of the dataset
-dir_index: M-Ca_2014/index # directory to put built indices in
-dir_in: M-Ca_2014/input # input directory
-dir_logs: M-Ca_2014/logs # log files directory
-dir_out: M-Ca_2014/output # output directory
-dir_tmp: M-Ca_2014/tmp # tmp directory for intermediate files
-do_pos_sp_nt_freq: FALSE # Do calculate position-specific nucleotide freqeuency
-features_file: NULL # file of features to correlate with ORFs
-fq_files: # fastq files to be processed, relative to dir_in
-  WT_A: SRR1027794.fastq.gz # ribosome profiling, bio rep A techrep 1
-  WT_A2: SRR1027795.fastq.gz # ribosome profiling, bio rep A techrep 2
-  WT_B: SRR1027796.fastq.gz # ribosome profiling, bio rep B
-is_riboviz_gff: TRUE # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
-is_test_run: FALSE # Is this a test run
-make_bedgraph: TRUE # output bedgraph.gzs of data, in addition to h5?
-max_read_length: 50 # Maximum read length in H5 output
-min_read_length: 10 # Minimum read length in H5 output
-num_processes: 8 # number of processes to parallelize over
-orf_fasta_file: annotation/Candida_albicans_CDS_with_120utrs.fa # orf file to align to
-orf_gff_file:  annotation/Candida_albicans_CDS_with_120utrs.gff3 # GFF2/GFF3 file for ORFs
-orf_index_prefix: CAlbi_CDS_with_120utrs # ORF index file prefix, relative to dir_index
-primary_id:  Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
-rpf: TRUE # Is the dataset an RPF or mRNA dataset?
-rrna_fasta_file: contaminants/Candida_albicans_rRNA_tRNA.fa # rRNA file to avoid aligning to
-rrna_index_prefix: Calbicans_rRNA_tRNA # rRNA index file prefix, relative to dir_index
-secondary_id: NULL # Secondary gene IDs to access the data (COX1, EFB1, etc.)
-stop_in_cds: TRUE # Are stop codons part of the CDS annotations in GFF?
-t_rna_file: NULL # tRNA estimates
+adapters: CTGTAGGCACCATCAAT
+aligner: hisat2
+asite_disp_length_file: null
+buffer: 120
+build_indices: true
+cmd_file: run_riboviz_M-Ca_2014.sh
+codon_positions_file: null
+count_reads: true
+count_threshold: 64
+dataset: M-Ca_2014
+dedup_stats: false
+dedup_umis: false
+dir_in: M-Ca_2014/input
+dir_index: M-Ca_2014/index
+dir_logs: M-Ca_2014/logs
+dir_out: M-Ca_2014/output
+dir_tmp: M-Ca_2014/tmp
+do_pos_sp_nt_freq: false
+extract_umis: false
+features_file: null
+fq_files:
+  WT_A: SRR1027794.fastq.gz
+  WT_A2: SRR1027795.fastq.gz
+  WT_B: SRR1027796.fastq.gz
+group_umis: false
+is_riboviz_gff: true
+is_test_run: false
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files: null
+num_processes: 8
+orf_fasta_file: annotation/Candida_albicans_CDS_with_120utrs.fa
+orf_gff_file: annotation/Candida_albicans_CDS_with_120utrs.gff3
+orf_index_prefix: CAlbi_CDS_with_120utrs
+primary_id: Name
+publish_index_tmp: false
+rpf: true
+rrna_fasta_file: contaminants/Candida_albicans_rRNA_tRNA.fa
+rrna_index_prefix: Calbicans_rRNA_tRNA
+sample_sheet: null
+secondary_id: null
+stop_in_cds: true
+t_rna_file: null
+trim_5p_mismatches: true
+umi_regexp: null
