@@ -3,18 +3,13 @@ provenance:
   authors:
   - author: Felicity Anderson
     email: Felicity.Anderson@ed.ac.uk
-  - author:
-    email: ...
-website:
+  website:
   date run: 2020-04-28
   riboviz-version: 2.0 | COMMIT
   GEO: GSE52236
-  reference: Extensive and coordinated control of allele-specific expression by both transcription and translation in Candida albicans. Genome Res 2014 Jun;24(6):963-73.
-Muzzey D, Sherlock G, Weissman JS.
+  reference: Extensive and coordinated control of allele-specific expression by both transcription and translation in Candida albicans. Genome Res 2014 Jun;24(6):963-73. Muzzey D, Sherlock G, Weissman JS.
   DOI: https://doi.org/10.1101/gr.166322.113
-  notes: >
-    Candida albicans RPF dataset (2 bio reps, one with 2 technical reps)
-
+  notes: Candida albicans RPF dataset (2 bio reps, one with 2 technical reps)
 
 adapters: CTGTAGGCACCATCAAT # Illumina sequencing adapter(s) to remove
 aligner: hisat2 # short read aligner to use. Currently only hisat2 works
@@ -43,12 +38,12 @@ make_bedgraph: TRUE # output bedgraph.gzs of data, in addition to h5?
 max_read_length: 50 # Maximum read length in H5 output
 min_read_length: 10 # Minimum read length in H5 output
 num_processes: 8 # number of processes to parallelize over
-orf_fasta_file: M-Ca_2014/input/CAlbi_CDS_with_120bputrs.fa # orf file to align to
-orf_gff_file:  M-Ca_2014/input/CAlbi_CDS_120bpL_120bpR.gff3 # GFF2/GFF3 file for ORFs
-orf_index_prefix: CAlbi_CDS_with_120bputrs # ORF index file prefix, relative to dir_index
+orf_fasta_file: annotation/Candida_albicans_CDS_with_120utrs.fa # orf file to align to
+orf_gff_file:  annotation/Candida_albicans_CDS_with_120utrs.gff3 # GFF2/GFF3 file for ORFs
+orf_index_prefix: CAlbi_CDS_with_120utrs # ORF index file prefix, relative to dir_index
 primary_id:  Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
 rpf: TRUE # Is the dataset an RPF or mRNA dataset?
-rrna_fasta_file: M-Ca_2014/input/Calbicans_rRNA_tRNA.fa # rRNA file to avoid aligning to
+rrna_fasta_file: contaminants/Candida_albicans_rRNA_tRNA.fa # rRNA file to avoid aligning to
 rrna_index_prefix: Calbicans_rRNA_tRNA # rRNA index file prefix, relative to dir_index
 secondary_id: NULL # Secondary gene IDs to access the data (COX1, EFB1, etc.)
 stop_in_cds: TRUE # Are stop codons part of the CDS annotations in GFF?
