@@ -2,7 +2,7 @@
 
 Example riboviz workflows from eubacteria.
 
-Within this, please arrange workflows into subfolders by genus (Bacillus, etc) or if more convenient by species (Escherichia coli, etc.)
+Within this, please arrange workflows into subfolders by genus (Bacillus, Escherischia, Mycobacterium, etc).
 
 ## escherichia
  
