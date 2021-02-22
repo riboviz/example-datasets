@@ -10,7 +10,6 @@ provenance:
   DOI: https://doi.org/10.1073/pnas.1617234114
   notes: CDS uses major isoform for each gene based on the Appris database. File paths assume you are currently in the riboviz directory.
 
-
 adapters: AGATCGGAAGAGCACACGTCT # Illumina sequencing adapter(s) to remove
 aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
 buffer: 25
@@ -19,14 +18,14 @@ build_indices: TRUE # Build indices for aligner? if TRUE, remake indices from fa
 cmd_file: mouse_riboviz.sh # Bash commands file
 count_reads: TRUE # Scan input, temporary and output files and produce counts of reads in each FASTQ, SAM, and BAM file processed?
 count_threshold: 64 # Remove genes with a read count below this threshold, when generating statistics and figures
-dataset: vignette # Dataset name
+dataset: S-Mm_2017 # Dataset name
 dedup_stats: FALSE # Output UMI deduplication statistics?
 dedup_umis: FALSE # Extract UMIs and deduplicate reads if TRUE
-dir_index: Mouse_Sugiyama_etal_2017/index # Built indices directory
-dir_in: Mouse_Sugiyama_etal_2017/input # Input directory
-dir_logs: Mouse_Sugiyama_etal_2017/logs # Log files directory
-dir_out: Mouse_Sugiyama_etal_2017/output # Output directory
-dir_tmp: Mouse_Sugiyama_etal_2017/tmp # Intermediate files directory
+dir_index: S-Mm_2017/index # Built indices directory
+dir_in: S-Mm_2017/input # Input directory
+dir_logs: S-Mm_2017/logs # Log files directory
+dir_out: S-Mm_2017/output # Output directory
+dir_tmp: S-Mm_2017/tmp # Intermediate files directory
 do_pos_sp_nt_freq: TRUE # Calculate position-specific nucleotide frequency?
 extract_umis: FALSE # Extract UMIs if TRUE
 group_umis: FALSE # Summarise UMI groups before and after deduplication, if TRUE
@@ -39,7 +38,7 @@ fq_files:
   WT_RPF_1: SRR4436398.fastq.gz
   WT_RPF_2: SRR4436400.fastq.gz
   NAT1_plus_minus_A7_1: SRR4436402.fastq.gz
-num_processes: 12 # Number of processes to parallelize over
+num_processes: 8 # Number of processes to parallelize over
 orf_fasta_file: ../example-datasets/animalia/mus/annotations/mus_appris_cdna.fa # ORF file to align to
 orf_gff_file: ../example-datasets/animalia/mus/annotations/mus_appris_cdna.gff3 # GFF2/GFF3 file for ORFs
 orf_index_prefix: mus_CDS # ORF index file prefix, relative to dir_index
