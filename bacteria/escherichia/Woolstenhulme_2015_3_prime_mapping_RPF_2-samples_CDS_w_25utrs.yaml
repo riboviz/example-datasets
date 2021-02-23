@@ -12,7 +12,11 @@ website:
 
 adapters: CTGTAGGCACCATCAAT # Illumina sequencing adapter(s) to remove
 aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
+<<<<<<< HEAD:bacteria/ecoli/Woolstenhulme_2015_3_prime_mapping_RPF_2-samples_CDS_w_25utrs.yaml
 asite_disp_length_file: data/ecoli_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
+=======
+asite_disp_length_file: /data/Escherichia_coli_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
+>>>>>>> 8c3a312297df8a6b78e6cd044ba00004d160f8eb:bacteria/escherichia/Woolstenhulme_2015_3_prime_mapping_RPF_2-samples_CDS_w_25utrs.yaml
 buffer: 25 # Length of flanking region around the CDS
 build_indices: TRUE # Build indices for aligner? if TRUE, remake indices from fasta files
 cmd_file: woolstenhulme_mops_riboviz_vignette.sh # Bash commands file
@@ -39,12 +43,18 @@ make_bedgraph: TRUE # Output bedgraph files, as TSV, in addition to h5?
 max_read_length: 50 # Maximum read length in H5 output
 min_read_length: 10 # Minimum read length in H5 output
 multiplex_fq_files: null # Multiplexed fastq files to be processed, relative to dir_in
+<<<<<<< HEAD:bacteria/ecoli/Woolstenhulme_2015_3_prime_mapping_RPF_2-samples_CDS_w_25utrs.yaml
 orf_fasta_file: ../../riboviz/example-datasets/bacteria/ecoli/annotation/ecoli_K12_CDS_w_25utrs.fa # ORF file to align to
 orf_gff_file: ../../riboviz/example-datasets/bacteria/ecoli/annotation/ecoli_K12_CDS_w_25utrs.gff3 # GFF2/GFF3 file for ORFs
+=======
+num_processes: 1 # Number of processes to parallelize over
+orf_fasta_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_K12_CDS_w_25utrs.fa # ORF file to align to
+orf_gff_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_K12_CDS_w_25utrs.gff3 # GFF2/GFF3 file for ORFs
+>>>>>>> 8c3a312297df8a6b78e6cd044ba00004d160f8eb:bacteria/escherichia/Woolstenhulme_2015_3_prime_mapping_RPF_2-samples_CDS_w_25utrs.yaml
 orf_index_prefix: ecoli_25_ # ORF index file prefix, relative to dir_index
 primary_id: Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
 rpf: TRUE # Is the dataset an RPF or mRNA dataset?
-rrna_fasta_file: ../../riboviz/example-datasets/bacteria/ecoli/contaminants/ecoli_rrna_trna.fa # rRNA file to avoid aligning to
+rrna_fasta_file: ../../riboviz/example-datasets/bacteria/escherichia/contaminants/Escherichia_coli_rrna_trna.fa # rRNA file to avoid aligning to
 rrna_index_prefix: rRNA # rRNA index file prefix, relative to dir_index
 sample_sheet: null # Sample sheet, TSV file with, at least, SampleID and TagRead (barcode) columns
 secondary_id: NULL # Secondary gene IDs to access the data (COX1, EFB1, etc.)

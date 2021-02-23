@@ -16,4 +16,12 @@ Cryptococcus neoformans and Cryptococcus deneoformans
 
 Neurospora crassa
 
+* Yu_2015_Nc_CDSplus120_config.yaml
+
+
 # saccharomyces
+
+Saccharomyces cerevisiae
+
+* Brar_2012_Meiosis_RPF_6-samples_CDS_w_250utrs_config.yaml
+* Gupta_2018_tRNA_Modification_Carbon_Nitrogen_Metabolism_RPF_9-samples_CDS_w_250utrs_config.yaml
