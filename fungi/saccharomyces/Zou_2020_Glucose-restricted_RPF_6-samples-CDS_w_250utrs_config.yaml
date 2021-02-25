@@ -6,7 +6,7 @@ provenance:
     email: ...
   website:
   date run: 2021-02-23
-  riboviz-version: 2.0 | COMMIT 7e62c9f8da4f66f9c18aca30394f44fa4a7fa1ef
+  riboviz-version: 2.0 | COMMIT e94a909c70942cb428450a3b98edef1614143c18
   GEO: GSE134152
   reference: Life span extension by glucose restriction is abrogated by methionine supplementation: Cross-talk between glucose and methionine and implication of methionine as a key regulator of life span, Zou et al 2020.
   DOI: http://dx.doi.org/10.1126/sciadv.aba1306
