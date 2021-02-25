@@ -1,0 +1,22 @@
+Transcript sequences:
+
+Schizosaccharomyces_pombe_CDS_w_250utrs.fasta
+
+Coding sequence locations:
+
+Schizosaccharomyces_pombe_CDS_w_250utrs.gff3
+
+These files hold Schizosaccharomyces pombe annotations and ORF sequences.
+
+These files were created as follows:
+
+The current genome release (file name Schizosaccharomyces_pombe_all_chromosomes.fa.gz; https://www.pombase.org/data/genome_sequence_and_features/genome_sequence/Schizosaccharomyces_pombe_all_chromosomes.fa.gz) was downloaded from the PomBase (https://www.pombase.org/).
+
+The current genome annotation (file name Schizosaccharomyces_pombe_all_chromosomes.gff3.gz; https://www.pombase.org/data/genome_sequence_and_features/gff3/Schizosaccharomyces_pombe_all_chromosomes.gff3.gz) was downloaded from the PomBase (https://www.pombase.org/).
+
+The files Schizosaccharomyces_pombe_all_chromosomes.gff3 and Schizosaccharomyces_pombe_all_chromosomes.fa were extracted from the .gz file.
+
+Schizosaccharomyces_pombe_all_chromosomes.fa was slighlty modified such that the sequence identifiers matched those in Schizosaccharomyces_pombe_all_chromosomes.gff3.
+
+The sequence and annotation files for the whole approximate Schizosaccharomyces pombe transcriptome were prepared using create_files_for_riboviz.R (https://github.com/riboviz/riboviz/blob/master/rscript/create_files_for_riboviz.R). 
+
