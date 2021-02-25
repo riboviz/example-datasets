@@ -1,0 +1,67 @@
+provenance:
+  yaml authors:
+  - author: Felicity Anderson
+    email: Felicity.Anderson@ed.ac.uk
+  - author: Sophie Winterbourne
+    email: ...
+  website:
+  date run: 2021-02-23
+  riboviz-version: 2.0 | COMMIT 7e62c9f8da4f66f9c18aca30394f44fa4a7fa1ef
+  GEO: GSE134152
+  reference: Life span extension by glucose restriction is abrogated by methionine supplementation: Cross-talk between glucose and methionine and implication of methionine as a key regulator of life span, Zou et al 2020.
+  DOI: http://dx.doi.org/10.1126/sciadv.aba1306
+  notes: Ribosome profiling datasets of Saccharomyces cerevisiae grown under glucose restriction conditions.
+
+adapters: CTGTAGGCACCATCAAT # Illumina sequencing adapter(s) to remove
+aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
+asite_disp_length_file: data/yeast_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
+buffer: 250 # Length of flanking region around the CDS
+build_indices: TRUE # Build indices for aligner? if TRUE, remake indices from fasta files
+cmd_file: run_riboviz_Zou_Sc_2020.sh # Bash commands file
+codon_positions_file: data/yeast_codon_pos_i200.RData # Codon positions in each gene
+count_reads: TRUE # Scan input, temporary and output files and produce counts of reads in each FASTQ, SAM, and BAM file processed?
+count_threshold: 64 # Remove genes with a read count below this threshold, when generating statistics and figures
+dataset: Zou_Sc_2020 # Dataset name
+dedup_stats: FALSE # Output UMI deduplication statistics?
+dedup_umis: FALSE # Extract UMIs and deduplicate reads if TRUE
+dir_in: ../Zou_Sc_2020/input # Input directory
+dir_index: ../Zou_Sc_2020/index # Built indices directory
+dir_logs: ../Zou_Sc_2020/logs # Log files directory
+dir_out: ../Zou_Sc_2020/output # Output directory
+dir_tmp: ../Zou_Sc_2020/tmp # Intermediate files directory
+do_pos_sp_nt_freq: TRUE # Calculate position-specific nucleotide frequency?
+extract_umis: FALSE # Extract UMIs if TRUE
+features_file: data/yeast_features.tsv # Features to correlate with ORFs
+fq_files: # fastq files to be processed, relative to dir_in
+  SD-sample3-1: SRR9670816.fastq.gz # SD (2% glucose)
+  SD-sample3-2: SRR9670817.fastq.gz # SD (2% glucose)
+  GR-sample4-1: SRR9670818.fastq.gz # GR (0.05% glucose)
+  GR-sample4-2: SRR9670819.fastq.gz # GR (0.05% glucose)
+  SD-sample7: SRR9670822.fastq.gz # SD (2% glucose)
+  GR-sample8: SRR9670823.fastq.gz # GR (0/05% glucose)
+group_umis: FALSE # Summarise UMI groups before and after deduplication, if TRUE
+is_riboviz_gff: TRUE # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
+is_test_run: FALSE # Is this a test run
+make_bedgraph: TRUE # Output bedgraph files, as TSV, in addition to h5?
+max_read_length: 50 # Maximum read length in H5 output
+min_read_length: 10 # Minimum read length in H5 output
+multiplex_fq_files: null # Multiplexed fastq files to be processed, relative to dir_in
+num_processes: 16 # Number of processes to parallelize over
+orf_fasta_file: ../../riboviz/example-datasets/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.fa # ORF file to align to
+orf_gff_file: ../../riboviz/example-datasets/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3 # GFF2/GFF3 file for ORFs
+orf_index_prefix: yeast_CDS_w_250 # ORF index file prefix, relative to dir_index
+primary_id: Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
+publish_index_tmp: FALSE
+rpf: TRUE # Is the dataset an RPF or mRNA dataset?
+rrna_fasta_file: ../../riboviz/example-datasets/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa # rRNA file to avoid aligning to
+rrna_index_prefix: yeast_rRNA # rRNA index file prefix, relative to dir_index
+samsort_memory: 768M
+sample_sheet: null # Sample sheet, TSV file with, at least, SampleID and TagRead (barcode) columns
+secondary_id: null # Secondary gene IDs to access the data (COX1, EFB1, etc.)
+skip_inputs: FALSE
+stop_in_cds: FALSE # Are stop codons part of the CDS annotations in GFF?
+trim_5p_mismatches: TRUE
+t_rna_file: data/yeast_tRNAs.tsv # tRNA estimates
+umi_regexp: null # UMI-tools-compliant regular expression to extract UMIs
+validate_only: FALSE
+
