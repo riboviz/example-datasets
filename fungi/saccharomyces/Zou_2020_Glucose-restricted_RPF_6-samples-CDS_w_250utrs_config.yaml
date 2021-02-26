@@ -24,11 +24,11 @@ count_threshold: 64 # Remove genes with a read count below this threshold, when 
 dataset: Zou_Sc_2020 # Dataset name
 dedup_stats: FALSE # Output UMI deduplication statistics?
 dedup_umis: FALSE # Extract UMIs and deduplicate reads if TRUE
-dir_in: ../Zou_Sc_2020/input # Input directory
-dir_index: ../Zou_Sc_2020/index # Built indices directory
-dir_logs: ../Zou_Sc_2020/logs # Log files directory
-dir_out: ../Zou_Sc_2020/output # Output directory
-dir_tmp: ../Zou_Sc_2020/tmp # Intermediate files directory
+dir_in: Zou_Sc_2020/input # Input directory
+dir_index: Zou_Sc_2020/index # Built indices directory
+dir_logs: Zou_Sc_2020/logs # Log files directory
+dir_out: Zou_Sc_2020/output # Output directory
+dir_tmp: Zou_Sc_2020/tmp # Intermediate files directory
 do_pos_sp_nt_freq: TRUE # Calculate position-specific nucleotide frequency?
 extract_umis: FALSE # Extract UMIs if TRUE
 features_file: data/yeast_features.tsv # Features to correlate with ORFs
