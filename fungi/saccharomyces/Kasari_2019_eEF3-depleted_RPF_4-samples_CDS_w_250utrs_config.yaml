@@ -23,11 +23,11 @@ count_threshold: 64 # Remove genes with a read count below this threshold, when 
 dataset: K-Sc-eEF3_2019 # Dataset name
 dedup_stats: FALSE # Output UMI deduplication statistics?
 dedup_umis: FALSE # Extract UMIs and deduplicate reads if TRUE
-dir_in: ../K-Sc-eEF3_2019/noUMIs/input # Input directory
-dir_index: ../K-Sc-eEF3_2019/noUMIs/index # Built indices directory
-dir_logs: ../K-Sc-eEF3_2019/noUMIs/logs # Log files directory
-dir_out: ../K-Sc-eEF3_2019/noUMIs/output # Output directory
-dir_tmp: ../K-Sc-eEF3_2019/noUMIs/tmp # Intermediate files directory
+dir_in: K-Sc-eEF3_2019/input # Input directory
+dir_index: K-Sc-eEF3_2019/index # Built indices directory
+dir_logs: K-Sc-eEF3_2019/logs # Log files directory
+dir_out: K-Sc-eEF3_2019/output # Output directory
+dir_tmp: K-Sc-eEF3_2019/tmp # Intermediate files directory
 do_pos_sp_nt_freq: TRUE # Calculate position-specific nucleotide frequency?
 extract_umis: FALSE # extract UMIs if TRUE
 features_file: data/yeast_features.tsv # Features to correlate with ORFs
