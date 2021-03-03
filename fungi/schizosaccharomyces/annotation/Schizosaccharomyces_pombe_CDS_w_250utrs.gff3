@@ -1,6 +1,6 @@
 ##gff-version 3
 ##source-version rtracklayer 1.48.0
-##date 2021-02-25
+##date 2021-02-26
 SPAC1002.01.1	rtracklayer	UTR5	1	250	.	+	.	Name=SPAC1002.01.1
 SPAC1002.01.1	rtracklayer	CDS	251	790	.	+	.	Name=SPAC1002.01.1
 SPAC1002.01.1	rtracklayer	UTR3	791	1040	.	+	.	Name=SPAC1002.01.1
