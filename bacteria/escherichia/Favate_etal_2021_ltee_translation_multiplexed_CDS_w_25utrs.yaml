@@ -8,8 +8,7 @@ website:
   GEO: GSE164308
   reference: The landscape of transcriptional and translational changes over 22 years of bacterial adaptation, Favate et. al. 2021
   DOI: 10.1101/2021.01.12.426406
-  notes: >
-    bioRxiv preprint. RiboSeq for E. coli strains from LTEE experiments. Successfully run using Python and Nextflow pipelines. Map A-site using 3'-end mapping strategy.
+  notes: bioRxiv preprint. RiboSeq for E. coli strains from LTEE experiments. Successfully run using Python and Nextflow pipelines. Map A-site using 3'-end mapping strategy.
 
 adapters: AGATCGGAAGAGCACACGTCTGAA
 aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
