@@ -8,8 +8,7 @@ website:
   GEO: GSE124428
   reference: A tRNA modification balances carbon and nitrogen metabolism by regulating phosphate homeostasis, Gupta et. al. 2018
   DOI: https://doi.org/10.7554/elife.44795
-  notes: >
-    Analysis of multiplexed RPF data for S. cerevisiae. YAML file is modified from simdata_multiplex_config.yaml file found in riboviz.
+  notes: Analysis of multiplexed RPF data for S. cerevisiae. YAML file is modified from simdata_multiplex_config.yaml file found in riboviz.
 adapters: AGATCGGAAGAG # Illumina sequencing adapter(s) to remove
 aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
 asite_disp_length_file: data/yeast_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
