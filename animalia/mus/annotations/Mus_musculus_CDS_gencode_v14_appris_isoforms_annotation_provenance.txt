@@ -1,0 +1,17 @@
+
+These files hold Gencode v14 annotations and ORF sequences for Mus Musculus.
+
+These files were created as follows:
+
+The cDNA sequences (file name Mus_musculus.GRCm38.cdna.all.fa; http://ftp.ensembl.org/pub/release-83/fasta/mus_musculus/cdna/) was downloaded from ENSEMBL.
+
+The genome annotation (file name gencode.vM14.annotation.gff3.gz; ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M14/) was downloaded from Gemcode.
+
+Principle isoforms were downloaded from Appris (http://appris.bioinfo.cnio.es/).
+
+The sequence and annotation files for the Mus musculus transcriptome were prepared using script_for_transcript_annotation.Rmd (https://github.com/riboviz/riboviz/blob/master/rmarkdown/script_for_transcript_annotation.Rmd). 
+
+These annotation files were run with Mus_musculus_rrna_gencode_vM14.fa contaminants file.
+
+These were run through Riboviz 2.0 tagged develop branch, commit: 346ee0f2e72e557b521d2f2b0b49d9af37904352
+
