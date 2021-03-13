@@ -1,16 +1,13 @@
 provenance:
   yaml authors:
-  - author: Felicity Anderson
-    email: Felicity.Anderson@ed.ac.uk
   - author: Emma MacKenzie
     email: ...
-  website:
-  date run: 2021-02-28
-  riboviz-version: 2.0 | COMMIT e9bdce6764f6fa3f8b2d3e5c6f2eff9216083ca9
+  date run: 2021-03-08
+  riboviz-version: 2.0 | COMMIT b75c1ba0e2a541d6f256e2d295b352a3aef969a9
   Array Express: E-MTAB-5810 
-  reference: General amino acid control in fission yeast is regulated by a nonconserved transcription factor, with functions analogous to Gcn4/Atf4
+  reference: General amino acid control in fission yeast is regulated by a nonconserved transcription factor, with functions analogous to Gcn4/Atf4, Duncan et al, 2018
   DOI: https://doi.org/10.1073/pnas.1713991115
-  notes: S. cerevisiae RPF dataset for riboviz hackathon by Emma. 
+  notes: S. pombe example dataset by Emma MacKenzie as part of her honours project. 
 
 adapters: TGGAATTCTCGGGTGCCAAGG # Illumina sequencing adapter(s) to remove
 aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
