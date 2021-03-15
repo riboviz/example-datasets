@@ -142,8 +142,7 @@ provenance:
   GEO: GSExxxxxxx # gene expression omnibus references for dataset, if relevant
   reference: Genome-Wide Analysis in Vivo of Translation with Nucleotide Resolution Using Ribosome Profiling, Ingolia et al 2009
   DOI: 10.1126/science.1168978
-  notes: >
-    Re-analysis of data from Ingolia 2009 to an updated yeast transcriptome.
+  notes:  Re-analysis of data from Ingolia 2009 to an updated yeast transcriptome.
 ```
 
 We are currently (May 2020) reviewing the format of this in issue [#riboviz166](https://github.com/riboviz/riboviz/issues/166), so the format may change.

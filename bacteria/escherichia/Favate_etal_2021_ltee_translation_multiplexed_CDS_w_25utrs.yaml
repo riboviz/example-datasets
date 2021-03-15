@@ -1,0 +1,50 @@
+provenance:
+  authors:
+  - author: Alexander Cope
+    email: alexander.cope@rutgers.edu
+website:
+  date run: 2020-10-13
+  riboviz-version: 2.0.beta | COMMIT 03a4f13b2d833b8650ebf33bdce81fe2639eb9cf
+  GEO: GSE164308
+  reference: The landscape of transcriptional and translational changes over 22 years of bacterial adaptation, Favate et. al. 2021
+  DOI: 10.1101/2021.01.12.426406
+  notes: bioRxiv preprint. RiboSeq for E. coli strains from LTEE experiments. Successfully run using Python and Nextflow pipelines. Map A-site using 3'-end mapping strategy.
+
+adapters: AGATCGGAAGAGCACACGTCTGAA
+aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
+asite_disp_length_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
+buffer: 25 # Length of flanking region around the CDS
+build_indices: TRUE # Build indices for aligner? if TRUE, remake indices from fasta files
+cmd_file: run_riboviz_F-Ec.sh # Bash commands file
+#codon_positions_file:
+count_reads: TRUE # Scan input, temporary and output files and produce counts of reads in each FASTQ, SAM, and BAM file processed?
+count_threshold: 0 # Remove genes with a read count below this threshold, when generating statistics and figures
+dataset: F-Ec_2020 # Dataset name
+dedup_umis: TRUE # Extract UMIs and deduplicate reads if TRUE
+dir_in: F-Ec_2020/input/ # Input directory
+dir_index: F-Ec_2020/index/ # directory to put built indices in
+dir_logs: F-Ec_2020/logs/ # Log files directory
+dir_out: F-Ec_2020/output/ # Output directory
+dir_tmp: F-Ec_2020/tmp # Intermediate files directory
+do_pos_sp_nt_freq: TRUE # Calculate position-specific nucleotide frequency?
+extract_umis: TRUE # Extract UMIs if TRUE
+group_umis: TRUE # Summarise UMI groups before and after deduplication, if TRUE
+is_riboviz_gff: TRUE # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
+is_test_run: FALSE # Is this a test run
+make_bedgraph: TRUE # Output bedgraph files, as TSV, in addition to h5?
+max_read_length: 50 # Maximum read length in H5 output
+min_read_length: 10 # Minimum read length in H5 output
+multiplex_fq_files:
+- rep1-ribo-am-fr.fq.gz
+num_processes: 1 # Number of processes to parallelize over
+orf_fasta_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_REL606_CDS_w_25utrs.fa # ORF file to align to
+orf_gff_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_REL606_CDS_w_25utrs.gff3 # GFF2/GFF3 file for ORFs
+orf_index_prefix: ecoli_25_ # ORF index file prefix, relative to dir_index
+primary_id: Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
+rpf: TRUE # Is the dataset an RPF or mRNA dataset?
+rrna_fasta_file: ../../riboviz/example-datasets/bacteria/escherichia/contaminants/Escherichia_coli_REL606_rrna_trna.fa # rRNA file to avoid aligning to
+rrna_index_prefix: rrna # rRNA index file prefix, relative to dir_index
+sample_sheet: ../../riboviz/example-datasets/bacteria/escherichia/Favate_etal_2021_ltee_translation_multiplexed_barcodes.tsv # Sample sheet, TSV file with, at least, SampleID and TagRead (barcode) columns
+secondary_id: NULL # Secondary gene IDs to access the data (COX1, EFB1, etc.)
+stop_in_cds: FALSE # Are stop codons part of the CDS annotations in GFF?
+umi_regexp: ^(?P<umi_1>.{4}).+(?P<umi_2>.{5})(?P<cell_1>.{5})$ # 4nt umi on 5' end, 5nt umi on 3' end, 5nt barcode on 3' end

@@ -1,0 +1,25 @@
+Transcript sequences:
+
+data/Hvolcanii_DS2_H98_CDS_w_25utrs.fa
+
+Coding sequence locations:
+
+data/Hvolcanii_DS2_H98_CDS_w_25utrs.gff3
+
+These files hold DS2 H98 annotations and ORF sequences.
+
+These files were created as follows:
+
+The FASTA file for genome assembly ASM2568v1 (file name GCF_000025685.1_ASM2568v1_genomic.fna.gz; https://ftp.ncbi.nlm.nih.gov/genomes/refseq/archaea/Haloferax_volcanii/latest_assembly_versions/GCF_000025685.1_ASM2568v1/GCF_000025685.1_ASM2568v1_genomic.fna.gz) was downloaded from the NCBI RefSeq (https://www.ncbi.nlm.nih.gov/genome/).
+
+The GFF file for genome assembly ASM2568v1 (file name GCF_000025685.1_ASM2568v1_genomic.gff.gz; https://ftp.ncbi.nlm.nih.gov/genomes/refseq/archaea/Haloferax_volcanii/latest_assembly_versions/GCF_000025685.1_ASM2568v1/GCF_000025685.1_ASM2568v1_genomic.gff.gz) was downloaded from the NCBI RefSeq (https://www.ncbi.nlm.nih.gov/genome/).
+
+The files GCF_000025685.1_ASM2568v1_genomic.gff and GCF_000025685.1_ASM2568v1_genomic.fna were extracted from the .gz file.
+
+The H.volcanii DS2 H98 genome contains a chromosome and 4 plasmids. Due to the circular nature of these plasmids, the origin of replication actually falls somewhere in the middle of gene WP_004050863.1, resulting in some weird behavior when adding this protein to the CDS file. It has been left in for now, but perhaps should be excluded in later analyses. 
+
+The sequence and annotation files for the whole approximate E. coli transcriptome were prepared using a modified version of script_for_transcript_annotation.Rmd (https://github.com/riboviz/riboviz/blob/master/rmarkdown/script_for_transcript_annotation.Rmd) that uses a 25 nucleotide buffer for UTRs. 
+
+These annotation files were run with Hvolcanii_DS2_H98_rRNA_tRNA.fasta contaminants file.
+
+These were run through Riboviz 2.0.beta tagged master branch, commit: ffb53643ccfdf78aa64a1627d2dd8a9c092df632

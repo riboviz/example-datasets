@@ -1,0 +1,10 @@
+Candida_albicans_rRNA_tRNA.fa
+
+This file was created as follows:
+
+The file genome release R64-1-1 (file name S288C_reference_genome_R64-1-1_20110203.tgz (https://downloads.yeastgenome.org/sequence/S288C_reference/genome_releases/S288C_reference_genome_R64-1-1_20110203.tgz)) was downloaded from the Saccharomyces Genome Database (https://www.yeastgenome.org/).
+
+The file rna_coding_R64-1-1_20110203.fasta was extracted from the .tgz file.
+Selected RDN-n-n sequences were copied and pasted from this file.
+
+These were run through Riboviz 2.0 tagged master branch, commit: ####

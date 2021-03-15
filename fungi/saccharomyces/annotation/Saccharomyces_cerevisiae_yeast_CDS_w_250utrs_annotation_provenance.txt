@@ -1,10 +1,10 @@
 Transcript sequences:
 
-data/yeast_CDS_w_250utrs.fa
+data/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.fa
 
 Coding sequence locations:
 
-data/yeast_CDS_w_250utrs.gff3
+data/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3
 
 These files hold S288c annotations and ORF sequences.
 
