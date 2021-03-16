@@ -28,6 +28,17 @@ dir_tmp: D-Sp_2018/tmp # Intermediate files directory
 do_pos_sp_nt_freq: true # Calculate position-specific nucleotide frequency?
 extract_umis: TRUE # Extract UMIs if TRUE
 fq_files: # fastq files to be processed, relative to dir_in
+  # wt.AT.CHX.ribo.11_s: ERR2003528.fastq.gz
+  # wt.AT.CHX.ribo.13_s: ERR2003529.fastq.gz
+  # wt.AT.noCHX.ribo.11_s: ERR2003535.fastq.gz
+  # wt.AT.noCHX.ribo.13_s: ERR2003536.fastq.gz
+  # wt.AT.ribo.3_s: ERR2003539.fastq.gz
+  # wt.AT.ribo.4_s: ERR2003540.fastq.gz
+  # wt.noAT.CHX.ribo.11_s: ERR2003543.fastq.gz
+  # wt.noAT.CHX.ribo.13_s: ERR2003544.fastq.gz
+  # wt.noAT.noCHX.ribo.11_s: ERR2003550.fastq.gz
+  # wt.noAT.noCHX.ribo.13_s:ERR2003551.fastq.gz
+  wt.noAT.ribo.3_s: ERR2003553.fastq.gz
   wt.noAT.ribo.4_s: ERR2003554.fastq.gz
 group_umis: TRUE # Summarise UMI groups before and after deduplication, if TRUE
 is_riboviz_gff: true # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
