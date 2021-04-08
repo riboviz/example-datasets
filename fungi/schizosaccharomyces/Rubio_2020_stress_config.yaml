@@ -28,7 +28,7 @@ dir_tmp: R-Sp_2020/tmp # Intermediate files directory
 do_pos_sp_nt_freq: true # Calculate position-specific nucleotide frequency?
 extract_umis: TRUE # Extract UMIs if TRUE
 fq_files: # fastq files to be processed, relative to dir_in
- wt.control.ribo.1:ERR3850620.fasta.gz
+ wt.control.ribo.1: ERR3850620.fastq.gz
 group_umis: TRUE # Summarise UMI groups before and after deduplication, if TRUE
 is_riboviz_gff: true # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
 is_test_run: false # Is this a test run
