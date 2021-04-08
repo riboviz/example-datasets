@@ -32,3 +32,9 @@ Saccharomyces cerevisiae
 
 * Brar_2012_Meiosis_RPF_6-samples_CDS_w_250utrs_config.yaml
 * Gupta_2018_tRNA_Modification_Carbon_Nitrogen_Metabolism_RPF_9-samples_CDS_w_250utrs_config.yaml
+
+# schizosaccharomyces
+
+Schizosaccaromyces pombe
+
+* Duncan_2018_amino_acid_starved_CDS_w_250utrs_config.yaml
