@@ -46,7 +46,7 @@ rpf: true # Is the dataset an RPF or mRNA dataset?
 rrna_fasta_file: ../../riboviz/example-datasets/fungi/schizosaccharomyces/contaminants/schizosaccharomyces_pombe_972h-_rRNA.fasta # rRNA file to avoid aligning to
 rrna_index_prefix: yeast_rRNA # rRNA index file prefix, relative to dir_index
 samsort_memory: 768M
-sample_sheet: null # Sample sheet, TSV file with, at least, SampleID and TagRead (barcode) columns
+sample_sheet: ../../riboviz/example-datasets/fungi/schizosaccharomyces/Rubio_2020_stress_barcodes.tsv # Sample sheet, TSV file with, at least, SampleID and TagRead (barcode) columns
 secondary_id: null # Secondary gene IDs to access the data (COX1, EFB1, etc.)
 skip_inputs: FALSE
 stop_in_cds: false # Are stop codons part of the CDS annotations in GFF?
