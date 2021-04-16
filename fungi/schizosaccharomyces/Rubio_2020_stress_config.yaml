@@ -9,7 +9,7 @@ provenance:
   DOI: https://doi.org/10.1093/nar/gkaa1180
   notes: S. pombe example dataset by Emma MacKenzie as part of her honours project. 
 
-adapters: AGATCGGAAGAGCGTCGTGT # Illumina sequencing adapter(s) to remove
+adapters: TGGAATTCTCGGGTGCCAAGG # Illumina sequencing adapter(s) to remove
 aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
 asite_disp_length_file: null # Table of fixed A-site positions by read length
 buffer: 250 # Length of flanking region around the CDS
@@ -28,7 +28,31 @@ dir_tmp: R-Sp_2020/tmp # Intermediate files directory
 do_pos_sp_nt_freq: true # Calculate position-specific nucleotide frequency?
 extract_umis: TRUE # Extract UMIs if TRUE
 fq_files: # fastq files to be processed, relative to dir_in
- wt.control.ribo.1: ERR3850620.fastq.gz
+ # cadmium treatment - E-MTAB-8746
+  wt.control.cd.ribo.1: ERR3850620.fastq.gz
+  wt.control.cd.ribo.2: ERR3850621.fastq.gz
+  wt.cd.ribo.1: ERR3850618.fastq.gz
+  wt.cd.ribo.1: ERR3850619.fastq.gz
+# Heat shock - E-MTAB-8686
+#  wt.control.hs.ribo.1: ERR3823830.fastq.gz
+#  wt.control.hs.ribo.2: ERR3823831.fastq.gz
+#  wt.hs.ribo.1: ERR3823832.fastq.gz
+#  wt.hs.ribo.2: ERR3823833.fastq.gz
+# hydrogen peroxide - E-MTAB-8744
+#  wt.control.h2o2.ribo.1: ERR3850594.fastq.gz
+#  wt.control.h2o2.ribo.2: ERR3850595.fastq.gz
+#  wt.h2o2.ribo.1: ERR3850596.fastq.gz
+#  wt.h2o2.ribo.2: ERR3850597.fastq.gz
+# MMS - E-MTAB-8745
+#  wt.control.mms.ribo.1: ERR3850913.fastq.gz
+#  wt.control.mms.ribo.2: ERR3850914.fastq.gz
+#  wt.mms.ribo.1: ERR3850915.fastq.gz
+#  wt.mms.ribo.2: ERR3850916.fastq.gz
+# sorbitol - E-MTAB-8602
+#  wt.control.sorbitol.ribo.1: ERR3765698.fastq.gz
+#  wt.control.sorbitol.ribo.2: ERR3765699.fastq.gz
+#  wt.sorbitol.ribo.1: ERR3765692.fastq.gz
+#  wt.sorbitol.ribo.2: ERR3765693.fastq.gz
 group_umis: TRUE # Summarise UMI groups before and after deduplication, if TRUE
 is_riboviz_gff: true # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
 is_test_run: false # Is this a test run
@@ -46,10 +70,10 @@ rpf: true # Is the dataset an RPF or mRNA dataset?
 rrna_fasta_file: ../../riboviz/example-datasets/fungi/schizosaccharomyces/contaminants/schizosaccharomyces_pombe_972h-_rRNA.fasta # rRNA file to avoid aligning to
 rrna_index_prefix: yeast_rRNA # rRNA index file prefix, relative to dir_index
 samsort_memory: 768M
-sample_sheet: ../../riboviz/example-datasets/fungi/schizosaccharomyces/Rubio_2020_stress_barcodes.tsv # Sample sheet, TSV file with, at least, SampleID and TagRead (barcode) columns
+sample_sheet: null # Sample sheet, TSV file with, at least, SampleID and TagRead (barcode) columns
 secondary_id: null # Secondary gene IDs to access the data (COX1, EFB1, etc.)
 skip_inputs: FALSE
 stop_in_cds: false # Are stop codons part of the CDS annotations in GFF?
 trim_5p_mismatches: TRUE
-umi_regexp: ^(?P<umi_1>.{2})(?P<cell_1>.{4})(?P<umi_2>.{3}) # UMI-tools-compliant regular expression to extract UMIs
+umi_regexp: ^(?P<umi_1>.{4}).+(?P<umi_2>.{4})$ # UMI-tools-compliant regular expression to extract UMIs
 validate_only: FALSE
