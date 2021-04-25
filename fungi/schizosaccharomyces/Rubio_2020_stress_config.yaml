@@ -32,7 +32,7 @@ fq_files: # fastq files to be processed, relative to dir_in
   wt.control.cd.ribo.1: ERR3850620.fastq.gz
   wt.control.cd.ribo.2: ERR3850621.fastq.gz
   wt.cd.ribo.1: ERR3850618.fastq.gz
-  wt.cd.ribo.1: ERR3850619.fastq.gz
+  wt.cd.ribo.2: ERR3850619.fastq.gz
 # Heat shock - E-MTAB-8686
 #  wt.control.hs.ribo.1: ERR3823830.fastq.gz
 #  wt.control.hs.ribo.2: ERR3823831.fastq.gz
