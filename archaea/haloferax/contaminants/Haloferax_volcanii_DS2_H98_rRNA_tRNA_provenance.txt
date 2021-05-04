@@ -1,0 +1,7 @@
+This files was created as follows:
+
+The RNA FASTA file for genome assembly ASM2568v1 (file name GCF_000025685.1_ASM2568v1_rna_from_genomic.fna.gz; https://ftp.ncbi.nlm.nih.gov/genomes/refseq/archaea/Haloferax_volcanii/latest_assembly_versions/GCF_000025685.1_ASM2568v1/GCF_000025685.1_ASM2568v1_rna_from_genomic.fna.gz) was downloaded from the NCBI RefSeq (https://www.ncbi.nlm.nih.gov/genome/).
+The file GCF_000005845.2_ASM584v2_rna_from_genomic.fna was extracted from the .gz file.
+Sequences were filtered based on those with gbkey=rRNA or gbkey=tRNA.
+
+These were run through Riboviz 2.0.beta tagged master branch, commit: ffb53643ccfdf78aa64a1627d2dd8a9c092df632

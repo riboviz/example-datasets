@@ -5,11 +5,14 @@ provenance:
 website:
   date run: 2020-10-27
   riboviz-version: 2.0.beta | COMMIT ffb53643ccfdf78aa64a1627d2dd8a9c092df632
+  GEO: GSE64488
+  reference: High Precision Analysis of Translational Pausing by Ribosome Profiling in Bacteria Lacking EFP, Woolstenhulme et. al. 2015
+  DOI: 10.1016/j.celrep.2015.03.014
   notes: RiboSeq for E. coli K12 MG1655 strain. Successfully run using Python pipeline. Assign A-site using 3'-end mapping strategy.
 
 adapters: CTGTAGGCACCATCAAT # Illumina sequencing adapter(s) to remove
 aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
-asite_disp_length_file: /data/Escherichia_coli_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
+asite_disp_length_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
 buffer: 25 # Length of flanking region around the CDS
 build_indices: TRUE # Build indices for aligner? if TRUE, remake indices from fasta files
 cmd_file: woolstenhulme_mops_riboviz_vignette.sh # Bash commands file
@@ -28,7 +31,6 @@ extract_umis: FALSE # Extract UMIs if TRUE
 fq_files: # fastq files to be processed, relative to dir_in
   MOPS1: SRR1734430.sra.fastq.gz
   MOPS2: SRR1734431.sra.fastq.gz
-num_processes: 16
 group_umis: FALSE # Summarise UMI groups before and after deduplication, if TRUE
 is_riboviz_gff: TRUE # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
 is_test_run: FALSE # Is this a test run
@@ -46,5 +48,5 @@ rrna_fasta_file: ../../riboviz/example-datasets/bacteria/escherichia/contaminant
 rrna_index_prefix: rRNA # rRNA index file prefix, relative to dir_index
 sample_sheet: null # Sample sheet, TSV file with, at least, SampleID and TagRead (barcode) columns
 secondary_id: NULL # Secondary gene IDs to access the data (COX1, EFB1, etc.)
-stop_in_cds: FALSE # Are stop codons part of the CDS annotations in GFF?
+stop_in_cds: FALSE # Are stop codons part of the CDS annotation in GFF?
 umi_regexp: null # UMI-tools-compliant regular expression to extract UMIs
