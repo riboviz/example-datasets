@@ -151,6 +151,14 @@ The .fasta/.gff files would **not** be needed if example-datasets already had an
 
 The `config.yaml` file should contain **all** parameters needed to run riboviz. This is described in [prep-riboviz-config.md](https://github.com/riboviz/riboviz/blob/master/docs/user/prep-riboviz-config.md).
 
+Give your config file a helpful name, e.g. `Gelsinger2020_hvolcanii.yaml` or `Weinberg_2016_RPF_1_sample_cerevisiae_CDS_w_250utrs_config.yaml`.
+Try to:
+* Start with author and year (e.g. `Gelsinger_2020` or `Weinberg_2016`).
+* If helpful, include distinguishing feature, e.g. `Meiosis_RPF_6samples` in `Brar_2012_Meiosis_RPF_6-samples_CDS_w_250utrs_config.yaml`.
+* Include enough information about the species, strain, or annotation files used to uniquely identify the configuration file.
+* This extra information can be minimal, place longer descriptions in the provenance notes section (see below).
+* Do not use any spaces or special characters in the file name.
+
 If your example dataset runs riboviz on published data in archives such as GEO/SRA/ENA, please ensure that config.yaml fastq filenames correspond to the accession numbers of the relevant SRA/ENA files.
 
 Please begin the `config.yaml` with a `provenance` entry providing metadata on the riboviz run, the authors of the file, the version of riboviz that ran on the dataset, and the data source including publication reference and DOI, for example:
