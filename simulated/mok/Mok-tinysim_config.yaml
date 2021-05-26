@@ -8,7 +8,7 @@ provenance:
   GEO: null
   reference: simRiboSeq, https://github.com/amandamok/simRiboSeq/, Amanda Mok 2021, commit 8367709
   DOI: null
-  notes:  Tiny simulated data from Amanda Mok, January 2021
+  notes:  Tiny simulated data from Amanda Mok, January 2021. Download the fq file from https://github.com/amandamok/simRiboSeq/blob/master/simulation_runs/riboviz/tiny_2genes.fq
 
 adapters: CTGTAGGCACCATCAAT # Illumina sequencing adapter(s) to remove
 aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
