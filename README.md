@@ -18,10 +18,11 @@ The main riboviz repository contains documentation of how to run riboviz in gene
 
 # Start here
 
-First install riboviz ([installation instructions](https://github.com/riboviz/riboviz/blob/master/docs/user/install.md)), and test that it works by [running the vignette](https://github.com/riboviz/riboviz/blob/master/docs/user/run-vignette.md).
+Start by installing riboviz ([installation instructions](https://github.com/riboviz/riboviz/blob/master/docs/user/install.md)), and test that it works by [running the vignette](https://github.com/riboviz/riboviz/blob/master/docs/user/run-vignette.md).
 
 To use one of these example datasets, you need to download two kinds of files.
 First, the configuration files and annotation files from this example-datasets repository, which you can download individually from github or by `git clone`.
+See [documentation on configuration files](https://github.com/riboviz/riboviz/blob/master/docs/user/prep-riboviz-config.md) for the details.
 Second, you need to download the raw read data in fastq, or gzipped fastq, format.
 A few of the datasets have specific links to download data in the header of the configuration files. 
 Most datasets here have fastq filenames that begin "SRR", indicating that they are stored on the [short read archive (SRA)](https://www.ncbi.nlm.nih.gov/sra) and mirrored on the [european nucleotide archive (ENA)](https://www.ebi.ac.uk/ena/).
@@ -33,7 +34,7 @@ We are planning to add functionality to riboviz for direct download from SRA/ENA
 Simulated data can be useful to test that code is working properly because it has "known" size and behaviour.
 We have some example simulated data that you can run using [simulated/mok/Mok-simYAL5_config.yaml](simulated/mok/Mok-simYAL5_config.yaml).
 The description and a download link to the (7.4MB) fastq files are found in the configuration file.
-This is based off 5 example genes from _S. cerevisiae_ yeast.
+This uses 5 genes from _S. cerevisiae_ yeast.
 
 ## A medium-sized real dataset
 
@@ -54,6 +55,7 @@ The files needed for this dataset are described in more detail below as [an exam
   * .fasta files of transcript/extended-ORF sequences
   * .gff files that describe the CDS/ORF position within the fasta file 
 * .fasta files of contaminants to exclude (rRNA, tRNA, etc)
+* if needed, a specialized A-site displacement length file `asite_disp_length.txt` (see [riboviz configuration documentation](https://github.com/riboviz/riboviz/blob/master/docs/user/prep-riboviz-config.md)). For example, for _E. coli_ bacteria,  [Escherichia_coli_asite_disp_length.txt](/bacteria/escherichia/annotations/Escherichia_coli_asite_disp_length.txt)
 
 Generally, the transcriptome fasta/gff files and contaminant fasta files would be referred to by multiple config.yaml files in the same species.
 
@@ -94,7 +96,7 @@ For example, for re-analysis of the yeast meiosis dataset from Brar 2012, aligni
 
 ## Top-level directories are kingdoms, with an artificial one for simulated data
 
-Each of these directories contains a README.md file with more detailed information
+Each of these directories contains a README.md file with more detailed information on the datasets conatined therein.
 
 ### animalia
 
@@ -169,12 +171,10 @@ provenance:
   notes:  Re-analysis of data from Ingolia 2009 to an updated yeast transcriptome.
 ```
 
-We are currently (May 2020) reviewing the format of this in issue [#riboviz166](https://github.com/riboviz/riboviz/issues/166), so the format may change.
-
 ## annotation files
 
 Annotation files (.fasta files of transcript/extended-ORF sequences, .gff files that describe the CDS/ORF position within the fasta file), should be placed within
-They should ideally be checked with [check_fasta_gff.py](https://github.com/riboviz/riboviz/blob/master/riboviz/tools/check_fasta_gff.py), which currently checks if start and stop codons are as expected. This can be run as follows:
+They should be checked with [check_fasta_gff.py](https://github.com/riboviz/riboviz/blob/master/riboviz/tools/check_fasta_gff.py), which currently checks if start and stop codons are as expected. This can be run as follows:
 
 ```console
 $ python -m riboviz.tools.check_fasta_gff -f FASTA -g GFF
