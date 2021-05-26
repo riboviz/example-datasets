@@ -9,17 +9,39 @@ The main riboviz repository contains documentation of how to run riboviz in gene
 
 # Table of contents
 
-* [Start here - DRAFT](#starthere)
+* [Start here](#starthere)
 * [Contents and structure of example-datasets](#contentsstructure)
 * [How to submit an example dataset](#howtosubmit)
 
 
 <a name="starthere"/>
 
-# Start here - DRAFT
+# Start here
 
-_This section will contain suggestions of example datasets to start with._
+First install riboviz ([installation instructions](https://github.com/riboviz/riboviz/blob/master/docs/user/install.md)), and test that it works by [running the vignette](https://github.com/riboviz/riboviz/blob/master/docs/user/run-vignette.md).
 
+To use one of these example datasets, you need to download two kinds of files.
+First, the configuration files and annotation files from this example-datasets repository, which you can download individually from github or by `git clone`.
+Second, you need to download the raw read data in fastq, or gzipped fastq, format.
+A few of the datasets have specific links to download data in the header of the configuration files. 
+Most datasets here have fastq filenames that begin "SRR", indicating that they are stored on the [short read archive (SRA)](https://www.ncbi.nlm.nih.gov/sra) and mirrored on the [european nucleotide archive (ENA)](https://www.ebi.ac.uk/ena/).
+
+We are planning to add functionality to riboviz for direct download from SRA/ENA, but for now you have to follow their instructions on downloading data prior to running riboviz.
+
+## A small simulated dataset
+
+Simulated data can be useful to test that code is working properly because it has "known" size and behaviour.
+We have some example simulated data that you can run using [simulated/mok/Mok-simYAL5_config.yaml](simulated/mok/Mok-simYAL5_config.yaml).
+The description and a download link to the (7.4MB) fastq files are found in the configuration file.
+This is based off 5 example genes from _S. cerevisiae_ yeast.
+
+## A medium-sized real dataset
+
+We recommend trying a 6-sample example from _S. cerevisiae_ yeast, [Brar_2012_Meiosis_RPF_6-samples_CDS_w_250utrs_config.yaml](/fungi/saccharomyces/Brar_2012_Meiosis_RPF_6-samples_CDS_w_250utrs_config.yaml).
+Budding yeast has a small 6000-gene genome so this is a friendly size of dataset to start.
+These data are a subset of 6 samples from the paper [High-resolution View of the Yeast Meiotic Program Revealed by Ribosome Profiling (Brar et al. 2012)](https://doi.org/10.1126/science.1215110).
+
+The files needed for this dataset are described in more detail below as [an example of an example dataset](#examplestructure).
 
 <a name="contentsstructure"/>
 
@@ -54,6 +76,8 @@ Please open an issue on github if there is something we have overlooked.
 The repository is organised roughly phylogenetically into subfolders, and then example datasets yaml files for each species are in the same folder, with fasta/gff files in a subfolder `annotation`.
 
 We have organised the repository into top-level folders with kingdoms, and then within that organised by genus (e.g. `/fungi/neurospora`, `/animalia/homo`). Kingdom and genus names are *all lower case* to avoid confusion with weblinks. When we set up the repository, this seemed to provide a useful compromise providing human readability and easy navigability.
+
+<a name="examplestructure"/>
 
 ### An example of an example dataset from brewer's yeast
 
