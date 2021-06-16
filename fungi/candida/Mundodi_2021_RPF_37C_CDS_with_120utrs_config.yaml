@@ -1,0 +1,49 @@
+provenance:
+  authors:
+  - author: Alexander Cope
+    email: alexander.cope@rutgers.edu
+  website:
+  date run: 2021-06-01
+  riboviz-version: 2.1beta | COMMIT f3e77ac58438d3bcc80b78fe78a58b75f0029633
+  GEO: GSE154488
+  reference: Global translational landscape of the Candida albicans morphological transition. G3 Genes|Genomes|Genetics 2021 Feb;11(2):jkaa043. Mundodi et. al.
+  DOI: https://doi.org/10.1093/g3journal/jkaa043
+  notes: Candida albicans RPF dataset at 37C (3 replicates)
+
+
+adapters: AGATCGGAAGAGCACACGTCTGAACTCCAGTCA # Illumina sequencing adapter(s) to remove
+aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
+buffer: 120
+asite_disp_length_file: data/yeast_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
+build_indices: TRUE # Build indices for aligner? if TRUE, remake indices from fasta files
+cmd_file: Mundodi_Calbicans_riboviz.sh # Bash commands file
+count_reads: TRUE # Scan input, temporary and output files and produce counts of reads in each FASTQ, SAM, and BAM file processed?
+count_threshold: 64 # Remove genes with a read count below this threshold, when generating statistics and figures
+dataset: Mundodi_Calbicans_37C # Dataset name
+dir_index: Mundodi_Calbicans-2021/index # Built indices directory
+dir_in: Mundodi_Calbicans-2021/input # Input directory
+dir_logs: Mundodi_Calbicans-2021/log # Log files directory
+dir_out: Mundodi_Calbicans-2021/output # Output directory
+dir_tmp: Mundodi_Calbicans-2021/tmp # Intermediate files directory
+do_pos_sp_nt_freq: TRUE # Calculate position-specific nucleotide frequency?
+extract_umis: FALSE # Extract UMIs if TRUE
+group_umis: FALSE # Summarise UMI groups before and after deduplication, if TRUE
+is_riboviz_gff: TRUE # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
+is_test_run: FALSE # Is this a test run
+make_bedgraph: TRUE # Output bedgraph files, as TSV, in addition to h5?
+max_read_length: 50 # Maximum read length in H5 output
+min_read_length: 10 # Minimum read length in H5 output
+fq_files:
+  37C1: SRR12228384.fastq
+  37C2: SRR12228385.fastq
+  37C3: SRR12228386.fastq
+num_processes: 16 # Number of processes to parallelize over
+orf_fasta_file: ../example-datasets/fungi/candida/annotation/Candida_albicans_CDS_with_120utrs.fa # ORF file to align to
+orf_gff_file: ../example-datasets/fungi/candida/annotation/Candida_albicans_CDS_with_120utrs.gff3 # GFF2/GFF3 file for ORFs
+orf_index_prefix: calbicans_CDS # ORF index file prefix, relative to dir_index
+primary_id: Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
+rpf: TRUE # Is the dataset an RPF or mRNA dataset?
+rrna_fasta_file: ../example-datasets/fungi/candida/contaminants/Candida_albicans_rRNA_tRNA.fa # rRNA file to avoid aligning to
+rrna_index_prefix: calbicans_rRNA # rRNA index file prefix, relative to dir_index
+secondary_id: NULL # Secondary gene IDs to access the data (COX1, EFB1, etc.)
+stop_in_cds: FALSE # Are stop codons part of the CDS annotations in GFF?
