@@ -123,7 +123,7 @@ The .fasta/.gff files would **not** be needed if example-datasets already had an
 
 ## config.yaml
 
-The `config.yaml` file should contain **all** parameters needed to run riboviz. This is described in [prep-riboviz-config.md](https://github.com/riboviz/riboviz/blob/master/docs/user/prep-riboviz-config.md).
+The `config.yaml` file should contain **all** parameters needed to run riboviz. This is described in [prep-riboviz-config.md](https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md).
 
 If your example dataset runs riboviz on published data in archives such as GEO/SRA/ENA, please ensure that config.yaml fastq filenames correspond to the accession numbers of the relevant SRA/ENA files.
 
@@ -150,7 +150,7 @@ We are currently (May 2020) reviewing the format of this in issue [#riboviz166](
 ## annotation files
 
 Annotation files (.fasta files of transcript/extended-ORF sequences, .gff files that describe the CDS/ORF position within the fasta file), should be placed within
-They should ideally be checked with [check_fasta_gff.py](https://github.com/riboviz/riboviz/blob/master/riboviz/tools/check_fasta_gff.py), which currently checks if start and stop codons are as expected. This can be run as follows:
+They should ideally be checked with [check_fasta_gff.py](https://github.com/riboviz/riboviz/blob/main/riboviz/tools/check_fasta_gff.py), which currently checks if start and stop codons are as expected. This can be run as follows:
 
 ```console
 $ python -m riboviz.tools.check_fasta_gff -f FASTA -g GFF
@@ -180,7 +180,7 @@ For an example, see: `fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_ye
 
 ## pull request
 
-When your example dataset is complete, please put in a pull request to the master branch and we will review.
+When your example dataset is complete, please put in a pull request to the main branch and we will review.
 
 We aim to implement automatic checking using the configuration validation option for nextflow, see issue [#riboviz172](https://github.com/riboviz/riboviz/issues/172).
 

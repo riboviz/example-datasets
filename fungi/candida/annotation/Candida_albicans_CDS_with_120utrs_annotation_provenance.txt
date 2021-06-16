@@ -14,8 +14,8 @@ The file genome release R64-2-1 (file name S288C_reference_genome_R64-2-1_201501
 
 The files saccharomyces_cerevisiae_R64-2-1_20150113.gff and S288C_reference_sequence_R64-2-1_20150113.fsa were extracted from the .tgz file.
 
-The sequence and annotation files for the whole approximate Saccharomyces cerevisiae transcriptome were prepared using script_for_transcript_annotation.Rmd (https://github.com/riboviz/riboviz/blob/master/rmarkdown/script_for_transcript_annotation.Rmd). 
+The sequence and annotation files for the whole approximate Saccharomyces cerevisiae transcriptome were prepared using script_for_transcript_annotation.Rmd (https://github.com/riboviz/riboviz/blob/main/rmarkdown/script_for_transcript_annotation.Rmd). 
 
 These annotation files were run with Calbicans_rRNA_tRNA.fa contaminants file.
 
-These were run through Riboviz 2.0 tagged master branch, commit: ######
+These were run through Riboviz 2.0 tagged main branch, commit: ######

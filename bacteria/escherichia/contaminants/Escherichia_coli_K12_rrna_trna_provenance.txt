@@ -4,4 +4,4 @@ The RNA FASTA file for genome assembly ASM584v2 (file name GCF_000005845.2_ASM58
 The file GCF_000005845.2_ASM584v2_rna_from_genomic.fna was extracted from the .gz file.
 Sequences were filtered based on those with gbkey=rRNA or gbkey=tRNA.
 
-These were run through Riboviz 2.0.beta tagged master branch, commit: ffb53643ccfdf78aa64a1627d2dd8a9c092df632
+These were run through Riboviz 2.0.beta tagged main branch, commit: ffb53643ccfdf78aa64a1627d2dd8a9c092df632
