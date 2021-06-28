@@ -33,8 +33,35 @@ extract_umis: false
 feature: CDS
 features_file: data/yeast_features.tsv
 fq_files:
+  Wt_CHX: SRR1042853.fastq.gz
+  Dom34KO_CHX: SRR1042854.fastq.gz
   Wt: SRR1042855.fastq.gz
+  Dom34KO: SRR1042856.fastq.gz
+  Wt_CHX_GMP-PNP: SRR1042857.fastq.gz
+  Wt_GMP-PNP: SRR1042858.fastq.gz
+  Wt_High-Mg: SRR1042859.fastq.gz
+  Dom34KO_CHX_GMP-PNP: SRR1042860.fastq.gz
+  Dom34KO_GMP-PNP: SRR1042861.fastq.gz
+  Dom34KO_High-Mg: SRR1042862.fastq.gz
+  Ski2KO: SRR1042863.fastq.gz
   Wt_3-AT: SRR1042864.fastq.gz
+  Dom34KO_3-AT_1: SRR1042867.fastq.gz
+  Dom34KO_3-AT_2: SRR1042866.fastq.gz
+  Dom34KO_3-AT_3: SRR1042865.fastq.gz
+  Wt_Diamide: SRR1042868.fastq.gz
+  Dom34KO_Diamide: SRR1042869.fastq.gz
+  Ski2KO_Suppr-tRNA_1: SRR1042870.fastq.gz
+  Ski2KO_Suppr-tRNA_2: SRR1042871.fastq.gz
+  Ski2KO_Suppr-tRNA_3: SRR1042872.fastq.gz
+  Ski2KO_Dom34KO_Suppr-tRNA: SRR1042873.fastq.gz
+  Dom34KO_Gluc-Starv: SRR1042874.fastq.gz
+  Hbs1KO: SRR1042875.fastq.gz
+  Ski2KO_Short: SRR1042876.fastq.gz
+  Ski2KO_Dom34KO_Short: SRR1042877.fastq.gz
+  # Dom34K0_Disome_F_Wt_1: SRR1042878.fastq.gz
+  # Dom34KO_Disome_F_Wt_2: SRR1042879.fastq.gz
+  # Dom34KO_Disome_F_1: SRR1042880.fastq.gz
+  # Dom34KO_Disome_F_2: SRR1042881.fastq.gz
 group_umis: false
 is_riboviz_gff: true
 job_email_events: beas
