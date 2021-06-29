@@ -221,6 +221,9 @@ These are in separate files, because .fasta files do not generally accept commen
 
 For an example, see: `fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs_annotation_provenance.txt`
 
+## kingdom-level README.md
+
+Edit the kingdom-level README.md file to include the new datasets.
 ## pull request
 
 When your example dataset is complete, please put in a pull request to the master branch and we will review.
