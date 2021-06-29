@@ -18,8 +18,8 @@ The files GCF_000025685.1_ASM2568v1_genomic.gff and GCF_000025685.1_ASM2568v1_ge
 
 The H.volcanii DS2 H98 genome contains a chromosome and 4 plasmids. Due to the circular nature of these plasmids, the origin of replication actually falls somewhere in the middle of gene WP_004050863.1, resulting in some weird behavior when adding this protein to the CDS file. It has been left in for now, but perhaps should be excluded in later analyses. 
 
-The sequence and annotation files for the whole approximate E. coli transcriptome were prepared using a modified version of script_for_transcript_annotation.Rmd (https://github.com/riboviz/riboviz/blob/master/rmarkdown/script_for_transcript_annotation.Rmd) that uses a 25 nucleotide buffer for UTRs. 
+The sequence and annotation files for the whole approximate E. coli transcriptome were prepared using a modified version of script_for_transcript_annotation.Rmd (https://github.com/riboviz/riboviz/blob/main/rmarkdown/script_for_transcript_annotation.Rmd) that uses a 25 nucleotide buffer for UTRs. 
 
 These annotation files were run with Hvolcanii_DS2_H98_rRNA_tRNA.fasta contaminants file.
 
-These were run through Riboviz 2.0.beta tagged master branch, commit: ffb53643ccfdf78aa64a1627d2dd8a9c092df632
+These were run through Riboviz 2.0.beta tagged main branch, commit: ffb53643ccfdf78aa64a1627d2dd8a9c092df632

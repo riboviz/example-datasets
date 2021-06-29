@@ -151,7 +151,7 @@ The .fasta/.gff files would **not** be needed if example-datasets already had an
 
 ## config.yaml
 
-The `config.yaml` file should contain **all** parameters needed to run riboviz. This is described in [prep-riboviz-config.md](https://github.com/riboviz/riboviz/blob/master/docs/user/prep-riboviz-config.md).
+The `config.yaml` file should contain **all** parameters needed to run riboviz. This is described in [prep-riboviz-config.md](https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md).
 
 Give your config file a helpful name, e.g. `Gelsinger2020_hvolcanii.yaml` or `Weinberg_2016_RPF_1_sample_cerevisiae_CDS_w_250utrs_config.yaml`.
 
@@ -227,7 +227,7 @@ For an example, see: `fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_ye
 Edit the kingdom-level README.md file to include the new datasets.
 ## pull request
 
-When your example dataset is complete, please put in a pull request to the master branch and we will review.
+When your example dataset is complete, please put in a pull request to the main branch and we will review.
 
 We aim to implement automatic checking using the configuration validation option for nextflow, see issue [#riboviz172](https://github.com/riboviz/riboviz/issues/172).
 
