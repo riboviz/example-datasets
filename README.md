@@ -27,7 +27,7 @@ Second, you need to download the raw read data in fastq, or gzipped fastq, forma
 A few of the datasets have specific links to download data in the header of the configuration files. 
 Most datasets here have fastq filenames that begin "SRR", indicating that they are stored on the [short read archive (SRA)](https://www.ncbi.nlm.nih.gov/sra) and mirrored on the [european nucleotide archive (ENA)](https://www.ebi.ac.uk/ena/).
 
-We are planning to add functionality to riboviz for direct download from SRA/ENA, but for now you have to follow their instructions on downloading data prior to running riboviz.
+We are working on add functionality to riboviz for direct download from SRA/ENA, but for now you have to follow their instructions on downloading data prior to running riboviz.
 
 ## A small simulated dataset
 
@@ -56,6 +56,7 @@ The files needed for this dataset are described in more detail below as [an exam
   * .gff files that describe the CDS/ORF position within the fasta file 
 * .fasta files of contaminants to exclude (rRNA, tRNA, etc)
 * if needed, a specialized A-site displacement length file `asite_disp_length.txt` (see [riboviz configuration documentation](https://github.com/riboviz/riboviz/blob/master/docs/user/prep-riboviz-config.md)). For example, for _E. coli_ bacteria,  [Escherichia_coli_asite_disp_length.txt](/bacteria/escherichia/annotations/Escherichia_coli_asite_disp_length.txt)
+* on request, additional metadata for analysis such as tRNA counts. These are currently poorly documented, see [riboviz#169](https://github.com/riboviz/riboviz/issues/169), so start an issue ticket to ask about those.
 
 Generally, the transcriptome fasta/gff files and contaminant fasta files would be referred to by multiple config.yaml files in the same species.
 
@@ -140,11 +141,11 @@ We request that example datasets are submitted when they have been tested thorou
 
 * config.yaml files that describe all parameters for the riboviz run, and IF NEEDED:
 * trancriptome or ORFeome files needed:
-  * .fasta files of transcript/extended-ORF sequences
+  * .fasta files of transcript/extended-ORF sequences **in the positive strand**
   * .gff files that describe the CDS/ORF position within the fasta file 
 * .fasta files of contaminants to exclude (rRNA, tRNA, etc)
 
-The .fasta/.gff files would **not** be needed if example-datasets already had an analysis of another dataset on the same transcriptome, so please check first.
+The .fasta/.gff files would **not** be needed if example-datasets already had an analysis of another dataset on the same species/transcriptome, so please check first.
 
 
 ## config.yaml
@@ -152,6 +153,7 @@ The .fasta/.gff files would **not** be needed if example-datasets already had an
 The `config.yaml` file should contain **all** parameters needed to run riboviz. This is described in [prep-riboviz-config.md](https://github.com/riboviz/riboviz/blob/master/docs/user/prep-riboviz-config.md).
 
 Give your config file a helpful name, e.g. `Gelsinger2020_hvolcanii.yaml` or `Weinberg_2016_RPF_1_sample_cerevisiae_CDS_w_250utrs_config.yaml`.
+
 Try to:
 * Start with author and year (e.g. `Gelsinger_2020` or `Weinberg_2016`).
 * If helpful, include distinguishing feature, e.g. `Meiosis_RPF_6samples` in `Brar_2012_Meiosis_RPF_6-samples_CDS_w_250utrs_config.yaml`.
@@ -166,8 +168,8 @@ Please begin the `config.yaml` with a `provenance` entry providing metadata on t
 ```
 provenance:
   authors: # people who put together this config.yaml file
-  - author: John Smith III
-    email: John.Smith.III@ed.ac.uk
+  - author: Vlad Sanchez
+    email: Vlad.Sanchez@ed.ac.uk
   - author: ...
     email: ...
   website: https://www.ed.ac.uk/some-bio-project
@@ -181,8 +183,19 @@ provenance:
 
 ## annotation files
 
-Annotation files (.fasta files of transcript/extended-ORF sequences, .gff files that describe the CDS/ORF position within the fasta file), should be placed within
-They should be checked with [check_fasta_gff.py](https://github.com/riboviz/riboviz/blob/master/riboviz/tools/check_fasta_gff.py), which currently checks if start and stop codons are as expected. This can be run as follows:
+Annotation files (.fasta files of transcript/extended-ORF sequences, .gff files that describe the CDS/ORF position within the fasta file), should be placed within the `annotation` subdirectory of the genus directory.
+
+Give your annotation files helpful names, that include the species name and other distinguishing features such as the length of fixed-width flanking regions (approximate UTRs) or an annotation source.
+
+### checking annotation files
+
+They should be checked with [check_fasta_gff.py](https://github.com/riboviz/riboviz/blob/master/riboviz/tools/check_fasta_gff.py). This checks the match between .gff and .fasta, by checking that each CDS annotated in the .gff:
+* corresponds to a sequence in the .fasta
+* begins with a start codon
+* ends with a stop codon
+* contains no internal stop codons
+
+This can be run as follows:
 
 ```console
 $ python -m riboviz.tools.check_fasta_gff -f FASTA -g GFF
@@ -195,9 +208,7 @@ $ python -m riboviz.tools.check_fasta_gff -f data/yeast_CDS_w_250utrs.fa \
     -g data/yeast_CDS_w_250utrs.gff3 
 ```
 
-You can submit files with non-ATG start codons or in-frame stops if you have good reason to do so, `check_fasta_gff.py` is a diagnostic not a prescription. 
-
-We are currently working on improving specification and testing for annotation files, see [#riboviz174](https://github.com/riboviz/riboviz/issues/74).
+You can submit files with non-ATG start codons or in-frame stops if you have good reason to do so, e.g. coding sequences with frameshifts. The script `check_fasta_gff.py` is a diagnostic not a prescription, that is useful at catching problems such as off-by-one errors, or reverse-complement sequences instead of positive-strand transcripts. Full documentation is in the script itself.
 
 ## contaminant files 
 
