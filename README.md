@@ -27,7 +27,8 @@ Second, you need to download the raw read data in fastq, or gzipped fastq, forma
 A few of the datasets have specific links to download data in the header of the configuration files. 
 Most datasets here have fastq filenames that begin "SRR", indicating that they are stored on the [short read archive (SRA)](https://www.ncbi.nlm.nih.gov/sra) and mirrored on the [european nucleotide archive (ENA)](https://www.ebi.ac.uk/ena/).
 
-We are working on add functionality to riboviz for direct download from SRA/ENA, but for now you have to follow their instructions on downloading data prior to running riboviz.
+We are working to add functionality to riboviz for direct download from SRA/ENA archives, see [riboviz#207](https://github.com/riboviz/riboviz/issues/207).
+However, for now you have to follow the instructions on SRA/ENA websites for downloading data prior to running riboviz.
 
 ## A small simulated dataset
 
