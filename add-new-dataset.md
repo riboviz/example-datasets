@@ -109,42 +109,50 @@ To add a new dataset, follow the instructions described below in **Adding a data
 
 # Adding a dataset for an existing species 
 
-If the species you would like to study is already available in example-datasets, the necessary annotation and contamination files are already available. You will need to ensure that [riboviz is set up](https://github.com/riboviz/riboviz/blob/main/docs/user/install.md) and that the [vignette runs](https://github.com/riboviz/riboviz/blob/main/docs/user/run-on-eddie.md#run-a-vignette-of-the-riboviz-workflow) before adding another dataset.
+If the species you would like to study is available in example-datasets, the necessary annotation and contamination files are will be available in `example-datasets/kingdom/species/`. You will need to ensure that [riboviz is set up](https://github.com/riboviz/riboviz/blob/main/docs/user/install.md) and that the [vignette runs](https://github.com/riboviz/riboviz/blob/main/docs/user/run-on-eddie.md#run-a-vignette-of-the-riboviz-workflow) before adding your dataset.
 
-This documentation provides the user with some useful documentation which supplements the [documentation](https://github.com/riboviz/riboviz/blob/main/docs/user/run-on-eddie.md#run-a-full-size-example-dataset) available for  new datasets for species which have already been set up.
+**Contents:**
 
-- Identify scientific paper, if applicable, and the associated dataset - link the paper 
-- Identify the ribosome profiling samples from the dataset (some may be RNA-seq) - link database
-- Identify the adapter sequence - link/describe  
-- Confirm/deny presence of UMIs and barcodes  
-- Using the gathered information, create a config.yaml file.
-- Prepare to run the data through riboviz. 
+- [ ] If studying published data, identify the scientific paper and provide a link
+- [ ] Identify the ribosome profiling samples from the dataset and provide a link
+- [ ] Identify the adapter sequence 
+- [ ] Confirm/deny presence of UMIs and barcodes  
+- [ ] Create a config.yaml file for your dataset of interest
+- [ ] Prepare to run the data through riboviz 
+
+This documentation provides the user with some useful documentation which supplements the [documentation](https://github.com/riboviz/riboviz/blob/main/docs/user/run-on-eddie.md#run-a-full-size-example-dataset) available for adding new datasets. The linked documentation covers making annotation, contamination and input directories. Instructions for creating qsub job submission scripts and submitting of jobs is also covered. 
+
+Desired structure:
+```
+W-Sc_2012/
+contaminants/   annotation/   config.yaml   input/
+```
 
 **Components:** 
 
-The scientific paper 
-- Identify the scientific paper which is associated with the dataset of interest. The paper will contain a reference to the associated sequencing data, usually in the form of which database the sequencing data has been deposited in and the series **accession number**. 
-- The methods section of the paper will either refer to a protocol or directly list the **adapter sequence** used as well as **UMIs** and/or **barcodes** which may have been used. This information is needed for the config file. 
+The scientific paper (if applicable) 
+- Identify the scientific paper which is associated with the dataset of interest. The paper will contain a reference to the associated sequencing data, including the database  and the series accession numbers. 
+- The methods section of the paper will either refer to a protocol or describe the adapter sequence used, as well as UMIs (Unique Molecular Identifiers) and/or barcodes which may have been used to generate the samples. This information is needed for the config.yaml file. 
 
 The ribosome profiling samples 
 - To find the fastq files for the samples associated with the dataset the series accession number can be searched for in the relevant database.
-- Identify the ribosome profiling samples as some of them may be RNA-seq and should not be included. ([Instructions for downloading fastq files](https://github.com/riboviz/riboviz/blob/main/docs/user/run-on-eddie.md#download-fastq-data-files-from-the-short-read-archive-sra-initial-setup))
+- Identify the ribosome profiling samples, some of the listed samples may be RNA-seq samples and should not be included. ([Instructions for downloading fastq files](https://github.com/riboviz/riboviz/blob/main/docs/user/run-on-eddie.md#download-fastq-data-files-from-the-short-read-archive-sra-initial-setup))
 
 The config.yaml file 
 - Documentation for [configuring the config.yaml](https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md) file is available in addition to a wide variety of examples in [example-datasets](https://github.com/riboviz/example-datasets). It is recommended to use an existing config.yaml file as a guide.
-- The majority of the parameters have default settings that are species-specific and can be modelled off of previous config files available in example-datasets. 
-- Dataset-specific parameters include the adapter sequence, accession codes for the samples and the potential presence of UMIs and/or barcodes. Whether or not UMIs and/or barcodes are present can be hard to pinpoint. If in doubt set the UMIs configuration as FALSE, if this is incorrect this will be reflected in irregular output files. 
-- Once your config.file has been written it is useful for fellow users to be able to access your work. To do this create a branch in example-datasets with a relevant name (e.g. W-Sc_2016_63 for Weinberg et al 2016 Saccharomyces cerevisiae dataset from issue ticket 63) 
-- From this branch add the config file and commit the config file with a useful commit message so that other users can easily access your work via this branch in example datasets. It is useful to link/name this branch in your issue ticket so that it is easy to find. 
+- The majority of the parameters have default settings that are species-specific and can be modelled off of previous config.yaml files which available in example-datasets. 
+- Dataset-specific parameters include the adapter sequence, accession codes for the samples and the potential presence of UMIs and/or barcodes. Whether or not UMIs and/or barcodes are present can be hard to pinpoint. If in doubt set the UMIs configuration as FALSE, if UMIs are present the output files will show irregularities such as a lack of three-nucleotide periodicity. 
+- It can be useful for other people to be able to access your work, if your work is open-science and the data has been published. To do this create a branch in example-datasets with a useful name linked to your issue ticket (e.g. W-Sc_2016-63 for Weinberg et al 2016 *Saccharomyces cerevisiae* dataset from issue ticket 63) which contains your config.yaml file. It is useful to link/name this branch in your issue ticket so that it is easy to find. 
 
 **Testing:**
 
-Attempt a run using the riboviz nextflow 
-- Common issues include running the command from the wrong directory, incorrect adapter sequences, UMIs or pathway errors. 
-- Check the logs to see where it failed. 
+Failure of the job to run through riboviz may be due to:
+- Running the job script command from the wrong directory
+- Pathway errors, either due to typo's or incorrect pathways - these errors may be present in the config.yaml file or in the job script that you submitted
+- Checking `.nextflow.log` to see where the job failed may provide further insights 
 
-If the run is successful output files will be generated, check these for:
-- Appropriate lengths – usually 28-32 nt 
+If the job is completed succesfully output files will be generated in an output folder. These output files should be checked to ensure that the parameters provided were correct.
+- The read_lengths file can be checked to confirm that adapters have been removed succesfully – the read lengths are usually expected to be 28-32 nt (this may depend upon the protocol) 
 - 3nt periodicity 
 
-If the output files look as expected this can confirm that the run was processed correctly.  
+If the output files look as expected confirms that the job ran succesfully.  
