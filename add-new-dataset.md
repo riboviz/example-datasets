@@ -113,12 +113,9 @@ If the species you would like to study is available in example-datasets, the nec
 
 **Contents:**
 
-- [ ] If studying published data, identify the scientific paper and provide a link
-- [ ] Identify the ribosome profiling samples from the dataset and provide a link
-- [ ] Identify the adapter sequence 
-- [ ] Confirm/deny presence of UMIs and barcodes  
-- [ ] Create a config.yaml file for your dataset of interest
-- [ ] Prepare to run the data through riboviz 
+1. Components 
+2. Testing
+3. Troubleshooting
 
 This documentation provides the user with some useful documentation which supplements the [documentation](https://github.com/riboviz/riboviz/blob/main/docs/user/run-on-eddie.md#run-a-full-size-example-dataset) available for adding new datasets. The linked documentation covers making annotation, contamination and input directories. Instructions for creating qsub job submission scripts and submitting of jobs is also covered. 
 
@@ -128,7 +125,7 @@ W-Sc_2012/
 contaminants/   annotation/   config.yaml   input/
 ```
 
-**Components:** 
+**1. Components:** 
 
 The scientific paper (if applicable) 
 - Identify the scientific paper which is associated with the dataset of interest. The paper will contain a reference to the associated sequencing data, including the database  and the series accession numbers. 
@@ -144,15 +141,24 @@ The config.yaml file
 - Dataset-specific parameters include the adapter sequence, accession codes for the samples and the potential presence of UMIs and/or barcodes. Whether or not UMIs and/or barcodes are present can be hard to pinpoint. If in doubt set the UMIs configuration as FALSE, if UMIs are present the output files will show irregularities such as a lack of three-nucleotide periodicity. 
 - It can be useful for other people to be able to access your work, if your work is open-science and the data has been published. To do this create a branch in example-datasets with a useful name linked to your issue ticket (e.g. W-Sc_2016-63 for Weinberg et al 2016 *Saccharomyces cerevisiae* dataset from issue ticket 63) which contains your config.yaml file. It is useful to link/name this branch in your issue ticket so that it is easy to find. 
 
-**Testing:**
+**2. Testing:**
+
+Create downsampled data and complete a fast test on it (optional)  
 
 Failure of the job to run through riboviz may be due to:
 - Running the job script command from the wrong directory
 - Pathway errors, either due to typo's or incorrect pathways - these errors may be present in the config.yaml file or in the job script that you submitted
-- Checking `.nextflow.log` to see where the job failed may provide further insights 
+- Checking `.nextflow.log` from `$HOME/riboviz/riboviz` to see where the job failed may provide further insights (further documentation can be found [here](https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-run-nextflow.md#debugging)
 
 If the job is completed succesfully output files will be generated in an output folder. These output files should be checked to ensure that the parameters provided were correct.
 - The read_lengths file can be checked to confirm that adapters have been removed succesfully – the read lengths are usually expected to be 28-32 nt (this may depend upon the protocol) 
-- 3nt periodicity 
+- 3nt periodicity on coding regions, and start and stop profiles can be checked by examining 3nt_periodicity
 
-If the output files look as expected confirms that the job ran succesfully.  
+The dataset has been processed correctly if the output files confirm the succesful removal of adapters and the presence of 3nt periodicity. You can then:
+- Update the provenance section of the config.yaml file with the most recent commit before submitting a pull request containing your config.yaml file (do not submit your input or output files in this pull request). 
+- Update the genus-level README.md so that it contains the name of your config.yaml file
+
+**3. Troubleshooting**
+
+If necessary, troubleshooting can be carried out to diagnose the cause of any irregularities. Possible causes include contaminating sequences which were not removed when aligning to the contamination files or the presence/incorrect removal of UMIs.  
+- FastQC analysis can be carried out on the fastq.gz input files. This will produce a FastQC report - examine the "Overrepresented sequences" section
