@@ -133,7 +133,7 @@ The scientific paper (if applicable)
 
 The ribosome profiling samples 
 - To find the fastq files for the samples associated with the dataset the series accession number can be searched for in the relevant database.
-- Identify the ribosome profiling samples, some of the listed samples may be RNA-seq samples and should not be included. ([Instructions for downloading fastq files](https://github.com/riboviz/riboviz/blob/main/docs/user/run-on-eddie.md#download-fastq-data-files-from-the-short-read-archive-sra-initial-setup))
+- Identify the ribosome profiling samples, some of the listed samples may be RNA-seq samples and should not be included. ([Instructions for downloading fastq files](https://github.com/riboviz/riboviz/blob/main/docs/user/run-on-eddie.md#download-fastq-data-files-from-the-short-read-archive-sra-initial-setup)).
 
 The config.yaml file 
 - Documentation for [configuring the config.yaml](https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md) file is available in addition to a wide variety of examples in [example-datasets](https://github.com/riboviz/example-datasets). It is recommended to use an existing config.yaml file as a guide.
@@ -143,22 +143,25 @@ The config.yaml file
 
 **2. Testing:**
 
-Create downsampled data and complete a fast test on it (optional)  
+Create downsampled data and complete a fast test on it (optional).  
 
 Failure of the job to run through riboviz may be due to:
-- Running the job script command from the wrong directory
-- Pathway errors, either due to typo's or incorrect pathways - these errors may be present in the config.yaml file or in the job script that you submitted
-- Checking `.nextflow.log` from `$HOME/riboviz/riboviz` to see where the job failed may provide further insights (further documentation can be found [here](https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-run-nextflow.md#debugging)
+- Running the job script command from the wrong directory.
+- Pathway errors, either due to typo's or incorrect pathways - these errors may be present in the config.yaml file or in the job script that you submitted.
+- Checking `.nextflow.log` from `$HOME/riboviz/riboviz` to see where the job failed may provide further insights (further documentation can be found [here](https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-run-nextflow.md#debugging). Errors may also have been encountered before so check previous issue tickets.
 
 If the job is completed succesfully output files will be generated in an output folder. These output files should be checked to ensure that the parameters provided were correct.
-- The read_lengths file can be checked to confirm that adapters have been removed succesfully – the read lengths are usually expected to be 28-32 nt (this may depend upon the protocol) 
-- 3nt periodicity on coding regions, and start and stop profiles can be checked by examining 3nt_periodicity
+- The read_lengths file can be checked to confirm that adapters have been removed succesfully – the read lengths are usually expected to be 28-32 nt (this may depend upon the protocol).
+- 3nt periodicity on coding regions, and start and stop profiles can be checked by examining 3nt_periodicity.
 
 The dataset has been processed correctly if the output files confirm the succesful removal of adapters and the presence of 3nt periodicity. You can then:
 - Update the provenance section of the config.yaml file with the most recent commit before submitting a pull request containing your config.yaml file (do not submit your input or output files in this pull request). 
-- Update the genus-level README.md so that it contains the name of your config.yaml file
+- Update the genus-level README.md so that it contains the name of your config.yaml file.
 
 **3. Troubleshooting**
 
-If necessary, troubleshooting can be carried out to diagnose the cause of any irregularities. Possible causes include contaminating sequences which were not removed when aligning to the contamination files or the presence/incorrect removal of UMIs.  
-- FastQC analysis can be carried out on the fastq.gz input files. This will produce a FastQC report - examine the "Overrepresented sequences" section
+If necessary, troubleshooting can be carried out to diagnose the cause of any irregularities. Possible causes include contaminating sequences which were not removed when aligning to the contamination files or the presence/incorrect removal of UMIs. 
+- Check the alignment of the reads. If random nucleotides are present in the read that were not removed, this would prevent the alignment of almost all reads (either to rRNA or mRNA), leading to a problem of no aligned reads.
+- If there are no sensible alignments: find the overrepresented sequences by performing a FastQC analysis on the fastq input files, check the FastQC report "Overrepresented sequences" section. Any overrepresented sequences are likely to be rRNA. You can then align to the reference genome by BLAST and check if there is a read structure of rRNAfragment-something-overrepresentedsequence. The something will be the length of the UMI.
+- If there are no sensible alignments: try UMIs. Put in the best-guess length of UMI to the config.yaml ([examples here](https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#examples)) (in another branch if helpful). Run through riboviz on a downsampled dataset. If there are sensible alignments and the output files look good you can scale up to the full dataset.
+- If it still does not make sense: email the authors.  
