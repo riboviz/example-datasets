@@ -152,7 +152,7 @@ Failure of the job to run through riboviz may be due to:
 
 If the job is completed succesfully output files will be generated in an output folder. These output files should be checked to ensure that the parameters provided were correct.
 - The read_lengths file can be checked to confirm that adapters have been removed succesfully – the read lengths are usually expected to be 28-32 nt (this may depend upon the protocol).
-- 3nt periodicity on coding regions, and start and stop profiles can be checked by examining 3nt_periodicity.
+- 3nt periodicity on coding regions, and start and stop profiles can be checked by examining the 3nt_periodicity file.
 
 The dataset has been processed correctly if the output files confirm the succesful removal of adapters and the presence of 3nt periodicity. You can then:
 - Update the provenance section of the config.yaml file with the most recent commit before submitting a pull request containing your config.yaml file (do not submit your input or output files in this pull request). 
@@ -162,6 +162,6 @@ The dataset has been processed correctly if the output files confirm the succesf
 
 If necessary, troubleshooting can be carried out to diagnose the cause of any irregularities. Possible causes include contaminating sequences which were not removed when aligning to the contamination files or the presence/incorrect removal of UMIs. 
 - Check the alignment of the reads. If random nucleotides are present in the read that were not removed, this would prevent the alignment of almost all reads (either to rRNA or mRNA), leading to a problem of no aligned reads.
-- If there are no sensible alignments: find the overrepresented sequences by performing a FastQC analysis on the fastq input files, check the FastQC report "Overrepresented sequences" section. Any overrepresented sequences are likely to be rRNA. You can then align to the reference genome by BLAST and check if there is a read structure of rRNAfragment-something-overrepresentedsequence. The something will be the length of the UMI.
+- If there are no sensible alignments: find the overrepresented sequences by performing a FastQC analysis on the fastq input files (`$ module load igmm/apps/FastQC/0.11.9` if working from Eddie), check the FastQC report "Overrepresented sequences" section. Any overrepresented sequences are likely to be rRNA. You can then align to the reference genome by BLAST and check if there is a read structure of rRNAfragment-something-overrepresentedsequence. The something will be the length of the UMI.
 - If there are no sensible alignments: try UMIs. Put in the best-guess length of UMI to the config.yaml ([examples here](https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#examples)) (in another branch if helpful). Run through riboviz on a downsampled dataset. If there are sensible alignments and the output files look good you can scale up to the full dataset.
 - If it still does not make sense: email the authors.  
