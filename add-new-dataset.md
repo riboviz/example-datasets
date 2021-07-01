@@ -127,7 +127,7 @@ contaminants/   annotation/   config.yaml   input/
 
 **1. Components:** 
 
-The scientific paper (if applicable) 
+The scientific paper (if dataset is published) 
 - Identify the scientific paper which is associated with the dataset of interest. The paper will contain a reference to the associated sequencing data, including the database  and the series accession numbers. 
 - The methods section of the paper will either refer to a protocol or describe the adapter sequence used, as well as UMIs (Unique Molecular Identifiers) and/or barcodes which may have been used to generate the samples. This information is needed for the config.yaml file. 
 
@@ -137,13 +137,15 @@ The ribosome profiling samples
 
 The config.yaml file 
 - Documentation for [configuring the config.yaml](https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md) file is available in addition to a wide variety of examples in [example-datasets](https://github.com/riboviz/example-datasets). It is recommended to use an existing config.yaml file as a guide.
-- The majority of the parameters have default settings that are species-specific and can be modelled off of previous config.yaml files which available in example-datasets. 
+- The majority of the parameters have default settings that are species-specific and can be modelled off of previous config.yaml files used for your species of interst, which are available in example-datasets. 
 - Dataset-specific parameters include the adapter sequence, accession codes for the samples and the potential presence of UMIs and/or barcodes. Whether or not UMIs and/or barcodes are present can be hard to pinpoint. If in doubt set the UMIs configuration as FALSE, if UMIs are present the output files will show irregularities such as a lack of three-nucleotide periodicity. 
 - It can be useful for other people to be able to access your work, if your work is open-science and the data has been published. To do this create a branch in example-datasets with a useful name linked to your issue ticket (e.g. W-Sc_2016-63 for Weinberg et al 2016 *Saccharomyces cerevisiae* dataset from issue ticket 63) which contains your config.yaml file. It is useful to link/name this branch in your issue ticket so that it is easy to find. 
 
 **2. Testing:**
 
-Create downsampled data and complete a fast test on it (optional).  
+Downsampled data test (optional)
+- Create downsampled data (e.g. 1000 reads) and complete a fast test on it, troubleshoot as necessary. 
+- If succesful you can increase the sample size (e.g.100 000 reads) and complete another test before increasing to full sample size. This saves time by identifying and correcting any errors before proceeding with the time-consuming task of processing an entire dataset.   
 
 Failure of the job to run through riboviz may be due to:
 - Running the job script command from the wrong directory.
