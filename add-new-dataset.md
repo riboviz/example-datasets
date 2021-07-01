@@ -3,6 +3,8 @@
 A how-to-guide to adding a new dataset for riboviz processing into example-datasets, including for new species.
 For more information on using riboviz, see [riboviz documentation](https://github.com/riboviz/riboviz#use-riboviz).
 
+This guide complements the overview of repository organisation and file naming conventions found in [README](https://github.com/riboviz/example-datasets#readme).
+
 # Table of contents
 
 * [Setting up a new species](#newspecies)
@@ -138,7 +140,8 @@ To add a new dataset, follow the instructions described below in **Adding a data
 
 # Adding a dataset for an existing species 
 
-If the species you would like to study is available in example-datasets, the necessary annotation and contamination files are will be available in `example-datasets/kingdom/species/`. You will need to ensure that [riboviz is set up](https://github.com/riboviz/riboviz/blob/main/docs/user/install.md) and that the [vignette runs](https://github.com/riboviz/riboviz/blob/main/docs/user/run-on-eddie.md#run-a-vignette-of-the-riboviz-workflow) before adding your dataset.
+If the species you would like to study is available in example-datasets, the necessary annotation and contamination files are will be available in `example-datasets/kingdom/species/`. 
+You should ensure that [riboviz is set up](https://github.com/riboviz/riboviz/blob/main/docs/user/install.md) and test that the [vignette runs](https://github.com/riboviz/riboviz/blob/main/docs/user/run-on-eddie.md#run-a-vignette-of-the-riboviz-workflow) before trying to run riboviz on a new your dataset.
 
 **Contents:**
 
@@ -146,9 +149,11 @@ If the species you would like to study is available in example-datasets, the nec
 2. Testing
 3. Troubleshooting
 
-This documentation provides the user with some useful documentation which supplements the [documentation](https://github.com/riboviz/riboviz/blob/main/docs/user/run-on-eddie.md#run-a-full-size-example-dataset) available for adding new datasets. The linked documentation covers making annotation, contamination and input directories. Instructions for creating qsub job submission scripts and submitting of jobs is also covered. 
+This documentation provides the user with some useful documentation which supplements the [documentation for running new datasets in a computing cluster](https://github.com/riboviz/riboviz/blob/main/docs/user/run-on-eddie.md#run-a-full-size-example-dataset).
+The linked documentation covers setting up annotation, contamination and input directories ready to run riboviz.
+For a cluster with a job submission system, instructions for creating qsub job submission scripts and submitting of jobs is also covered. 
 
-Desired structure:
+Suggested structure, with a root directory code-named for a dataset `W-Sc_2012`:
 ```
 W-Sc_2012/
 contaminants/   annotation/   config.yaml   input/
@@ -156,17 +161,18 @@ contaminants/   annotation/   config.yaml   input/
 
 **1. Components:** 
 
-The scientific paper (if dataset is published) 
+The scientific paper (if dataset is published) :
 - Identify the scientific paper which is associated with the dataset of interest. The paper will contain a reference to the associated sequencing data, including the database  and the series accession numbers. 
 - The methods section of the paper will either refer to a protocol or describe the adapter sequence used, as well as UMIs (Unique Molecular Identifiers) and/or barcodes which may have been used to generate the samples. This information is needed for the config.yaml file. 
 
-The ribosome profiling samples 
-- To find the fastq files for the samples associated with the dataset the series accession number can be searched for in the relevant database.
-- Identify the ribosome profiling samples, some of the listed samples may be RNA-seq samples and should not be included. ([Instructions for downloading fastq files](https://github.com/riboviz/riboviz/blob/main/docs/user/run-on-eddie.md#download-fastq-data-files-from-the-short-read-archive-sra-initial-setup)).
+The ribosome profiling samples:
+- To find the fastq files for the samples associated with the dataset the series accession number can be searched for in the relevant database, usually [NCBI Short Read Archive (SRA)](https://www.ncbi.nlm.nih.gov/sra) or the [European Nucleotide Archive (ENA)](https://www.ebi.ac.uk/ena/).
+- Identify the ribosome profiling samples, some of the listed samples may be RNA-seq samples and should not be included. 
+- Download the files, see [Instructions for downloading fastq files from SRA](https://github.com/riboviz/riboviz/blob/main/docs/user/run-on-eddie.md#download-fastq-data-files-from-the-short-read-archive-sra-initial-setup).
 
-The config.yaml file 
+The config.yaml file:
 - Documentation for [configuring the config.yaml](https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md) file is available in addition to a wide variety of examples in [example-datasets](https://github.com/riboviz/example-datasets). It is recommended to use an existing config.yaml file as a guide.
-- The majority of the parameters have default settings that are species-specific and can be modelled off of previous config.yaml files used for your species of interst, which are available in example-datasets. 
+- The majority of the parameters have default settings that are species-specific and can be adapted from previous config.yaml files used for your species of interest, already in example-datasets. 
 - Dataset-specific parameters include the adapter sequence, accession codes for the samples and the potential presence of UMIs and/or barcodes. Whether or not UMIs and/or barcodes are present can be hard to pinpoint. If in doubt set the UMIs configuration as FALSE, if UMIs are present the output files will show irregularities such as a lack of three-nucleotide periodicity. 
 - It can be useful for other people to be able to access your work, if your work is open-science and the data has been published. To do this create a branch in example-datasets with a useful name linked to your issue ticket (e.g. W-Sc_2016-63 for Weinberg et al 2016 *Saccharomyces cerevisiae* dataset from issue ticket 63) which contains your config.yaml file. It is useful to link/name this branch in your issue ticket so that it is easy to find. 
 
@@ -174,25 +180,28 @@ The config.yaml file
 
 Downsampled data test (optional)
 - Create downsampled data (e.g. 1000 reads) and complete a fast test on it, troubleshoot as necessary. 
-- If succesful you can increase the sample size (e.g.100 000 reads) and complete another test before increasing to full sample size. This saves time by identifying and correcting any errors before proceeding with the time-consuming task of processing an entire dataset.   
+- If succesful you can increase the sample size (e.g.100 000 reads) and complete another test before increasing to full sample size. This saves time by identifying and correcting any errors before proceeding with the time-consuming task of processing an entire dataset.
 
 Failure of the job to run through riboviz may be due to:
 - Running the job script command from the wrong directory.
 - Pathway errors, either due to typo's or incorrect pathways - these errors may be present in the config.yaml file or in the job script that you submitted.
 - Checking `.nextflow.log` from `$HOME/riboviz/riboviz` to see where the job failed may provide further insights (further documentation can be found [here](https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-run-nextflow.md#debugging). Errors may also have been encountered before so check previous issue tickets.
 
-If the job is completed succesfully output files will be generated in an output folder. These output files should be checked to ensure that the parameters provided were correct.
-- The read_lengths file can be checked to confirm that adapters have been removed succesfully – the read lengths are usually expected to be 28-32 nt (this may depend upon the protocol).
-- 3nt periodicity on coding regions, and start and stop profiles can be checked by examining the 3nt_periodicity file.
+If the job is completed successfully, output files will be generated in an output folder. These output files should be checked to ensure that the parameters provided were correct.
+- The read_lengths file can be checked to confirm that adapters have been removed successfully. The read lengths are usually expected to be 28-32 nt for eukaryotes, depending  upon the protocol.
+- 3nt periodicity on coding regions, and start and stop profiles, can be checked by examining the 3nt_periodicity file.
 
 The dataset has been processed correctly if the output files confirm the succesful removal of adapters and the presence of 3nt periodicity. You can then:
-- Update the provenance section of the config.yaml file with the most recent commit before submitting a pull request containing your config.yaml file (do not submit your input or output files in this pull request). 
+- Update the provenance section of the config.yaml file with the most recent commit before submitting a pull request containing your config.yaml file. **Do not submit your input or output files in this pull request.** 
 - Update the genus-level README.md so that it contains the name of your config.yaml file.
 
 **3. Troubleshooting**
 
-If necessary, troubleshooting can be carried out to diagnose the cause of any irregularities. Possible causes include contaminating sequences which were not removed when aligning to the contamination files or the presence/incorrect removal of UMIs. 
-- Check the alignment of the reads. If random nucleotides are present in the read that were not removed, this would prevent the alignment of almost all reads (either to rRNA or mRNA), leading to a problem of no aligned reads.
+If necessary, troubleshooting to diagnose and fix any problems. 
+Common causes include contaminating sequences which were not removed when aligning to the contamination files or the presence/incorrect removal of UMIs. 
+- Check the proportion of reads that are aligned. If adapters or random nucleotides are present in the read that were not removed, this would prevent the alignment of almost all reads (either to rRNA or mRNA), leading to a problem of no aligned reads.
 - If there are no sensible alignments: find the overrepresented sequences by performing a FastQC analysis on the fastq input files (`$ module load igmm/apps/FastQC/0.11.9` if working from Eddie), check the FastQC report "Overrepresented sequences" section. Any overrepresented sequences are likely to be rRNA. You can then align to the reference genome by BLAST and check if there is a read structure of rRNAfragment-something-overrepresentedsequence. The something will be the length of the UMI.
-- If there are no sensible alignments: try UMIs. Put in the best-guess length of UMI to the config.yaml ([examples here](https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#examples)) (in another branch if helpful). Run through riboviz on a downsampled dataset. If there are sensible alignments and the output files look good you can scale up to the full dataset.
+- If there are no sensible alignments: try UMIs. Put in the best-guess length of UMI to the config.yaml ([examples here](https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#examples)). Run through riboviz on a downsampled dataset. If there are sensible alignments and the output files look good you can scale up to the full dataset.
+- Note, if you are working in a git repository, it can be helpful to try different parameter values in different git branches to keep troubleshooting attempts separate from each other.
+- Describe your problem clearly in your issue ticket on example-datasets to ask for help from the riboviz team.
 - If it still does not make sense: email the authors.  
