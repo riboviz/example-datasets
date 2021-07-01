@@ -1,6 +1,7 @@
-# Setting up a new dataset 
+# How to set up a new dataset 
 
-A how-to-guide to adding a new dataset for riboviz processing onto example-datasets, including for new species. For more information on using riboviz, check out documentation [here.](https://github.com/riboviz/riboviz#use-riboviz)
+A how-to-guide to adding a new dataset for riboviz processing into example-datasets, including for new species.
+For more information on using riboviz, see [riboviz documentation](https://github.com/riboviz/riboviz#use-riboviz).
 
 # Table of contents
 
@@ -13,26 +14,39 @@ A how-to-guide to adding a new dataset for riboviz processing onto example-datas
 
 # Setting up a new species
 
-**For species where annotations are not already available on riboviz**
+**For species where annotations are not already available on example-datasets**
 
-Some species already having annotations set up in example-datasets, meaning it is quicker and easier to add new datasets for them. The species already present in example-datasets include; *Escherichia*, *Candida*, *Cryptococcus*, *Saccharomyces* and many more. If the species you want to study is not already on example-datasets then it will take more time to set up, but the key steps are outlines below. 
+Some species already have transcript annotations set up in example-datasets, meaning it is quicker and easier to add new datasets for them.
+The species already present in example-datasets include; *Escherichia coli*, *Candida albicans*, *Cryptococcus neoformans*, *Saccharomyces cerevisiae* and many more.
+If the species you want to study is not already on example-datasets then it will take more time to set up, but the key steps are outlines below.
+
+Note that all annotations are imperfect, and your biological question may require a transcript annotation different from the ones already present.
+The steps to add a new annotation are the same as adding a new species.
 
 **Contents:**
 
-1. Identify the new species you want to study.
-2. Create a spceies folder in example-datasets.
-3. Download contaminants fasta file.
-4. Download or create annotation fasta and gff files.
+1. Find annotation data for the species you want to study.
+2. Create a genus folder in example-datasets if needed.
+3. Download or create contaminants fasta file.
+4. Download or create transcriptome annotation fasta and gff files.
 5. Check annotation files
 6. Add your first dataset.
 
-**1. Identify the new species you want to study**
+**1. Find annotation data for the species you want to study**
 
-First step is to pick a species to study. https://www.ncbi.nlm.nih.gov/genome/ contains the genomes of over 60,000 organsims and can provide links to external resources focussing of individual species, for example; Saccharomyces has the https://www.yeastgenome.org/ and schizosaccharomyces pombe has https://www.pombase.org/ listed as externaml resources.  
+Unless you have generated new annotation data yourself, you will find this on public databases of genomes and annotations. 
+Some top choices are:
+
+* [EMBL-EBI Ensembl](http://www.ensembl.org/) and its sister sites for [Fungi](https://fungi.ensembl.org/), [Bacteria](http://bacteria.ensembl.org/), [Plants](http://plants.ensembl.org/), and [Protists](http://protists.ensembl.org/) contain many genomes and annotations.
+* [NCBI genomes](https://www.ncbi.nlm.nih.gov/genome/) contains the genomes of over 60,000 organisms and can provide links to external resources focussing of individual species.
+* Model organism databases are useful for specialised orgnaisms, such as [Saccharomyces, SGD](https://www.yeastgenome.org/) and [Schizosaccharomyces pombe, pombase](https://www.pombase.org/).  
 
 **2. Create a genus folder in example-datasets**
 
-Each genus has it's own folder within the relevant Kingdom folder, as outlined in the example-datasets [README file](https://github.com/riboviz/example-datasets#repository-structure-is-loosely-phylogenetic). The genus folder will eventually hold the config.yamls for each dataset. Within the genus folder, an annotation and a contaminants folder need to be created. These will hold the transcriptome gff and fasta, and the contaminant fasta respectively, along with the relevant provinance files.  
+Each genus has its own folder within the relevant Kingdom folder, as outlined in the example-datasets [README file](https://github.com/riboviz/example-datasets#repository-structure-is-loosely-phylogenetic).
+The genus folder will eventually hold the `config.yaml` files for each dataset for species within that genus
+Within the genus folder, an annotation and a contaminants folder need to be created.
+These will hold the transcriptome gff and fasta, and the contaminant fasta respectively, along with the relevant provenance files.  
 
 - Create a new branch in example datasets to work in.
 - Within the branch, create a folder for your genus.
@@ -40,23 +54,31 @@ Each genus has it's own folder within the relevant Kingdom folder, as outlined i
 
 **3. Download contaminants fasta file**
 
-The contaminants file is a fasta file containing the sequences of the rRNA for the organism being studied. rRNA is protected by the ribosome during the digestion step of ribosome profiling, so will be present in the data. These can typically be found and downloaded from a genome database in the .fasta format.
+The contaminants file is a fasta file containing the sequences of unwanted contaminant RNA sequence for the organism being studied. 
+Some ribosomal RNA (rRNA) fragments are released from ribosome during the digestion step of ribosome profiling, so will typically be abundant in the data.
+Other non-coding RNAs such as transfer RNA, snoRNAs, and so on, may also be useful to remove as contaminants.
+Their sequences can typically be found and downloaded from a genome database in the .fasta format.
 
-This can then be added to the contaminants folder, along with a provenance.txt file describing the origins and how it was created. 
+The contaminants fasta file can then be added to the contaminants folder, along with a provenance.txt file describing the origins and how it was created. 
 
-- Find and download the rRNA sequences for your organisim in the .fasta format
-- Add the rRNA.fasta file to the contaminants file 
-- Add a provenance.txt file
+- Find and download the contaminant/rRNA sequences for your organism in .fasta format
+- Add the .fasta file to the contaminants folder with a helpful name such as `Genus_species_rRNA_tRNA.fasta`
+- Create and add a provenance.txt file
 
-**4. Download or create annotation fasta and gff files**
+**4. Download or create transcriptome annotation fasta and gff files**
 
-Riboviz runs using transcriptome style annotation files rather than genome style annotation files, as this reduces problems later on in the data analysis that would be cause by splicing. If transcriptome fasta and gff files are available to download then great! If not, then these can be created from genome style fasta and gff files using the Rscript 'create_files_for_riboviz.R' available [here](https://github.com/riboviz/riboviz/blob/create_riboviz_style_cds_gff_acope3-278/rscripts/create_files_for_riboviz.R). This code may need to be adapted to fit different research questions and is still in development, but is definitely a good starting point. 
+Riboviz runs using transcriptome-centric annotation files rather than genome annotation files, as this reduces problems later on in the data analysis that would be caused by splicing and antisense/opposite-strand reads.
+If transcriptome fasta and gff files are already available then great!
+If not, you will have to create them.
+
+You can try to create transcriptome files from genome fasta and gff files using the Rscript 'create_files_for_riboviz.R' available [here](https://github.com/riboviz/riboviz/blob/create_riboviz_style_cds_gff_acope3-278/rscripts/create_files_for_riboviz.R).
+This code may need to be adapted to fit different research questions and is still in development, but is definitely a good starting point. 
 
 This can be run using the command:
 
 `Rscript --vanilla rscripts/create_files_for_riboviz.R `
 
-and by adding arguments to specify the input fasta and gff, output files, the method of seperating sequences (ie by the gene name or sequence ID) etc.
+and by adding arguments to specify the input fasta and gff, output files, the method of seperating sequences (i.e. by the gene name or sequence ID), etc.
 ```
 "-i","--input",help="Input DNA sequences. Should contain genome (i.e. sequence of each chromosome) or transcripts. Should be file path",type="character"
 "-g","--gff",help="GFF3 file corresponding to input DNA sequences.",type="character"
@@ -74,32 +96,39 @@ and by adding arguments to specify the input fasta and gff, output files, the me
 "--exons_preordered",help="Some GFF3 files have exons pre-ordered such that exon with start codon is listed first. Effects how multi-exon genes will be combined.",action="store_true"
 
 ```
-These parameters allow the code to be adapted depending on the format of the GFF and fasta files, which may vary based on how they were created.
 
-Key qualities of transcriptome style fasta and gff files produced by create_ files for riboviz.R:
-- All sequences are +ve stranded 
-- All coding sequences are flanked by a consistent buffer region
+These parameters allow the code to be adapted depending on the format of the GFF and fasta files, which is inconsistent between different file sources and databases.
+
+Key qualities of transcriptome style fasta and gff files produced by `create_files_for_riboviz.R`:
+- All coding sequences are on the positive/forward stranded 
+- All coding sequences are flanked by a fixed-length buffer region
 - Each transcript sequence is listed seperately in the fasta file, rather than being the full sequences of chromosomes
-- For each transcript, the GFF will contain 3 features; the upstream buffer, the CDS and the downstream buffer.
+- For each transcript, the GFF will contain 3 features; the upstream buffer (approximate 5'UTR), the CDS, and the downstream buffer (approximate 3'UTR).
 
 Once created, these annotation files can be uploaded to the annotation folder. 
 
-- If available, download transcriptome gff and fasta files for the species of interest and add to annnotation folder.
+- If available, download transcriptome gff and fasta files for the species of interest and add to annotation folder.
 - If unavailable, download genome gff and fasta files and run through create_files_for_riboviz.R
 - Add new files to annotation folder
+- Create and add a provenance.txt file describing their origins and how they was created. 
 
 **5. Check annotation files**
 
-The GFF file acts as a guide, and tells the pipeline where to find the start and stop codons for each transcript. However it is important that these locations do actually match the location of the start and stop codon in the provided fasta file. Files can be checked using the riboviz tool check_fasta_gff, which looks for start and stop codons in the fasta file using the positions provided by the GFF and provides details on the number of missing and unexpected features. Details about how to use check_fasta_gff can be found [here](https://github.com/riboviz/riboviz/blob/main/docs/user/check-fasta-gff.md). It is likely that there will be a few issues present due to alternative start and stop codons, and the presence of psuedogenes if not removed.
+The gff file acts as a guide, and tells the pipeline where to find the start and stop codons for each transcript.
+It is essential that these locations do actually match the location of the start and stop codon in the matched fasta file.
+If not, riboviz will still run, but the read frame and counts per ORF will be wrong.
 
-If there are issues present, then using a genome viewer such as SnapGene can help highlight the cause.
+Annotation files can be checked using the riboviz tool [check_fasta_gff](https://github.com/riboviz/riboviz/blob/main/riboviz/tools/check_fasta_gff.py), which looks for start and stop codons in the fasta file using the positions provided by the GFF and provides details on the number of missing and unexpected features.
+See [the documentation about how to use check_fasta_gff](https://github.com/riboviz/riboviz/blob/main/docs/user/check-fasta-gff.md).
+It is likely that there will be a few issues present due to alternative start codons, frameshifts, and the presence of psuedogenes if not removed.
 
-If the gff and fasta files show few issues, the files are ready to test with a dataset, which you can add following the instructions below. Adding a provenance.txt file here describing how the files were made and the sources of the data is advisable. 
+If there are issues present, then using a sequence viewer such as IGV or SnapGene can help highlight the cause.
+
+If the gff and fasta files show few issues, the files are ready to test with a dataset, which you can add following the instructions below.
 
 - Run GFF and fasta files through check_fasta_gff.
 - Check outputs for unexpected issues.
 - Investigate issues if present. 
-- Add provenance.txt file.
 
 **6. Add your first dataset**
 
