@@ -73,8 +73,8 @@ Riboviz runs using transcriptome-centric annotation files rather than genome ann
 If transcriptome fasta and gff files are already available then great!
 If not, you will have to create them.
 
-You can try to create transcriptome files from genome fasta and gff files using the Rscript 'create_files_for_riboviz.R' available [here](https://github.com/riboviz/riboviz/blob/create_riboviz_style_cds_gff_acope3-278/rscripts/create_files_for_riboviz.R).
-This code may need to be adapted to fit different research questions and is still in development, but is definitely a good starting point. 
+You can try to create transcriptome files from genome fasta and gff files using the script [create_files_for_riboviz.R](https://github.com/riboviz/riboviz/blob/create_riboviz_style_cds_gff_acope3-278/rscripts/create_files_for_riboviz.R).
+This code may need to be adapted to fit different research questions and is still in development, but is a good starting point. 
 
 This can be run using the command:
 
