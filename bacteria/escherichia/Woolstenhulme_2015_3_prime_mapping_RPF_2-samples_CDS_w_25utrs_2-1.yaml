@@ -1,0 +1,70 @@
+provenance:
+  authors:
+  - author: Alexander Cope
+    email: alexander.cope@rutgers.edu
+website:
+  date run: 2021-06-17
+  riboviz-version: 2.1 | COMMIT tbc
+  GEO: GSE64488
+  reference: High Precision Analysis of Translational Pausing by Ribosome Profiling in Bacteria Lacking EFP, Woolstenhulme et. al. 2015
+  DOI: 10.1016/j.celrep.2015.03.014
+  notes: RiboSeq for E. coli K12 MG1655 strain. Successfully run using Python pipeline. Assign A-site using 3'-end mapping strategy.
+
+adapters: CTGTAGGCACCATCAAT
+asite_disp_length_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_standard_asite_disp_length.txt
+buffer: 25
+build_indices: true
+codon_positions_file: data/yeast_codon_pos_i200.RData
+count_reads: true
+count_threshold: 64
+dataset: W-Ec_2015
+dedup_stats: false
+dedup_umis: false
+dir_in: W-Ec_2015/input
+dir_index: W-Ec_2015/index
+dir_out: W-Ec_2015/output
+dir_tmp: W-Ec_2015/tmp
+do_pos_sp_nt_freq: true
+extract_umis: false
+feature: CDS
+features_file: data/yeast_features.tsv
+fq_files:
+  MOPS1: SRR1734430.sra.fastq.gz
+  MOPS2: SRR1734431.sra.fastq.gz
+group_umis: false
+is_riboviz_gff: true
+job_email: null
+job_email_events: beas
+job_memory: 8G
+job_name: riboviz
+job_num_cpus: 4
+job_parallel_env: mpi
+job_runtime: '48:00:00'
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files: null
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+num_processes: 1
+orf_fasta_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_K12_CDS_w_25utrs.fa
+orf_gff_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_K12_CDS_w_25utrs.gff3
+orf_index_prefix: ecoli_25_
+output_pdfs: true
+primary_id: Name
+publish_index_tmp: false
+rpf: true
+rrna_fasta_file: ../../riboviz/example-datasets/bacteria/escherichia/contaminants/Escherichia_coli_rrna_trna.fa
+rrna_index_prefix: rRNA
+run_static_html: true
+sample_sheet: null
+samsort_memory: null
+secondary_id: null
+stop_in_feature: false
+t_rna_file: data/yeast_tRNAs.tsv
+trim_5p_mismatches: true
+umi_regexp: null
+validate_only: false
