@@ -136,9 +136,11 @@ Artificial datasets that don't come from a complete real genome.
 
 # How to submit an example dataset
 
-We welcome community contributions!
+We welcome community contributions! 
+To get started, [open a new issue in the example-datasets repository, and choose the new dataset issue template](https://github.com/riboviz/example-datasets/issues/new/choose).
+See also the [how-to-guide on adding a new dataset](add-new-dataset.md).
 
-We request that example datasets are submitted when they have been tested thoroughly, i.e. riboviz runs on the example dataset on relevant .fastq-format data. Please submit by forking the repository, and putting in a pull request for that contains only:
+We request that example datasets are submitted when they have been tested thoroughly, i.e. riboviz runs on the example dataset on relevant .fastq-format data. Please submit by forking the repository, and putting in a pull request connected to your open issue, that contains only:
 
 * config.yaml files that describe all parameters for the riboviz run, and IF NEEDED:
 * trancriptome or ORFeome files needed:
@@ -225,6 +227,7 @@ For an example, see: `fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_ye
 ## kingdom-level README.md
 
 Edit the kingdom-level README.md file to include the new datasets.
+
 ## pull request
 
 When your example dataset is complete, please put in a pull request to the main branch and we will review.
