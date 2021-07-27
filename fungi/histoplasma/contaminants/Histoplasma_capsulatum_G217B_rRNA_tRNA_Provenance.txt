@@ -1,0 +1,7 @@
+This file was created by Sophie Winterbourne in 2021, ribosomal RNA files and tRNA files were selcted from RNAcentral for Histoplasma capsulatum strain G217B.
+
+The data was downloaded from RNAcentral (https://rnacentral.org/).
+
+tRNA contamination fasta files: https://rnacentral.org/export/download-result?job=442d4f95-5792-489d-ae63-c59d6d51ebbb
+
+rRNA contamination fasta files: https://rnacentral.org/export/download-result?job=b263c2bd-87d0-42e4-8843-7148dc709e61   
