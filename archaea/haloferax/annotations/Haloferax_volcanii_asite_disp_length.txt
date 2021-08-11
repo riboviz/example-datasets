@@ -1,0 +1,28 @@
+# asite_disp_length_ecoli_standard.txt
+# summarizes the displacement from 3' end to A-site for each read length
+# based on "standard" ecoli data from early ribosome profiling papers
+# 12nt to the a-site from 3'-end, 12-nt to the p-site/ start codon.
+# Edward Wallace, December 2019
+read_length	asite_displacement
+20	7
+21	8
+22	9
+23	10
+24	11
+25	12
+26	13
+27	14
+28	15
+29	16
+30	17
+31	18
+32	19
+33	20
+34	21
+35	22
+36	23
+37	24
+38	25
+39	26
+40	27
+
