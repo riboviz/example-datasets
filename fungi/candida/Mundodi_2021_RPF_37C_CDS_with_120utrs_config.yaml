@@ -17,6 +17,7 @@ buffer: 120
 asite_disp_length_file: data/yeast_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
 build_indices: TRUE # Build indices for aligner? if TRUE, remake indices from fasta files
 cmd_file: Mundodi_Calbicans_riboviz.sh # Bash commands file
+codon_positions_file: null
 count_reads: TRUE # Scan input, temporary and output files and produce counts of reads in each FASTQ, SAM, and BAM file processed?
 count_threshold: 64 # Remove genes with a read count below this threshold, when generating statistics and figures
 dataset: Mundodi_Calbicans_37C # Dataset name
@@ -33,6 +34,7 @@ is_test_run: FALSE # Is this a test run
 make_bedgraph: TRUE # Output bedgraph files, as TSV, in addition to h5?
 max_read_length: 50 # Maximum read length in H5 output
 min_read_length: 10 # Minimum read length in H5 output
+features_file: null
 fq_files:
   37C1: SRR12228384.fastq
   37C2: SRR12228385.fastq
@@ -47,3 +49,4 @@ rrna_fasta_file: ../example-datasets/fungi/candida/contaminants/Candida_albicans
 rrna_index_prefix: calbicans_rRNA # rRNA index file prefix, relative to dir_index
 secondary_id: NULL # Secondary gene IDs to access the data (COX1, EFB1, etc.)
 stop_in_cds: FALSE # Are stop codons part of the CDS annotations in GFF?
+t_rna_file: null
