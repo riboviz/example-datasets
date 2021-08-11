@@ -36,9 +36,9 @@ max_read_length: 50 # Maximum read length in H5 output
 min_read_length: 10 # Minimum read length in H5 output
 features_file: null
 fq_files:
-  37C1: SRR12228384.fastq
-  37C2: SRR12228385.fastq
-  37C3: SRR12228386.fastq
+  37C1: SRR12228384.fastq.gz
+  37C2: SRR12228385.fastq.gz
+  37C3: SRR12228386.fastq.gz
 num_processes: 16 # Number of processes to parallelize over
 orf_fasta_file: ../example-datasets/fungi/candida/annotation/Candida_albicans_CDS_with_120utrs.fa # ORF file to align to
 orf_gff_file: ../example-datasets/fungi/candida/annotation/Candida_albicans_CDS_with_120utrs.gff3 # GFF2/GFF3 file for ORFs
