@@ -1,0 +1,16 @@
+# `Scer_YOL_3genes_w_30utrs_annotation_provenance.txt`
+
+Transcript sequences:
+
+`Scer_YOL_3genes_w_30utrs.fa`
+
+Coding sequence locations:
+
+`Scer_YOL_3genes_w_30utrs.gff3`
+
+These annotations were created by selecting data from 3 genes (YOL012C, YOL039W, YOL086C) from files in the folder `fungi/saccharomyces/annotation` and basing the files off of the first ~90 nucleotides.
+* `Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.fa`
+* `Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3`
+
+Provenenance of those files is described in `Saccharomyces_cerevisiae_yeast_CDS_w_250utrs_annotation_provenance.txt`
+

@@ -1,0 +1,12 @@
+##gff-version 3
+##swinterbourne
+##date 2021-08-12
+YOL012C swinterbourne   UTR5    1       30      .       +       .       Name=YOL012C
+YOL012C swinterbourne   CDS     31      120     .       +       .       Name=YOL012C
+YOL012C swinterbourne   UTR3    121     150     .       +       .       Name=YOL012C
+YOL039W swinterbourne   UTR5    1       30      .       +       .       Name=YOL039W
+YOL039W swinterbourne   CDS     31      120     .       +       .       Name=YOL039W
+YOL039W swinterbourne   UTR3    121     150     .       +       .       Name=YOL039W
+YOL086C swinterbourne   UTR5    1       30      .       +       .       Name=YOL086C
+YOL086C swinterbourne   CDS     31      114     .       +       .       Name=YOL086C
+YOL086C swinterbourne   UTR3    115     144     .       +       .       Name=YOL086C
