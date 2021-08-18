@@ -1,0 +1,70 @@
+provenance:
+  DOI: null
+  GEO: null
+  date run: 
+  notes: 
+  reference: 
+    commit
+  riboviz-version: 2.0 | 
+  website: null
+  yaml authors:
+  - author: 
+    email: 
+
+adapters: CTGTAGGCACCATCAAT
+asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
+buffer: 30
+build_indices: true
+codon_positions_file: null
+count_reads: true
+count_threshold: 1
+dataset: sim-YOL3
+dedup_stats: false
+dedup_umis: false
+dir_in: sim-YOL3/input
+dir_index: sim-YOL3/index
+dir_out: sim-YOL3/output
+dir_tmp: sim-YOL3/tmp
+do_pos_sp_nt_freq: true
+extract_umis: false
+feature: CDS
+features_file: null
+fq_files:
+  A: sim-YOL3.fq
+group_umis: false
+is_riboviz_gff: true
+job_email: null
+job_email_events: beas
+job_memory: 8G
+job_name: riboviz
+job_num_cpus: 4
+job_parallel_env: mpi
+job_runtime: '48:00:00'
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files: null
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+num_processes: 1
+orf_fasta_file: ../../riboviz/example-datasets/simulated/sim-YOL3/annotation/Scer_YOL_3genes_w_30utrs.fa
+orf_gff_file: ../../riboviz/example-datasets/simulated/sim-YOL3/annotation/Scer_YOL_3genes_w_30utrs.gff3
+orf_index_prefix: YOL_3_genes_30utrs
+output_pdfs: true
+primary_id: Name
+publish_index_tmp: false
+rpf: true
+rrna_fasta_file: ../../riboviz/example-datasets/simulated/mok/contaminants/Sc_rRNA_example.fa
+rrna_index_prefix: yeast_rRNA
+run_static_html: true
+sample_sheet: null
+samsort_memory: null
+secondary_id: null
+stop_in_feature: false
+t_rna_file: null
+trim_5p_mismatches: true
+umi_regexp: null
+validate_only: false
