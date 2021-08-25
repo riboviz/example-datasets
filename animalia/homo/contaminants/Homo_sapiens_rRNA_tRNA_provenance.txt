@@ -1,0 +1,7 @@
+This files was created as follows:
+
+Ribosomal RNA was downloaded from the Silva database (https://www.arb-silva.de/) on 2017-09-01
+File hg19-tRNAs.fa containing tRNA sequences were downloaded from GtRNAdb (http://gtrnadb.ucsc.edu/genomes/eukaryota/Hsapi19/Hsapi19-seq.html) on 2018-06-2018
+These files were concatenated together to create Homoe_spaiens_rRNA_tRNA.fa 
+
+These were run through Riboviz 2.1 tagged main branch, commit: d74847762d9ce8fcdb84387c4f1d98ee41bd6312
