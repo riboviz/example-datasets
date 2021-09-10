@@ -10,7 +10,7 @@ provenance:
   GEO: GSE68705
   reference: Genome-Wide Reprogramming of Transcript Architecture by Temperature Specifies the Developmental States of the Human Pathogen Histoplasma, Sil et al 2015
   DOI: https://doi.org/10.1371/journal.pgen.1005395
-  notes: add new species H capsulatum with this data as the first sample run 
+  notes: add new species H capsulatum with this data as the first sample run. There are some irregularities in the output files, see issue #91 in riboviz/example-datasets.
 
 adapters: CTGTAGGCACCATCAAT
 asite_disp_length_file: null
