@@ -32,6 +32,12 @@ Saccharomyces cerevisiae
 
 * Brar_2012_Meiosis_RPF_6-samples_CDS_w_250utrs_config.yaml
 * Gupta_2018_tRNA_Modification_Carbon_Nitrogen_Metabolism_RPF_9-samples_CDS_w_250utrs_config.yaml
+* Jan_2014_sec63_RPF_1-sample_CDS_w_250utrs_config.yaml
+* Kasari_2019_eEF3-depleted_RPF_4-samples_CDS_w_250utrs_config.yaml
+* Lareau_2014_Replicates_RPF_3-samples_CDS_w_250utrs_config.yaml
+* Weinberg_2016_RPF_1_sample_cerevisiae_CDS_w_250utrs_config.yaml
+* Zou_2020_Glucose-restricted_RPF_6-samples-CDS_w_250utrs_config.yaml
+
 
 # schizosaccharomyces
 
