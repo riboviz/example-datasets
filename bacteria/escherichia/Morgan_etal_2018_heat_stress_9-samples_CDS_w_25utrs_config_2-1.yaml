@@ -20,7 +20,7 @@ build_indices: true
 codon_positions_file: null
 count_reads: true
 count_threshold: 64
-dataset: vignette
+dataset: M-Ec_2018
 dedup_stats: false
 dedup_umis: false
 dir_in: M-Ec_2018/input
