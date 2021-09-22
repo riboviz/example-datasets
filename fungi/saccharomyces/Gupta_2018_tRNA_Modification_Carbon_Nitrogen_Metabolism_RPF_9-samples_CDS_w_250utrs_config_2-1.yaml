@@ -65,7 +65,7 @@ sample_sheet: ../../../../riboviz/example-datasets/fungi/saccharomyces/Gupta_201
 samsort_memory: null
 secondary_id: null
 stop_in_feature: false
-t_rna_file: null
+t_rna_file: data/yeast_tRNAs.tsv
 trim_5p_mismatches: true
 umi_regexp: ^(?P<umi_1>.{4}).+(?P<umi_2>.{5})(?P<cell_1>.{5})$
 validate_only: false
