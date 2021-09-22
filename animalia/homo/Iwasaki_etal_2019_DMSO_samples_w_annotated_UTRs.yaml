@@ -2,70 +2,70 @@ provenance:
   authors:
   - author: Alexander Cope
     email: alexander.cope@rutgers.edu
-website:
   date run: 2021-07-27
   riboviz-version: 2.1 | COMMIT d74847762d9ce8fcdb84387c4f1d98ee41bd6312
   GEO: GSE102720
-  reference: The Translation Inhibitor Rocaglamide Targets a Biomolecular Cavity between eIF4A and Polypurine RNA, Iwasaki et al. 2019
+  reference: The Translation Inhibitor Rocaglamide Targets a Biomolecular Cavity between
+    eIF4A and Polypurine RNA, Iwasaki et al. 2019
   DOI: https://dx.doi.org/10.1016%2Fj.molcel.2018.11.026
-  notes: Analyzing ribosome profiling replicates from DMSO samples. Use yeast A-site mapping because both are eukaryotes.
+  notes: Analyzing ribosome profiling replicates from DMSO samples. Use yeast A-site
+    mapping because both are eukaryotes.
 
-adapters: ATGTACACTAGGGATAACAGGGTAATCAACGCG 
+adapters: ATGTACACTAGGGATAACAGGGTAATCAACGCG
 asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
 buffer: 100
-build_indices: TRUE 
-codon_positions_file: NULL
-cmd_file: human_riboviz_vignette.sh 
+build_indices: true
+codon_positions_file: null
 count_reads: true
 count_threshold: 64
 dataset: I-Hs_2019
-dedup_stats: false 
-dedup_umis: false 
-dir_in: /data2/Riboviz_Datasets/I-Hs_2019/input
-dir_index: /data2/Riboviz_Datasets/I-Hs_2019/index
-dir_out: /data2/Riboviz_Datasets/I-Hs_2019/output_develop
-dir_tmp: /data2/Riboviz_Datasets/I-Hs_2019/tmp_develop
-do_pos_sp_nt_freq: false
+dedup_stats: false
+dedup_umis: false
+dir_in: I-Hs_2019/input
+dir_index: I-Hs_2019/index
+dir_out: I-Hs_2019/output
+dir_tmp: I-Hs_2019/tmp
 extract_umis: false
 feature: CDS
-features_file: NULL
+features_file: null
 fq_files:
   DMSO_1: SRX3097574.fastq.gz
   DMSO_2: SRX3097575.fastq.gz
 group_umis: false
 is_riboviz_gff: true
-job_email: NULL
-job_email_events: NULL
-job_memory: NULL
-job_name: NULL
-job_num_cpus: NULL
-job_parallel_env: NULL
-job_runtime: NULL
-make_bedgraph: TRUE
+job_email: null
+job_email_events: null
+job_memory: null
+job_name: null
+job_num_cpus: null
+job_parallel_env: null
+job_runtime: null
+make_bedgraph: true
 max_read_length: 50
 min_read_length: 10
-multiplex_fq_files: NULL
+multiplex_fq_files: null
 nextflow_dag_file: nextflow-dag.html
 nextflow_report_file: nextflow-report.html
 nextflow_timeline_file: nextflow-timeline.html
 nextflow_trace_file: nextflow-trace.tsv
 nextflow_work_dir: work
-num_processes: 12
-orf_fasta_file: /data/cope/example-datasets/animalia/homo/annotation/Homo_sapiens_CDS_w_annotated_UTRs.fa
-orf_gff_file: /data/cope/example-datasets/animalia/homo/annotation/Homo_sapiens_CDS_w_annotated_UTRs.gff3
+num_processes: 8
+orf_fasta_file: ../../riboviz/example-datasets/animalia/homo/annotation/Homo_sapiens_CDS_w_annotated_UTRs.fa
+orf_gff_file: ../../ribviz/example-datasets/animalia/homo/annotation/Homo_sapiens_CDS_w_annotated_UTRs.gff3
+orf_index_prefix: hsapien_CDS_w_annotated_UTR 
+output_metagene_normalized_profile: false
 output_pdfs: true
-orf_index_prefix: hsapien_CDS_w_annotated_UTR
 primary_id: Name
 publish_index_tmp: false
 rpf: true
-rrna_fasta_file: /data/cope/example-datasets/animalia/homo/contaminants/Homo_sapiens_rRNA_tRNA.fa
-rrna_index_prefix: hsapien_rRNA # rRNA index file prefix, relative to dir_index
+rrna_fasta_file: ../../riboviz/example-datasets/animalia/homo/contaminants/Homo_sapiens_rRNA_tRNA.fa
+rrna_index_prefix: hsapien_rRNA
 run_static_html: true
-sample_sheet: NULL
-samsort_memory: NULL
-secondary_id: NULL
+sample_sheet: null
+samsort_memory: null
+secondary_id: null
 stop_in_feature: false
-t_rna_file: NULL
+t_rna_file: null
 trim_5p_mismatches: true
-umi_regexp: NULL
-
+umi_regexp: null
+validate_only: false
