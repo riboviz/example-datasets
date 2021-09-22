@@ -1,0 +1,80 @@
+provenance:
+  yaml authors:
+  - author: Edward W. J. Wallace
+    email: edward.wallace@ed.ac.uk
+  - author: Felicity Anderson
+    email: Felicity.Anderson@ed.ac.uk
+  - author: Siyin Xue
+    email: siyinxue@gmail.com
+  DOI: https://doi.org/10.1093/nar/gkaa060
+  GEO: GSE133125
+  date run: 2020-09-26
+  notes: Presumes example-datasets folder structure is held within $HOME/riboviz and
+    will need to create folder called Wallace_2020_H99/input to place the .fastq files
+    in, while output and other folders will be created in Wallace_2020/ by the riboviz
+    workflow.
+  reference: Quantitative global studies reveal differential translational control
+    by start codon context across the fungal kingdom, Wallace et al. 2012
+  riboviz-version: 2.0 | COMMIT 0f4e932d8c7de032d66f68048989b182730e7d49
+
+
+adapters: CTGTAGGCACC
+asite_disp_length_file: null
+buffer: 120
+build_indices: true
+codon_positions_file: null
+count_reads: true
+count_threshold: 64
+dataset: Wallace_2020_H99
+dedup_stats: false
+dedup_umis: false
+dir_in: Wallace_2020_H99/input
+dir_index: Wallace_2020_H99/index
+dir_out: Wallace_2020_H99/output
+dir_tmp: Wallace_2020_H99/tmp
+do_pos_sp_nt_freq: false
+extract_umis: false
+feature: CDS
+features_file: null
+fq_files:
+  H99r1: SRR9336389.fastq.gz
+  H99r2: SRR9336393.fastq.gz
+  HdAGO1: SRR9336395.fastq.gz
+  HdGWO1: SRR9336391.fastq.gz
+group_umis: false
+is_riboviz_gff: true
+job_email: null
+job_email_events: beas
+job_memory: 8G
+job_name: riboviz
+job_num_cpus: 4
+job_parallel_env: mpi
+job_runtime: '48:00:00'
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files: null
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+num_processes: 2
+orf_fasta_file: ../../riboviz/example-datasets/fungi/cryptococcus/annotation/H99_10p_up12dwn9_CDS_with_120bputrs.fa
+orf_gff_file: ../../riboviz/example-datasets/fungi/cryptococcus/annotation/H99_10p_up12dwn9_CDS_120bpL_120bpR.gff3
+orf_index_prefix: H99_CDS_with_120bputrs
+output_pdfs: true
+primary_id: Name
+publish_index_tmp: false
+rpf: true
+rrna_fasta_file: ../../riboviz/example-datasets/fungi/cryptococcus/contaminants/H99_rrna.fasta
+rrna_index_prefix: H99_rRNA
+run_static_html: true
+sample_sheet: null
+samsort_memory: null
+secondary_id: null
+stop_in_feature: true
+t_rna_file: null
+trim_5p_mismatches: true
+umi_regexp: null
+validate_only: false

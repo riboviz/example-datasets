@@ -16,8 +16,8 @@ The GFF file for genome assembly ASM584v2 (file name GCF_000005845.2_ASM584v2_ge
 
 The files GCF_000005845.2_ASM584v2_genomic.gff and GCF_000005845.2_ASM584v2_genomic.fna were extracted from the .gz file.
 
-The sequence and annotation files for the whole approximate E. coli transcriptome were prepared using a modified version of script_for_transcript_annotation.Rmd (https://github.com/riboviz/riboviz/blob/master/rmarkdown/script_for_transcript_annotation.Rmd) that uses a 25 nucleotide buffer for UTRs. 
+The sequence and annotation files for the whole approximate E. coli transcriptome were prepared using a modified version of script_for_transcript_annotation.Rmd (https://github.com/riboviz/riboviz/blob/main/rmarkdown/script_for_transcript_annotation.Rmd) that uses a 25 nucleotide buffer for UTRs. 
 
 These annotation files were run with Ecoli_K12_rrna_trna.fa contaminants file.
 
-These were run through Riboviz 2.0.beta tagged master branch, commit: ffb53643ccfdf78aa64a1627d2dd8a9c092df632
+These were run through Riboviz 2.0.beta tagged main branch, commit: ffb53643ccfdf78aa64a1627d2dd8a9c092df632

@@ -1,0 +1,76 @@
+provenance:
+  yaml authors:
+  - author: Emma MacKenzie
+    email: ...
+  - author: Sophie Winterbourne
+    email: ...
+  website:
+  date run: 08/09/2021
+  riboviz-version: 2.0 | COMMIT 8933be78ac01e344584e4291d5590c36e0282183
+  GEO: GSE68705
+  reference: Genome-Wide Reprogramming of Transcript Architecture by Temperature Specifies the Developmental States of the Human Pathogen Histoplasma, Sil et al 2015
+  DOI: https://doi.org/10.1371/journal.pgen.1005395
+  notes: add new species H capsulatum with this data as the first sample run. There are some irregularities in the output files, see issue #91 in riboviz/example-datasets.
+
+adapters: CTGTAGGCACCATCAAT
+asite_disp_length_file: null
+buffer: 250
+build_indices: true
+codon_positions_file: null
+count_reads: true
+count_threshold: 64
+dataset: S-Hc_2015
+dedup_stats: false
+dedup_umis: false
+dir_in: S-Hc_2015/input
+dir_index: S-Hc_2015/index
+dir_out: S-Hc_2015/output
+dir_tpm: S-Hc_2015/tpm
+do_pos_sp_nt_freq: true
+extract_umis: false
+feature: CDS
+features_file: null
+fq_files:
+  Hyphae_C: SRR2015208.fastq.gz
+  Hyphae_D: SRR2015210.fastq.gz
+  Yeast_C: SRR2015212.fastq.gz
+  Yeast_D: SRR2015214.fastq.gz
+group_umis: false
+is_riboviz_gff: true
+job_email_events: beas
+job_email: null 
+job_memory: 20G
+job_name: riboviz
+job_num_cpus: 10
+job_parallel_env: sharedmem
+job_runtime: 48:00:00
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files: null
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv 
+nextflow_work_dir: S-Hc_2015/work
+num_processes: 16
+orf_fasta_file: ../../riboviz/example-datasets/fungi/histoplasma/annotation/Histoplasma_capsulatum_G217B_w_250utrs.fasta
+orf_gff_file: ../../riboviz/example-datasets/fungi/histoplasma/annotation/Histoplasma_capsulatum_G217B_w_250utrs.gff3
+orf_index_prefix: yeast_CDS_w_250
+output_pdfs: true
+primary_id: Name
+publish_index_tpm: false
+rpf: true
+rrna_fasta_file: ../../riboviz/example-datasets/fungi/histoplasma/contaminants/Histoplasma_capsulatum_G217B_rRNA_tRNA.fa
+rrna_index_prefix: yeast_rRNA
+run_static_html: true
+samsort_memory: 768M
+sample_sheet: null
+secondary_id: null 
+skip_inputs: false
+stop_in_cds: false
+stop_in_feature: false
+trim_5p_mismatches: true
+t_rna_file: null
+umi_regexp: null
+validate_only: false

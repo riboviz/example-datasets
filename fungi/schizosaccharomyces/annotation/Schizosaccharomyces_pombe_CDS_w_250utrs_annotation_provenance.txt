@@ -18,5 +18,5 @@ The files Schizosaccharomyces_pombe_all_chromosomes.gff3 and Schizosaccharomyces
 
 Schizosaccharomyces_pombe_all_chromosomes.fa was slighlty modified such that the sequence identifiers matched those in Schizosaccharomyces_pombe_all_chromosomes.gff3.
 
-The sequence and annotation files for the whole approximate Schizosaccharomyces pombe transcriptome were prepared using create_files_for_riboviz.R (https://github.com/riboviz/riboviz/blob/master/rscript/create_files_for_riboviz.R). 
+The sequence and annotation files for the whole approximate Schizosaccharomyces pombe transcriptome were prepared using create_files_for_riboviz.R (https://github.com/riboviz/riboviz/blob/main/rscript/create_files_for_riboviz.R). 
 
