@@ -61,7 +61,7 @@ output_pdfs: true
 primary_id: Name
 publish_index_tpm: false
 rpf: true
-rrna_fasta_file: ../../riboviz/example-datasets/fungi/histoplasma/contaminants/Histoplasma_capsulatum_G217B_rRNA_tRNA.fq
+rrna_fasta_file: ../../riboviz/example-datasets/fungi/histoplasma/contaminants/Histoplasma_capsulatum_G217B_rRNA_tRNA.fa
 rrna_index_prefix: yeast_rRNA
 run_static_html: true
 samsort_memory: 768M
