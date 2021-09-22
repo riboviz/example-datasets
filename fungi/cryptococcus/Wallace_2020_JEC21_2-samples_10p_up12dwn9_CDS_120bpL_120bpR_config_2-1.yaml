@@ -8,7 +8,6 @@ provenance:
   reference: Quantitative global studies reveal differential translational control
     by start codon context across the fungal kingdom, Wallace et al. 2012
   riboviz-version: 2.0 | COMMIT 0f4e932d8c7de032d66f68048989b182730e7d49
-  website: null
   yaml authors:
   - author: Edward W. J. Wallace
     email: edward.wallace@ed.ac.uk
