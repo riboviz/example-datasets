@@ -2,7 +2,6 @@ provenance:
   yaml authors:
   - author: Edward W. J. Wallace
     email: edward.wallace@ed.ac.uk
-website:
   DOI: https://doi.org/10.1016/j.molcel.2015.07.018
   GEO: GSM1825740
   date run: 2020-11-06
@@ -20,13 +19,13 @@ build_indices: true
 codon_positions_file: null
 count_reads: true
 count_threshold: 64
-dataset: Yu2015
+dataset: Y-Nc_2015
 dedup_stats: false
 dedup_umis: false
-dir_in: Yu_2015_Nc/input
-dir_index: Yu_2015_Nc/index
-dir_out: Yu_2015_Nc/output
-dir_tmp: Yu_2015_Nc/tmp
+dir_in: Y-Nc_2015/input
+dir_index: Y-Nc_2015/index
+dir_out: Y-Nc_2015/output
+dir_tmp: Y-Nc_2015/tmp
 do_pos_sp_nt_freq: false
 extract_umis: false
 feature: CDS
