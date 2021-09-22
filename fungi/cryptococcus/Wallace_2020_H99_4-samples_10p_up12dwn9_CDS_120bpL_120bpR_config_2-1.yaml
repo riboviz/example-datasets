@@ -6,7 +6,6 @@ provenance:
     email: Felicity.Anderson@ed.ac.uk
   - author: Siyin Xue
     email: siyinxue@gmail.com
-website:
   DOI: https://doi.org/10.1093/nar/gkaa060
   GEO: GSE133125
   date run: 2020-09-26
@@ -66,14 +65,6 @@ orf_gff_file: ../../riboviz/example-datasets/fungi/cryptococcus/annotation/H99_1
 orf_index_prefix: H99_CDS_with_120bputrs
 output_pdfs: true
 primary_id: Name
-provenance:
-  yaml authors:
-  - author: Edward W. J. Wallace
-    email: edward.wallace@ed.ac.uk
-  - author: Felicity Anderson
-    email: Felicity.Anderson@ed.ac.uk
-  - author: Siyin Xue
-    email: siyinxue@gmail.com
 publish_index_tmp: false
 rpf: true
 rrna_fasta_file: ../../riboviz/example-datasets/fungi/cryptococcus/contaminants/H99_rrna.fasta
@@ -87,14 +78,3 @@ t_rna_file: null
 trim_5p_mismatches: true
 umi_regexp: null
 validate_only: false
-website:
-  DOI: https://doi.org/10.1093/nar/gkaa060
-  GEO: GSE133125
-  date run: 2020-09-26
-  notes: Presumes example-datasets folder structure is held within $HOME/riboviz and
-    will need to create folder called Wallace_2020_H99/input to place the .fastq files
-    in, while output and other folders will be created in Wallace_2020/ by the riboviz
-    workflow.
-  reference: Quantitative global studies reveal differential translational control
-    by start codon context across the fungal kingdom, Wallace et al. 2012
-  riboviz-version: 2.0 | COMMIT 0f4e932d8c7de032d66f68048989b182730e7d49
