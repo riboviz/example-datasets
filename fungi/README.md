@@ -18,6 +18,11 @@ Cryptococcus neoformans and Cryptococcus deneoformans
 * Wallace_2020_H99_4-samples_10p_up12dwn9_CDS_120bpL_120bpR_config.yaml
 * Wallace_2020_JEC21_2-samples_10p_up12dwn9_CDS_120bpL_120bpR_config.yaml
 
+# histoplasma
+
+Histoplasma capsulatum
+
+* Sil_2015_RPF_4-samples_CDS_w_250utrs_config.yaml
 
 # neurospora
 
