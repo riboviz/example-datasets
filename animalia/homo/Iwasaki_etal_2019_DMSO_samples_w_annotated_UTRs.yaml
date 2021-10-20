@@ -29,8 +29,8 @@ extract_umis: false
 feature: CDS
 features_file: null
 fq_files:
-  DMSO_1: SRX3097574.fastq.gz
-  DMSO_2: SRX3097575.fastq.gz
+  DMSO_1: SRR5937640.fastq.gz
+  DMSO_2: SRR5937641.fastq.gz
 group_umis: false
 is_riboviz_gff: true
 job_email: null
