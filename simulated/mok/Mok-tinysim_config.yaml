@@ -6,11 +6,14 @@ provenance:
   date run: 2021-01-15
   riboviz-version: 2.0 | fad6141
   GEO: null
-  reference: simRiboSeq, https://github.com/amandamok/simRiboSeq/, Amanda Mok 2021,
-    commit 8367709
+  reference: simRiboSeq, https://github.com/amandamok/simRiboSeq/, Amanda Mok 2021, commit 8367709
   DOI: null
   notes: Tiny simulated data from Amanda Mok, January 2021. Download the fq file from
-    https://github.com/amandamok/simRiboSeq/blob/master/simulation_runs/riboviz/tiny_2genes.fq  
+    https://github.com/amandamok/simRiboSeq/blob/master/simulation_runs/riboviz/tiny_2genes.fq
+  riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
+  riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
+  riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets simulated data repository folder e.g. /home/user/riboviz/example-datasets/simulated/mok
+  riboviz environment tokens note 3: ${RIBOVIZ_SAMPLES} should point to location where input data fastq file has been downloaded from simRiboSeq/simulation_runs/riboviz repository folder & placed within 'input' folder
 
 adapters: CTGTAGGCACCATCAAT
 asite_disp_length_file: ${RIBOVIZ_DATA}/yeast_standard_asite_disp_length.txt
@@ -26,7 +29,7 @@ dir_in: ${RIBOVIZ_SAMPLES}/input
 dir_index: ${RIBOVIZ_SAMPLES}/index
 dir_out: ${RIBOVIZ_SAMPLES}/output
 dir_tmp: ${RIBOVIZ_SAMPLES}/tmp
-extract_umis: false 
+extract_umis: false
 feature: CDS
 features_file: null
 fq_files:
