@@ -1,35 +1,39 @@
 provenance:
+  yaml authors:
+    author: Edward Wallace
+    email: Edward.Wallace@ed.ac.uk
+  date run: 2021-01-12
+  riboviz-version: 2.0 | 8e61429
   DOI: null
   GEO: null
-  date run: 2021-01-12
+  reference: simRiboSeq, https://github.com/amandamok/simRiboSeq/, Amanda Mok 2021 commit 48c9e2d
   notes: Simulated data from Amanda Mok, January 2021
-  reference: simRiboSeq, https://github.com/amandamok/simRiboSeq/, Amanda Mok 2021
-    commit 48c9e2d
-  riboviz-version: 2.0 | 8e61429
-  website: null
-  yaml authors:
-  - author: Edward Wallace
-    email: Edward.Wallace@ed.ac.uk
+  riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
+  riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
+  riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets repository folder e.g. /home/user/riboviz/example-datasets
+  riboviz environment tokens note 3: ${RIBOVIZ_SAMPLES} should point to location where input data fastq file has been downloaded from simRiboSeq/simulation_runs/riboviz repository folder & placed within 'input' folder
+
 adapters: CTGTAGGCACCATCAAT
-asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
+asite_disp_length_file: ${RIBOVIZ_DATA}/yeast_standard_asite_disp_length.txt
 buffer: 250
 build_indices: true
-codon_positions_file: data/yeast_codon_pos_i200.RData
+codon_positions_file: ${RIBOVIZ_DATA}/yeast_codon_pos_i200.RData
 count_reads: true
 count_threshold: 64
 dataset: Mok-simYAL5
 dedup_stats: false
 dedup_umis: false
-dir_in: Mok-simYAL5/input
-dir_index: Mok-simYAL5/index
-dir_out: Mok-simYAL5/output
-dir_tmp: Mok-simYAL5/tmp
+dir_in: ${RIBOVIZ_SAMPLES}/input
+dir_index: ${RIBOVIZ_SAMPLES}/index
+dir_out: ${RIBOVIZ_SAMPLES}/output
+dir_tmp: ${RIBOVIZ_SAMPLES}/tmp
 extract_umis: false
 feature: CDS
 features_file: null
 fq_files:
   A: simRiboviz.fq.gz
 group_umis: false
+hisat2_orf_params: -k 2 --no-spliced-alignment --rna-strandness F --no-unal
 is_riboviz_gff: true
 job_email: null
 job_email_events: beas
@@ -48,23 +52,22 @@ nextflow_timeline_file: nextflow-timeline.html
 nextflow_trace_file: nextflow-trace.tsv
 nextflow_work_dir: work
 num_processes: 1
-orf_fasta_file: ../../riboviz/example-datasets/simulated/mok/annotation/Scer_YAL_5genes_w_250utrs.fa
-orf_gff_file: ../../riboviz/example-datasets/simulated/mok/annotation/Scer_YAL_5genes_w_250utrs.gff3
+orf_fasta_file: ${RIBOVIZ_ORGANISMS}/simulated/mok/annotation/Scer_YAL_5genes_w_250utrs.fa
+orf_gff_file: ${RIBOVIZ_ORGANISMS}/simulated/mok/annotation/Scer_YAL_5genes_w_250utrs.gff3
 orf_index_prefix: Scer_YAL_5genes
+output_metagene_normalized_profile: true
 output_pdfs: true
 primary_id: Name
 publish_index_tmp: false
 rpf: true
-rrna_fasta_file: ../../riboviz/example-datasets/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa
 rrna_index_prefix: yeast_rRNA
 run_static_html: true
 sample_sheet: null
 samsort_memory: null
 secondary_id: null
 stop_in_feature: false
-t_rna_file: data/yeast_tRNAs.tsv
+t_rna_file: ${RIBOVIZ_DATA}/yeast_tRNAs.tsv
 trim_5p_mismatches: true
 umi_regexp: null
 validate_only: false
-output_metagene_normalized_profile: true
-hisat2_orf_params: -k 2 --no-spliced-alignment --rna-strandness F --no-unal
