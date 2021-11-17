@@ -1,0 +1,74 @@
+provenance:
+  authors:
+  - author: Alexander Cope
+    email: alexander.cope@rutgers.edu
+website:
+  DOI: 10.1101/2021.01.12.426406
+  GEO: GSE164308
+  date run: 2020-10-13
+  notes: bioRxiv preprint. RiboSeq for E. coli strains from LTEE experiments. Successfully
+    run using Python and Nextflow pipelines. Map A-site using 3'-end mapping strategy.
+  reference: The landscape of transcriptional and translational changes over 22 years
+    of bacterial adaptation, Favate et. al. 2021
+  riboviz-version: 2.0.beta | COMMIT 03a4f13b2d833b8650ebf33bdce81fe2639eb9cf
+
+
+
+adapters: AGATCGGAAGAGCACACGTCTGAA
+asite_disp_length_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_standard_asite_disp_length.txt
+buffer: 25
+build_indices: true
+codon_positions_file: null
+count_reads: true
+count_threshold: 0
+dataset: F-Ec_2020
+dedup_stats: false
+dedup_umis: true
+dir_in: F-Ec_2020/input/
+dir_index: F-Ec_2020/index/
+dir_out: F-Ec_2020/output/
+dir_tmp: F-Ec_2020/tmp
+do_pos_sp_nt_freq: true
+extract_umis: true
+feature: CDS
+features_file: null
+fq_files: null
+group_umis: true
+is_riboviz_gff: true
+job_email: null
+job_email_events: beas
+job_memory: 8G
+job_name: riboviz
+job_num_cpus: 4
+job_parallel_env: mpi
+job_runtime: '48:00:00'
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files:
+- rep1-ribo-am-fr.fq.gz
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+num_processes: 1
+orf_fasta_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_REL606_CDS_w_25utrs.fa
+orf_gff_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_REL606_CDS_w_25utrs.gff3
+orf_index_prefix: ecoli_25_
+output_pdfs: true
+primary_id: Name
+publish_index_tmp: false
+rpf: true
+rrna_fasta_file: ../../riboviz/example-datasets/bacteria/escherichia/contaminants/Escherichia_coli_REL606_rrna_trna.fa
+rrna_index_prefix: rrna
+run_static_html: true
+sample_sheet: ../../riboviz/example-datasets/bacteria/escherichia/Favate_etal_2021_ltee_translation_multiplexed_barcodes.tsv
+samsort_memory: null
+secondary_id: null
+stop_in_feature: false
+t_rna_file: null
+trim_5p_mismatches: true
+umi_regexp: ^(?P<umi_1>.{4}).+(?P<umi_2>.{5})(?P<cell_1>.{5})$
+validate_only: false
+

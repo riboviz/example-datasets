@@ -1,0 +1,73 @@
+Provenance:
+  Authors:
+  - author: Felicity Anderson
+    email: Felicity.Anderson@ed.ac.uk
+  - author: Sophie Winterbourne
+    email: '...'
+  DOI: https://doi.org/10.1126/science.1257521
+  assession number: GSE61012
+  date run: 2021-02-19
+  notes: Run assuming no UMIs. Analysis of 1 RPF sample of S. cerevisiae which was
+    used by Gamble et al 2016 to identify inhibitory codon pairs.
+  reference: Principles of ER cotranslational translocation revealed by proximity-specific
+    ribosome profiling, Jan et al. 2014.
+  riboviz-version: 2.0 | COMMIT e94a909c70942cb428450a3b98edef1614143c18
+
+adapters: CTGTAGGCACCATCAAT
+asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
+buffer: 250
+build_indices: true
+codon_positions_file: data/yeast_codon_pos_i200.RData
+count_reads: true
+count_threshold: 64
+dataset: J-Sc-2014
+dedup_stats: false
+dedup_umis: false
+dir_in: J-Sc-sec63_2014/input
+dir_index: J-Sc-sec63_2014/index
+dir_out: J-Sc-sec63_2014/output
+dir_tmp: J-Sc-sec63_2014/tmp
+do_pos_sp_nt_freq: true
+extract_umis: false
+feature: CDS
+features_file: data/yeast_features.tsv
+fq_files:
+  sec63_1: SRR1562907.fastq.gz
+group_umis: false
+is_riboviz_gff: true
+job_email: null
+job_email_events: beas
+job_memory: 8G
+job_name: riboviz
+job_num_cpus: 4
+job_parallel_env: mpi
+job_runtime: '48:00:00'
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files: null
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+num_processes: 16
+orf_fasta_file: ../../riboviz/example-datasets/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.fa
+orf_gff_file: ../../riboviz/example-datasets/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3
+orf_index_prefix: yeast_CDS_w_250
+output_pdfs: true
+primary_id: Name
+publish_index_tmp: false
+rpf: true
+rrna_fasta_file: ../../riboviz/example-datasets/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa
+rrna_index_prefix: yeast_rRNA
+run_static_html: true
+sample_sheet: null
+samsort_memory: 768M
+secondary_id: null
+skip_inputs: false
+stop_in_feature: false
+t_rna_file: data/yeast_tRNAs.tsv
+trim_5p_mismatches: true
+umi_regexp: null
+validate_only: false

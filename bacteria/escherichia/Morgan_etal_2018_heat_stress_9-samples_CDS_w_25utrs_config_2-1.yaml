@@ -1,0 +1,80 @@
+provenance:
+  authors:
+  - author: Alexander Cope
+    email: alexander.cope@rutgers.edu
+  website:
+  DOI: 10.1074/jbc.RA117.000284
+  GEO: GSE64488
+  date run: 2021-02-01
+  notes: RiboSeq for E. coli K12 MG1655 strain. Successfully run using Nextflow pipeline.
+    Assign A-site using 3'-end mapping strategy.
+  reference: Translation efficiency is maintained at elevated temperature in Escherichia
+    coli, Morgan et. al. 2018
+  riboviz-version: 2.0.beta | COMMIT 35b7285efdcd572e5f4065c58fcee5cdf340e976
+
+
+adapters: CTGTAGGCACCATCAAT
+asite_disp_length_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_asite_disp_length.txt
+buffer: 25
+build_indices: true
+codon_positions_file: null
+count_reads: true
+count_threshold: 64
+dataset: M-Ec_2018
+dedup_stats: false
+dedup_umis: false
+dir_in: M-Ec_2018/input
+dir_index: M-Ec_2018/index
+dir_out: M-Ec_2018/output
+dir_tmp: M-Ec_2018/tmp
+do_pos_sp_nt_freq: true
+extract_umis: false
+feature: CDS
+features_file: null
+fq_files:
+  30C1: SRR5036070.fastq.gz
+#  30C2: SRR5036076.fastq.gz
+#  30C3: SRR5036082.fastq.gz
+#  42C_10min_1: SRR5036072.fastq.gz
+#  42C_10min_2: SRR5036078.fastq.gz
+#  42C_10min_3: SRR5036084.fastq.gz
+#  42C_20min_1: SRR5036074.fastq.gz
+#  42C_20min_2: SRR5036080.fastq.gz
+#  42C_20min_3: SRR5036086.fastq.gz
+group_umis: false
+is_riboviz_gff: true
+job_email: null
+job_email_events: beas
+job_memory: 20G
+job_name: riboviz
+job_num_cpus: 8
+job_parallel_env: sharedmem
+job_runtime: '48:00:00'
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files: null
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+num_processes: 1
+orf_fasta_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_K12_CDS_w_25utrs.fa
+orf_gff_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_K12_CDS_w_25utrs.gff3
+orf_index_prefix: ecoli_CDS_w_25
+output_pdfs: true
+primary_id: Name
+publish_index_tmp: false
+rpf: true
+rrna_fasta_file: ../../riboviz/example-datasets/bacteria/escherichia/contaminants/Escherichia_coli_K12_rrna_trna.fa
+rrna_index_prefix: ecoli_rRNA
+run_static_html: true
+sample_sheet: null
+samsort_memory: null
+secondary_id: null
+stop_in_feature: false
+t_rna_file: null
+trim_5p_mismatches: true
+umi_regexp: null
+validate_only: false

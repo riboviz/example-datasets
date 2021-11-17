@@ -1,0 +1,79 @@
+provenance:
+  DOI: https://doi.org/10.1126/science.1215110
+  GEO: GSE34082
+  date run: 2020-09-30
+  notes: Analysis of subset S. cerevisiae meotic RPF dataset by Ania Kurowska for
+    undergraduate honours project.
+  reference: High-resolution View of the Yeast Meiotic Program Revealed by Ribosome
+    Profiling, Brar et al. 2012
+  riboviz-version: 2.0 | COMMIT 0f4e932d8c7de032d66f68048989b182730e7d49
+  website: null
+  yaml authors:
+  - author: Felicity Anderson
+    email: Felicity.Anderson@ed.ac.uk
+  - author: Ania Kurowska
+    email: '...'
+
+
+adapters: AAAAAAAAAAAAAAAAAAAA
+asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
+buffer: 250
+build_indices: true
+codon_positions_file: data/yeast_codon_pos_i200.RData
+count_reads: true
+count_threshold: 64
+dataset: B-Sc_2012
+dedup_stats: false
+dedup_umis: false
+dir_in: B-Sc_2012/input
+dir_index: B-Sc_2012/index
+dir_out: B-Sc_2012/output
+dir_tmp: B-Sc_2012/tmp
+do_pos_sp_nt_freq: true
+extract_umis: false
+feature: CDS
+features_file: data/yeast_features.tsv
+fq_files:
+  ANAPH_1: SRR387890.fastq.gz
+  ANAPH_2: SRR387891.fastq.gz
+  SPORE_1: SRR387898.fastq.gz
+  SPORE_2: SRR387899.fastq.gz
+  VEG_1: SRR387871.fastq.gz
+  VEG_2: SRR387872.fastq.gz
+group_umis: false
+is_riboviz_gff: true
+job_email: null
+job_email_events: beas
+job_memory: 8G
+job_name: riboviz
+job_num_cpus: 4
+job_parallel_env: mpi
+job_runtime: '48:00:00'
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files: null
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+num_processes: 16
+orf_fasta_file: ../../riboviz/example-datasets/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.fa
+orf_gff_file: ../../riboviz/example-datasets/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3
+orf_index_prefix: yeast_CDS_w_250
+output_pdfs: true
+primary_id: Name
+publish_index_tmp: false
+rpf: true
+rrna_fasta_file: ../../riboviz/example-datasets/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa
+rrna_index_prefix: yeast_rRNA
+run_static_html: true
+sample_sheet: null
+samsort_memory: null
+secondary_id: null
+stop_in_feature: false
+t_rna_file: data/yeast_tRNAs.tsv
+trim_5p_mismatches: true
+umi_regexp: null
+validate_only: false
