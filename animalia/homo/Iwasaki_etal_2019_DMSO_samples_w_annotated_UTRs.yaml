@@ -2,14 +2,19 @@ provenance:
   authors:
   - author: Alexander Cope
     email: alexander.cope@rutgers.edu
-  date run: 2021-07-27
-  riboviz-version: 2.1 | COMMIT d74847762d9ce8fcdb84387c4f1d98ee41bd6312
+  date run: 2021-11-25
+  riboviz-version: 2.1 | COMMIT ac84378a460378eb0458c81f5bfffc6f2be24fac
   GEO: GSE102720
   reference: The Translation Inhibitor Rocaglamide Targets a Biomolecular Cavity between
     eIF4A and Polypurine RNA, Iwasaki et al. 2019
   DOI: https://dx.doi.org/10.1016%2Fj.molcel.2018.11.026
   notes: Analyzing ribosome profiling replicates from DMSO samples. Use yeast A-site
     mapping because both are eukaryotes.
+  riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
+  riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
+  riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets Homo genus data repository folder e.g. /home/user/riboviz/example-datasets/animalia/homo
+  riboviz environment tokens note 3: ${RIBOVIZ_SAMPLES} should point to location where input data fastq file has been downloaded & placed within 'input' folder
+
 
 adapters: ATGTACACTAGGGATAACAGGGTAATCAACGCG
 asite_disp_length_file: ${RIBOVIZ_DATA}/yeast_standard_asite_disp_length.txt
@@ -50,7 +55,7 @@ nextflow_report_file: nextflow-report.html
 nextflow_timeline_file: nextflow-timeline.html
 nextflow_trace_file: nextflow-trace.tsv
 nextflow_work_dir: work
-num_processes: 8
+num_processes: 1
 orf_fasta_file: ${RIBOVIZ_ORGANISMS}/annotation/Homo_sapiens_CDS_w_annotated_UTRs.fa
 orf_gff_file: ${RIBOVIZ_ORGANISMS}/annotation/Homo_sapiens_CDS_w_annotated_UTRs.gff3
 orf_index_prefix: hsapien_CDS_w_annotated_UTR 
