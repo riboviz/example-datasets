@@ -1,0 +1,24 @@
+Transcript sequences:
+
+Homo_sapiens_CDS_w_annotated_UTRs.fa
+
+Coding sequence locations:
+
+Homo_sapiens_CDS_w_annotated_UTRs.gff3
+
+These files hold Homo sapiens annotations and ORF sequences.
+
+These files were created as follows:
+
+The file containing cDNA sequeces for release 83 (file name Homo_sapiens.GRCh38.cdna.all.fa.gz; http://ftp.ensembl.org/pub/release-83/fasta/homo_sapiens/cdna/) was downloaded from ENSEMBL FTP site (http://ftp.ensembl.org/pub/release-83/fasta/homo_sapiens/cdna/).
+
+The GFF3 file containing transcript coordinates version 21 (file name gencode.v21.annotation.gff3.gz; http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_21/)  was downloaded from Gencode FTP site (http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_21/)
+
+Isoforms were selected based on the APPRIS database (file name appris_data.principal.txt; https://apprisws.bioinfo.cnio.es/pub/releases/2017_06.v23/datafiles/homo_sapiens/e84v22/appris_data.principal.txt).
+
+Transcript sequences and GFF3 file were generated using rmarkdown/scripts_for_annotation.Rmd
+
+These annotation files were run with Homo_sapiends_rRNA_tRNA.fa contaminants file.
+
+These were run through Riboviz 2.1 tagged main branch, commit: d74847762d9ce8fcdb84387c4f1d98ee41bd6312
+
