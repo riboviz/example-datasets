@@ -66,10 +66,14 @@ Generally, the transcriptome fasta/gff files and contaminant fasta files would b
 * read files, which are too big
   * fastq or fastq.gz
   * bam, sam, etc
+* any other riboviz result files 
+  * bedgraph, h5, etc.
 * genome fasta files. Instead, please refer to a genome build or link to the file.
   * genome-centric gffs also probably do not belong here
 * processed data files such as riboviz outputs
 * everything else not specifically listed in "what belongs in example-datasets"
+
+We have added many of these file extensions to the .gitignore file to make it harder to commit them accidentally.
 
 Please open an issue on github if there is something we have overlooked.
 
