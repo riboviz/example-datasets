@@ -27,7 +27,7 @@ dir_in: ${RIBOVIZ_SAMPLES}/input
 dir_index: ${RIBOVIZ_SAMPLES}/index
 dir_out: ${RIBOVIZ_SAMPLES}/output
 dir_tmp: ${RIBOVIZ_SAMPLES}/tmp
-extract_umis: false # FIXME: check settings needed to extrct UMIs
+extract_umis: true
 feature: CDS
 features_file: ${RIBOVIZ_DATA}/yeast_features.tsv
 fq_files:
@@ -36,7 +36,7 @@ fq_files:
   # wtRep1: Bfr_data_wtRep1.fastq.gz
   # wtRep2: Bfr_data_wtRep2.fastq.gz
   sub: Bfr_data_wtRep1_init100000.fastq.gz
-group_umis: false # FIXME: check settings
+group_umis: false
 hisat2_orf_params: -k 2 --no-spliced-alignment --rna-strandness F --no-unal
 is_riboviz_gff: true
 job_email: null
@@ -74,5 +74,5 @@ skip_inputs: false
 stop_in_feature: false
 t_rna_file: ${RIBOVIZ_DATA}/yeast_tRNAs.tsv
 trim_5p_mismatches: true
-umi_regexp: ^(?P<umi_1>.{2}).+(?P<umi_2>.{5})$ # FIXME: check if this needs to be in quotes?
+umi_regexp: ^(?P<umi_1>.{2}).+(?P<umi_2>.{5})$
 validate_only: false
