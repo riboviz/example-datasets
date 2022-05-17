@@ -1,0 +1,50 @@
+provenance:
+  authors:
+  - author: Alexander Cope
+    email: alexander.cope@rutgers.edu
+website:
+  date run: 2020-09-22
+  riboviz-version: 2.0.beta | COMMIT 03a4f13b2d833b8650ebf33bdce81fe2639eb9cf
+  GEO: GSE124428
+  reference: A tRNA modification balances carbon and nitrogen metabolism by regulating phosphate homeostasis, Gupta et. al. 2018
+  DOI: https://doi.org/10.7554/elife.44795
+  notes: Analysis of multiplexed RPF data for S. cerevisiae. YAML file is modified from simdata_multiplex_config.yaml file found in riboviz.
+adapters: AGATCGGAAGAG # Illumina sequencing adapter(s) to remove
+aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
+asite_disp_length_file: data/yeast_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
+buffer: 250 # Length of flanking region around the CDS
+build_indices: TRUE # Build indices for aligner? if TRUE, remake indices from fasta files
+cmd_file: run_riboviz_G-Sc_2018.sh # Bash commands file
+count_reads: TRUE # Scan input, temporary and output files and produce counts of reads in each FASTQ, SAM, and BAM file processed?
+count_threshold: 64 # Remove genes with a read count below this threshold, when generating statistics and figures
+dataset: G-Sc_2018 # Dataset name
+dedup_stats: TRUE # Output UMI deduplication statistics?
+dedup_umis: TRUE # Extract UMIs and deduplicate reads if TRUE
+dir_in: G-Sc_2018/input # Input directory
+dir_index: G-Sc_2018/index # Built indices directory
+dir_logs: G-Sc_2018/logs # Log files directory
+dir_out: G-Sc_2018/output # Output directory
+dir_tmp: G-Sc_2018/tmp # Intermediate files directory
+do_pos_sp_nt_freq: TRUE # Calculate position-specific nucleotide frequency?
+extract_umis: TRUE # Extract UMIs if TRUE
+features_file: data/yeast_features.tsv # Features to correlate with ORFs
+group_umis: TRUE # Summarise UMI groups before and after deduplication, if TRUE
+is_riboviz_gff: TRUE # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
+is_test_run: FALSE # Is this a test run
+make_bedgraph: TRUE # Output bedgraph files, as TSV, in addition to h5?
+max_read_length: 50 # Maximum read length in H5 output
+min_read_length: 10 # Minimum read length in H5 output
+multiplex_fq_files:
+- SRR8375039.fastq
+num_processes: 1 # Number of processes to parallelize over
+orf_fasta_file: ../../riboviz/example-datasets/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.fa # ORF file to align to
+orf_gff_file: ../../riboviz/example-datasets/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3 # GFF2/GFF3 file for ORFs
+orf_index_prefix: yeast_CDS_w_250 # ORF index file prefix, relative to dir_index
+primary_id: Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
+rpf: TRUE # Is the dataset an RPF or mRNA dataset?
+rrna_fasta_file: ../../riboviz/example-datasets/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa # rRNA file to avoid aligning to
+rrna_index_prefix: yeast_rRNA # rRNA index file prefix, relative to dir_index
+sample_sheet: ../../riboviz/example-datasets/fungi/saccharomyces/annotation/barcodes/Gupta_2018_tRNA_Modification_Carbon_Nitrogen_Metabolism_RPF_9-samples_barcodes.tsv # Sample sheet, TSV file with, at least, SampleID and TagRead (barcode) columns, should be included in input directory
+secondary_id: NULL # Secondary gene IDs to access the data (COX1, EFB1, etc.)
+stop_in_cds: FALSE # Are stop codons part of the CDS annotations in GFF?
+umi_regexp: ^(?P<umi_1>.{4}).+(?P<umi_2>.{5})(?P<cell_1>.{5})$ # UMI-tools-compliant regular expression to extract UMIs and barcodes

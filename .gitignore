@@ -1,2 +1,15 @@
 # Mac OS X directory listing
 .DS_Store
+
+# bioinformatics and riboviz output files
+# that we do not want as part of example_datasets
+*.fai
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.sam
+*.bedgraph
+*.bg
+*.h5

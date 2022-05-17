@@ -1,0 +1,71 @@
+provenance:
+  authors:
+  - author: Alexander Cope
+    email: alexander.cope@rutgers.edu
+website:
+  DOI: https://doi.org/10.7554/elife.44795
+  GEO: GSE124428
+  date run: 2020-09-22
+  notes: Analysis of multiplexed RPF data for S. cerevisiae. YAML file is modified
+    from simdata_multiplex_config.yaml file found in riboviz.
+  reference: A tRNA modification balances carbon and nitrogen metabolism by regulating
+    phosphate homeostasis, Gupta et. al. 2018
+  riboviz-version: 2.0.beta | COMMIT 03a4f13b2d833b8650ebf33bdce81fe2639eb9cf
+
+adapters: AGATCGGAAGAG
+asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
+buffer: 250
+build_indices: true
+codon_positions_file: null
+count_reads: true
+count_threshold: 64
+dataset: G-Sc_2018
+dedup_stats: true
+dedup_umis: true
+dir_in: G-Sc_2018/input
+dir_index: G-Sc_2018/index
+dir_out: G-Sc_2018/output
+dir_tmp: G-Sc_2018/tmp
+do_pos_sp_nt_freq: true
+extract_umis: true
+feature: CDS
+features_file: data/yeast_features.tsv
+fq_files: null
+group_umis: true
+is_riboviz_gff: true
+job_email: null
+job_email_events: beas
+job_memory: 8G
+job_name: riboviz
+job_num_cpus: 4
+job_parallel_env: mpi
+job_runtime: '48:00:00'
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files:
+- SRR8375039.fastq
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+num_processes: 1
+orf_fasta_file: ../../riboviz/example-datasets/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.fa
+orf_gff_file: ../../riboviz/example-datasets/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3
+orf_index_prefix: yeast_CDS_w_250
+output_pdfs: true
+primary_id: Name
+publish_index_tmp: false
+rpf: true
+rrna_fasta_file: ../../riboviz/example-datasets/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa
+rrna_index_prefix: yeast_rRNA
+run_static_html: true
+sample_sheet: ../../../../riboviz/example-datasets/fungi/saccharomyces/Gupta_2018_tRNA_Modification_Carbon_Nitrogen_Metabolism_RPF_9-samples_barcodes.tsv
+samsort_memory: null
+secondary_id: null
+stop_in_feature: false
+t_rna_file: data/yeast_tRNAs.tsv
+trim_5p_mismatches: true
+umi_regexp: ^(?P<umi_1>.{4}).+(?P<umi_2>.{5})(?P<cell_1>.{5})$
+validate_only: false

@@ -1,10 +1,10 @@
 Transcript sequences:
 
-data/yeast_CDS_w_250utrs.fa
+data/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.fa
 
 Coding sequence locations:
 
-data/yeast_CDS_w_250utrs.gff3
+data/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3
 
 These files hold S288c annotations and ORF sequences.
 
@@ -14,8 +14,8 @@ The file genome release R64-2-1 (file name S288C_reference_genome_R64-2-1_201501
 
 The files saccharomyces_cerevisiae_R64-2-1_20150113.gff and S288C_reference_sequence_R64-2-1_20150113.fsa were extracted from the .tgz file.
 
-The sequence and annotation files for the whole approximate Saccharomyces cerevisiae transcriptome were prepared using script_for_transcript_annotation.Rmd (https://github.com/riboviz/riboviz/blob/master/rmarkdown/script_for_transcript_annotation.Rmd). 
+The sequence and annotation files for the whole approximate Saccharomyces cerevisiae transcriptome were prepared using script_for_transcript_annotation.Rmd (https://github.com/riboviz/riboviz/blob/main/rmarkdown/script_for_transcript_annotation.Rmd). 
 
 These annotation files were run with Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa contaminants file.
 
-These were run through Riboviz 2.0.beta tagged master branch, commit: 0ecd69ec0786eaeee78c4ce0999f4a181c775044
+These were run through Riboviz 2.0.beta tagged main branch, commit: 0ecd69ec0786eaeee78c4ce0999f4a181c775044

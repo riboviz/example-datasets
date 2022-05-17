@@ -1,0 +1,61 @@
+provenance:
+  yaml authors:
+  - author: Edward W. J. Wallace
+    email: edward.wallace@ed.ac.uk
+  - author: Felicity Anderson
+    email: Felicity.Anderson@ed.ac.uk
+  - author: Siyin Xue
+    email: siyinxue@gmail.com
+website:
+  date run: 2020-09-26
+  riboviz-version: 2.0 | COMMIT 0f4e932d8c7de032d66f68048989b182730e7d49
+  GEO: GSE133125
+  reference: Quantitative global studies reveal differential translational control by start codon context across the fungal kingdom, Wallace et al. 2012
+  DOI: https://doi.org/10.1093/nar/gkaa060
+  notes: Presumes example-datasets folder structure is held within $HOME/riboviz and will need to create folder called Wallace_2020_H99/input to place the .fastq files in, while output and other folders will be created in Wallace_2020/ by the riboviz workflow.
+
+adapters: CTGTAGGCACC # Illumina sequencing adapter(s) to remove
+aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
+asite_disp_length_file: NULL # Table of fixed A-site positions by read length
+buffer: 120 # Length of flanking region around the CDS
+build_indices: TRUE # Build indices for aligner? if TRUE, remake indices from fasta files
+codon_positions_file: NULL
+count_reads: TRUE # Scan input, temporary and output files and produce counts of reads in each FASTQ, SAM, and BAM file processed?
+count_threshold: 64 # Remove genes with a read count below this threshold, when generating statistics and figures
+cmd_file: run_riboviz_Wallace_2020_H99.sh # Bash commands file
+dataset: Wallace_2020_H99 # Dataset name
+dedup_stats: FALSE # Output UMI deduplication statistics?
+dedup_umis: FALSE # Extract UMIs and deduplicate reads if TRUE
+dir_index: Wallace_2020_H99/index # Built indices directory
+dir_in: Wallace_2020_H99/input # Input directory
+dir_logs: Wallace_2020_H99/logs # Log files directory
+dir_out: Wallace_2020_H99/output # Output directory
+dir_tmp: Wallace_2020_H99/tmp # Intermediate files directory
+do_pos_sp_nt_freq: FALSE # Calculate position-specific nucleotide frequency?
+extract_umis: FALSE # Extract UMIs if TRUE
+features_file: NULL # Features to correlate with ORFs
+fq_files: # fastq files to be processed
+  H99r1: SRR9336389.fastq.gz
+  HdGWO1: SRR9336391.fastq.gz
+  H99r2: SRR9336393.fastq.gz
+  HdAGO1: SRR9336395.fastq.gz
+group_umis: FALSE # Summarise UMI groups before and after deduplication, if TRUE
+is_riboviz_gff: TRUE # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
+is_test_run: FALSE # Is this a test run
+make_bedgraph: TRUE # Output bedgraph files, as TSV, in addition to h5?
+max_read_length: 50 # Maximum read length in H5 output
+min_read_length: 10 # Minimum read length in H5 output
+multiplex_fq_files: NULL # Multiplexed fastq files to be processed, relative to dir_in
+num_processes: 2 # Number of processes to parallelize over
+orf_fasta_file: ../../riboviz/example-datasets/fungi/cryptococcus/annotation/H99_10p_up12dwn9_CDS_with_120bputrs.fa # ORF file to align to
+orf_gff_file: ../../riboviz/example-datasets/fungi/cryptococcus/annotation/H99_10p_up12dwn9_CDS_120bpL_120bpR.gff3 # GFF2/GFF3 file for ORFs
+orf_index_prefix: H99_CDS_with_120bputrs # ORF index file prefix, relative to dir_index
+primary_id: Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
+rpf: TRUE # Is the dataset an RPF or mRNA dataset?
+rrna_fasta_file: ../../riboviz/example-datasets/fungi/cryptococcus/contaminants/H99_rrna.fasta # rRNA file to avoid aligning to
+rrna_index_prefix: H99_rRNA # rRNA index file prefix, relative to dir_index
+sample_sheet: NULL # Sample sheet, TSV file with, at least, SampleID and TagRead (barcode) columns
+secondary_id: NULL # Secondary gene IDs to access the data (COX1, EFB1, etc.)
+stop_in_cds: TRUE # Are stop codons part of the CDS annotations in GFF?
+t_rna_file: NULL # tRNA estimates
+umi_regexp: NULL # UMI-tools-compliant regular expression to extract UMIs

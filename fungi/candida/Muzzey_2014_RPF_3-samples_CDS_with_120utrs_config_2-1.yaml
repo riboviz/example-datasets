@@ -1,0 +1,74 @@
+provenance:
+  DOI: https://doi.org/10.1101/gr.166322.113
+  GEO: GSE52236
+  authors:
+  - author: Felicity Anderson
+    email: Felicity.Anderson@ed.ac.uk
+  date run: 2020-04-28
+  notes: Candida albicans RPF dataset (2 bio reps, one with 2 technical reps)
+  reference: Extensive and coordinated control of allele-specific expression by$
+    transcription and translation in Candida albicans. Genome Res 2014 Jun;24(6$
+    Muzzey D, Sherlock G, Weissman JS.
+  riboviz-version: 2.0 | COMMIT
+  website: null
+
+
+adapters: CTGTAGGCACCATCAAT
+asite_disp_length_file: null
+buffer: 120
+build_indices: true
+codon_positions_file: null
+count_reads: true
+count_threshold: 64
+dataset: M-Ca_2014
+dedup_stats: false
+dedup_umis: false
+dir_in: M-Ca_2014/input
+dir_index: M-Ca_2014/index
+dir_out: M-Ca_2014/output
+dir_tmp: M-Ca_2014/tmp
+do_pos_sp_nt_freq: false
+extract_umis: false
+feature: CDS
+features_file: null
+fq_files:
+  WT_A: SRR1027794.fastq.gz
+  WT_A2: SRR1027795.fastq.gz
+  WT_B: SRR1027796.fastq.gz
+group_umis: false
+is_riboviz_gff: true
+job_email: null
+job_email_events: beas
+job_memory: 8G
+job_name: riboviz
+job_num_cpus: 4
+job_parallel_env: mpi
+job_runtime: '48:00:00'
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files: null
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+num_processes: 8
+orf_fasta_file: ../../riboviz/example-datasets/fungi/candida/annotation/Candida_albicans_CDS_with_120utrs.fa
+orf_gff_file: ../../riboviz/example-datasets/fungi/candida/annotation/Candida_albicans_CDS_with_120utrs.gff3
+orf_index_prefix: CAlbi_CDS_with_120utrs
+output_pdfs: true
+primary_id: Name
+publish_index_tmp: false
+rpf: true
+rrna_fasta_file: ../../riboviz/example-datasets/fungi/candida/contaminants/Candida_albicans_rRNA_tRNA.fa
+rrna_index_prefix: Calbicans_rRNA_tRNA
+run_static_html: true
+sample_sheet: null
+samsort_memory: null
+secondary_id: null
+stop_in_feature: true
+t_rna_file: null
+trim_5p_mismatches: true
+umi_regexp: null
+validate_only: false

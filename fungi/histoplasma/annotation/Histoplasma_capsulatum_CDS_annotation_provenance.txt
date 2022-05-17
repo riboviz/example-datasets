@@ -1,0 +1,22 @@
+Transcript sequences:
+
+Histoplasma_capsulatum_CDS.fasta
+
+Coding sequence locations:
+
+Histoplasma_capsulatum_CDS.gff3
+
+These files hold Histoplasma capsulatum annotations and ORF sequences.
+
+These files were created as follows:
+
+The current genome release (file name G217B_predicted.fasta; http://histo.ucsf.edu/downloads/F_HCG217B.fasta.041130.gz) was downloaded from HistoBase (http://histo.ucsf.edu/).
+
+The current genome release (file name G217B_predicted.gff3; http://histo.ucsf.edu/downloads/ucsf_hc.01_1.G217B.gff3) was downloaded from HistoBase (http://histo.ucsf.edu/).
+
+These files were then run through create_files_for_riboviz.R, to change them into a useable format. The names in the original fasta file were changed as descibed in example-datasets issue 91 to make them identical to those in the gff,
+which was necessary for create_files_for_riboviz.R to run correctly. Resultant files were checked with check_fasta_gff and snapgene, which showed that the CDS features were 1 codon short, causing the stop codon of all sequences to be 
+the first codon in the 3'UTR, based on loactions listed in the GFF file. This was fixed by increasing the width and end of all CDS type features in the GFF by 3 nt, and adding 3 'N' nt to the end of all fasta sequences, maintaint the 250 
+utr buffer.
+
+

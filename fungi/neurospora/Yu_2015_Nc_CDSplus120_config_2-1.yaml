@@ -1,0 +1,73 @@
+provenance:
+  yaml authors:
+  - author: Edward W. J. Wallace
+    email: edward.wallace@ed.ac.uk
+  DOI: https://doi.org/10.1016/j.molcel.2015.07.018
+  GEO: GSM1825740
+  date run: 2020-11-06
+  notes: Presumes example-datasets folder structure is held within $HOME/riboviz and
+    will need to create folder called Yu_2015_Nc/input to place the .fastq files in,
+    while output and other folders will be created in Yu_2015_Nc/ by the riboviz workflow.
+  reference: Codon Usage Influences the Local Rate of Translation Elongation to Regulate
+    Co-translational Protein Folding., Yu et al. 2015
+  riboviz-version: 2.0 | COMMIT d8215697a5fca37df51fd2b71af51e211ac213d2
+
+adapters: AGATCGGAAGAGCACACGTCT
+asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
+buffer: 120
+build_indices: true
+codon_positions_file: null
+count_reads: true
+count_threshold: 64
+dataset: Y-Nc_2015
+dedup_stats: false
+dedup_umis: false
+dir_in: Y-Nc_2015/input
+dir_index: Y-Nc_2015/index
+dir_out: Y-Nc_2015/output
+dir_tmp: Y-Nc_2015/tmp
+do_pos_sp_nt_freq: false
+extract_umis: false
+feature: CDS
+features_file: null
+fq_files:
+  Cwt-Opt: SRR2105980.fastq.gz
+  Opt: SRR2105979.fastq.gz
+  WT: SRR2105977.fastq.gz
+group_umis: false
+is_riboviz_gff: true
+job_email: null
+job_email_events: beas
+job_memory: 8G
+job_name: riboviz
+job_num_cpus: 4
+job_parallel_env: mpi
+job_runtime: '48:00:00'
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files: null
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+num_processes: 2
+orf_fasta_file: ../../riboviz/example-datasets/fungi/neurospora/annotation/NC12_CDS_with_120bputrs.fa
+orf_gff_file: ../../riboviz/example-datasets/fungi/neurospora/annotation/NC12_CDS_120bpL_120bpR.gff3
+orf_index_prefix: NC12_CDS_with_120bputrs
+output_pdfs: true
+primary_id: Name
+publish_index_tmp: false
+rpf: true
+rrna_fasta_file: ../../riboviz/example-datasets/fungi/neurospora/contaminants/Neurospora_crassa_NC12_rRNA_tRNA.fa
+rrna_index_prefix: NC12_rRNA_tRNA
+run_static_html: true
+sample_sheet: null
+samsort_memory: null
+secondary_id: null
+stop_in_feature: true
+t_rna_file: null
+trim_5p_mismatches: true
+umi_regexp: null
+validate_only: false

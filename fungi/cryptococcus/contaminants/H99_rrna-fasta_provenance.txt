@@ -1,0 +1,6 @@
+This file was created by Edward Wallace in 2018, ribosomal RNA transcripts selected from the CNA3 genome assembly and annotation of Cryptococcus neoformans strain H99.
+The full annotation is available in Genbank under project accession PRJNA411. The genome is also available at FungiDb.
+
+Citation:
+
+Janbon G et al., "Analysis of the genome and transcriptome of Cryptococcus neoformans var. grubii reveals complex RNA expression and microevolution leading to virulence attenuation.", PLoS Genet, 2014 Apr 17;10(4):e1004261

@@ -1,0 +1,77 @@
+provenance:
+  DOI: https://doi.org/10.1093/nar/gkaa060
+  GEO: GSE133125
+  date run: 2020-09-28
+  notes: Presumes example-datasets folder structure is held within $HOME/riboviz/
+    and need to create folder Wallace_2020_JEC21/input to place .fastq files into
+    and riboviz will create other folders within Wallace_2020_JEC21/ to hold outputs.
+  reference: Quantitative global studies reveal differential translational control
+    by start codon context across the fungal kingdom, Wallace et al. 2012
+  riboviz-version: 2.0 | COMMIT 0f4e932d8c7de032d66f68048989b182730e7d49
+  yaml authors:
+  - author: Edward W. J. Wallace
+    email: edward.wallace@ed.ac.uk
+  - author: Felicity Anderson
+    email: Felicity.Anderson@ed.ac.uk
+  - author: Siyin Xue
+    email: siyinxue@gmail.com
+
+
+adapters: CTGTAGGCACC
+asite_disp_length_file: null
+buffer: 120
+build_indices: true
+codon_positions_file: null
+count_reads: true
+count_threshold: 64
+dataset: Wallace_2020_JEC21
+dedup_stats: false
+dedup_umis: false
+dir_in: Wallace_2020_JEC21/input
+dir_index: Wallace_2020_JEC21/index
+dir_out: Wallace_2020_JEC21/output
+dir_tmp: Wallace_2020_JEC21/tmp
+do_pos_sp_nt_freq: false
+extract_umis: false
+feature: CDS
+features_file: null
+fq_files:
+  JEC21: SRR9620586.fastq.gz
+  JdAGO1: SRR9620588.fastq.gz
+group_umis: false
+is_riboviz_gff: true
+job_email: null
+job_email_events: beas
+job_memory: 8G
+job_name: riboviz
+job_num_cpus: 4
+job_parallel_env: mpi
+job_runtime: '48:00:00'
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files: null
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+num_processes: 16
+orf_fasta_file: ../../riboviz/example-datasets/fungi/cryptococcus/annotation/JEC21_10p_up12dwn9_CDS_with_120bputrs.fa
+orf_gff_file: ../../riboviz/example-datasets/fungi/cryptococcus/annotation/JEC21_10p_up12dwn9_CDS_120bpL_120bpR.gff3
+orf_index_prefix: JEC21_CDS_with_120bputrs
+output_pdfs: true
+primary_id: Name
+publish_index_tmp: false
+rpf: true
+rrna_fasta_file: ../../riboviz/example-datasets/fungi/cryptococcus/contaminants/JEC21_rrna.fasta
+rrna_index_prefix: JEC21_rRNA
+run_static_html: true
+sample_sheet: null
+samsort_memory: null
+secondary_id: null
+stop_in_feature: true
+t_rna_file: null
+trim_5p_mismatches: true
+umi_regexp: null
+validate_only: false
