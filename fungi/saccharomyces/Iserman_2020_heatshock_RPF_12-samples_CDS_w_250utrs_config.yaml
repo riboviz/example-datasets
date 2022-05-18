@@ -10,7 +10,8 @@ provenance:
   DOI: https://doi.org/10.1016/j.cell.2020.04.009
   notes: presumes running from $HOME/riboviz/riboviz 
 
-adapters: ATCGTAGATCGGAAGAGCACACGTCTGAA # Illumina sequencing adapter(s) to remove
+#adapters: ATCGTAGATCGGAAGAGCACACGTCTGAA # Illumina sequencing adapter(s) to remove
+adapters: CTGTAGGCACCATCAAT # Illumina sequencing adapter(s) to remove # Illumina sequencing adapter(s) to remove
 aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
 asite_disp_length_file: data/yeast_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
 buffer: 250 # Length of flanking region around the CDS
