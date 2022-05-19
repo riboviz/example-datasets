@@ -11,7 +11,7 @@ provenance:
 
 adapters: TGGAATTCTCGGGTGCCAAGG # Illumina sequencing adapter(s) to remove
 aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
-# Table of fixed A-site positions by read length
+asite_disp_length_file: data/yeast_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
 buffer: 250 # Length of flanking region around the CDS
 build_indices: true # Build indices for aligner? if TRUE, remake indices from fasta files
 cmd_file: run_S-Sp_2021.sh # Bash commands file
