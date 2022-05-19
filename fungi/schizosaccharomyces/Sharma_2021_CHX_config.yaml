@@ -1,0 +1,66 @@
+provenance:
+  yaml authors:
+  - author: Emma MacKenzie
+    email: ...
+  date run: 2021-03-08
+  riboviz-version: 2.0 | COMMIT b75c1ba0e2a541d6f256e2d295b352a3aef969a9
+  Array Express: E-MTAB-5810 
+  reference: General amino acid control in fission yeast is regulated by a nonconserved transcription factor, with functions analogous to Gcn4/Atf4, Duncan et al, 2018
+  DOI: https://doi.org/10.1073/pnas.1713991115
+  notes: S. pombe example dataset by Emma MacKenzie as part of her honours project. 
+
+adapters: TGGAATTCTCGGGTGCCAAGG # Illumina sequencing adapter(s) to remove
+aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
+# Table of fixed A-site positions by read length
+buffer: 250 # Length of flanking region around the CDS
+build_indices: true # Build indices for aligner? if TRUE, remake indices from fasta files
+cmd_file: run_riboviz_D-Sp_2018.sh # Bash commands file
+count_reads: true # Scan input, temporary and output files and produce counts of reads in each FASTQ, SAM, and BAM file processed?
+count_threshold: 64 # Remove genes with a read count below this threshold, when generating statistics and figures
+dataset: D-Sp_2018 # Dataset name
+dedup_stats: TRUE # Output UMI deduplication statistics?
+dedup_umis: TRUE # Extract UMIs and deduplicate reads if TRUE
+dir_in: D-Sp_2018/input # Input directory
+dir_index: D-Sp_2018/index # Built indices directory
+dir_logs: D-Sp_2018/logs # Log files directory
+dir_out: D-Sp_2018/output # Output directory
+dir_tmp: D-Sp_2018/tmp # Intermediate files directory
+do_pos_sp_nt_freq: true # Calculate position-specific nucleotide frequency?
+extract_umis: TRUE # Extract UMIs if TRUE
+fq_files: # fastq files to be processed, relative to dir_in
+  # wt.AT.CHX.ribo.11_s: ERR2003528.fastq.gz
+  # wt.AT.CHX.ribo.13_s: ERR2003529.fastq.gz
+  # wt.AT.noCHX.ribo.11_s: ERR2003535.fastq.gz
+  # wt.AT.noCHX.ribo.13_s: ERR2003536.fastq.gz
+  # wt.AT.ribo.3_s: ERR2003539.fastq.gz
+  # wt.AT.ribo.4_s: ERR2003540.fastq.gz
+  # wt.noAT.CHX.ribo.11_s: ERR2003543.fastq.gz
+  # wt.noAT.CHX.ribo.13_s: ERR2003544.fastq.gz
+  # wt.noAT.noCHX.ribo.11_s: ERR2003550.fastq.gz
+  # wt.noAT.noCHX.ribo.13_s:ERR2003551.fastq.gz
+  wt.noAT.ribo.3_s: ERR2003553.fastq.gz
+  wt.noAT.ribo.4_s: ERR2003554.fastq.gz
+group_umis: TRUE # Summarise UMI groups before and after deduplication, if TRUE
+is_riboviz_gff: true # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
+is_test_run: false # Is this a test run
+make_bedgraph: true # Output bedgraph files, as TSV, in addition to h5?
+max_read_length: 50 # Maximum read length in H5 output
+min_read_length: 10 # Minimum read length in H5 output
+multiplex_fq_files: null # Multiplexed fastq files to be processed, relative to dir_in
+num_processes: 16 # Number of processes to parallelize over
+orf_fasta_file: ../../riboviz/example-datasets/fungi/schizosaccharomyces/annotation/Schizosaccharomyces_pombe_CDS_w_250utrs.fasta # ORF file to align to
+orf_gff_file: ../../riboviz/example-datasets/fungi/schizosaccharomyces/annotation/Schizosaccharomyces_pombe_CDS_w_250utrs.gff3 # GFF2/GFF3 file for ORFs
+orf_index_prefix: yeast_CDS_w_250 # ORF index file prefix, relative to dir_index
+primary_id: Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
+publish_index_tmp: FALSE
+rpf: true # Is the dataset an RPF or mRNA dataset?
+rrna_fasta_file: ../../riboviz/example-datasets/fungi/schizosaccharomyces/contaminants/schizosaccharomyces_pombe_972h-_rRNA.fasta # rRNA file to avoid aligning to
+rrna_index_prefix: yeast_rRNA # rRNA index file prefix, relative to dir_index
+samsort_memory: 768M
+sample_sheet: null # Sample sheet, TSV file with, at least, SampleID and TagRead (barcode) columns
+secondary_id: null # Secondary gene IDs to access the data (COX1, EFB1, etc.)
+skip_inputs: FALSE
+stop_in_cds: false # Are stop codons part of the CDS annotations in GFF?
+trim_5p_mismatches: TRUE
+umi_regexp: ^(?P<umi_1>.{4}).+(?P<umi_2>.{4})$ # UMI-tools-compliant regular expression to extract UMIs
+validate_only: FALSE
