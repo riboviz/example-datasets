@@ -11,7 +11,7 @@ provenance:
 
 
 adapters: CTGTAGGCACCATCAAT
-asite_disp_length_file: null
+asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
 buffer: 120
 build_indices: TRUE
 codon_positions_file: null
