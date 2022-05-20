@@ -1,0 +1,72 @@
+provenance:
+  authors:
+  - author: Alexander Cope
+    email: alexander.cope@rutgers.edu
+  website: null
+  date run: 2021-06-01
+  riboviz-version: 2.1beta | COMMIT f3e77ac58438d3bcc80b78fe78a58b75f0029633
+  GEO: GSE154488
+  reference: Global translational landscape of the Candida albicans morphological
+    transition. G3 Genes|Genomes|Genetics 2021 Feb;11(2):jkaa043. Mundodi et. al.
+  DOI: https://doi.org/10.1093/g3journal/jkaa043
+  notes: Candida albicans RPF dataset at 37C (3 replicates)
+adapters: AGATCGGAAGAGCACACGTCTGAACTCCAGTCA
+buffer: 120
+asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
+build_indices: true
+codon_positions_file: null
+count_reads: true
+count_threshold: 64
+dataset: Mundodi_Calbicans_37C
+dir_index: M-Ca_2021/index
+dir_in: M-Ca_2021/input
+dir_out: M-Ca_2021/output
+dir_tmp: M-Ca_2021/tmp
+extract_umis: false
+group_umis: false
+is_riboviz_gff: true
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+features_file: null
+fq_files:
+  37C1: SRR12228384.fastq.gz
+  37C2: SRR12228385.fastq.gz
+  37C3: SRR12228386.fastq.gz
+num_processes: 16
+orf_fasta_file: ../example-datasets/fungi/candida/annotation/Candida_albicans_CDS_with_120utrs.fa
+orf_gff_file: ../example-datasets/fungi/candida/annotation/Candida_albicans_CDS_with_120utrs.gff3
+orf_index_prefix: calbicans_CDS
+primary_id: Name
+rpf: true
+rrna_fasta_file: ../example-datasets/fungi/candida/contaminants/Candida_albicans_rRNA_tRNA.fa
+rrna_index_prefix: calbicans_rRNA
+secondary_id: null
+t_rna_file: null
+stop_in_feature: false
+output_metagene_normalized_profile: true
+dedup_stats: false
+dedup_umis: false
+feature: CDS
+hisat2_orf_params: -k 2 --no-spliced-alignment --rna-strandness F --no-unal
+job_email: null
+job_email_events: beas
+job_memory: 8G
+job_name: riboviz
+job_num_cpus: 4
+job_parallel_env: mpi
+job_runtime: '48:00:00'
+multiplex_fq_files: null
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+output_pdfs: true
+publish_index_tmp: false
+run_static_html: true
+sample_sheet: null
+samsort_memory: null
+trim_5p_mismatches: true
+umi_regexp: null
+validate_only: false

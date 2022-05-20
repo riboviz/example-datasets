@@ -1,0 +1,75 @@
+provenance:
+  yaml authors:
+  - author: Emma MacKenzie
+    email: '...'
+  date run: 2021-03-08
+  riboviz-version: 2.0 | COMMIT b75c1ba0e2a541d6f256e2d295b352a3aef969a9
+  Array Express: E-MTAB-8746, E-MTAB-8686, E-MTAB-8744, E-MTAB-8745, E-MTAB-8602 and
+    E-MTAB-8583.
+  reference: Ribosome profiling reveals ribosome stalling on tryptophan codons and
+    ribosome queuing upon oxidative stress in fission yeast, Rubio et al, 2020
+  DOI: https://doi.org/10.1093/nar/gkaa1180
+  notes: S. pombe example dataset by Emma MacKenzie as part of her honours project.
+adapters: TGGAATTCTCGGGTGCCAAGG
+asite_disp_length_file: null
+buffer: 250
+build_indices: true
+codon_positions_file: null
+count_reads: true
+count_threshold: 64
+dataset: R-Sp_2020
+dedup_stats: true
+dedup_umis: true
+dir_in: R-Sp_2020/input
+dir_index: R-Sp_2020/index
+dir_out: R-Sp_2020/output
+dir_tmp: R-Sp_2020/tmp
+extract_umis: true
+features_file: null
+fq_files:
+  wt.control.cd.ribo.1: ERR3850620.fastq.gz
+  wt.control.cd.ribo.2: ERR3850621.fastq.gz
+  wt.cd.ribo.1: ERR3850618.fastq.gz
+  wt.cd.ribo.2: ERR3850619.fastq.gz
+group_umis: true
+is_riboviz_gff: true
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files: null
+num_processes: 16
+orf_fasta_file: ../../riboviz/example-datasets/fungi/schizosaccharomyces/annotation/Schizosaccharomyces_pombe_CDS_w_250utrs.fasta
+orf_gff_file: ../../riboviz/example-datasets/fungi/schizosaccharomyces/annotation/Schizosaccharomyces_pombe_CDS_w_250utrs.gff3
+orf_index_prefix: yeast_CDS_w_250
+primary_id: Name
+publish_index_tmp: false
+rpf: true
+rrna_fasta_file: ../../riboviz/example-datasets/fungi/schizosaccharomyces/contaminants/schizosaccharomyces_pombe_972h-_rRNA.fasta
+rrna_index_prefix: yeast_rRNA
+samsort_memory: 768M
+sample_sheet: null
+secondary_id: null
+skip_inputs: false
+trim_5p_mismatches: true
+trna_file: null
+umi_regexp: ^(?P<umi_1>.{4}).+(?P<umi_2>.{4})$
+validate_only: false
+stop_in_feature: false
+output_metagene_normalized_profile: true
+feature: CDS
+hisat2_orf_params: -k 2 --no-spliced-alignment --rna-strandness F --no-unal
+job_email: null
+job_email_events: beas
+job_memory: 8G
+job_name: riboviz
+job_num_cpus: 4
+job_parallel_env: mpi
+job_runtime: '48:00:00'
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+output_pdfs: true
+run_static_html: true
+t_rna_file: null

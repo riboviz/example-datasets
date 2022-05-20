@@ -1,0 +1,71 @@
+provenance:
+  yaml authors:
+  - author: Edward Wallace
+    email: Edward.Wallace@ed.ac.uk
+  website: null
+  date run: 2021-01-15
+  riboviz-version: 2.0 | fad6141
+  GEO: null
+  reference: simRiboSeq, https://github.com/amandamok/simRiboSeq/, Amanda Mok 2021,
+    commit 8367709
+  DOI: null
+  notes: Tiny simulated data from Amanda Mok, January 2021. Download the fq file from
+    https://github.com/amandamok/simRiboSeq/blob/master/simulation_runs/riboviz/tiny_2genes.fq
+adapters: CTGTAGGCACCATCAAT
+asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
+buffer: 20
+build_indices: true
+codon_positions_file: null
+count_reads: true
+count_threshold: 1
+dataset: Mok-tinysim
+dedup_stats: false
+dedup_umis: false
+dir_in: Mok-tinysim/input
+dir_index: Mok-tinysim/index
+dir_out: Mok-tinysim/output
+dir_tmp: Mok-tinysim/tmp
+extract_umis: false
+features_file: null
+fq_files:
+  A: tiny_2genes.fq
+group_umis: false
+is_riboviz_gff: true
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files: null
+num_processes: 1
+orf_fasta_file: ../../riboviz/example-datasets/simulated/mok/annotation/tiny_2genes_20utrs.fa
+orf_gff_file: ../../riboviz/example-datasets/simulated/mok/annotation/tiny_2genes_20utrs.gff3
+orf_index_prefix: tiny_2genes_20utrs
+primary_id: Name
+rpf: true
+rrna_fasta_file: ../../riboviz/example-datasets/simulated/mok/contaminants/Sc_rRNA_example.fa
+rrna_index_prefix: yeast_rRNA
+sample_sheet: null
+secondary_id: null
+t_rna_file: null
+umi_regexp: null
+stop_in_feature: false
+output_metagene_normalized_profile: true
+feature: CDS
+hisat2_orf_params: -k 2 --no-spliced-alignment --rna-strandness F --no-unal
+job_email: null
+job_email_events: beas
+job_memory: 8G
+job_name: riboviz
+job_num_cpus: 4
+job_parallel_env: mpi
+job_runtime: '48:00:00'
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+output_pdfs: true
+publish_index_tmp: false
+run_static_html: true
+samsort_memory: null
+trim_5p_mismatches: true
+validate_only: false
