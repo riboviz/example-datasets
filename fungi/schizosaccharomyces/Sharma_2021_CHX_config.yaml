@@ -9,7 +9,7 @@ provenance:
   DOI: https://doi.org/10.1038/s41467-021-25411-y
   notes: S. pombe dataset from Sharma et al., (2021) using CHX
 
-adapters: TGGAATTCTCGGGTGCCAAGG # Illumina sequencing adapter(s) to remove
+adapters: CTGTAGGCACCATCAAT # Illumina sequencing adapter(s) to remove
 aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
 asite_disp_length_file: data/yeast_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
 buffer: 250 # Length of flanking region around the CDS
