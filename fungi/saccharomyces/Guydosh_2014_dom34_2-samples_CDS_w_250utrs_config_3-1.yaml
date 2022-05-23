@@ -62,6 +62,10 @@ fq_files:
   Hbs1KO: SRR1042875.fastq.gz
   Ski2KO_Short: SRR1042876.fastq.gz
   Ski2KO_Dom34KO_Short: SRR1042877.fastq.gz
+  # Dom34K0_Disome_F_Wt_1: SRR1042878.fastq.gz
+  # Dom34KO_Disome_F_Wt_2: SRR1042879.fastq.gz
+  # Dom34KO_Disome_F_1: SRR1042880.fastq.gz
+  # Dom34KO_Disome_F_2: SRR1042881.fastq.gz
 group_umis: false
 is_riboviz_gff: true
 job_email_events: beas
