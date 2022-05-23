@@ -9,20 +9,37 @@ provenance:
     transcription factor, with functions analogous to Gcn4/Atf4, Duncan et al, 2018
   DOI: https://doi.org/10.1073/pnas.1713991115
   notes: S. pombe example dataset by Emma MacKenzie as part of her honours project.
+  riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
+  riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
+  riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets simulated data repository folder e.g. /home/user/riboviz/example-datasets/simulated/mok
+  riboviz environment tokens note 3: ${RIBOVIZ_SAMPLES} should point to location where input data fastq file has been downloaded from simRiboSeq/simulation_runs/riboviz repository folder & placed within 'input' folder
+  
 adapters: TGGAATTCTCGGGTGCCAAGG
+asite_disp_length_file: ${RIBOVIZ_DATA}/yeast_standard_asite_disp_length.txt
 buffer: 250
 build_indices: true
+codon_positions_file: null
 count_reads: true
 count_threshold: 64
 dataset: D-Sp_2018
 dedup_stats: true
 dedup_umis: true
-dir_in: D-Sp_2018/input
-dir_index: D-Sp_2018/index
-dir_out: D-Sp_2018/output
-dir_tmp: D-Sp_2018/tmp
+dir_in: ${RIBOVIZ_SAMPLES}/input
+dir_index: ${RIBOVIZ_SAMPLES}/index
+dir_out: ${RIBOVIZ_SAMPLES}/output
+dir_tmp: ${RIBOVIZ_SAMPLES}/tmp
 extract_umis: true
 fq_files:
+  # wt.AT.CHX.ribo.11_s: ERR2003528.fastq.gz
+  # wt.AT.CHX.ribo.13_s: ERR2003529.fastq.gz
+  # wt.AT.noCHX.ribo.11_s: ERR2003535.fastq.gz
+  # wt.AT.noCHX.ribo.13_s: ERR2003536.fastq.gz
+  # wt.AT.ribo.3_s: ERR2003539.fastq.gz
+  # wt.AT.ribo.4_s: ERR2003540.fastq.gz
+  # wt.noAT.CHX.ribo.11_s: ERR2003543.fastq.gz
+  # wt.noAT.CHX.ribo.13_s: ERR2003544.fastq.gz
+  # wt.noAT.noCHX.ribo.11_s: ERR2003550.fastq.gz
+  # wt.noAT.noCHX.ribo.13_s:ERR2003551.fastq.gz
   wt.noAT.ribo.3_s: ERR2003553.fastq.gz
   wt.noAT.ribo.4_s: ERR2003554.fastq.gz
 group_umis: true
@@ -32,13 +49,13 @@ max_read_length: 50
 min_read_length: 10
 multiplex_fq_files: null
 num_processes: 16
-orf_fasta_file: ../../riboviz/example-datasets/fungi/schizosaccharomyces/annotation/Schizosaccharomyces_pombe_CDS_w_250utrs.fasta
-orf_gff_file: ../../riboviz/example-datasets/fungi/schizosaccharomyces/annotation/Schizosaccharomyces_pombe_CDS_w_250utrs.gff3
+orf_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/schizosaccharomyces/annotation/Schizosaccharomyces_pombe_CDS_w_250utrs.fasta
+orf_gff_file: ${RIBOVIZ_ORGANISMS}/fungi/schizosaccharomyces/annotation/Schizosaccharomyces_pombe_CDS_w_250utrs.gff3
 orf_index_prefix: yeast_CDS_w_250
 primary_id: Name
 publish_index_tmp: false
 rpf: true
-rrna_fasta_file: ../../riboviz/example-datasets/fungi/schizosaccharomyces/contaminants/schizosaccharomyces_pombe_972h-_rRNA.fasta
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/schizosaccharomyces/contaminants/schizosaccharomyces_pombe_972h-_rRNA.fasta
 rrna_index_prefix: yeast_rRNA
 samsort_memory: 768M
 sample_sheet: null
@@ -49,8 +66,6 @@ umi_regexp: ^(?P<umi_1>.{4}).+(?P<umi_2>.{4})$
 validate_only: false
 stop_in_feature: false
 output_metagene_normalized_profile: true
-asite_disp_length_file: null
-codon_positions_file: null
 feature: CDS
 features_file: null
 hisat2_orf_params: -k 2 --no-spliced-alignment --rna-strandness F --no-unal
