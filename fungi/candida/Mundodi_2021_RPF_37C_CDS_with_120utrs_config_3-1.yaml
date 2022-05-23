@@ -23,10 +23,10 @@ codon_positions_file: null
 count_reads: true
 count_threshold: 64
 dataset: Mundodi_Calbicans_37C
-dir_index: ${RIBOVIZ_ORGANISMS}/index
-dir_in: ${RIBOVIZ_ORGANISMS}/input
-dir_out: ${RIBOVIZ_ORGANISMS}/output
-dir_tmp: ${RIBOVIZ_ORGANISMS}/tmp
+dir_index: ${RIBOVIZ_SAMPLES}/index
+dir_in: ${RIBOVIZ_SAMPLES}/input
+dir_out: ${RIBOVIZ_SAMPLES}/output
+dir_tmp: ${RIBOVIZ_SAMPLES}/tmp
 extract_umis: false
 group_umis: false
 is_riboviz_gff: true
