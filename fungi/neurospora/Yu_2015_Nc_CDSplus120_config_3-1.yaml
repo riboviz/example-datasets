@@ -12,8 +12,13 @@ website:
   notes: Presumes example-datasets folder structure is held within $HOME/riboviz and
     will need to create folder called Yu_2015_Nc/input to place the .fastq files in,
     while output and other folders will be created in Yu_2015_Nc/ by the riboviz workflow.
+  riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
+  riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
+  riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets simulated data repository folder e.g. /home/user/riboviz/example-datasets/simulated/mok
+  riboviz environment tokens note 3: ${RIBOVIZ_SAMPLES} should point to location where input data fastq file has been downloaded from simRiboSeq/simulation_runs/riboviz repository folder & placed within 'input' folder
+
 adapters: AGATCGGAAGAGCACACGTCT
-asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
+asite_disp_length_file: ${RIBOVIZ_DATA}/yeast_standard_asite_disp_length.txt
 buffer: 120
 build_indices: true
 codon_positions_file: null
@@ -22,10 +27,10 @@ count_threshold: 64
 dataset: Yu2015
 dedup_stats: false
 dedup_umis: false
-dir_index: Yu_2015_Nc/index
-dir_in: Yu_2015_Nc/input
-dir_out: Yu_2015_Nc/output
-dir_tmp: Yu_2015_Nc/tmp
+dir_index: ${RIBOVIZ_SAMPLES}/index
+dir_in: ${RIBOVIZ_SAMPLES}/input
+dir_out: ${RIBOVIZ_SAMPLES}/output
+dir_tmp: ${RIBOVIZ_SAMPLES}/tmp
 extract_umis: false
 features_file: null
 fq_files:
@@ -39,13 +44,13 @@ max_read_length: 50
 min_read_length: 10
 multiplex_fq_files: null
 num_processes: 2
-orf_fasta_file: ../../riboviz/example-datasets/fungi/neurospora/annotation/NC12_CDS_with_120bputrs.fa
-orf_gff_file: ../../riboviz/example-datasets/fungi/neurospora/annotation/NC12_CDS_120bpL_120bpR.gff3
+orf_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/neurospora/annotation/NC12_CDS_with_120bputrs.fa
+orf_gff_file: ${RIBOVIZ_ORGANISMS}/fungi/neurospora/annotation/NC12_CDS_120bpL_120bpR.gff3
 orf_index_prefix: NC12_CDS_with_120bputrs
 primary_id: Name
 publish_index_tmp: false
 rpf: true
-rrna_fasta_file: ../../riboviz/example-datasets/fungi/neurospora/contaminants/Neurospora_crassa_NC12_rRNA_tRNA.fa
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/neurospora/contaminants/Neurospora_crassa_NC12_rRNA_tRNA.fa
 rrna_index_prefix: NC12_rRNA_tRNA
 sample_sheet: null
 secondary_id: null
