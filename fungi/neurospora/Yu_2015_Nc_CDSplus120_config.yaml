@@ -42,7 +42,7 @@ max_read_length: 50
 min_read_length: 10
 multiplex_fq_files: null
 num_processes: 2
-orf_fasta_file: ../../riboviz/example-datasets/fungi/neurospora/annotation/modified_NC12_CDS_with_120bputrs.fa
+orf_fasta_file: ../../riboviz/example-datasets/fungi/neurospora/annotation/NC12_CDS_with_120bputrs.fa
 orf_gff_file:  ../../riboviz/example-datasets/fungi/neurospora/annotation/NC12_CDS_120bpL_120bpR.gff3
 orf_index_prefix: NC12_CDS_with_120bputrs
 primary_id: Name
