@@ -40,7 +40,6 @@ max_read_length: 50
 min_read_length: 10
 multiplex_fq_files: null
 num_processes: 16
-orf_fasta_file: 
 orf_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.fa
 orf_gff_file: ${RIBOVIZ_ORGANISMS}/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3
 orf_index_prefix: yeast_CDS_w_250
