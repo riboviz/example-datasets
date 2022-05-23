@@ -1,16 +1,19 @@
 provenance:
-  authors:
+  yaml authors:
   - author: Alexander Cope
     email: alexander.cope@rutgers.edu
-website:
+  website:
   date run: 2021-02-01
   riboviz-version: 2.0.beta | COMMIT 35b7285efdcd572e5f4065c58fcee5cdf340e976
   GEO: GSE64488
-  reference: Translation efficiency is maintained at elevated temperature in Escherichia
-    coli, Morgan et. al. 2018
+  reference: Translation efficiency is maintained at elevated temperature in Escherichia coli, Morgan et. al. 2018
   DOI: 10.1074/jbc.RA117.000284
-  notes: RiboSeq for E. coli K12 MG1655 strain. Successfully run using Nextflow pipeline.
-    Assign A-site using 3'-end mapping strategy.
+  notes: RiboSeq for E. coli K12 MG1655 strain. Successfully run using Nextflow pipeline. Assign A-site using 3'-end mapping strategy.
+  riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
+  riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
+  riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets repository folder e.g. /home/user/riboviz/example-datasets
+  riboviz environment tokens note 3: ${RIBOVIZ_SAMPLES} should point to location where input data fastq file has been downloaded from simRiboSeq/simulation_runs/riboviz repository folder & placed within 'input' folder
+
 adapters: CTGTAGGCACCATCAAT
 asite_disp_length_file: ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/annotations/Escherichia_coli_standard_asite_disp_length.txt
 buffer: 25
@@ -42,12 +45,12 @@ make_bedgraph: true
 max_read_length: 50
 min_read_length: 10
 multiplex_fq_files: null
-orf_fasta_file:  ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/annotations/Escherichia_coli_K12_CDS_w_25utrs.fa
+orf_fasta_file: ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/annotations/Escherichia_coli_K12_CDS_w_25utrs.fa
 orf_gff_file: ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/annotations/Escherichia_coli_K12_CDS_w_25utrs.gff3
 orf_index_prefix: ecoli_CDS_w_25
 primary_id: Name
 rpf: true
-rrna_fasta_file:  ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/contaminants/Escherichia_coli_rrna_trna.fa
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/contaminants/Escherichia_coli_rrna_trna.fa
 rrna_index_prefix: ecoli_rRNA
 sample_sheet: null
 secondary_id: null
