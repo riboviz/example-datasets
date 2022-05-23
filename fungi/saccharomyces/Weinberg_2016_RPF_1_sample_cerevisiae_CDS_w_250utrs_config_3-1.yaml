@@ -10,11 +10,10 @@ provenance:
   date run: 2021-02-12
   riboviz-version: 2.0 | COMMIT 7e62c9f8da4f66f9c18aca30394f44fa4a7fa1ef
   GEO: GSE75897
-  reference: Improved ribosome-footprint and mRNA measurements provide insights into
-    dynamics and regulation of yeast translation, Weinberg et al. 2016
+  reference: Improved ribosome-footprint and mRNA measurements provide insights into dynamics and regulation of yeast translation, Weinberg et al. 2016
   DOI: https://doi.org/10.1016/j.celrep.2016.01.043
   notes: S. cerevisiae RPF dataset for riboviz hackathon by Emma and Sophie.
-   riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
+  riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
   riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
   riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets repository folder e.g. /home/user/riboviz/example-datasets
   riboviz environment tokens note 3: ${RIBOVIZ_SAMPLES} should point to location where input data fastq file has been downloaded from simRiboSeq/simulation_runs/riboviz repository folder & placed within 'input' folder
@@ -50,7 +49,7 @@ orf_index_prefix: yeast_CDS_w_250
 primary_id: Name
 publish_index_tmp: false
 rpf: true
-rrna_fasta_file:${RIBOVIZ_ORGANISMS}/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa
 rrna_index_prefix: yeast_rRNA
 samsort_memory: 768M
 sample_sheet: null
