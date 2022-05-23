@@ -1,16 +1,14 @@
 provenance:
-  authors:
+  yaml authors:
   - author: Alexander Cope
     email: alexander.cope@rutgers.edu
-website:
+  website:
   date run: 2020-10-27
   riboviz-version: 2.0.beta | COMMIT ffb53643ccfdf78aa64a1627d2dd8a9c092df632
   GEO: GSE64488
-  reference: High Precision Analysis of Translational Pausing by Ribosome Profiling
-    in Bacteria Lacking EFP, Woolstenhulme et. al. 2015
+  reference: High Precision Analysis of Translational Pausing by Ribosome Profiling in Bacteria Lacking EFP, Woolstenhulme et. al. 2015
   DOI: 10.1016/j.celrep.2015.03.014
-  notes: RiboSeq for E. coli K12 MG1655 strain. Successfully run using Python pipeline.
-    Assign A-site using 3'-end mapping strategy.
+  notes: RiboSeq for E. coli K12 MG1655 strain. Successfully run using Python pipeline. Assign A-site using 3'-end mapping strategy.
   riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
   riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
   riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets repository folder e.g. /home/user/riboviz/example-datasets
