@@ -2,28 +2,20 @@ provenance:
   authors:
   - author: Alexander Cope
     email: alexander.cope@rutgers.edu
-website:
+  website:
   date run: 2020-11-24
   riboviz-version: 2.0.beta | COMMIT ffb53643ccfdf78aa64a1627d2dd8a9c092df632
   GEO: GSE138990
-  reference: Ribosome profiling in archaea reveals leaderless translation, novel translational
-    initiation sites, and ribosome pausing at single codon resolution, Gelsinger et
-    al. 2020
+  reference: Ribosome profiling in archaea reveals leaderless translation, novel translational initiation sites, and ribosome pausing at single codon resolution, Gelsinger et al. 2020
   DOI: https://doi.org/10.1093/nar/gkaa304
-  notes: RiboSeq for H. volcanii DS2 strain from Gelsinger et. al. 2020. Successfully
-    run using Python pipeline. Assign A-site using 3'-end mapping strategy. The H.volcanii
-    genome contains a chromosome and 4 plasmids. Due to the circular nature of these
-    plasmids, the origin of replication actually falls somewhere in the middle of
-    gene WP_004050863.1, resulting in some weird behavior when adding this protein
-    to the CDS file. It has been left in for now, but perhaps should be excluded in
-    later analyses.
-    riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
+  notes: RiboSeq for H. volcanii DS2 strain from Gelsinger et. al. 2020. Successfully run using Python pipeline. Assign A-site using 3'-end mapping strategy. The H.volcanii genome contains a chromosome and 4 plasmids. Due to the circular nature of these plasmids, the origin of replication actually falls somewhere in the middle of gene WP_004050863.1, resulting in some weird behavior when adding this protein to the CDS file. It has been left in for now, but perhaps should be excluded is later analyses.
+  riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
   riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
   riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets repository folder e.g. /home/user/riboviz/example-datasets
   riboviz environment tokens note 3: ${RIBOVIZ_SAMPLES} should point to location where input data fastq file has been downloaded from simRiboSeq/simulation_runs/riboviz repository folder & placed within 'input' folder
     
 adapters: CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCA
-asite_disp_length_file:${RIBOVIZ_ORGANISMS}/archaea/haloferax/annotations/Haloferax_volcanii_asite_disp_length.txt
+asite_disp_length_file: ${RIBOVIZ_ORGANISMS}/archaea/haloferax/annotations/Haloferax_volcanii_asite_disp_length.txt
 buffer: 25
 build_indices: true
 count_reads: true
@@ -31,7 +23,7 @@ count_threshold: 64
 dataset: G-Hv_2020
 dedup_stats: false
 dedup_umis: false
-dir_index:${RIBOVIZ_SAMPLES}/index
+dir_index: ${RIBOVIZ_SAMPLES}/index
 dir_in: ${RIBOVIZ_SAMPLES}/input
 dir_out: ${RIBOVIZ_SAMPLES}/output
 dir_tmp: ${RIBOVIZ_SAMPLES}tmp
