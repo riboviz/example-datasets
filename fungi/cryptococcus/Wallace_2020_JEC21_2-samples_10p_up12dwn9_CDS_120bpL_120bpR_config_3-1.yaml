@@ -16,8 +16,13 @@ provenance:
   notes: Presumes example-datasets folder structure is held within $HOME/riboviz/
     and need to create folder Wallace_2020_JEC21/input to place .fastq files into
     and riboviz will create other folders within Wallace_2020_JEC21/ to hold outputs.
+  riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
+  riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
+  riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets simulated data repository folder e.g. /home/user/riboviz/example-datasets/simulated/mok
+  riboviz environment tokens note 3: ${RIBOVIZ_SAMPLES} should point to location where input data fastq file has been downloaded from simRiboSeq/simulation_runs/riboviz repository folder & placed within 'input' folder
+  
 adapters: CTGTAGGCACC
-asite_disp_length_file: null
+asite_disp_length_file: ${RIBOVIZ_DATA}/yeast_standard_asite_disp_length.txt
 buffer: 120
 build_indices: true
 codon_positions_file: null
@@ -26,10 +31,10 @@ count_threshold: 64
 dataset: Wallace_2020_JEC21
 dedup_stats: false
 dedup_umis: false
-dir_index: Wallace_2020_JEC21/index
-dir_in: Wallace_2020_JEC21/input
-dir_out: Wallace_2020_JEC21/output
-dir_tmp: Wallace_2020_JEC21/tmp
+dir_index: ${RIBOVIZ_SAMPLES}/index
+dir_in: ${RIBOVIZ_SAMPLES}/input
+dir_out: ${RIBOVIZ_SAMPLES}/output
+dir_tmp: ${RIBOVIZ_SAMPLES}/tmp
 extract_umis: false
 features_file: null
 fq_files:
@@ -42,12 +47,12 @@ max_read_length: 50
 min_read_length: 10
 multiplex_fq_files: null
 num_processes: 16
-orf_fasta_file: ../../riboviz/example-datasets/fungi/cryptococcus/annotation/JEC21_10p_up12dwn9_CDS_with_120bputrs.fa
-orf_gff_file: ../../riboviz/example-datasets/fungi/cryptococcus/annotation/JEC21_10p_up12dwn9_CDS_120bpL_120bpR.gff3
+orf_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/cryptococcus/annotation/JEC21_10p_up12dwn9_CDS_with_120bputrs.fa
+orf_gff_file: ${RIBOVIZ_ORGANISMS}/fungi/cryptococcus/annotation/JEC21_10p_up12dwn9_CDS_120bpL_120bpR.gff3
 orf_index_prefix: JEC21_CDS_with_120bputrs
 primary_id: Name
 rpf: true
-rrna_fasta_file: ../../riboviz/example-datasets/fungi/cryptococcus/contaminants/JEC21_rrna.fasta
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/cryptococcus/contaminants/JEC21_rrna.fasta
 rrna_index_prefix: JEC21_rRNA
 sample_sheet: null
 secondary_id: null
