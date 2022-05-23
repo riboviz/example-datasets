@@ -8,11 +8,9 @@ provenance:
   date run: 2021-02-21
   riboviz-version: 2.0 | COMMIT e94a909c70942cb428450a3b98edef1614143c18
   GEO: GSE58321
-  reference: Distinct stages of the translation elongation cycle revealed by sequencing
-    ribosome-protected mRNA fragments, Lareau et. al. 2014
+  reference: Distinct stages of the translation elongation cycle revealed by sequencingribosome-protected mRNA fragments, Lareau et. al. 2014
   DOI: https://doi.org/10.7554/eLife.01257
-  notes: Replicates carried out by Gamble et al 2016 to confirm findings of ICPs from
-    Jan et al 2014.
+  notes: Replicates carried out by Gamble et al 2016 to confirm findings of ICPs from Jan et al 2014.
   riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
   riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
   riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets repository folder e.g. /home/user/riboviz/example-datasets
@@ -46,7 +44,7 @@ min_read_length: 10
 multiplex_fq_files: null
 num_processes: 16
 orf_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.fa
-orf_gff_file:${RIBOVIZ_ORGANISMS}/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3
+orf_gff_file: ${RIBOVIZ_ORGANISMS}/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3
 orf_index_prefix: yeast_CDS_w_250
 primary_id: Name
 publish_index_tmp: false
@@ -58,7 +56,7 @@ sample_sheet: null
 secondary_id: null
 skip_inputs: false
 trim_5p_mismatches: true
-t_rna_file:  ${RIBOVIZ_DATA}/yeast_tRNAs.tsv
+t_rna_file: ${RIBOVIZ_DATA}/yeast_tRNAs.tsv
 umi_regexp: null
 validate_only: false
 stop_in_feature: false
