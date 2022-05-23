@@ -1,5 +1,5 @@
 Provenance:
-  Authors:
+  yaml authors:
   - author: Felicity Anderson
     email: Felicity.Anderson@ed.ac.uk
   - author: Sophie Winterbourne
@@ -7,11 +7,9 @@ Provenance:
   date run: 2021-02-19
   riboviz-version: 2.0 | COMMIT e94a909c70942cb428450a3b98edef1614143c18
   assession number: GSE61012
-  reference: Principles of ER cotranslational translocation revealed by proximity-specific
-    ribosome profiling, Jan et al. 2014.
+  reference: Principles of ER cotranslational translocation revealed by proximity-specific ribosome profiling, Jan et al. 2014.
   DOI: https://doi.org/10.1126/science.1257521
-  notes: Run assuming no UMIs. Analysis of 1 RPF sample of S. cerevisiae which was
-    used by Gamble et al 2016 to identify inhibitory codon pairs.
+  notes: Run assuming no UMIs. Analysis of 1 RPF sample of S. cerevisiae which was used by Gamble et al 2016 to identify inhibitory codon pairs.
   riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
   riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
   riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets repository folder e.g. /home/user/riboviz/example-datasets
