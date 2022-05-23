@@ -5,10 +5,10 @@ provenance:
   date run: 2022-05-??
   riboviz-version: 2.1 | COMMIT ??
   GEO: GSE136940
-  reference: Humans and other commonly used model organisms are resistant to cycloheximide-mediated
-    biases in ribosome profiling experiments, Sharma et al., (2021).
+  reference: Humans and other commonly used model organisms are resistant to cycloheximide-mediated biases in ribosome profiling experiments, Sharma et al., (2021).
   DOI: https://doi.org/10.1038/s41467-021-25411-y
   notes: S. pombe dataset from Sharma et al., (2021) using CHX
+
 adapters: CTGTAGGCACCATCAAT
 asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
 buffer: 250
@@ -19,10 +19,10 @@ count_threshold: 64
 dataset: S-Sp_2021
 dedup_stats: false
 dedup_umis: false
-dir_in: I-Sp_2021/input
-dir_index: I-Sp_2021/index
-dir_out: I-Sp_2021/output
-dir_tmp: I-Sp_2021/tmp
+dir_in: S-Sp_2021/input
+dir_index: S-Sp_2021/index
+dir_out: S-Sp_2021/output
+dir_tmp: S-Sp_2021/tmp
 extract_umis: true
 fq_files:
   SacPom_plus_plus_1: SRR10072587.fastq.gz
