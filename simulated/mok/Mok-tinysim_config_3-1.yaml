@@ -6,13 +6,17 @@ provenance:
   date run: 2021-01-15
   riboviz-version: 2.0 | fad6141
   GEO: null
-  reference: simRiboSeq, https://github.com/amandamok/simRiboSeq/, Amanda Mok 2021,
-    commit 8367709
+  reference: simRiboSeq, https://github.com/amandamok/simRiboSeq/, Amanda Mok 2021, commit 8367709
   DOI: null
   notes: Tiny simulated data from Amanda Mok, January 2021. Download the fq file from
     https://github.com/amandamok/simRiboSeq/blob/master/simulation_runs/riboviz/tiny_2genes.fq
+  riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
+  riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
+  riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets simulated data repository folder e.g. /home/user/riboviz/example-datasets/simulated/mok
+  riboviz environment tokens note 3: ${RIBOVIZ_SAMPLES} should point to location where input data fastq file has been downloaded from simRiboSeq/simulation_runs/riboviz repository folder & placed within 'input' folder
+    
 adapters: CTGTAGGCACCATCAAT
-asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
+asite_disp_length_file: ${RIBOVIZ_DATA}/yeast_standard_asite_disp_length.txt
 buffer: 20
 build_indices: true
 codon_positions_file: null
@@ -21,10 +25,10 @@ count_threshold: 1
 dataset: Mok-tinysim
 dedup_stats: false
 dedup_umis: false
-dir_in: Mok-tinysim/input
-dir_index: Mok-tinysim/index
-dir_out: Mok-tinysim/output
-dir_tmp: Mok-tinysim/tmp
+dir_in: ${RIBOVIZ_SAMPLES}/input
+dir_index: ${RIBOVIZ_SAMPLES}/index
+dir_out: ${RIBOVIZ_SAMPLES}/output
+dir_tmp: ${RIBOVIZ_SAMPLES}/tmp
 extract_umis: false
 features_file: null
 fq_files:
@@ -36,12 +40,12 @@ max_read_length: 50
 min_read_length: 10
 multiplex_fq_files: null
 num_processes: 1
-orf_fasta_file: ../../riboviz/example-datasets/simulated/mok/annotation/tiny_2genes_20utrs.fa
-orf_gff_file: ../../riboviz/example-datasets/simulated/mok/annotation/tiny_2genes_20utrs.gff3
+orf_fasta_file: ${RIBOVIZ_ORGANISMS}/annotation/tiny_2genes_20utrs.fa
+orf_gff_file: ${RIBOVIZ_ORGANISMS}/annotation/tiny_2genes_20utrs.gff3
 orf_index_prefix: tiny_2genes_20utrs
 primary_id: Name
 rpf: true
-rrna_fasta_file: ../../riboviz/example-datasets/simulated/mok/contaminants/Sc_rRNA_example.fa
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/contaminants/Sc_rRNA_example.fa
 rrna_index_prefix: yeast_rRNA
 sample_sheet: null
 secondary_id: null
