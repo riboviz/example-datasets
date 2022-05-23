@@ -10,18 +10,23 @@ provenance:
     transition. G3 Genes|Genomes|Genetics 2021 Feb;11(2):jkaa043. Mundodi et. al.
   DOI: https://doi.org/10.1093/g3journal/jkaa043
   notes: Candida albicans RPF dataset at 37C (3 replicates)
+  riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
+  riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
+  riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets simulated data repository folder e.g. /home/user/riboviz/example-datasets/simulated/mok
+  riboviz environment tokens note 3: ${RIBOVIZ_SAMPLES} should point to location where input data fastq file has been downloaded from simRiboSeq/simulation_runs/riboviz repository folder & placed within 'input' folder
+  
 adapters: AGATCGGAAGAGCACACGTCTGAACTCCAGTCA
 buffer: 120
-asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
+asite_disp_length_file: ${RIBOVIZ_DATA}/yeast_standard_asite_disp_length.txt
 build_indices: true
 codon_positions_file: null
 count_reads: true
 count_threshold: 64
 dataset: Mundodi_Calbicans_37C
-dir_index: M-Ca_2021/index
-dir_in: M-Ca_2021/input
-dir_out: M-Ca_2021/output
-dir_tmp: M-Ca_2021/tmp
+dir_index: ${RIBOVIZ_ORGANISMS}/index
+dir_in: ${RIBOVIZ_ORGANISMS}/input
+dir_out: ${RIBOVIZ_ORGANISMS}/output
+dir_tmp: ${RIBOVIZ_ORGANISMS}/tmp
 extract_umis: false
 group_umis: false
 is_riboviz_gff: true
@@ -34,12 +39,12 @@ fq_files:
   37C2: SRR12228385.fastq.gz
   37C3: SRR12228386.fastq.gz
 num_processes: 16
-orf_fasta_file: ../example-datasets/fungi/candida/annotation/Candida_albicans_CDS_with_120utrs.fa
-orf_gff_file: ../example-datasets/fungi/candida/annotation/Candida_albicans_CDS_with_120utrs.gff3
+orf_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/candida/annotation/Candida_albicans_CDS_with_120utrs.fa
+orf_gff_file: ${RIBOVIZ_ORGANISMS}/fungi/candida/annotation/Candida_albicans_CDS_with_120utrs.gff3
 orf_index_prefix: calbicans_CDS
 primary_id: Name
 rpf: true
-rrna_fasta_file: ../example-datasets/fungi/candida/contaminants/Candida_albicans_rRNA_tRNA.fa
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/candida/contaminants/Candida_albicans_rRNA_tRNA.fa
 rrna_index_prefix: calbicans_rRNA
 secondary_id: null
 t_rna_file: null
