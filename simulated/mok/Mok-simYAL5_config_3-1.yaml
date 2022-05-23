@@ -9,22 +9,26 @@ provenance:
   reference: simRiboSeq, https://github.com/amandamok/simRiboSeq/, Amanda Mok 2021,
     commit 48c9e2d
   DOI: null
-  notes: Simulated data from Amanda Mok, January 2021. Before running, download the
-    fastq file from https://github.com/amandamok/simRiboSeq/blob/master/simulation_runs/riboviz/simRiboviz.fq.gz
+  notes: Simulated data from Amanda Mok, January 2021. 
+  riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
+  riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
+  riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets repository folder e.g. /home/user/riboviz/example-datasets
+  riboviz environment tokens note 3: ${RIBOVIZ_SAMPLES} should point to location where input data fastq file has been downloaded from simRiboSeq/simulation_runs/riboviz repository folder & placed within 'input' folder
+  
 adapters: CTGTAGGCACCATCAAT
-asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
+asite_disp_length_file: ${RIBOVIZ_DATA}/yeast_standard_asite_disp_length.txt
 buffer: 250
 build_indices: true
-codon_positions_file: data/yeast_codon_pos_i200.RData
+codon_positions_file: ${RIBOVIZ_DATA}/yeast_codon_pos_i200.RData
 count_reads: true
 count_threshold: 64
 dataset: Mok-simYAL5
 dedup_stats: false
 dedup_umis: false
-dir_in: Mok-simYAL5/input
-dir_index: Mok-simYAL5/index
-dir_out: Mok-simYAL5/output
-dir_tmp: Mok-simYAL5/tmp
+dir_in: ${RIBOVIZ_SAMPLES}/input
+dir_index: ${RIBOVIZ_SAMPLES}/index
+dir_out: ${RIBOVIZ_SAMPLES}/output
+dir_tmp: ${RIBOVIZ_SAMPLES}/tmp
 extract_umis: false
 features_file: null
 fq_files:
@@ -36,16 +40,16 @@ max_read_length: 50
 min_read_length: 10
 multiplex_fq_files: null
 num_processes: 1
-orf_fasta_file: ../../riboviz/example-datasets/simulated/mok/annotation/Scer_YAL_5genes_w_250utrs.fa
-orf_gff_file: ../../riboviz/example-datasets/simulated/mok/annotation/Scer_YAL_5genes_w_250utrs.gff3
+orf_fasta_file: ${RIBOVIZ_ORGANISMS}/simulated/mok/annotation/Scer_YAL_5genes_w_250utrs.fa
+orf_gff_file: ${RIBOVIZ_ORGANISMS}/simulated/mok/annotation/Scer_YAL_5genes_w_250utrs.gff3
 orf_index_prefix: Scer_YAL_5genes
 primary_id: Name
 rpf: true
-rrna_fasta_file: ../../riboviz/example-datasets/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa
 rrna_index_prefix: yeast_rRNA
 sample_sheet: null
 secondary_id: null
-t_rna_file: data/yeast_tRNAs.tsv
+t_rna_file: ${RIBOVIZ_DATA}/yeast_tRNAs.tsv
 umi_regexp: null
 stop_in_feature: false
 output_metagene_normalized_profile: true
