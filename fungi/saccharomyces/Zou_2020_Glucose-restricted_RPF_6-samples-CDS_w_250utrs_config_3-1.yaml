@@ -73,7 +73,7 @@ output_pdfs: true
 primary_id: Name
 publish_index_tmp: false
 rpf: true
-rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa
 rrna_index_prefix: yeast_rRNA
 run_static_html: true
 sample_sheet: null
