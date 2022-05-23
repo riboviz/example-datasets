@@ -29,7 +29,7 @@ count_threshold: 64
 dataset: G-Sc_2014
 dedup_stats: false
 dedup_umis: false
-dir_in: /input
+dir_in:  ${RIBOVIZ_SAMPLES}/input
 dir_index: ${RIBOVIZ_SAMPLES}/index
 dir_out: ${RIBOVIZ_SAMPLES}/output
 dir_tpm: ${RIBOVIZ_SAMPLES}/tpm
