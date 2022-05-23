@@ -2,15 +2,13 @@ provenance:
   authors:
   - author: Alexander Cope
     email: alexander.cope@rutgers.edu
-website:
+  website:
   date run: 2020-09-22
   riboviz-version: 2.0.beta | COMMIT 03a4f13b2d833b8650ebf33bdce81fe2639eb9cf
   GEO: GSE124428
-  reference: A tRNA modification balances carbon and nitrogen metabolism by regulating
-    phosphate homeostasis, Gupta et. al. 2018
+  reference: A tRNA modification balances carbon and nitrogen metabolism by regulating phosphate homeostasis, Gupta et. al. 2018
   DOI: https://doi.org/10.7554/elife.44795
-  notes: Analysis of multiplexed RPF data for S. cerevisiae. YAML file is modified
-  from simdata_multiplex_config.yaml file found in riboviz
+  notes: Analysis of multiplexed RPF data for S. cerevisiae. YAML file is modified from simdata_multiplex_config.yaml file found in riboviz
   riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
   riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
   riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets repository folder e.g. /home/user/riboviz/example-datasets
