@@ -25,7 +25,7 @@ count_threshold: 64
 dataset: J-Sc-2014
 dedup_stats: false
 dedup_umis: false
-dir_in: ${RIBOVIZ_SAMPLES}input
+dir_in: ${RIBOVIZ_SAMPLES}/input
 dir_index: ${RIBOVIZ_SAMPLES}/index
 dir_out: ${RIBOVIZ_SAMPLES}/output
 dir_tmp: ${RIBOVIZ_SAMPLES}/tmp
