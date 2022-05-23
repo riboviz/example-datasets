@@ -1,5 +1,5 @@
 provenance:
-  authors:
+  yaml authors:
   - author: Alexander Cope
     email: alexander.cope@rutgers.edu
   website:
@@ -26,7 +26,7 @@ dedup_umis: true
 dir_in: ${RIBOVIZ_SAMPLES}/input
 dir_index: ${RIBOVIZ_SAMPLES}/index
 dir_out: ${RIBOVIZ_SAMPLES}/output
-dir_tmp:${RIBOVIZ_SAMPLES}/tmp
+dir_tmp: ${RIBOVIZ_SAMPLES}/tpm
 extract_umis: true
 features_file: ${RIBOVIZ_DATA}/yeast_features.tsv
 group_umis: true
