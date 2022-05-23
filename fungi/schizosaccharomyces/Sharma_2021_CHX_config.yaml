@@ -21,11 +21,11 @@ count_threshold: 64 # Remove genes with a read count below this threshold, when 
 dataset: S-Sp_2021 # Dataset name
 dedup_stats: false # Output UMI deduplication statistics?
 dedup_umis: false # Extract UMIs and deduplicate reads if TRUE
-dir_in: I-Sp_2021/input # Input directory
-dir_index: I-Sp_2021/index # Built indices directory
-dir_logs: I-Sp_2021/logs # Log files directory
-dir_out: I-Sp_2021/output # Output directory
-dir_tmp: I-Sp_2021/tmp # Intermediate files directory
+dir_in: S-Sp_2021/input # Input directory
+dir_index: S-Sp_2021/index # Built indices directory
+dir_logs: S-Sp_2021/logs # Log files directory
+dir_out: S-Sp_2021/output # Output directory
+dir_tmp: S-Sp_2021/tmp # Intermediate files directory
 do_pos_sp_nt_freq: true # Calculate position-specific nucleotide frequency?
 extract_umis: true # Extract UMIs if TRUE
 fq_files: # fastq files to be processed, relative to dir_in
