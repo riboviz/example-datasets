@@ -12,7 +12,7 @@ website:
   notes: RiboSeq for E. coli K12 MG1655 strain. Successfully run using Nextflow pipeline.
     Assign A-site using 3'-end mapping strategy.
 adapters: CTGTAGGCACCATCAAT
-asite_disp_length_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_standard_asite_disp_length.txt
+asite_disp_length_file: ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/annotations/Escherichia_coli_standard_asite_disp_length.txt
 buffer: 25
 build_indices: true
 count_reads: true
@@ -20,10 +20,10 @@ count_threshold: 64
 dataset: vignette
 dedup_stats: false
 dedup_umis: false
-dir_index: Morgan-Ecoli_2018/index
-dir_in: Morgan-Ecoli_2018/input
-dir_out: Morgan-Ecoli_2018/output
-dir_tmp: Morgan-Ecoli_2018/tmp
+dir_index: ${RIBOVIZ_SAMPLES}/index
+dir_in: ${RIBOVIZ_SAMPLES}/input
+dir_out: ${RIBOVIZ_SAMPLES}/output
+dir_tmp: ${RIBOVIZ_SAMPLES}tmp
 extract_umis: false
 fq_files:
   30C1: SRR5036070.fastq.gz
@@ -42,12 +42,12 @@ make_bedgraph: true
 max_read_length: 50
 min_read_length: 10
 multiplex_fq_files: null
-orf_fasta_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_K12_CDS_w_25utrs.fa
-orf_gff_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_K12_CDS_w_25utrs.gff3
+orf_fasta_file:  ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/annotations/Escherichia_coli_K12_CDS_w_25utrs.fa
+orf_gff_file: ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/annotations/Escherichia_coli_K12_CDS_w_25utrs.gff3
 orf_index_prefix: ecoli_CDS_w_25
 primary_id: Name
 rpf: true
-rrna_fasta_file: ../../riboviz/example-datasets/bacteria/escherichia/contaminants/Escherichia_coli_rrna_trna.fa
+rrna_fasta_file:  ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/contaminants/Escherichia_coli_rrna_trna.fa
 rrna_index_prefix: ecoli_rRNA
 sample_sheet: null
 secondary_id: null
