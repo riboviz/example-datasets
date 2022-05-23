@@ -17,8 +17,13 @@ website:
     will need to create folder called Wallace_2020_H99/input to place the .fastq files
     in, while output and other folders will be created in Wallace_2020/ by the riboviz
     workflow.
+  riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
+  riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
+  riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets simulated data repository folder e.g. /home/user/riboviz/example-datasets/simulated/mok
+  riboviz environment tokens note 3: ${RIBOVIZ_SAMPLES} should point to location where input data fastq file has been downloaded from simRiboSeq/simulation_runs/riboviz repository folder & placed within 'input' folder
+  
 adapters: CTGTAGGCACC
-asite_disp_length_file: null
+asite_disp_length_file: ${RIBOVIZ_DATA}/yeast_standard_asite_disp_length.txt
 buffer: 120
 build_indices: true
 codon_positions_file: null
@@ -27,10 +32,10 @@ count_threshold: 64
 dataset: Wallace_2020_H99
 dedup_stats: false
 dedup_umis: false
-dir_index: Wallace_2020_H99/index
-dir_in: Wallace_2020_H99/input
-dir_out: Wallace_2020_H99/output
-dir_tmp: Wallace_2020_H99/tmp
+dir_index: ${RIBOVIZ_SAMPLES}/index
+dir_in: ${RIBOVIZ_SAMPLES}/input
+dir_out: ${RIBOVIZ_SAMPLES}/output
+dir_tmp: ${RIBOVIZ_SAMPLES}/tmp
 extract_umis: false
 features_file: null
 fq_files:
@@ -45,12 +50,12 @@ max_read_length: 50
 min_read_length: 10
 multiplex_fq_files: null
 num_processes: 2
-orf_fasta_file: ../../riboviz/example-datasets/fungi/cryptococcus/annotation/H99_10p_up12dwn9_CDS_with_120bputrs.fa
-orf_gff_file: ../../riboviz/example-datasets/fungi/cryptococcus/annotation/H99_10p_up12dwn9_CDS_120bpL_120bpR.gff3
+orf_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/cryptococcus/annotation/H99_10p_up12dwn9_CDS_with_120bputrs.fa
+orf_gff_file: ${RIBOVIZ_ORGANISMS}/fungi/cryptococcus/annotation/H99_10p_up12dwn9_CDS_120bpL_120bpR.gff3
 orf_index_prefix: H99_CDS_with_120bputrs
 primary_id: Name
 rpf: true
-rrna_fasta_file: ../../riboviz/example-datasets/fungi/cryptococcus/contaminants/H99_rrna.fasta
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/cryptococcus/contaminants/H99_rrna.fasta
 rrna_index_prefix: H99_rRNA
 sample_sheet: null
 secondary_id: null
