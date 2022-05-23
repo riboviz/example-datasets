@@ -1,0 +1,72 @@
+provenance:
+  authors:
+  - author: Alexander Cope
+    email: alexander.cope@rutgers.edu
+website:
+  date run: 2020-10-27
+  riboviz-version: 2.0.beta | COMMIT ffb53643ccfdf78aa64a1627d2dd8a9c092df632
+  GEO: GSE64488
+  reference: High Precision Analysis of Translational Pausing by Ribosome Profiling
+    in Bacteria Lacking EFP, Woolstenhulme et. al. 2015
+  DOI: 10.1016/j.celrep.2015.03.014
+  notes: RiboSeq for E. coli K12 MG1655 strain. Successfully run using Python pipeline.
+    Assign A-site using 3'-end mapping strategy.
+adapters: CTGTAGGCACCATCAAT
+asite_disp_length_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_standard_asite_disp_length.txt
+buffer: 25
+build_indices: true
+count_reads: true
+count_threshold: 64
+dedup_stats: false
+dedup_umis: false
+dataset: W-Ec_2015
+dir_index: W-Ec_2015/index
+dir_in: W-Ec_2015/input
+dir_out: W-Ec_2015/output
+dir_tmp: W-Ec_2015/tmp
+extract_umis: false
+fq_files:
+  MOPS1: SRR1734430.sra.fastq.gz
+  MOPS2: SRR1734431.sra.fastq.gz
+group_umis: false
+is_riboviz_gff: true
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files: null
+num_processes: 1
+orf_fasta_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_K12_CDS_w_25utrs.fa
+orf_gff_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_K12_CDS_w_25utrs.gff3
+orf_index_prefix: ecoli_25_
+primary_id: Name
+rpf: true
+rrna_fasta_file: ../../riboviz/example-datasets/bacteria/escherichia/contaminants/Escherichia_coli_rrna_trna.fa
+rrna_index_prefix: rRNA
+sample_sheet: null
+secondary_id: null
+umi_regexp: null
+stop_in_feature: false
+output_metagene_normalized_profile: true
+codon_positions_file: null
+feature: CDS
+features_file: null
+hisat2_orf_params: -k 2 --no-spliced-alignment --rna-strandness F --no-unal
+job_email: null
+job_email_events: beas
+job_memory: 8G
+job_name: riboviz
+job_num_cpus: 4
+job_parallel_env: mpi
+job_runtime: '48:00:00'
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+output_pdfs: true
+publish_index_tmp: false
+run_static_html: true
+samsort_memory: null
+t_rna_file: null
+trim_5p_mismatches: true
+validate_only: false

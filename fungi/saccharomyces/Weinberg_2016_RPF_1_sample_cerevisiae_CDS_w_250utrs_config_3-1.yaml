@@ -1,0 +1,75 @@
+provenance:
+  yaml authors:
+  - author: Felicity Anderson
+    email: Felicity.Anderson@ed.ac.uk
+  - author: Emma MacKenzie
+    email: '...'
+  - author: Sophie Winterbourne
+    email: '...'
+  website: null
+  date run: 2021-02-12
+  riboviz-version: 2.0 | COMMIT 7e62c9f8da4f66f9c18aca30394f44fa4a7fa1ef
+  GEO: GSE75897
+  reference: Improved ribosome-footprint and mRNA measurements provide insights into
+    dynamics and regulation of yeast translation, Weinberg et al. 2016
+  DOI: https://doi.org/10.1016/j.celrep.2016.01.043
+  notes: S. cerevisiae RPF dataset for riboviz hackathon by Emma and Sophie.
+adapters: TCGTATGCCGTCTTCTGCTTG
+asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
+buffer: 250
+build_indices: true
+codon_positions_file: data/yeast_codon_pos_i200.RData
+count_reads: true
+count_threshold: 64
+dataset: W-Sc_2016
+dedup_stats: true
+dedup_umis: true
+dir_in: W-Sc_2016/input
+dir_index: W-Sc_2016/index
+dir_out: W-Sc_2016/output
+dir_tmp: W-Sc_2016/tmp
+extract_umis: true
+features_file: data/yeast_features.tsv
+fq_files:
+  Cerevisiae_RPF: SRR1049521.fastq.gz
+group_umis: true
+is_riboviz_gff: true
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files: null
+num_processes: 16
+orf_fasta_file: ../../riboviz/example-datasets/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.fa
+orf_gff_file: ../../riboviz/example-datasets/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3
+orf_index_prefix: yeast_CDS_w_250
+primary_id: Name
+publish_index_tmp: false
+rpf: true
+rrna_fasta_file: ../../riboviz/example-datasets/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa
+rrna_index_prefix: yeast_rRNA
+samsort_memory: 768M
+sample_sheet: null
+secondary_id: null
+skip_inputs: false
+trim_5p_mismatches: true
+t_rna_file: data/yeast_tRNAs.tsv
+umi_regexp: (?P<umi_1>.{8})
+validate_only: false
+stop_in_feature: false
+output_metagene_normalized_profile: true
+feature: CDS
+hisat2_orf_params: -k 2 --no-spliced-alignment --rna-strandness F --no-unal
+job_email: null
+job_email_events: beas
+job_memory: 8G
+job_name: riboviz
+job_num_cpus: 4
+job_parallel_env: mpi
+job_runtime: '48:00:00'
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+output_pdfs: true
+run_static_html: true

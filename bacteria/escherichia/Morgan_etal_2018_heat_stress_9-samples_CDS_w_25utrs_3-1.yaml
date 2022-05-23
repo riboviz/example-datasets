@@ -1,0 +1,79 @@
+provenance:
+  authors:
+  - author: Alexander Cope
+    email: alexander.cope@rutgers.edu
+website:
+  date run: 2021-02-01
+  riboviz-version: 2.0.beta | COMMIT 35b7285efdcd572e5f4065c58fcee5cdf340e976
+  GEO: GSE64488
+  reference: Translation efficiency is maintained at elevated temperature in Escherichia
+    coli, Morgan et. al. 2018
+  DOI: 10.1074/jbc.RA117.000284
+  notes: RiboSeq for E. coli K12 MG1655 strain. Successfully run using Nextflow pipeline.
+    Assign A-site using 3'-end mapping strategy.
+adapters: CTGTAGGCACCATCAAT
+asite_disp_length_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_standard_asite_disp_length.txt
+buffer: 25
+build_indices: true
+count_reads: true
+count_threshold: 64
+dataset: vignette
+dedup_stats: false
+dedup_umis: false
+dir_index: Morgan-Ecoli_2018/index
+dir_in: Morgan-Ecoli_2018/input
+dir_out: Morgan-Ecoli_2018/output
+dir_tmp: Morgan-Ecoli_2018/tmp
+extract_umis: false
+fq_files:
+  30C1: SRR5036070.fastq.gz
+  30C3: SRR5036082.fastq.gz
+  30C2: SRR5036076.fastq.gz
+  42C_10min_1: SRR5036072.fastq.gz
+  42C_20min_1: SRR5036074.fastq.gz
+  42C_10min_2: SRR5036078.fastq.gz
+  42C_20min_3: SRR5036086.fastq.gz
+  42C_20min_2: SRR5036080.fastq.gz
+  42C_10min_3: SRR5036084.fastq.gz
+num_processes: 1
+group_umis: false
+is_riboviz_gff: true
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files: null
+orf_fasta_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_K12_CDS_w_25utrs.fa
+orf_gff_file: ../../riboviz/example-datasets/bacteria/escherichia/annotations/Escherichia_coli_K12_CDS_w_25utrs.gff3
+orf_index_prefix: ecoli_CDS_w_25
+primary_id: Name
+rpf: true
+rrna_fasta_file: ../../riboviz/example-datasets/bacteria/escherichia/contaminants/Escherichia_coli_rrna_trna.fa
+rrna_index_prefix: ecoli_rRNA
+sample_sheet: null
+secondary_id: null
+umi_regexp: null
+stop_in_feature: false
+output_metagene_normalized_profile: true
+codon_positions_file: null
+feature: CDS
+features_file: null
+hisat2_orf_params: -k 2 --no-spliced-alignment --rna-strandness F --no-unal
+job_email: null
+job_email_events: beas
+job_memory: 8G
+job_name: riboviz
+job_num_cpus: 4
+job_parallel_env: mpi
+job_runtime: '48:00:00'
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+output_pdfs: true
+publish_index_tmp: false
+run_static_html: true
+samsort_memory: null
+t_rna_file: null
+trim_5p_mismatches: true
+validate_only: false

@@ -1,0 +1,101 @@
+provenance:
+  yaml authors:
+  - author: Felicity Anderson
+    email: Felicity.Anderson@ed.ac.uk
+  - author: Emma MacKenzie
+    email: '...'
+  - author: Sophie Winterbourne
+    email: '...'
+  website: null
+  date run: 2021-06-24
+  riboviz-version: 2.1 | COMMIT tbc
+  GEO: GSE52968
+  reference: "Dom34 Rescues Ribosomes in 3\xB4 Untranslated Regions, Guydosh & Green\
+    \ 2014"
+  DOI: https://doi.org/10.1016/j.cell.2014.02.006
+  notes: The vignette was made using the Guydosh & Green 2014 dataset.
+adapters: CTGTAGGCACCATCAAT
+asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
+buffer: 250
+build_indices: true
+codon_positions_file: data/yeast_codon_pos_i200.RData
+count_reads: true
+count_threshold: 64
+dataset: G-Sc_2014
+dedup_stats: false
+dedup_umis: false
+dir_in: G-Sc_2014/input
+dir_index: G-Sc_2014/index
+dir_out: G-Sc_2014/output
+dir_tpm: G-Sc_2014/tpm
+extract_umis: false
+feature: CDS
+features_file: data/yeast_features.tsv
+fq_files:
+  Wt_CHX: SRR1042853.fastq.gz
+  Dom34KO_CHX: SRR1042854.fastq.gz
+  Wt: SRR1042855.fastq.gz
+  Dom34KO: SRR1042856.fastq.gz
+  Wt_CHX_GMP-PNP: SRR1042857.fastq.gz
+  Wt_GMP-PNP: SRR1042858.fastq.gz
+  Wt_High-Mg: SRR1042859.fastq.gz
+  Dom34KO_CHX_GMP-PNP: SRR1042860.fastq.gz
+  Dom34KO_GMP-PNP: SRR1042861.fastq.gz
+  Dom34KO_High-Mg: SRR1042862.fastq.gz
+  Ski2KO: SRR1042863.fastq.gz
+  Wt_3-AT: SRR1042864.fastq.gz
+  Dom34KO_3-AT_1: SRR1042867.fastq.gz
+  Dom34KO_3-AT_2: SRR1042866.fastq.gz
+  Dom34KO_3-AT_3: SRR1042865.fastq.gz
+  Wt_Diamide: SRR1042868.fastq.gz
+  Dom34KO_Diamide: SRR1042869.fastq.gz
+  Ski2KO_Suppr-tRNA_1: SRR1042870.fastq.gz
+  Ski2KO_Suppr-tRNA_2: SRR1042871.fastq.gz
+  Ski2KO_Suppr-tRNA_3: SRR1042872.fastq.gz
+  Ski2KO_Dom34KO_Suppr-tRNA: SRR1042873.fastq.gz
+  Dom34KO_Gluc-Starv: SRR1042874.fastq.gz
+  Hbs1KO: SRR1042875.fastq.gz
+  Ski2KO_Short: SRR1042876.fastq.gz
+  Ski2KO_Dom34KO_Short: SRR1042877.fastq.gz
+group_umis: false
+is_riboviz_gff: true
+job_email_events: beas
+job_email: null
+job_memory: 20G
+job_name: riboviz
+job_num_cpus: 10
+job_parallel_env: sharedmem
+job_runtime: 64800
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files: null
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: G-Sc_2014/work
+num_processes: 16
+orf_fasta_file: ../../riboviz/example-datasets/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.fa
+orf_gff_file: ../../riboviz/example-datasets/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3
+orf_index_prefix: yeast_CDS_w_250
+output_pdfs: true
+primary_id: Name
+publish_index_tpm: false
+rpf: true
+rrna_fasta_file: ../../riboviz/example-datasets/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa
+rrna_index_prefix: yeast_rRNA
+samsort_memory: 768M
+sample_sheet: null
+secondary_id: null
+skip_inputs: false
+stop_in_feature: false
+trim_5p_mismatches: true
+t_rna_file: data/yeast_tRNAs.tsv
+umi_regexp: null
+validate_only: false
+output_metagene_normalized_profile: true
+dir_tmp: tmp
+hisat2_orf_params: -k 2 --no-spliced-alignment --rna-strandness F --no-unal
+publish_index_tmp: false
+run_static_html: true
