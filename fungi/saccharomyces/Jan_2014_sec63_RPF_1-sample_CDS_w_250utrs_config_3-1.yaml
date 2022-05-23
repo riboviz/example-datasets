@@ -28,7 +28,7 @@ dedup_umis: false
 dir_in: ${RIBOVIZ_SAMPLES}/input
 dir_index: ${RIBOVIZ_SAMPLES}/index
 dir_out: ${RIBOVIZ_SAMPLES}/output
-dir_tmp: ${RIBOVIZ_SAMPLES}/tmp
+dir_tmp: ${RIBOVIZ_SAMPLES}/tpm
 extract_umis: false
 features_file: ${RIBOVIZ_DATA}/yeast_features.tsv
 fq_files:
@@ -47,7 +47,7 @@ primary_id: Name
 publish_index_tmp: false
 rpf: true
 rrna_fasta_file: 
-orf_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa
 rrna_index_prefix: yeast_rRNA
 samsort_memory: 768M
 sample_sheet: null
