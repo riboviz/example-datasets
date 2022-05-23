@@ -10,8 +10,13 @@ provenance:
     ribosome queuing upon oxidative stress in fission yeast, Rubio et al, 2020
   DOI: https://doi.org/10.1093/nar/gkaa1180
   notes: S. pombe example dataset by Emma MacKenzie as part of her honours project.
+  riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
+  riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
+  riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets simulated data repository folder e.g. /home/user/riboviz/example-datasets/simulated/mok
+  riboviz environment tokens note 3: ${RIBOVIZ_SAMPLES} should point to location where input data fastq file has been downloaded from simRiboSeq/simulation_runs/riboviz repository folder & placed within 'input' folder
+  
 adapters: TGGAATTCTCGGGTGCCAAGG
-asite_disp_length_file: null
+asite_disp_length_file: ${RIBOVIZ_DATA}/yeast_standard_asite_disp_length.txt
 buffer: 250
 build_indices: true
 codon_positions_file: null
@@ -20,17 +25,38 @@ count_threshold: 64
 dataset: R-Sp_2020
 dedup_stats: true
 dedup_umis: true
-dir_in: R-Sp_2020/input
-dir_index: R-Sp_2020/index
-dir_out: R-Sp_2020/output
-dir_tmp: R-Sp_2020/tmp
+dir_in: ${RIBOVIZ_SAMPLES}/input
+dir_index: ${RIBOVIZ_SAMPLES}/index
+dir_out: ${RIBOVIZ_SAMPLES}/output
+dir_tmp: ${RIBOVIZ_SAMPLES}/tmp
 extract_umis: true
 features_file: null
 fq_files:
+  # cadmium treatment - E-MTAB-8746
   wt.control.cd.ribo.1: ERR3850620.fastq.gz
   wt.control.cd.ribo.2: ERR3850621.fastq.gz
   wt.cd.ribo.1: ERR3850618.fastq.gz
   wt.cd.ribo.2: ERR3850619.fastq.gz
+  # Heat shock - E-MTAB-8686
+#  wt.control.hs.ribo.1: ERR3823830.fastq.gz
+#  wt.control.hs.ribo.2: ERR3823831.fastq.gz
+#  wt.hs.ribo.1: ERR3823832.fastq.gz
+#  wt.hs.ribo.2: ERR3823833.fastq.gz
+# hydrogen peroxide - E-MTAB-8744
+#  wt.control.h2o2.ribo.1: ERR3850594.fastq.gz
+#  wt.control.h2o2.ribo.2: ERR3850595.fastq.gz
+#  wt.h2o2.ribo.1: ERR3850596.fastq.gz
+#  wt.h2o2.ribo.2: ERR3850597.fastq.gz
+# MMS - E-MTAB-8745
+#  wt.control.mms.ribo.1: ERR3850913.fastq.gz
+#  wt.control.mms.ribo.2: ERR3850914.fastq.gz
+#  wt.mms.ribo.1: ERR3850915.fastq.gz
+#  wt.mms.ribo.2: ERR3850916.fastq.gz
+# sorbitol - E-MTAB-8602
+#  wt.control.sorbitol.ribo.1: ERR3765698.fastq.gz
+#  wt.control.sorbitol.ribo.2: ERR3765699.fastq.gz
+#  wt.sorbitol.ribo.1: ERR3765692.fastq.gz
+#  wt.sorbitol.ribo.2: ERR3765693.fastq.gz
 group_umis: true
 is_riboviz_gff: true
 make_bedgraph: true
@@ -38,13 +64,13 @@ max_read_length: 50
 min_read_length: 10
 multiplex_fq_files: null
 num_processes: 16
-orf_fasta_file: ../../riboviz/example-datasets/fungi/schizosaccharomyces/annotation/Schizosaccharomyces_pombe_CDS_w_250utrs.fasta
-orf_gff_file: ../../riboviz/example-datasets/fungi/schizosaccharomyces/annotation/Schizosaccharomyces_pombe_CDS_w_250utrs.gff3
+orf_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/schizosaccharomyces/annotation/Schizosaccharomyces_pombe_CDS_w_250utrs.fasta
+orf_gff_file: ${RIBOVIZ_ORGANISMS}/fungi/schizosaccharomyces/annotation/Schizosaccharomyces_pombe_CDS_w_250utrs.gff3
 orf_index_prefix: yeast_CDS_w_250
 primary_id: Name
 publish_index_tmp: false
 rpf: true
-rrna_fasta_file: ../../riboviz/example-datasets/fungi/schizosaccharomyces/contaminants/schizosaccharomyces_pombe_972h-_rRNA.fasta
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/schizosaccharomyces/contaminants/schizosaccharomyces_pombe_972h-_rRNA.fasta
 rrna_index_prefix: yeast_rRNA
 samsort_memory: 768M
 sample_sheet: null
