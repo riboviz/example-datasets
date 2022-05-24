@@ -10,7 +10,7 @@ provenance:
   notes: S. pombe dataset from Sharma et al., (2021) using CHX
 
 adapters: CTGTAGGCACCATCAAT
-asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
+asite_disp_length_file: null
 buffer: 250
 build_indices: true
 codon_positions_file: null
