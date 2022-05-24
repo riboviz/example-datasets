@@ -43,7 +43,7 @@ orf_gff_file: ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/annotations/Escherichia_
 orf_index_prefix: ecoli_25_
 primary_id: Name
 rpf: true
-rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/contaminants/Escherichia_coli_rrna_trna.fa
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/contaminants/Escherichia_coli_K12_rrna_trna.fa
 rrna_index_prefix: rRNA
 sample_sheet: null
 secondary_id: null
