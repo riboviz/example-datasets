@@ -15,7 +15,7 @@ provenance:
   riboviz environment tokens note 3: ${RIBOVIZ_SAMPLES} should point to location where input data fastq file has been downloaded from simRiboSeq/simulation_runs/riboviz repository folder & placed within 'input' folder
 
 adapters: CTGTAGGCACCATCAAT
-asite_disp_length_file: ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/annotations/Escherichia_coli_standard_asite_disp_length.txt
+asite_disp_length_file: ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/annotations/Escherichia_coli_asite_disp_length.txt
 buffer: 25
 build_indices: true
 count_reads: true
@@ -50,7 +50,7 @@ orf_gff_file: ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/annotations/Escherichia_
 orf_index_prefix: ecoli_CDS_w_25
 primary_id: Name
 rpf: true
-rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/contaminants/Escherichia_coli_rrna_trna.fa
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/contaminants/Escherichia_coli_K12_rrna_trna.fa
 rrna_index_prefix: ecoli_rRNA
 sample_sheet: null
 secondary_id: null
