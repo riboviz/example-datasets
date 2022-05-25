@@ -1,0 +1,69 @@
+provenance:
+  yaml authors:
+  - author: Eleanor Donohoe
+    email: s2249175@ed.ac.uk
+  date run: 2022-05-??
+  riboviz-version: 2.1 | COMMIT ??
+  GEO: GSE136940
+  reference: Humans and other commonly used model organisms are resistant to cycloheximide-mediated biases in ribosome profiling experiments, Sharma et al., (2021).
+  DOI: https://doi.org/10.1038/s41467-021-25411-y
+  notes: S. cerevisiae dataset from Sharma et al., (2021) using CHX
+
+
+adapters: CTGTAGGCACCATCAAT
+asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
+buffer: 120
+build_indices: TRUE
+codon_positions_file: data/yeast_codon_pos_i200.RData
+count_reads: TRUE
+count_threshold: 64
+dataset: S-Sc_2021
+dedup_stats: FALSE
+dedup_umis: FALSE
+dir_in: S-Sc_2021/input
+dir_index: S-Sc_2021/index
+dir_out: S-Sc_2021/output
+dir_tmp: S-Sc_2021/tmp
+do_pos_sp_nt_freq: TRUE
+extract_umis: TRUE
+feature: CDS
+features_file: null
+fq_files: 
+  SacCer_minus_minus_1: SRR10072578.fastq.gz
+  SacCer_minus_minus_2: SRR10072579.fastq.gz
+  
+group_umis: FALSE
+is_riboviz_gff: TRUE
+job_email: null
+job_email_events: beas
+job_memory: 16G
+job_name: riboviz
+job_num_cpus: 16
+job_parallel_env: mpi
+job_runtime: 48:00:00
+make_bedgraph: TRUE
+max_read_length: 50
+min_read_length: 10
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+num_processes: 16
+orf_fasta_file: ../../riboviz/example-datasets/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.fa
+orf_gff_file: ../../riboviz/example-datasets/fungi/saccharomyces/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3
+orf_index_prefix: yeast_CDS_w_250
+output_pdfs: TRUE
+primary_id: Name
+publish_index_tmp: FALSE
+rrna_fasta_file: ../../riboviz/example-datasets/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa # rRNA file to avoid aligning to
+rrna_index_prefix: yeast_rRNA
+run_static_html: TRUE
+samsort_memory: null
+secondary_id: NULL
+skip_inputs: FALSE
+stop_in_feature: TRUE
+t_rna_file: data/yeast_tRNAs.tsv
+trim_5p_mismatches: TRUE
+umi_regexp: ^(?P<umi_1>.{3}).+(?P<umi_2>.{4})$
+validate_only: FALSE
