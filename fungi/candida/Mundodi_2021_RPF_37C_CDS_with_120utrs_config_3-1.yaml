@@ -3,8 +3,8 @@ provenance:
   - author: Alexander Cope
     email: alexander.cope@rutgers.edu
   website: null
-  date run: 2021-06-01
-  riboviz-version: 2.1beta | COMMIT f3e77ac58438d3bcc80b78fe78a58b75f0029633
+  date run: 2022-05-25
+  riboviz-version: 2.2 | COMMIT a2ebaa7dac383e6ce0972626bf57fdba105d1780
   GEO: GSE154488
   reference: Global translational landscape of the Candida albicans morphological
     transition. G3 Genes|Genomes|Genetics 2021 Feb;11(2):jkaa043. Mundodi et. al.
