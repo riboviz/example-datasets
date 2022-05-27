@@ -35,10 +35,10 @@ features_file: ${RIBOVIZ_DATA}/yeast_features.tsv
 fq_files:
   VEG_1: SRR387871.fastq.gz
   VEG_2: SRR387872.fastq.gz
-  ANAPH_1: SRR387890.fastq.gz
-  ANAPH_2: SRR387891.fastq.gz
-  SPORE_1: SRR387898.fastq.gz
-  SPORE_2: SRR387899.fastq.gz
+  #ANAPH_1: SRR387890.fastq.gz
+  #ANAPH_2: SRR387891.fastq.gz
+  #SPORE_1: SRR387898.fastq.gz
+  #SPORE_2: SRR387899.fastq.gz
 group_umis: false
 is_riboviz_gff: true
 make_bedgraph: true
