@@ -26,7 +26,7 @@ count_threshold: 64
 dataset: B-Sc_2012
 dedup_stats: false
 dedup_umis: false
-dir_in: ${RIBOVIZ_SAMPLES}/
+dir_in: ${RIBOVIZ_SAMPLES}/input
 dir_index: ${RIBOVIZ_SAMPLES}/index
 dir_out: ${RIBOVIZ_SAMPLES}/output
 dir_tmp: ${RIBOVIZ_SAMPLES}/tpm
