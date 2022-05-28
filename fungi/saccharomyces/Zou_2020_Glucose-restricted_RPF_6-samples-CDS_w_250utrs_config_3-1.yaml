@@ -41,10 +41,10 @@ features_file: ${RIBOVIZ_DATA}/yeast_features.tsv
 fq_files:
   SD-sample3-1: SRR9670816.fastq.gz
   SD-sample3-2: SRR9670817.fastq.gz
-  GR-sample4-1: SRR9670818.fastq.gz
-  GR-sample4-2: SRR9670819.fastq.gz
-  SD-sample7: SRR9670822.fastq.gz
-  GR-sample8: SRR9670823.fastq.gz
+  #GR-sample4-1: SRR9670818.fastq.gz
+  #GR-sample4-2: SRR9670819.fastq.gz
+  #SD-sample7: SRR9670822.fastq.gz
+  #GR-sample8: SRR9670823.fastq.gz
 group_umis: false
 hisat2_orf_params: -k 2 --no-spliced-alignment --rna-strandness F --no-unal
 is_riboviz_gff: true
