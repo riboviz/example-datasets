@@ -31,13 +31,13 @@ extract_umis: false
 fq_files:
   30C1: SRR5036070.fastq.gz
   30C3: SRR5036082.fastq.gz
-  30C2: SRR5036076.fastq.gz
-  42C_10min_1: SRR5036072.fastq.gz
-  42C_20min_1: SRR5036074.fastq.gz
-  42C_10min_2: SRR5036078.fastq.gz
-  42C_20min_3: SRR5036086.fastq.gz
-  42C_20min_2: SRR5036080.fastq.gz
-  42C_10min_3: SRR5036084.fastq.gz
+  #30C2: SRR5036076.fastq.gz
+  #42C_10min_1: SRR5036072.fastq.gz
+  #42C_20min_1: SRR5036074.fastq.gz
+  #42C_10min_2: SRR5036078.fastq.gz
+  #42C_20min_3: SRR5036086.fastq.gz
+  #42C_20min_2: SRR5036080.fastq.gz
+  #42C_10min_3: SRR5036084.fastq.gz
 num_processes: 1
 group_umis: false
 is_riboviz_gff: true
