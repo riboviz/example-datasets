@@ -42,7 +42,7 @@ primary_id: Name
 rpf: true
 rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/contaminants/Escherichia_coli_REL606_rrna_trna.fa
 rrna_index_prefix: rrna
-sample_sheet: ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/Favate_etal_2021_ltee_translation_multiplexed_barcodes.tsv
+sample_sheet: ../../riboviz/example-datasets/bacteria/escherichia/Favate_etal_2021_ltee_translation_multiplexed_barcodes.tsv # Sample sheet, TSV file with, at least, SampleID and TagRead (barcode) columns
 secondary_id: null
 umi_regexp: ^(?P<umi_1>.{4}).+(?P<umi_2>.{5})(?P<cell_1>.{5})$
 stop_in_feature: false
