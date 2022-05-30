@@ -3,8 +3,8 @@ provenance:
   - author: Edward W. J. Wallace
     email: edward.wallace@ed.ac.uk
 website:
-  date run: 2020-11-06
-  riboviz-version: 2.0 | COMMIT d8215697a5fca37df51fd2b71af51e211ac213d2
+  date run: 2022-05-28
+  riboviz-version: 2.2 | COMMIT a2ebaa7dac383e6ce0972626bf57fdba105d1780
   GEO: GSM1825740
   reference: Codon Usage Influences the Local Rate of Translation Elongation to Regulate
     Co-translational Protein Folding., Yu et al. 2015
