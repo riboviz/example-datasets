@@ -44,7 +44,7 @@ primary_id: Name
 rpf: true
 rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/saccharomyces/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa
 rrna_index_prefix: yeast_rRNA
-sample_sheet: ${RIBOVIZ_ORGANISMS}/fungi/saccharomyces/Gupta_2018_tRNA_Modification_Carbon_Nitrogen_Metabolism_RPF_9-samples_barcodes.tsv
+sample_sheet: ../../riboviz/example-datasets/fungi/saccharomyces/annotation/barcodes/Gupta_2018_tRNA_Modification_Carbon_Nitrogen_Metabolism_RPF_9-samples_barcodes.tsv
 secondary_id: null
 umi_regexp: ^(?P<umi_1>.{4}).+(?P<umi_2>.{5})(?P<cell_1>.{5})$
 stop_in_feature: false
