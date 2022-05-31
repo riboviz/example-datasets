@@ -62,7 +62,8 @@ skip_inputs: false
 stop_in_feature: true
 t_rna_file: null
 trim_5p_mismatches: true
-umi_regexp: ^(?P<umi_1>.{3}).+(?P<umi_2>.{4})$
+#umi_regexp: ^(?P<umi_1>.{3}).+(?P<umi_2>.{4})$
+umi_regexp: ^(?P<umi_1>.{0}).+(?P<umi_2>.{4})$
 validate_only: false
 output_metagene_normalized_profile: true
 hisat2_orf_params: -k 2 --no-spliced-alignment --rna-strandness F --no-unal
