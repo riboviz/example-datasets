@@ -44,7 +44,7 @@ rrna_index_prefix: yeast_rRNA
 sample_sheet: null
 secondary_id: null
 t_rna_file: null
-umi_regexp: ^(?P<umi_1>.{3}).+(?P<umi_2>.{4})$
+umi_regexp: ^(?P<umi_1>.{0}).+(?P<umi_2>.{4})$
 validate_only: false
 stop_in_feature: false
 output_metagene_normalized_profile: true
