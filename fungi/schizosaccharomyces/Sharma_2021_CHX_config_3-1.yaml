@@ -25,7 +25,8 @@ dir_out: S-Sp_2021/output
 dir_tmp: S-Sp_2021/tmp
 extract_umis: true
 fq_files:
-  SacPom_plus_plus_1: SRR10072587.fastq.gz
+  SacPom_plus_plus_1: SRR10072586.fastq.gz #GSM4062103: SacPom_plus_plus_1
+  SacPom_plus_plus_2: SRR10072587.fastq.gz #GSM4062104: SacPom_plus_plus_2
 group_umis: false
 is_riboviz_gff: true
 make_bedgraph: true
