@@ -67,5 +67,5 @@ skip_inputs: FALSE
 stop_in_feature: TRUE
 t_rna_file: data/yeast_tRNAs.tsv
 trim_5p_mismatches: TRUE
-umi_regexp: ^(?P<umi_1>.{3}).+(?P<umi_2>.{4})$
+umi_regexp: ^(?P<umi_1>.{0}).+(?P<umi_2>.{4})$
 validate_only: FALSE
