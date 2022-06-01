@@ -3,8 +3,8 @@ provenance:
   - author: Alexander Cope
     email: alexander.cope@rutgers.edu
   website:
-  date run: 2021-02-01
-  riboviz-version: 2.0.beta | COMMIT 35b7285efdcd572e5f4065c58fcee5cdf340e976
+  date run: 2022-05-28
+  riboviz-version: 2.2 | COMMIT a2ebaa7dac383e6ce0972626bf57fdba105d1780
   GEO: GSE64488
   reference: Translation efficiency is maintained at elevated temperature in Escherichia coli, Morgan et. al. 2018
   DOI: 10.1074/jbc.RA117.000284
