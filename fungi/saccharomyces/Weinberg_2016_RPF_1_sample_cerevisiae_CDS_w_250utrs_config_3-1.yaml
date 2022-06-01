@@ -7,8 +7,8 @@ provenance:
   - author: Sophie Winterbourne
     email: '...'
   website: null
-  date run: 2021-02-12
-  riboviz-version: 2.0 | COMMIT 7e62c9f8da4f66f9c18aca30394f44fa4a7fa1ef
+  date run: 2022-05-27
+  riboviz-version: 2.2 | COMMIT a2ebaa7dac383e6ce0972626bf57fdba105d1780
   GEO: GSE75897
   reference: Improved ribosome-footprint and mRNA measurements provide insights into dynamics and regulation of yeast translation, Weinberg et al. 2016
   DOI: https://doi.org/10.1016/j.celrep.2016.01.043
