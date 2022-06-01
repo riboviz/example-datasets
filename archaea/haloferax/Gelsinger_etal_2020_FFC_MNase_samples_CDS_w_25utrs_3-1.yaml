@@ -3,8 +3,8 @@ provenance:
   - author: Alexander Cope
     email: alexander.cope@rutgers.edu
   website:
-  date run: 2020-11-24
-  riboviz-version: 2.0.beta | COMMIT ffb53643ccfdf78aa64a1627d2dd8a9c092df632
+  date run: 2022-05-27
+  riboviz-version: 2.2 | COMMIT a2ebaa7dac383e6ce0972626bf57fdba105d1780
   GEO: GSE138990
   reference: Ribosome profiling in archaea reveals leaderless translation, novel translational initiation sites, and ribosome pausing at single codon resolution, Gelsinger et al. 2020
   DOI: https://doi.org/10.1093/nar/gkaa304
