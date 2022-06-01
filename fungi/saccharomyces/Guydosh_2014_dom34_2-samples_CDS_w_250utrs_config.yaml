@@ -7,8 +7,8 @@ provenance:
   - author: Sophie Winterbourne
     email: '...'
   website: null
-  date run: 2021-06-24
-  riboviz-version: 2.1 | COMMIT tbc
+  date run: 2022-05-26
+  riboviz-version: 2.1 | COMMIT a2ebaa7dac383e6ce0972626bf57fdba105d1780
   GEO: GSE52968
   reference: "Dom34 Rescues Ribosomes in 3\xB4 Untranslated Regions, Guydosh & Green\
     \ 2014"
