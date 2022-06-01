@@ -14,7 +14,8 @@ provenance:
   DOI: https://doi.org/10.1016/j.cell.2020.04.009
   notes:  presumes running from $HOME/riboviz/riboviz
 
-adapters: ATCGTAGATCGGAAGAGCACACGTCTGAA # Illumina sequencing adapter(s) to remove NEED TO CHECK
+adapters: AGATCGGAAGAGCACACGTCTGAA # Illumina sequencing adapter(s) to remove NEED TO CHECK
+#adapters: ATCGTAGATCGGAAGAGCACACGTCTGAA # Illumina sequencing adapter(s) to remove NEED TO CHECK
 aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
 asite_disp_length_file: data/yeast_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
 buffer: 250 # Length of flanking region around the CDS
@@ -35,10 +36,10 @@ do_pos_sp_nt_freq: true # Calculate position-specific nucleotide frequency?
 extract_umis: true # Extract UMIs if TRUE   NEED TO CHECK
 features_file: data/yeast_features.tsv # Features to correlate with ORFs
 fq_files: # fastq files to be processed, relative to dir_in
-  WT_30_1: SRR9052038.fastq.gz  # GSM3765211: WT_30°C_Rep1
-  WT_30_2: SRR9052039.fastq.gz  # GSM3765212: WT_30°C_Rep2
- # WT_40_1: SRR9052040.fastq.gz  # GSM3765213: WT_40°C_Rep1
- # WT_40_2: SRR9052041.fastq.gz  # GSM3765214: WT_40°C_Rep2
+ #WT_30_1: SRR9052038.fastq.gz  # GSM3765211: WT_30°C_Rep1
+ #WT_30_2: SRR9052039.fastq.gz  # GSM3765212: WT_30°C_Rep2
+ WT_40_1: SRR9052040.fastq.gz  # GSM3765213: WT_40°C_Rep1
+ WT_40_2: SRR9052041.fastq.gz  # GSM3765214: WT_40°C_Rep2
  # WT_42_1: SRR9052042.fastq.gz  # GSM3765215: WT_42°C_Rep1
  # WT_42_2: SRR9052043.fastq.gz  # GSM3765216: WT_42°C_Rep2
  # IDR-mut_30_1: SRR9052044.fastq.gz  # GSM3765217: IDRm_30°C_Rep1
@@ -66,4 +67,4 @@ sample_sheet: null # Sample sheet, TSV file with, at least, SampleID and TagRead
 secondary_id: null # Secondary gene IDs to access the data (COX1, EFB1, etc.)
 stop_in_cds: false # Are stop codons part of the CDS annotations in GFF?
 t_rna_file: data/yeast_tRNAs.tsv # tRNA estimates
-umi_regexp: ^(?P<umi_1>.{2}).+(?P<umi_2>.{5})$ # UMI-tools-compliant regular expression to extract UMIs    NEED TO CHECK
+umi_regexp: ^(?P<umi_1>.{2}).+(?P<umi_2>.{10})$ # UMI-tools-compliant regular expression to extract UMIs    NEED TO CHECK
