@@ -5,7 +5,7 @@ provenance:
   - author: Ania Kurowska
     email: '...'
   website: null
-  date run: 26/05/2022
+  date run: 2022-05-26
   riboviz-version: 2.2 | COMMIT a2ebaa7dac383e6ce0972626bf57fdba105d1780
   GEO: GSE34082
   reference: High-resolution View of the Yeast Meiotic Program Revealed by Ribosome Profiling, Brar et al. 2012
