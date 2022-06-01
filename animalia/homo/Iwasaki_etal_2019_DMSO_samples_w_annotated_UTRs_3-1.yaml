@@ -2,8 +2,8 @@ provenance:
   authors:
   - author: Alexander Cope
     email: alexander.cope@rutgers.edu
-  date run: 2021-11-25
-  riboviz-version: 2.1 | COMMIT ac84378a460378eb0458c81f5bfffc6f2be24fac
+  date run: 2022-05-31
+  riboviz-version: 2.2 | COMMIT a2ebaa7dac383e6ce0972626bf57fdba105d1780
   GEO: GSE102720
   reference: The Translation Inhibitor Rocaglamide Targets a Biomolecular Cavity between
     eIF4A and Polypurine RNA, Iwasaki et al. 2019
