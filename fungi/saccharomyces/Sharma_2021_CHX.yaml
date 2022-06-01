@@ -12,7 +12,7 @@ provenance:
 
 adapters: CTGTAGGCACCATCAAT
 asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
-buffer: 120
+buffer: 250
 build_indices: TRUE
 codon_positions_file: data/yeast_codon_pos_i200.RData
 count_reads: TRUE
