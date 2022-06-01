@@ -29,8 +29,8 @@ dir_out: ${RIBOVIZ_SAMPLES}/output
 dir_tmp: ${RIBOVIZ_SAMPLES}/tmp
 extract_umis: false
 fq_files:
-  MOPS1: SRR1734430.sra.fastq.gz
-  MOPS2: SRR1734431.sra.fastq.gz
+  MOPS1: SRR1734430.fastq.gz
+  MOPS2: SRR1734431.fastq.gz
 group_umis: false
 is_riboviz_gff: true
 make_bedgraph: true
