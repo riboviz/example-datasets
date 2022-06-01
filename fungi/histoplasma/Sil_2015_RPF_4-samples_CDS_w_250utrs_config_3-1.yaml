@@ -5,8 +5,8 @@ provenance:
   - author: Sophie Winterbourne
     email: '...'
   website: null
-  date run: 08/09/2021
-  riboviz-version: 2.0 | COMMIT 8933be78ac01e344584e4291d5590c36e0282183
+  date run: 2022/05/30
+  riboviz-version: 2.2 | COMMIT a2ebaa7dac383e6ce0972626bf57fdba105d1780
   GEO: GSE68705
   reference: Genome-Wide Reprogramming of Transcript Architecture by Temperature Specifies
     the Developmental States of the Human Pathogen Histoplasma, Sil et al 2015
