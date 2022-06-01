@@ -5,8 +5,8 @@ provenance:
   - author: Sophie Winterbourne
     email: '...'
   website: null
-  date run: 2021-02-21
-  riboviz-version: 2.0 | COMMIT e94a909c70942cb428450a3b98edef1614143c18
+  date run: 2022-05-27
+  riboviz-version: 2.2 | COMMIT a2ebaa7dac383e6ce0972626bf57fdba105d1780
   GEO: GSE58321
   reference: Distinct stages of the translation elongation cycle revealed by sequencingribosome-protected mRNA fragments, Lareau et. al. 2014
   DOI: https://doi.org/10.7554/eLife.01257
