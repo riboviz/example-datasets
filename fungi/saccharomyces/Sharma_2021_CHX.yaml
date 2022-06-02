@@ -31,8 +31,8 @@ features_file: null
 fq_files: 
   SacCer_minus_minus_1: SRR10072578.fastq.gz #not treated with CHX
   SacCer_minus_minus_2: SRR10072579.fastq.gz #not treated with CHX
-  SacCer_plus_plus_1: SRR10072572.fastq.gz #CHX treated
-  SacCer_plus_plus_2: SRR10072573.fastq.gz #CHX treated
+  #SacCer_plus_plus_1: SRR10072572.fastq.gz #CHX treated
+  #SacCer_plus_plus_2: SRR10072573.fastq.gz #CHX treated
   
 group_umis: FALSE
 is_riboviz_gff: TRUE
