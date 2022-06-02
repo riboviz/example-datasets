@@ -14,7 +14,7 @@ provenance:
   DOI: https://doi.org/10.1016/j.cell.2020.04.009
   notes:  presumes running from $HOME/riboviz/riboviz
 
-adapters: AGATCGGAAGAGCACACGTCTGAA # Illumina sequencing adapter(s) to remove NEED TO CHECK
+adapters: ATCGTAGATCGGAAGAGCACACGTCTGAA # Illumina sequencing adapter(s) to remove NEED TO CHECK
 #adapters: ATCGTAGATCGGAAGAGCACACGTCTGAA # Illumina sequencing adapter(s) to remove NEED TO CHECK
 aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
 asite_disp_length_file: data/yeast_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
@@ -67,4 +67,4 @@ sample_sheet: null # Sample sheet, TSV file with, at least, SampleID and TagRead
 secondary_id: null # Secondary gene IDs to access the data (COX1, EFB1, etc.)
 stop_in_cds: false # Are stop codons part of the CDS annotations in GFF?
 t_rna_file: data/yeast_tRNAs.tsv # tRNA estimates
-umi_regexp: ^(?P<umi_1>.{2}).+(?P<umi_2>.{10})$ # UMI-tools-compliant regular expression to extract UMIs    NEED TO CHECK
+umi_regexp: ^(?P<umi_1>.{3}).+(?P<umi_2>.{5})$ # UMI-tools-compliant regular expression to extract UMIs    NEED TO CHECK
