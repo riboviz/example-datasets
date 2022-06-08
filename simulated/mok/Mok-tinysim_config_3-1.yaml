@@ -40,12 +40,12 @@ max_read_length: 50
 min_read_length: 10
 multiplex_fq_files: null
 num_processes: 1
-orf_fasta_file: ${RIBOVIZ_ORGANISMS}/annotation/tiny_2genes_20utrs.fa
-orf_gff_file: ${RIBOVIZ_ORGANISMS}/annotation/tiny_2genes_20utrs.gff3
+orf_fasta_file: ${RIBOVIZ_ORGANISMS}/simulated/mok/annotation/tiny_2genes_20utrs.fa
+orf_gff_file: ${RIBOVIZ_ORGANISMS}/simulated/mok/annotation/tiny_2genes_20utrs.gff3
 orf_index_prefix: tiny_2genes_20utrs
 primary_id: Name
 rpf: true
-rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/contaminants/Sc_rRNA_example.fa
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/simulated/mok/contaminants/Sc_rRNA_example.fa
 rrna_index_prefix: yeast_rRNA
 sample_sheet: null
 secondary_id: null
