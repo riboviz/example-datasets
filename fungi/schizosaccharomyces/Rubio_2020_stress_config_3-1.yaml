@@ -73,7 +73,7 @@ rpf: true
 rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/schizosaccharomyces/contaminants/schizosaccharomyces_pombe_972h-_rRNA.fasta
 rrna_index_prefix: yeast_rRNA
 samsort_memory: 768M
-sample_sheet: ${RIBOVIZ_ORGANISMS}/fungi/schizosaccharomyces/Rubio_2020_stress_barcodes.tsv
+sample_sheet: null
 secondary_id: null
 skip_inputs: false
 trim_5p_mismatches: true
