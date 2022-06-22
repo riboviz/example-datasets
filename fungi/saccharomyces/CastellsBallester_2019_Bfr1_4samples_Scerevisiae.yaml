@@ -1,0 +1,74 @@
+provenance:
+  yaml authors:
+  - author: Edward Wallace
+    email: Edward.Wallace@ed.ac.uk
+  DOI: https://dx.doi.org/10.3390/Fijms20246220
+  GEO: NA
+  date run: 2022-05-11
+  notes: Ribosome profiling datasets of Saccharomyces cerevisiae wild-type and Bfr1 deletion
+  reference: Translational Regulation of Pmt1 and Pmt2 by Bfr1 Affects Unfolded Protein O-Mannosylation, Castells-Ballester etl a., 2019
+  riboviz-version: 2.2 | cc97e742686617dea1d34d2387fa0e4d63a5f9d5
+
+adapters: ATCGTAGATCGGAAGAGCACACGTCTGAA
+asite_disp_length_file: ${RIBOVIZ_DATA}/yeast_standard_asite_disp_length.txt
+buffer: 250
+build_indices: true
+codon_positions_file: ${RIBOVIZ_DATA}/yeast_codon_pos_i200.RData
+count_reads: true
+count_threshold: 64
+dataset: CB-Sc-Bfr1_2019
+dedup_stats: false
+dedup_umis: false
+dir_in: ${RIBOVIZ_SAMPLES}/input
+dir_index: ${RIBOVIZ_SAMPLES}/index
+dir_out: ${RIBOVIZ_SAMPLES}/output
+dir_tmp: ${RIBOVIZ_SAMPLES}/tmp
+extract_umis: true
+feature: CDS
+features_file: ${RIBOVIZ_DATA}/yeast_features.tsv
+fq_files:
+  DeltaBfr_Rep1: Bfr_data_DeltaBfrRep1.fastq.gz
+  DeltaBfr_Rep2: Bfr_data_DeltaBfrRep2.fastq.gz
+  WT_Rep1: Bfr_data_wtRep1.fastq.gz
+  WT_Rep2: Bfr_data_wtRep2.fastq.gz
+  # sub: Bfr_data_wtRep1_init100000.fastq.gz # subsampled data for troubleshooting
+group_umis: false
+hisat2_orf_params: -k 2 --no-spliced-alignment --rna-strandness F --no-unal
+is_riboviz_gff: true
+job_email: null
+job_email_events: null
+job_memory: null
+job_name: riboviz
+job_num_cpus: null
+job_parallel_env: null
+job_runtime: null
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files: null
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: CB-Sc-Bfr1_2019/work
+num_processes: 4
+orf_fasta_file: ${RIBOVIZ_ORGANISMS}/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.fa
+orf_gff_file: ${RIBOVIZ_ORGANISMS}/annotation/Saccharomyces_cerevisiae_yeast_CDS_w_250utrs.gff3
+orf_index_prefix: yeast_CDS_w_250
+output_metagene_normalized_profile: true
+output_pdfs: true
+primary_id: Name
+publish_index_tmp: false
+rpf: true
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/contaminants/Saccharomyces_cerevisiae_yeast_rRNA_R64-1-1.fa
+rrna_index_prefix: yeast_rRNA
+run_static_html: true
+sample_sheet: null
+samsort_memory: null
+secondary_id: null
+skip_inputs: false
+stop_in_feature: false
+t_rna_file: ${RIBOVIZ_DATA}/yeast_tRNAs.tsv
+trim_5p_mismatches: true
+umi_regexp: ^(?P<umi_1>.{2}).+(?P<umi_2>.{5})$
+validate_only: false
