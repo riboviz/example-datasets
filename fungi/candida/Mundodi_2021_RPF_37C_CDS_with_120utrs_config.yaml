@@ -2,51 +2,76 @@ provenance:
   authors:
   - author: Alexander Cope
     email: alexander.cope@rutgers.edu
-  website:
-  date run: 2021-06-01
-  riboviz-version: 2.1beta | COMMIT f3e77ac58438d3bcc80b78fe78a58b75f0029633
+  website: null
+  date run: 2022-05-25
+  riboviz-version: 2.2 | COMMIT a2ebaa7dac383e6ce0972626bf57fdba105d1780
   GEO: GSE154488
-  reference: Global translational landscape of the Candida albicans morphological transition. G3 Genes|Genomes|Genetics 2021 Feb;11(2):jkaa043. Mundodi et. al.
+  reference: Global translational landscape of the Candida albicans morphological
+    transition. G3 Genes|Genomes|Genetics 2021 Feb;11(2):jkaa043. Mundodi et. al.
   DOI: https://doi.org/10.1093/g3journal/jkaa043
   notes: Candida albicans RPF dataset at 37C (3 replicates)
-
-
-adapters: AGATCGGAAGAGCACACGTCTGAACTCCAGTCA # Illumina sequencing adapter(s) to remove
-aligner: hisat2 # Short read aligner to use. Currently only hisat2 works
+  riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
+  riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
+  riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets simulated data repository folder e.g. /home/user/riboviz/example-datasets/simulated/mok
+  riboviz environment tokens note 3: ${RIBOVIZ_SAMPLES} should point to location where input data fastq file has been downloaded from simRiboSeq/simulation_runs/riboviz repository folder & placed within 'input' folder
+  
+adapters: AGATCGGAAGAGCACACGTCTGAACTCCAGTCA
 buffer: 120
-asite_disp_length_file: data/yeast_standard_asite_disp_length.txt # Table of fixed A-site positions by read length
-build_indices: TRUE # Build indices for aligner? if TRUE, remake indices from fasta files
-cmd_file: Mundodi_Calbicans_riboviz.sh # Bash commands file
+asite_disp_length_file: ${RIBOVIZ_DATA}/yeast_standard_asite_disp_length.txt
+build_indices: true
 codon_positions_file: null
-count_reads: TRUE # Scan input, temporary and output files and produce counts of reads in each FASTQ, SAM, and BAM file processed?
-count_threshold: 64 # Remove genes with a read count below this threshold, when generating statistics and figures
-dataset: Mundodi_Calbicans_37C # Dataset name
-dir_index: M-Ca_2021/index # Built indices directory
-dir_in: M-Ca_2021/input # Input directory
-dir_logs: M-Ca_2021/log # Log files directory
-dir_out: M-Ca_2021/output # Output directory
-dir_tmp: M-Ca_2021/tmp # Intermediate files directory
-do_pos_sp_nt_freq: TRUE # Calculate position-specific nucleotide frequency?
-extract_umis: FALSE # Extract UMIs if TRUE
-group_umis: FALSE # Summarise UMI groups before and after deduplication, if TRUE
-is_riboviz_gff: TRUE # Does the GFF file contain 3 elements per gene - UTR5, CDS, and UTR3
-is_test_run: FALSE # Is this a test run
-make_bedgraph: TRUE # Output bedgraph files, as TSV, in addition to h5?
-max_read_length: 50 # Maximum read length in H5 output
-min_read_length: 10 # Minimum read length in H5 output
+count_reads: true
+count_threshold: 64
+dataset: Mundodi_Calbicans_37C
+dir_index: ${RIBOVIZ_SAMPLES}/index
+dir_in: ${RIBOVIZ_SAMPLES}/input
+dir_out: ${RIBOVIZ_SAMPLES}/output
+dir_tmp: ${RIBOVIZ_SAMPLES}/tmp
+extract_umis: false
+group_umis: false
+is_riboviz_gff: true
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
 features_file: null
 fq_files:
   37C1: SRR12228384.fastq.gz
   37C2: SRR12228385.fastq.gz
   37C3: SRR12228386.fastq.gz
-num_processes: 16 # Number of processes to parallelize over
-orf_fasta_file: ../example-datasets/fungi/candida/annotation/Candida_albicans_CDS_with_120utrs.fa # ORF file to align to
-orf_gff_file: ../example-datasets/fungi/candida/annotation/Candida_albicans_CDS_with_120utrs.gff3 # GFF2/GFF3 file for ORFs
-orf_index_prefix: calbicans_CDS # ORF index file prefix, relative to dir_index
-primary_id: Name # Primary gene IDs to access the data (YAL001C, YAL003W, etc.)
-rpf: TRUE # Is the dataset an RPF or mRNA dataset?
-rrna_fasta_file: ../example-datasets/fungi/candida/contaminants/Candida_albicans_rRNA_tRNA.fa # rRNA file to avoid aligning to
-rrna_index_prefix: calbicans_rRNA # rRNA index file prefix, relative to dir_index
-secondary_id: NULL # Secondary gene IDs to access the data (COX1, EFB1, etc.)
-stop_in_cds: FALSE # Are stop codons part of the CDS annotations in GFF?
+num_processes: 16
+orf_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/candida/annotation/Candida_albicans_CDS_with_120utrs.fa
+orf_gff_file: ${RIBOVIZ_ORGANISMS}/fungi/candida/annotation/Candida_albicans_CDS_with_120utrs.gff3
+orf_index_prefix: calbicans_CDS
+primary_id: Name
+rpf: true
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/candida/contaminants/Candida_albicans_rRNA_tRNA.fa
+rrna_index_prefix: calbicans_rRNA
+secondary_id: null
 t_rna_file: null
+stop_in_feature: false
+output_metagene_normalized_profile: true
+dedup_stats: false
+dedup_umis: false
+feature: CDS
+hisat2_orf_params: -k 2 --no-spliced-alignment --rna-strandness F --no-unal
+job_email: null
+job_email_events: beas
+job_memory: 8G
+job_name: riboviz
+job_num_cpus: 4
+job_parallel_env: mpi
+job_runtime: '48:00:00'
+multiplex_fq_files: null
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+output_pdfs: true
+publish_index_tmp: false
+run_static_html: true
+sample_sheet: null
+samsort_memory: null
+trim_5p_mismatches: true
+umi_regexp: null
+validate_only: false

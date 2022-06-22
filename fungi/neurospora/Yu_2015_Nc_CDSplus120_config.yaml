@@ -3,31 +3,34 @@ provenance:
   - author: Edward W. J. Wallace
     email: edward.wallace@ed.ac.uk
 website:
-  date run: 2020-11-06
-  riboviz-version: 2.0 | COMMIT d8215697a5fca37df51fd2b71af51e211ac213d2
+  date run: 2022-05-28
+  riboviz-version: 2.2 | COMMIT a2ebaa7dac383e6ce0972626bf57fdba105d1780
   GEO: GSM1825740
-  reference: Codon Usage Influences the Local Rate of Translation Elongation to Regulate Co-translational Protein Folding., Yu et al. 2015
+  reference: Codon Usage Influences the Local Rate of Translation Elongation to Regulate
+    Co-translational Protein Folding., Yu et al. 2015
   DOI: https://doi.org/10.1016/j.molcel.2015.07.018
-  notes: Presumes example-datasets folder structure is held within $HOME/riboviz and will need to create folder called Yu_2015_Nc/input to place the .fastq files in, while output and other folders will be created in Yu_2015_Nc/ by the riboviz workflow.
+  notes: Presumes example-datasets folder structure is held within $HOME/riboviz and
+    will need to create folder called Yu_2015_Nc/input to place the .fastq files in,
+    while output and other folders will be created in Yu_2015_Nc/ by the riboviz workflow.
+  riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
+  riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
+  riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets simulated data repository folder e.g. /home/user/riboviz/example-datasets/simulated/mok
+  riboviz environment tokens note 3: ${RIBOVIZ_SAMPLES} should point to location where input data fastq file has been downloaded from simRiboSeq/simulation_runs/riboviz repository folder & placed within 'input' folder
 
 adapters: AGATCGGAAGAGCACACGTCT
-aligner: hisat2
-asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
+asite_disp_length_file: ${RIBOVIZ_DATA}/yeast_standard_asite_disp_length.txt
 buffer: 120
 build_indices: true
-cmd_file: run_riboviz_Yu_2015_Nc.sh
 codon_positions_file: null
 count_reads: true
 count_threshold: 64
 dataset: Yu2015
 dedup_stats: false
 dedup_umis: false
-dir_index: Yu_2015_Nc/index # Built indices directory
-dir_in: Yu_2015_Nc/input # Input directory
-dir_logs: Yu_2015_Nc/logs # Log files directory
-dir_out: Yu_2015_Nc/output # Output directory
-dir_tmp: Yu_2015_Nc/tmp # Intermediate files directory
-do_pos_sp_nt_freq: false
+dir_index: ${RIBOVIZ_SAMPLES}/index
+dir_in: ${RIBOVIZ_SAMPLES}/input
+dir_out: ${RIBOVIZ_SAMPLES}/output
+dir_tmp: ${RIBOVIZ_SAMPLES}/tmp
 extract_umis: false
 features_file: null
 fq_files:
@@ -36,22 +39,41 @@ fq_files:
   WT: SRR2105977.fastq.gz
 group_umis: false
 is_riboviz_gff: true
-is_test_run: false
 make_bedgraph: true
 max_read_length: 50
 min_read_length: 10
 multiplex_fq_files: null
 num_processes: 2
-orf_fasta_file: ../../riboviz/example-datasets/fungi/neurospora/annotation/NC12_CDS_with_120bputrs.fa
-orf_gff_file:  ../../riboviz/example-datasets/fungi/neurospora/annotation/NC12_CDS_120bpL_120bpR.gff3
+orf_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/neurospora/annotation/NC12_CDS_with_120bputrs.fa
+orf_gff_file: ${RIBOVIZ_ORGANISMS}/fungi/neurospora/annotation/NC12_CDS_120bpL_120bpR.gff3
 orf_index_prefix: NC12_CDS_with_120bputrs
 primary_id: Name
 publish_index_tmp: false
 rpf: true
-rrna_fasta_file: ../../riboviz/example-datasets/fungi/neurospora/contaminants/Neurospora_crassa_NC12_rRNA_tRNA.fa
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/fungi/neurospora/contaminants/Neurospora_crassa_NC12_rRNA_tRNA.fa
 rrna_index_prefix: NC12_rRNA_tRNA
 sample_sheet: null
 secondary_id: null
-stop_in_cds: true
 t_rna_file: null
 umi_regexp: null
+stop_in_feature: true
+output_metagene_normalized_profile: false
+feature: CDS
+hisat2_orf_params: -k 2 --no-spliced-alignment --rna-strandness F --no-unal
+job_email: null
+job_email_events: beas
+job_memory: 8G
+job_name: riboviz
+job_num_cpus: 4
+job_parallel_env: mpi
+job_runtime: '48:00:00'
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+output_pdfs: true
+run_static_html: true
+samsort_memory: null
+trim_5p_mismatches: true
+validate_only: false

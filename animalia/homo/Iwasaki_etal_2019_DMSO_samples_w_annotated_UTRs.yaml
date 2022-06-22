@@ -2,20 +2,22 @@ provenance:
   authors:
   - author: Alexander Cope
     email: alexander.cope@rutgers.edu
-  date run: 2021-11-25
-  riboviz-version: 2.1 | COMMIT ac84378a460378eb0458c81f5bfffc6f2be24fac
+  date run: 2022-05-31
+  riboviz-version: 2.2 | COMMIT a2ebaa7dac383e6ce0972626bf57fdba105d1780
   GEO: GSE102720
   reference: The Translation Inhibitor Rocaglamide Targets a Biomolecular Cavity between
     eIF4A and Polypurine RNA, Iwasaki et al. 2019
   DOI: https://dx.doi.org/10.1016%2Fj.molcel.2018.11.026
   notes: Analyzing ribosome profiling replicates from DMSO samples. Use yeast A-site
     mapping because both are eukaryotes.
-  riboviz environment tokens use: for advice on how to use environment tokens with riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
-  riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo data folder location e.g. /home/user/riboviz/riboviz/data
-  riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets Homo genus data repository folder e.g. /home/user/riboviz/example-datasets/animalia/homo
-  riboviz environment tokens note 3: ${RIBOVIZ_SAMPLES} should point to location where input data fastq file has been downloaded & placed within 'input' folder
-
-
+  riboviz environment tokens use: for advice on how to use environment tokens with
+    riboviz, see documentation at https://github.com/riboviz/riboviz/blob/main/docs/user/prep-riboviz-config.md#environment-variables-and-configuration-tokens
+  riboviz environment tokens note 1: ${RIBOVIZ_DATA} should point to riboviz repo
+    data folder location e.g. /home/user/riboviz/riboviz/data
+  riboviz environment tokens note 2: ${RIBOVIZ_ORGANISMS} is location of example-datasets
+    Homo genus data repository folder e.g. /home/user/riboviz/example-datasets/animalia/homo
+  riboviz environment tokens note 3: ${RIBOVIZ_SAMPLES} should point to location where
+    input data fastq file has been downloaded & placed within 'input' folder
 adapters: ATGTACACTAGGGATAACAGGGTAATCAACGCG
 asite_disp_length_file: ${RIBOVIZ_DATA}/yeast_standard_asite_disp_length.txt
 buffer: 100
@@ -56,15 +58,15 @@ nextflow_timeline_file: nextflow-timeline.html
 nextflow_trace_file: nextflow-trace.tsv
 nextflow_work_dir: work
 num_processes: 1
-orf_fasta_file: ${RIBOVIZ_ORGANISMS}/annotation/Homo_sapiens_CDS_w_annotated_UTRs.fa
-orf_gff_file: ${RIBOVIZ_ORGANISMS}/annotation/Homo_sapiens_CDS_w_annotated_UTRs.gff3
-orf_index_prefix: hsapien_CDS_w_annotated_UTR 
+orf_fasta_file: ${RIBOVIZ_ORGANISMS}/animalia/homo/annotation/Homo_sapiens_CDS_w_annotated_UTRs.fa
+orf_gff_file: ${RIBOVIZ_ORGANISMS}/animalia/homo/annotation/Homo_sapiens_CDS_w_annotated_UTRs.gff3
+orf_index_prefix: hsapien_CDS_w_annotated_UTR
 output_metagene_normalized_profile: false
 output_pdfs: true
 primary_id: Name
 publish_index_tmp: false
 rpf: true
-rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/contaminants/Homo_sapiens_rRNA_tRNA.fa
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/animalia/homo/contaminants//Homo_sapiens_rRNA_tRNA.fa
 rrna_index_prefix: hsapien_rRNA
 run_static_html: true
 sample_sheet: null
