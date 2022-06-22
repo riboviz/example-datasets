@@ -2,8 +2,8 @@ provenance:
   yaml authors:
   - author: Emma MacKenzie
     email: '...'
-  date run: 2021-03-08
-  riboviz-version: 2.0 | COMMIT b75c1ba0e2a541d6f256e2d295b352a3aef969a9
+  date run: 2022-06-21
+  riboviz-version: 2.2 | COMMIT a2ebaa7dac383e6ce0972626bf57fdba105d1780
   Array Express: E-MTAB-8746, E-MTAB-8686, E-MTAB-8744, E-MTAB-8745, E-MTAB-8602 and
     E-MTAB-8583.
   reference: Ribosome profiling reveals ribosome stalling on tryptophan codons and
