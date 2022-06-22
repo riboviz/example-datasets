@@ -36,6 +36,7 @@ Neurospora crassa
 Saccharomyces cerevisiae
 
 * Brar_2012_Meiosis_RPF_6-samples_CDS_w_250utrs_config.yaml
+* CastellsBallester_2019_Bfr1_4samples_Scerevisiae.yaml
 * Gupta_2018_tRNA_Modification_Carbon_Nitrogen_Metabolism_RPF_9-samples_CDS_w_250utrs_config.yaml
 * Jan_2014_sec63_RPF_1-sample_CDS_w_250utrs_config.yaml
 * Kasari_2019_eEF3-depleted_RPF_4-samples_CDS_w_250utrs_config.yaml
