@@ -3,8 +3,8 @@ provenance:
   - author: Alexander Cope
     email: alexander.cope@rutgers.edu
   website:
-  date run: 2020-09-22
-  riboviz-version: 2.0.beta | COMMIT 03a4f13b2d833b8650ebf33bdce81fe2639eb9cf
+  date run: 2022-07-07
+  riboviz-version: 2.0 | COMMIT 2050fa96d8a9428839236e376536c151863ecb4c
   GEO: GSE124428
   reference: A tRNA modification balances carbon and nitrogen metabolism by regulating phosphate homeostasis, Gupta et. al. 2018
   DOI: https://doi.org/10.7554/elife.44795
