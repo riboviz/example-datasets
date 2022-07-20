@@ -37,8 +37,8 @@ extract_umis: false
 feature: CDS
 features_file: ${RIBOVIZ_DATA}/yeast_features.tsv
 fq_files:
-  #Wt_CHX: SRR1042853.fastq.gz
-  #Dom34KO_CHX: SRR1042854.fastq.gz
+  Wt_CHX: SRR1042853.fastq.gz
+  Dom34KO_CHX: SRR1042854.fastq.gz
   Wt: SRR1042855.fastq.gz
   Dom34KO: SRR1042856.fastq.gz
   #Wt_CHX_GMP-PNP: SRR1042857.fastq.gz
