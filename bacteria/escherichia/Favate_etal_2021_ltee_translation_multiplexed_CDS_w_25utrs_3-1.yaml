@@ -33,7 +33,7 @@ make_bedgraph: true
 max_read_length: 50
 min_read_length: 10
 multiplex_fq_files:
-  rep1-ribo-am-fr.fq.gz
+ - rep1-ribo-am-fr.fq.gz
 num_processes: 1
 orf_fasta_file: ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/annotations/Escherichia_coli_REL606_CDS_w_25utrs.fa
 orf_gff_file: ${RIBOVIZ_ORGANISMS}/bacteria/escherichia/annotations/Escherichia_coli_REL606_CDS_w_25utrs.gff3
