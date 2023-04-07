@@ -1,0 +1,69 @@
+provenance:
+  authors:
+  - author: David Bunn
+    email: s1901391@ed.ac.uk
+website:
+  DOI: NA
+  GEO: NA
+  date run: 2023-03-31
+  notes: Analysis of multiplexed RPF data for L. kluyveri.
+  reference: NA (data not yet published)
+  riboviz-version: 2.2
+
+adapters:  AGATCGGAAGAGCACACGTCTGAA
+asite_disp_length_file: data/yeast_standard_asite_disp_length.txt
+buffer: 250
+build_indices: true
+codon_positions_file: data/yeast_codon_pos_i200.RData
+count_reads: true
+count_threshold: 64
+dataset: EIRNA_2023_LK_down
+dedup_stats: true
+dedup_umis: true
+dir_in: EIRNA_2023/input
+dir_index: EIRNA_2023/index
+dir_out: EIRNA_2023/output
+dir_tmp: EIRNA_2023/tmp
+extract_umis: true
+feature: CDS
+features_file: data/yeast_features.tsv
+fq_files: null
+group_umis: true
+hisat2_orf_params: -k 2 --no-spliced-alignment --rna-strandness F --no-unal
+is_riboviz_gff: true
+job_email: null
+job_email_events: beas
+job_memory: 8G
+job_name: riboviz
+job_num_cpus: 4
+job_parallel_env: mpi
+job_runtime: '48:00:00'
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+multiplex_fq_files:
+- LK_S3_L001_R1_001_init10000.fastq
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+num_processes: 1
+orf_fasta_file: ../example-datasets/fungi/lachancea/annotation/lachancea_kluyveri_cds_250nt_utr.fasta
+orf_gff_file: ../example-datasets/fungi/lachancea/annotation/lachancea_kluyveri_cds_250nt_utr.gff3
+orf_index_prefix: yeast_CDS_w_250
+output_pdfs: true
+primary_id: Name
+publish_index_tmp: false
+rpf: true
+rrna_fasta_file: ../example-datasets/fungi/lachancea/contaminants/LT_contaminants.fasta
+rrna_index_prefix: yeast_rRNA
+run_static_html: true
+sample_sheet: ../../../example-datasets/fungi/lachancea/EIRNA_2023_barcodes.tsv
+samsort_memory: null
+secondary_id: null
+stop_in_feature: false
+t_rna_file: data/yeast_tRNAs.tsv
+trim_5p_mismatches: true
+umi_regexp: ^(?P<umi_1>.{4}).+(?P<umi_2>.{5})(?P<cell_1>.{5})$
+validate_only: false
