@@ -1,0 +1,50 @@
+[1] "Created by: riboviz"
+[1] "Date: 2023-04-05 10:44:57"
+[1] "File: /exports/csce/eddie/biology/groups/wallace_rna/riboviz-david/riboviz/riboviz/rscripts/bam_to_h5.R"
+[1] "Version: commit bb25145b6ec95e37fe5129429ddf94067d6b99f6 date 2023-03-09 14:39:35 GMT"
+[1] "bam_to_h5.R running with parameters:"
+$bam_file
+[1] "Rep3.bam"
+
+$orf_gff_file
+[1] "lachancea_kluyveri_cds_250nt_utr.gff3"
+
+$feature
+[1] "CDS"
+
+$min_read_length
+[1] 10
+
+$max_read_length
+[1] 50
+
+$buffer
+[1] 250
+
+$primary_id
+[1] "Name"
+
+$secondary_id
+[1] NA
+
+$dataset
+[1] "EIRNA_2023_LK_down"
+
+$stop_in_feature
+[1] FALSE
+
+$is_riboviz_gff
+[1] TRUE
+
+$hd_file
+[1] "Rep3.h5"
+
+$num_processes
+[1] 1
+
+$help
+[1] FALSE
+
+[1] "Mapping reads to feature CDS"
+[1] "Saving mapped reads in H5 file Rep3.h5"
+[1] "bam_to_h5.R done"

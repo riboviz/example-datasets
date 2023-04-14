@@ -1,0 +1,45 @@
+# Created by: riboviz
+# Date: 2023-03-28 16:48:54.699000
+# Command-line tool: /exports/csce/eddie/biology/groups/wallace_rna/riboviz-david/riboviz/riboviz/riboviz/tools/check_fasta_gff.py
+# File: /exports/csce/eddie/biology/groups/wallace_rna/riboviz-david/riboviz/riboviz/riboviz/check_fasta_gff.py
+# Version: commit bb25145b6ec95e37fe5129429ddf94067d6b99f6 date 2023-03-09 14:39:35+00:00
+# fasta_file: Rutgers_2023/lachancea_kluyveri_cds_250nt_utr.fasta
+# gff_file: Rutgers_2023/lachancea_kluyveri_cds_250nt_utr.gff3
+# start_codons: ['ATG']
+# NumSequences: 5189
+# NumFeatures: 15567
+# NumCDSFeatures: 5189
+# NoStartCodon: 14
+# NoStopCodon: 9
+# SequenceNotInFASTA: 0
+# SequenceNotInGFF: 0
+# DuplicateFeatureIds: 0
+# DuplicateFeatureId: 0
+# InternalStopCodon: 0
+# IncompleteFeature: 0
+# MultipleCDS: 0
+# NoIdName: 0
+Sequence	Feature	Issue	Data
+maker-SAKL0A-augustus-gene-3.0	maker-SAKL0A-augustus-gene-3.0	NoStartCodon	GTA
+maker-SAKL0A-snap-gene-4.54	maker-SAKL0A-snap-gene-4.54	NoStopCodon	TTT
+maker-SAKL0A-augustus-gene-8.66	maker-SAKL0A-augustus-gene-8.66	NoStartCodon	TCA
+maker-SAKL0B-snap-gene-10.54	maker-SAKL0B-snap-gene-10.54	NoStartCodon	GCC
+maker-SAKL0B-snap-gene-10.54	maker-SAKL0B-snap-gene-10.54	NoStopCodon	CAG
+maker-SAKL0C-augustus-gene-4.43	maker-SAKL0C-augustus-gene-4.43	NoStopCodon	CAC
+maker-SAKL0C-snap-gene-4.52	maker-SAKL0C-snap-gene-4.52	NoStartCodon	ACC
+maker-SAKL0C-snap-gene-4.52	maker-SAKL0C-snap-gene-4.52	NoStopCodon	GCG
+maker-SAKL0D-snap-gene-7.6	maker-SAKL0D-snap-gene-7.6	NoStartCodon	TAT
+maker-SAKL0D-snap-gene-7.6	maker-SAKL0D-snap-gene-7.6	NoStopCodon	GAA
+augustus_masked-SAKL0E-processed-gene-11.268	augustus_masked-SAKL0E-processed-gene-11.268	NoStartCodon	AGG
+maker-SAKL0F-snap-gene-4.47	maker-SAKL0F-snap-gene-4.47	NoStartCodon	AAT
+maker-SAKL0F-augustus-gene-11.100	maker-SAKL0F-augustus-gene-11.100	NoStopCodon	CAA
+maker-SAKL0G-augustus-gene-6.4	maker-SAKL0G-augustus-gene-6.4	NoStartCodon	GAA
+maker-SAKL0G-augustus-gene-14.129	maker-SAKL0G-augustus-gene-14.129	NoStartCodon	GGG
+maker-SAKL0G-augustus-gene-16.195	maker-SAKL0G-augustus-gene-16.195	NoStartCodon	GAA
+genemark-SAKL0H-processed-gene-0.40	genemark-SAKL0H-processed-gene-0.40	NoStopCodon	TTT
+maker-SAKL0H-snap-gene-0.79	maker-SAKL0H-snap-gene-0.79	NoStartCodon	GCT
+maker-SAKL0H-snap-gene-0.79	maker-SAKL0H-snap-gene-0.79	NoStopCodon	ATC
+maker-SAKL0H-augustus-gene-3.86	maker-SAKL0H-augustus-gene-3.86	NoStartCodon	AAA
+maker-SAKL0H-augustus-gene-16.2	maker-SAKL0H-augustus-gene-16.2	NoStartCodon	GGC
+maker-SAKL0H-augustus-gene-18.90	maker-SAKL0H-augustus-gene-18.90	NoStopCodon	ATG
+maker-SAKL0H-augustus-gene-22.42	maker-SAKL0H-augustus-gene-22.42	NoStartCodon	CAG

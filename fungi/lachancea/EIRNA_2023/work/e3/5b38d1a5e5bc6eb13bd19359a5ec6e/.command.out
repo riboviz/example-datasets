@@ -1,0 +1,90 @@
+[1] "Created by: riboviz"
+[1] "Date: 2023-04-05 11:51:32"
+[1] "File: /exports/csce/eddie/biology/groups/wallace_rna/riboviz-david/riboviz/riboviz/rscripts/generate_stats_figs.R"
+[1] "Version: commit bb25145b6ec95e37fe5129429ddf94067d6b99f6 date 2023-03-09 14:39:35 GMT"
+[1] "generate_stats_figs.R running with parameters:"
+$output_dir
+[1] "."
+
+$orf_fasta_file
+[1] "lachancea_kluyveri_cds_250nt_utr.fasta"
+
+$orf_gff_file
+[1] "lachancea_kluyveri_cds_250nt_utr.gff3"
+
+$output_pdfs
+[1] TRUE
+
+$num_processes
+[1] 1
+
+$min_read_length
+[1] 10
+
+$max_read_length
+[1] 50
+
+$buffer
+[1] 250
+
+$primary_id
+[1] "Name"
+
+$dataset
+[1] "EIRNA_2023_LK_down"
+
+$rpf
+[1] TRUE
+
+$features_file
+[1] "yeast_features.tsv"
+
+$output_metagene_normalized_profile
+[1] TRUE
+
+$t_rna_file
+[1] "yeast_tRNAs.tsv"
+
+$codon_positions_file
+[1] "yeast_codon_pos_i200.RData"
+
+$count_threshold
+[1] 64
+
+$length_threshold
+[1] 500
+
+$output_prefix
+[1] ""
+
+$hd_file
+[1] "Rep2.h5"
+
+$nnt_buffer
+[1] 25
+
+$nnt_gene
+[1] 50
+
+$asite_disp_length_file
+[1] "yeast_standard_asite_disp_length.txt"
+
+$help
+[1] FALSE
+
+[1] "Starting: Check for 3nt periodicity globally"
+[1] "Completed: Check for 3nt periodicity globally"
+[1] "Completed: Distribution of lengths of all mapped reads"
+[1] "Starting: Biases in nucleotide composition along mapped read lengths"
+[1] "finished for loop"
+[1] "finished prepping Length, Position, Frame variables"
+[1] "finished, returning all_out"
+[1] "Completed: Biases in nucleotide composition along mapped read lengths"
+[1] "Starting: Check for 3nt periodicity (frame) by gene"
+[1] "Completed: Check for 3nt periodicity (frame) by Gene"
+[1] "Starting: Position specific distribution of reads"
+[1] "Completed: Position specific distribution of reads - RPF method"
+[1] "Completed: Position specific distribution of reads"
+[1] "Starting: Calculate TPMs of genes"
+[1] "Completed: Calculate TPMs of genes"
+[1] "Starting: Correlations between TPMs of genes with their sequence-based features"

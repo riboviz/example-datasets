@@ -1,0 +1,13 @@
+Created by: riboviz
+Date: 2023-04-05 10:16:38.000797
+Command-line tool: /exports/csce/eddie/biology/groups/wallace_rna/riboviz-david/riboviz/riboviz/riboviz/tools/demultiplex_fastq.py
+File: /exports/csce/eddie/biology/groups/wallace_rna/riboviz-david/riboviz/riboviz/riboviz/tools/demultiplex_fastq.py
+Version: commit bb25145b6ec95e37fe5129429ddf94067d6b99f6 date 2023-03-09 14:39:35+00:00
+
+Demultiplexing reads for file: LK_S3_L001_R1_001_init10000_extract_trim.fq
+Using sample sheet: EIRNA_2023_barcodes.tsv
+Number of samples: 3
+Allowed mismatches: 2
+Barcode delimiter: _
+All 9987 reads processed
+Done

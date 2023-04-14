@@ -1,0 +1,12 @@
+Warning: skipping read 'FS10002027:70:BSB09409-3014:1:1101:7520:1010_ATCGT_CGTCGTGAG 1:N:0:3' because length (1) <= # seed mismatches (0)
+Warning: skipping read 'FS10002027:70:BSB09409-3014:1:1101:7520:1010_ATCGT_CGTCGTGAG 1:N:0:3' because it was < 2 characters long
+Warning: skipping read 'FS10002027:70:BSB09409-3014:1:1101:1710:1110_ATCGT_ACGTGACGG 1:N:0:3' because length (1) <= # seed mismatches (0)
+Warning: skipping read 'FS10002027:70:BSB09409-3014:1:1101:1710:1110_ATCGT_ACGTGACGG 1:N:0:3' because it was < 2 characters long
+Warning: skipping read 'FS10002027:70:BSB09409-3014:1:1101:1710:1120_ATCGT_ACGTGACGG 1:N:0:3' because length (1) <= # seed mismatches (0)
+Warning: skipping read 'FS10002027:70:BSB09409-3014:1:1101:1710:1120_ATCGT_ACGTGACGG 1:N:0:3' because it was < 2 characters long
+1616 reads; of these:
+  1616 (100.00%) were unpaired; of these:
+    715 (44.25%) aligned 0 times
+    511 (31.62%) aligned exactly 1 time
+    390 (24.13%) aligned >1 times
+55.75% overall alignment rate

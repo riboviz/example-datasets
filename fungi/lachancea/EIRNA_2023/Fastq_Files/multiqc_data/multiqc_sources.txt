@@ -1,0 +1,5 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	LT_S2_L001_R1_001	/exports/csce/eddie/biology/groups/wallace_rna/riboviz-david/riboviz/riboviz/Rutgers_2023/Fastq_Files/Raw_RIBOseq_Shallow/LT_S2_L001_R1_001_fastqc.zip
+FastQC	all_sections	LK_S3_L001_R1_001	/exports/csce/eddie/biology/groups/wallace_rna/riboviz-david/riboviz/riboviz/Rutgers_2023/Fastq_Files/Raw_RIBOseq_Shallow/LK_S3_L001_R1_001_fastqc.zip
+FastQC	all_sections	AG_S1_L001_R1_001	/exports/csce/eddie/biology/groups/wallace_rna/riboviz-david/riboviz/riboviz/Rutgers_2023/Fastq_Files/Raw_RIBOseq_Shallow/AG_S1_L001_R1_001_fastqc.zip
+FastQC	all_sections	LW_S4_L001_R1_001	/exports/csce/eddie/biology/groups/wallace_rna/riboviz-david/riboviz/riboviz/Rutgers_2023/Fastq_Files/Raw_RIBOseq_Shallow/LW_S4_L001_R1_001_fastqc.zip
