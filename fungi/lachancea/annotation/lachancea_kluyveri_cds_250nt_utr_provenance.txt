@@ -1,0 +1,16 @@
+Transcript sequences:
+
+data/lachancea_kluyveri_cds_250nt_utr.fasta
+
+Coding sequence locations:
+
+data/lachancea_kluyveri_cds_250nt_utr.gff3
+
+These files hold annotations for Lachancea kluyveri annotations and ORF sequences.
+
+These files were created as follows:
+
+Genomes for the Saccharomycotina subphylum were downloaded from the file 0_332yeast_genomes.zip on FigShare (https://figshare.com/articles/dataset/Tempo_and_mode_of_genome_evolution_in_the_budding_yeast_subphylum/5854692). The zip file was unzipped and the Lachancea kluyveri genome file was taken from fas/lachancea_kluyveri.fas and the GTF file from gtf/lachancea_kluyveri.max.gtf. The GTF was first sorted with the command `sort -k1,1 -k4,4n gtf/lachancea_kluyveri.max.gtf > gtf_sorted/lachancea_kluyveri.max.gtf`
+
+The sequence and annotation files for the whole approximate Lachancea kluyveri transcriptome were prepared using create_files_for_riboviz.R (https://github.com/riboviz/riboviz/blob/main/rscripts/create_files_for_ribovi.R). 
+
