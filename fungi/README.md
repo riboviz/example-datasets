@@ -52,7 +52,7 @@ Schizosaccaromyces pombe
 * Duncan_2018_amino_acid_starved_CDS_w_250utrs_config.yaml
 
 
-#lachancea
+# lachancea
 
 Lachancea Kluyveri
 
