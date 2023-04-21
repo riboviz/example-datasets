@@ -7,8 +7,8 @@ website:
   GEO: NA
   date run: 2023-03-31
   notes: Analysis of multiplexed RPF data for L. kluyveri. Presumes example-datasets folder structure is held within $HOME/riboviz/ 
-         and need to create folder EIRNA_2023/input to place .fastq files into and riboviz will create other folders within
-         EIRNA_2023/ to hold outputs. LT_contaminants.fasta is derived from the related species Lachancea thermotolerans since 
+         and need to create folder EIRNA_2023_LK/input to place .fastq files into and riboviz will create other folders within
+         EIRNA_2023_LK/ to hold outputs. LT_contaminants.fasta is derived from the related species Lachancea thermotolerans since 
          contaminants data from kluyveri wasn't found.
   reference: NA (data not yet published)
   riboviz-version: 2.2
@@ -20,13 +20,13 @@ build_indices: true
 codon_positions_file: null
 count_reads: true
 count_threshold: 64
-dataset: EIRNA_2023
+dataset: EIRNA_2023_LK
 dedup_stats: true
 dedup_umis: true
-dir_in: EIRNA_2023/input
-dir_index: EIRNA_2023/index
-dir_out: EIRNA_2023/output
-dir_tmp: EIRNA_2023/tmp
+dir_in: EIRNA_2023_LK/input
+dir_index: EIRNA_2023_LK/index
+dir_out: EIRNA_2023_LK/output
+dir_tmp: EIRNA_2023_LK/tmp
 extract_umis: true
 feature: CDS
 features_file: null
@@ -52,14 +52,14 @@ nextflow_timeline_file: nextflow-timeline.html
 nextflow_trace_file: nextflow-trace.tsv
 nextflow_work_dir: work
 num_processes: 1
-orf_fasta_file: EIRNA_2023/annotation/lachancea_kluyveri_cds_250nt_utr.fasta
-orf_gff_file: EIRNA_2023/annotation/lachancea_kluyveri_cds_250nt_utr.gff3
+orf_fasta_file: EIRNA_2023_LK/annotation/lachancea_kluyveri_cds_250nt_utr.fasta
+orf_gff_file: EIRNA_2023_LK/annotation/lachancea_kluyveri_cds_250nt_utr.gff3
 orf_index_prefix: yeast_CDS_w_250
 output_pdfs: true
 primary_id: Name
 publish_index_tmp: false
 rpf: true
-rrna_fasta_file: EIRNA_2023/contaminants/LT_contaminants.fasta
+rrna_fasta_file: EIRNA_2023_LK/contaminants/LT_contaminants.fasta
 rrna_index_prefix: yeast_rRNA
 run_static_html: true
 sample_sheet: EIRNA_2023_barcodes.tsv
