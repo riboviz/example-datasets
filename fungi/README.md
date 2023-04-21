@@ -54,6 +54,6 @@ Schizosaccaromyces pombe
 
 # lachancea
 
-Lachancea Kluyveri
+Lachancea kluyveri
 
 * EIRNA_2023_LK_3-samples_cds_250nt_utr_config.yaml
