@@ -1,1 +1,0 @@
-/exports/csce/eddie/biology/groups/wallace_rna/riboviz-david/riboviz/riboviz/data/yeast_standard_asite_disp_length.txt

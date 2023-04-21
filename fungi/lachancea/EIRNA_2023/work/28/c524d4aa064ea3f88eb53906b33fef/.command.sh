@@ -1,2 +1,0 @@
-#!/bin/bash -ue
-Rscript --vanilla /exports/csce/eddie/biology/groups/wallace_rna/riboviz-david/riboviz/riboviz/rscripts/bam_to_h5.R            --num-processes=1            --min-read-length=10            --max-read-length=50            --buffer=250            --primary-id=Name                        --dataset=EIRNA_2023_LK_down            --bam-file=Rep1.bam            --hd-file=Rep1.h5            --orf-gff-file=lachancea_kluyveri_cds_250nt_utr.gff3            --is-riboviz-gff=true            --feature=CDS            --stop-in-feature=false

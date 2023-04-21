@@ -50,3 +50,10 @@ Saccharomyces cerevisiae
 Schizosaccaromyces pombe
 
 * Duncan_2018_amino_acid_starved_CDS_w_250utrs_config.yaml
+
+
+#lachancea
+
+Lachancea Kluyveri
+
+* EIRNA_2023_LK_3-samples_cds_250nt_utr_config.yaml

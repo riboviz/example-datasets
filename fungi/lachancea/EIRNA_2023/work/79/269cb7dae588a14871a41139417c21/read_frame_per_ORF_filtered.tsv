@@ -1,5 +1,0 @@
-# Created by: riboviz
-# Date: 2023-04-05 11:45:49
-# File: /exports/csce/eddie/biology/groups/wallace_rna/riboviz-david/riboviz/riboviz/rscripts/generate_stats_figs.R
-# Version: commit bb25145b6ec95e37fe5129429ddf94067d6b99f6 date 2023-03-09 14:39:35 GMT
-gene	Ct_fr0	Ct_fr1	Ct_fr2	pval_fr0vs1	pval_fr0vs2	pval_fr0vsboth
