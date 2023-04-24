@@ -59,7 +59,7 @@ output_pdfs: true
 primary_id: Name
 publish_index_tmp: false
 rpf: true
-rrna_fasta_file: EIRNA_2023_LW/contaminants/LW_contaminants.fasta
+rrna_fasta_file: EIRNA_2023_LW/contaminants/LT_contaminants.fasta
 rrna_index_prefix: yeast_rRNA
 run_static_html: true
 sample_sheet: EIRNA_2023_barcodes.tsv
