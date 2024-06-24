@@ -1,0 +1,8 @@
+
+This file was created by David Bunn in 2023, ribosomal RNA files were selected from NCBI for Lachancea thermotolerans strain CBS 6340
+
+The data was downloaded from NCBI, https://www.ncbi.nlm.nih.gov/nuccore with Organism "lachancea thermotolerans cbs 6340" and filtered for rRNA. 
+
+Génolevures Consortium, Souciet JL, Dujon B, et al. Comparative genomics of protoploid Saccharomycetaceae. Genome Res.(2009) 19(10) 1696-1709.
+DOI:10.1101/gr.091546.109
+
