@@ -1,0 +1,66 @@
+provenance:
+  authors:
+  - author: David Bunn
+    email: s1901391@ed.ac.uk
+website:
+  DOI: NA
+  GEO: NA
+  date run: 2023-03-31
+  notes: Analysis of multiplexed RPF data for L. kluyveri. Presumes example-datasets folder structure is held within $HOME/riboviz/ 
+         and need to create folder EIRNA_2023_LK/input to place .fastq files into and riboviz will create other folders within
+         EIRNA_2023_LK/ to hold outputs. LT_contaminants.fasta is derived from the related species Lachancea thermotolerans since 
+         contaminants data from kluyveri wasn't found.
+  reference: NA (data not yet published)
+  riboviz-version: 2.2
+
+adapters: AGATCGGAAGAGCACACGTCTGAA
+asite_disp_length_file: ${RIBOVIZ_DATA}/yeast_standard_asite_disp_length.txt
+buffer: 250
+build_indices: true
+codon_positions_file: ${RIBOVIZ_ORGANISMS}/annotation/Ashbya_gossypii_codon_pos.Rdata
+count_reads: true
+count_threshold: 64
+dataset: EIRNA_2023_AG
+dedup_stats: false
+dedup_umis: true
+dir_in: ${RIBOVIZ_SAMPLES}/input
+dir_index: ${RIBOVIZ_SAMPLES}/index
+dir_out: ${RIBOVIZ_SAMPLES}/output
+dir_tmp: ${RIBOVIZ_SAMPLES}/tmp
+extract_umis: true
+feature: CDS
+features_file: null
+group_umis: true
+hisat2_orf_params: -k 2 --no-spliced-alignment --rna-strandness F --no-unal
+is_riboviz_gff: true
+make_bedgraph: true
+max_read_length: 50
+min_read_length: 10
+fq_files:
+  Rep1: AG_Rep1_rpf.fastq.gz
+  Rep2: AG_Rep2_rpf.fastq.gz
+  Rep3: AG_Rep3_rpf.fastq.gz
+nextflow_dag_file: nextflow-dag.html
+nextflow_report_file: nextflow-report.html
+nextflow_timeline_file: nextflow-timeline.html
+nextflow_trace_file: nextflow-trace.tsv
+nextflow_work_dir: work
+num_processes: 12
+orf_fasta_file: ${RIBOVIZ_ORGANISMS}/annotation/Ashbya_gossypii_cds_250nt_utr.fasta
+orf_gff_file: ${RIBOVIZ_ORGANISMS}/annotation/Ashbya_gossypii_cds_250nt_utr.gff3
+orf_index_prefix: agossypii_CDS_w_250
+output_pdfs: true
+primary_id: Name
+publish_index_tmp: false
+rpf: true
+rrna_fasta_file: ${RIBOVIZ_ORGANISMS}/contaminants/AG_contaminants.fasta
+rrna_index_prefix: agossypii_rRNA
+run_static_html: true
+sample_sheet: null
+samsort_memory: null
+secondary_id: null
+stop_in_feature: false
+t_rna_file: ${RIBOVIZ_ORGANISMS}/annotation/tgcn.tsv
+trim_5p_mismatches: true
+umi_regexp: ^(?P<umi_1>.{4}).+(?P<umi_2>.{5})(?P<cell_1>.{5})$
+validate_only: false
