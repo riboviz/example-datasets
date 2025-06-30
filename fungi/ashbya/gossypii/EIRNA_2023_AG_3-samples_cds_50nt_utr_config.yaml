@@ -15,18 +15,18 @@ website:
 
 adapters: AGATCGGAAGAGCACACGTCTGAA
 asite_disp_length_file: ${RIBOVIZ_DATA}/yeast_standard_asite_disp_length.txt
-buffer: 250
+buffer: 50
 build_indices: true
-codon_positions_file: ${RIBOVIZ_ORGANISMS}/annotation/Ashbya_gossypii_codon_pos.Rdata
+codon_positions_file: ${RIBOVIZ_DATA}/Ashbya_gossypii_codon_pos_50nt_utr.Rdata
 count_reads: true
 count_threshold: 64
 dataset: EIRNA_2023_AG
 dedup_stats: false
 dedup_umis: true
 dir_in: ${RIBOVIZ_SAMPLES}/input
-dir_index: ${RIBOVIZ_SAMPLES}/index
-dir_out: ${RIBOVIZ_SAMPLES}/output
-dir_tmp: ${RIBOVIZ_SAMPLES}/tmp
+dir_index: ${RIBOVIZ_SAMPLES}/index_hisat2v2.2
+dir_out: ${RIBOVIZ_SAMPLES}/output_hisat2v2.2
+dir_tmp: ${RIBOVIZ_SAMPLES}/tmp_hisat2v2.2
 extract_umis: true
 feature: CDS
 features_file: null
@@ -37,18 +37,18 @@ make_bedgraph: true
 max_read_length: 50
 min_read_length: 10
 fq_files:
-  Rep1: AG_Rep1_rpf.fastq.gz
-  Rep2: AG_Rep2_rpf.fastq.gz
-  Rep3: AG_Rep3_rpf.fastq.gz
+  Rep1: AG_Rep1_rpf_polyG_removed.fastq.gz
+  Rep2: AG_Rep2_rpf_polyG_removed.fastq.gz
+  Rep3: AG_Rep3_rpf_polyG_removed.fastq.gz
 nextflow_dag_file: nextflow-dag.html
 nextflow_report_file: nextflow-report.html
 nextflow_timeline_file: nextflow-timeline.html
 nextflow_trace_file: nextflow-trace.tsv
 nextflow_work_dir: work
-num_processes: 12
-orf_fasta_file: ${RIBOVIZ_ORGANISMS}/annotation/Ashbya_gossypii_cds_250nt_utr.fasta
-orf_gff_file: ${RIBOVIZ_ORGANISMS}/annotation/Ashbya_gossypii_cds_250nt_utr.gff3
-orf_index_prefix: agossypii_CDS_w_250
+num_processes: 8
+orf_fasta_file: ${RIBOVIZ_ORGANISMS}/annotation/Ashbya_gossypii_cds_50nt_utr.fasta
+orf_gff_file: ${RIBOVIZ_ORGANISMS}/annotation/Ashbya_gossypii_cds_50nt_utr.gff3
+orf_index_prefix: agossypii_CDS_w_50
 output_pdfs: true
 primary_id: Name
 publish_index_tmp: false
@@ -60,7 +60,7 @@ sample_sheet: null
 samsort_memory: null
 secondary_id: null
 stop_in_feature: false
-t_rna_file: ${RIBOVIZ_ORGANISMS}/annotation/tgcn.tsv
+t_rna_file: ${RIBOVIZ_DATA}/Ashbya_gossypii_tgcn.tsv
 trim_5p_mismatches: true
 umi_regexp: ^(?P<umi_1>.{4}).+(?P<umi_2>.{5})(?P<cell_1>.{5})$
 validate_only: false
