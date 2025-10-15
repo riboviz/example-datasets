@@ -1,0 +1,11 @@
+The file GCF_000091025.4_ASM9102v4_rna_from_genomic.fna was downloaded from NCBI RefSeq on Oct. 13, 2025
+
+Both non-coding RNA (ncRNA) and mitochondrial genes were extracted using custom R scripts using Biostrings (v2.74.1) and tidyverse (v2.0.0). Specifically, ncRNAs were determined by searching for gbkey != mRNA and mitochondrial sequences were determined by searching for NC_005789.1 (the mitochondrial chromosome).
+
+The union of these sequences were obtained and written as "AG_contaminants.fasta"
+
+Sequences were clustered using cd-hit (v4.8.1) with the command `cd-hit -i AG_contaminants.fasta -o AG_contaminants_clustered.fasta`.
+
+Note that the recommended version of hisat2 for riboviz2 will exclude reads if there are more possible mappings than the value of `-k` provided to the command line, which can lead to misleadingly poor mapping statistics. Clustering contaminants (which have many highly similar sequences) alleviates this problem.
+
+
